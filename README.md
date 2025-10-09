@@ -8,6 +8,16 @@ Generate ZWO workout files for cycling training programs.
 
 ## Usage
 
+### Option 1: Use Pre-Generated Files
+
+The `.zwo` files in each program's `zwo_files/` directory can be directly imported into:
+- **Zwift** - Import custom workouts
+- **MyWhoosh** - Import workout files
+- **TrainingPeaks** - Upload ZWO files
+- Any other platform that supports the ZWO format
+
+### Option 2: Generate Files Yourself
+
 ```bash
 # Install dependencies
 npm install
