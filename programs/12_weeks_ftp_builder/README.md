@@ -147,12 +147,12 @@ Easy, conversational pace that builds aerobic base and promotes recovery while m
 
 ## Training Tips
 
-✅ **Update your FTP** in MyWhoosh after Week 1 test
-✅ **Trust the recovery weeks** - adaptation happens during rest
-✅ **Consistency over intensity** - complete 90% of workouts as prescribed
-✅ **Fuel properly** - carbs before/during hard sessions
-✅ **Sleep 7-9 hours** during build weeks
-✅ **Listen to your body** - extra rest beats injury
+- ✅ **Update your FTP** in MyWhoosh after Week 1 test
+- ✅ **Trust the recovery weeks** - adaptation happens during rest
+- ✅ **Consistency over intensity** - complete 90% of workouts as prescribed
+- ✅ **Fuel properly** - carbs before/during hard sessions
+- ✅ **Sleep 7-9 hours** during build weeks
+- ✅ **Listen to your body** - extra rest beats injury
 
 ---
 
