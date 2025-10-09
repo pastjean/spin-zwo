@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W12-W: Easy Recovery</n>
+      <description>Very easy 30-minute spin. Recovery from test.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 12"/>
+        <tag name="Recovery"/>
+        <tag name="Zone 1"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="1800" Power="0.55">
+            <textevent timeoffset="10" message="Very easy recovery - let the test results sink in"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

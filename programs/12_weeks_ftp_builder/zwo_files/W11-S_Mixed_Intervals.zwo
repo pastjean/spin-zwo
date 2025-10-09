@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W11-S: Mixed Intensity</n>
+      <description>90-minute ride with mixed tempo and threshold efforts.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 11"/>
+        <tag name="Mixed"/>
+        <tag name="Zone 3-4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <SteadyState Duration="600" Power="0.85">
+            <textevent timeoffset="10" message="Tempo 1"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="480" Power="1">
+            <textevent timeoffset="10" message="Threshold 1"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="600" Power="0.85">
+            <textevent timeoffset="10" message="Tempo 2"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="480" Power="1">
+            <textevent timeoffset="10" message="Threshold 2"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="600" Power="0.85">
+            <textevent timeoffset="10" message="Final tempo"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W2-W: Recovery Spin</n>
+      <description>Easy 45-minute recovery with short accelerations.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 2"/>
+        <tag name="Recovery"/>
+        <tag name="Zone 1"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="420" Power="0.6">
+            <textevent timeoffset="10" message="Easy recovery pace"/>
+        </SteadyState>
+        <SteadyState Duration="15" Power="0.8">
+            <textevent timeoffset="5" message="Short acceleration 1/6"/>
+        </SteadyState>
+        <SteadyState Duration="405" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="15" Power="0.8">
+            <textevent timeoffset="5" message="Short acceleration 2/6"/>
+        </SteadyState>
+        <SteadyState Duration="405" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="15" Power="0.8">
+            <textevent timeoffset="5" message="Short acceleration 3/6"/>
+        </SteadyState>
+        <SteadyState Duration="405" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="15" Power="0.8">
+            <textevent timeoffset="5" message="Short acceleration 4/6"/>
+        </SteadyState>
+        <SteadyState Duration="405" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="15" Power="0.8">
+            <textevent timeoffset="5" message="Short acceleration 5/6"/>
+        </SteadyState>
+        <SteadyState Duration="405" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="15" Power="0.8">
+            <textevent timeoffset="5" message="Final acceleration 6/6"/>
+        </SteadyState>
+        <SteadyState Duration="195" Power="0.6">
+        </SteadyState>
+      </workout>
+  </workout_file>

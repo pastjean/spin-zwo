@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W3-S: Sweet Spot 3x20</n>
+      <description>3 x 20-minute sweet spot intervals. Extended sweet spot work.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 3"/>
+        <tag name="Sweet Spot"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <SteadyState Duration="1200" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 1/3 - 20 minutes"/>
+            <textevent timeoffset="600" message="Halfway through first"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="1200" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 2/3"/>
+            <textevent timeoffset="600" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="1200" Power="0.9">
+            <textevent timeoffset="10" message="Final Sweet Spot 3/3"/>
+            <textevent timeoffset="600" message="Halfway - finish strong!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

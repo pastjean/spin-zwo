@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W5-S: Extended Tempo Endurance</n>
+      <description>100-minute ride with 3 x 18-minute tempo intervals.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 5"/>
+        <tag name="Tempo"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 3"/>
+      </tags>
+      <workout>
+          <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <SteadyState Duration="1080" Power="0.85">
+            <textevent timeoffset="10" message="Tempo 1/3 - 18 minutes"/>
+            <textevent timeoffset="540" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="1080" Power="0.85">
+            <textevent timeoffset="10" message="Tempo 2/3"/>
+            <textevent timeoffset="540" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="1080" Power="0.85">
+            <textevent timeoffset="10" message="Final tempo 3/3"/>
+            <textevent timeoffset="540" message="Halfway - strong finish!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

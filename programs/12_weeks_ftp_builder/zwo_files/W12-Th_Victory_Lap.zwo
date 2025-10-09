@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W12-Th: Victory Lap</n>
+      <description>60-minute relaxed ride at your new FTP zones. Celebrate your gains!</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 12"/>
+        <tag name="Celebration"/>
+        <tag name="Zone 2"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="3600" Power="0.7">
+            <textevent timeoffset="10" message="Victory lap at your NEW improved zones!"/>
+            <textevent timeoffset="1800" message="Halfway - feel how much stronger you are"/>
+            <textevent timeoffset="3300" message="You did it - 12 weeks of hard work paid off!"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

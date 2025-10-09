@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W1-W: Active Recovery</n>
+      <description>Easy recovery spin. Very light effort to promote blood flow and recovery.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 1"/>
+        <tag name="Recovery"/>
+        <tag name="Zone 1"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="2700" Power="0.6">
+            <textevent timeoffset="10" message="Easy recovery pace - completely conversational"/>
+            <textevent timeoffset="1350" message="Halfway - stay relaxed"/>
+            <textevent timeoffset="2400" message="Almost done - enjoy the easy ride"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

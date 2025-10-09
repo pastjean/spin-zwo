@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W8-T: Recovery Cadence</n>
+      <description>Easy 60-minute recovery with cadence drills.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 8"/>
+        <tag name="Recovery"/>
+        <tag name="Cadence"/>
+        <tag name="Zone 1-2"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="600" Power="0.65">
+            <textevent timeoffset="540" message="Prepare for first cadence drill"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Cadence drill 1/5 - aim for 100+ RPM"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.65">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Cadence drill 2/5"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.65">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Cadence drill 3/5"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.65">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Cadence drill 4/5"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.65">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Final cadence drill 5/5"/>
+        </SteadyState>
+        <SteadyState Duration="1095" Power="0.65">
+        </SteadyState>
+      </workout>
+  </workout_file>

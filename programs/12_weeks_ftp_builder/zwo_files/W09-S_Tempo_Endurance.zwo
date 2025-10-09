@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W9-S: Tempo Endurance</n>
+      <description>100-minute ride with 3 x 18-minute tempo intervals.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 9"/>
+        <tag name="Tempo"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 3"/>
+      </tags>
+      <workout>
+          <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <SteadyState Duration="1080" Power="0.85">
+            <textevent timeoffset="540" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="1080" Power="0.85">
+            <textevent timeoffset="540" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="1080" Power="0.85">
+            <textevent timeoffset="540" message="Halfway - strong finish!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

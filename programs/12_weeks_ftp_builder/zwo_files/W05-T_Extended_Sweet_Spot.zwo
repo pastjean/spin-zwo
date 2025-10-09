@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W5-T: Extended Sweet Spot</n>
+      <description>2 x 20-minute sweet spot intervals at 90% FTP.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 5"/>
+        <tag name="Sweet Spot"/>
+        <tag name="Extended"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+        </Warmup>
+        <SteadyState Duration="1200" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 1/2 - 20 minutes strong"/>
+            <textevent timeoffset="600" message="Halfway through first interval"/>
+            <textevent timeoffset="1140" message="Final minute of first"/>
+        </SteadyState>
+        <SteadyState Duration="480" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="1200" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 2/2 - final 20 minutes"/>
+            <textevent timeoffset="600" message="Halfway through final interval"/>
+            <textevent timeoffset="1140" message="Last minute - finish strong!"/>
+        </SteadyState>
+        <Cooldown Duration="720" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

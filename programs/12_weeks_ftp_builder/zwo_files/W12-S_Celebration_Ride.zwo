@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W12-S: Celebration Endurance</n>
+      <description>90-minute easy celebration ride. Enjoy your fitness!</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 12"/>
+        <tag name="Celebration"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="5400" Power="0.68">
+            <textevent timeoffset="10" message="Celebrate your 12-week journey!"/>
+            <textevent timeoffset="2700" message="Halfway - reflect on your progress"/>
+            <textevent timeoffset="5100" message="You're a stronger cyclist now!"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

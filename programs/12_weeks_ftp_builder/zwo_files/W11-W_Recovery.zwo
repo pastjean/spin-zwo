@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W11-W: Recovery Spin</n>
+      <description>Easy 45-minute recovery.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 11"/>
+        <tag name="Recovery"/>
+        <tag name="Zone 1"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="2700" Power="0.6">
+        </SteadyState>
+      </workout>
+  </workout_file>

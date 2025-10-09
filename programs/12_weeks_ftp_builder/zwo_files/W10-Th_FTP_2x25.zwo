@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W10-Th: FTP 2x25</n>
+      <description>2 x 25-minute FTP intervals. Peak threshold work.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 10"/>
+        <tag name="FTP"/>
+        <tag name="Threshold"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+        </Warmup>
+        <SteadyState Duration="1500" Power="1">
+            <textevent timeoffset="10" message="FTP 1/2 - 25 minutes at threshold"/>
+            <textevent timeoffset="750" message="Halfway through first"/>
+            <textevent timeoffset="1440" message="Final minute"/>
+        </SteadyState>
+        <SteadyState Duration="600" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="1500" Power="1">
+            <textevent timeoffset="10" message="FTP 2/2 - final 25 minutes"/>
+            <textevent timeoffset="750" message="Halfway - dig deep!"/>
+            <textevent timeoffset="1440" message="Last minute - everything you have!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

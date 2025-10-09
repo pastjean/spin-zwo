@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W2-T: Sweet Spot</n>
+      <description>2 x 15-minute sweet spot intervals at 90% FTP. Build aerobic power.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 2"/>
+        <tag name="Sweet Spot"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+            <textevent timeoffset="10" message="Progressive warmup for sweet spot work"/>
+            <textevent timeoffset="1080" message="Almost ready for sweet spot efforts"/>
+        </Warmup>
+        <SteadyState Duration="900" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 1/2 - Moderately hard but sustainable"/>
+            <textevent timeoffset="450" message="Halfway through first interval"/>
+            <textevent timeoffset="840" message="Final minute - stay focused"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="900" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 2/2 - Same strong effort"/>
+            <textevent timeoffset="450" message="Halfway - you've got this"/>
+            <textevent timeoffset="840" message="Last minute - finish strong!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

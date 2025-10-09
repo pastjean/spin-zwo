@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W9-T: Sweet Spot 2x22</n>
+      <description>2 x 22-minute sweet spot intervals.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 9"/>
+        <tag name="Sweet Spot"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+        </Warmup>
+        <SteadyState Duration="1320" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 1/2 - 22 minutes"/>
+            <textevent timeoffset="660" message="Halfway through first"/>
+        </SteadyState>
+        <SteadyState Duration="480" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="1320" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 2/2 - final 22 minutes"/>
+            <textevent timeoffset="660" message="Halfway through final interval"/>
+        </SteadyState>
+        <Cooldown Duration="720" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

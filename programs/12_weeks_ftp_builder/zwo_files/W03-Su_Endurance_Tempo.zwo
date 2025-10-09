@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W3-Su: Endurance with Tempo</n>
+      <description>90-minute endurance ride with embedded tempo efforts.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 3"/>
+        <tag name="Endurance"/>
+        <tag name="Tempo"/>
+        <tag name="Zone 2-3"/>
+      </tags>
+      <workout>
+          <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <SteadyState Duration="720" Power="0.7">
+            <textevent timeoffset="10" message="Steady endurance pace"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.85">
+            <textevent timeoffset="10" message="Tempo burst 1/4"/>
+        </SteadyState>
+        <SteadyState Duration="720" Power="0.7">
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.85">
+            <textevent timeoffset="10" message="Tempo burst 2/4"/>
+        </SteadyState>
+        <SteadyState Duration="720" Power="0.7">
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.85">
+            <textevent timeoffset="10" message="Tempo burst 3/4"/>
+        </SteadyState>
+        <SteadyState Duration="720" Power="0.7">
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.85">
+            <textevent timeoffset="10" message="Final tempo burst 4/4"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W10-T: Over/Unders 4x</n>
+      <description>4 x (4min@95% + 4min@105%) Over/Under intervals.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 10"/>
+        <tag name="Over/Under"/>
+        <tag name="Zone 4-5"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+        </Warmup>
+        <SteadyState Duration="240" Power="0.95">
+        </SteadyState>
+        <SteadyState Duration="240" Power="1.05">
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.95">
+        </SteadyState>
+        <SteadyState Duration="240" Power="1.05">
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.95">
+        </SteadyState>
+        <SteadyState Duration="240" Power="1.05">
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.95">
+        </SteadyState>
+        <SteadyState Duration="240" Power="1.05">
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

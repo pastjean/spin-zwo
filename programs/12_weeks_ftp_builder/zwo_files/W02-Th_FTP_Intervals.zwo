@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W2-Th: FTP Intervals 4x8</n>
+      <description>4 x 8-minute FTP intervals at 100% FTP. Direct threshold training.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 2"/>
+        <tag name="FTP"/>
+        <tag name="Threshold"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+            <textevent timeoffset="900" message="Preparing for threshold efforts"/>
+        </Warmup>
+        <SteadyState Duration="480" Power="1">
+            <textevent timeoffset="10" message="FTP 1/4 - Threshold power"/>
+            <textevent timeoffset="240" message="Halfway - stay steady"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="480" Power="1">
+            <textevent timeoffset="10" message="FTP 2/4 - Maintain same power"/>
+            <textevent timeoffset="240" message="Halfway through second"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="480" Power="1">
+            <textevent timeoffset="10" message="FTP 3/4 - Two more to go"/>
+            <textevent timeoffset="240" message="Halfway - you're doing great"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="480" Power="1">
+            <textevent timeoffset="10" message="Final FTP 4/4 - dig deep!"/>
+            <textevent timeoffset="240" message="Halfway through final interval"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

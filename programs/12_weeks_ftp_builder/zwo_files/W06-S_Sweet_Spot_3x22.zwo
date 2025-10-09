@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W6-S: Sweet Spot 3x22</n>
+      <description>3 x 22-minute sweet spot intervals. Extended progression.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 6"/>
+        <tag name="Sweet Spot"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <SteadyState Duration="1320" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 1/3 - 22 minutes"/>
+            <textevent timeoffset="660" message="Halfway through first"/>
+            <textevent timeoffset="1260" message="Final minute"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="1320" Power="0.9">
+            <textevent timeoffset="10" message="Sweet Spot 2/3"/>
+            <textevent timeoffset="660" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="1320" Power="0.9">
+            <textevent timeoffset="10" message="Final Sweet Spot 3/3"/>
+            <textevent timeoffset="660" message="Halfway - finish strong!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        </Cooldown>
+      </workout>
+  </workout_file>

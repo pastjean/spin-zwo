@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W4-S: Relaxed Endurance</n>
+      <description>75-minute easy endurance ride. No structure, just enjoy.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 4"/>
+        <tag name="Recovery"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="4500" Power="0.68">
+            <textevent timeoffset="10" message="Easy endurance - no structured intervals"/>
+            <textevent timeoffset="2250" message="Halfway - keep it relaxed"/>
+            <textevent timeoffset="4200" message="Almost done - enjoy the ride"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

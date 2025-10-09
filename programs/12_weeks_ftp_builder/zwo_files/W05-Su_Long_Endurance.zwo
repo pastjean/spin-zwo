@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W5-Su: Long Endurance</n>
+      <description>2-hour steady endurance ride.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 5"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+        <tag name="Long Ride"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="7200" Power="0.7">
+            <textevent timeoffset="1800" message="30 min in"/>
+            <textevent timeoffset="3600" message="Halfway!"/>
+            <textevent timeoffset="5400" message="90 min - final 30 minutes"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

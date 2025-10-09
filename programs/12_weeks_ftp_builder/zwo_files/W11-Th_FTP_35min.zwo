@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W11-Th: Continuous Threshold 35min</n>
+      <description>35-minute continuous FTP effort. Maximum threshold endurance.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 11"/>
+        <tag name="FTP"/>
+        <tag name="Threshold"/>
+        <tag name="Zone 4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+        </Warmup>
+        <SteadyState Duration="2100" Power="1">
+            <textevent timeoffset="10" message="35 minutes at FTP - your longest threshold!"/>
+            <textevent timeoffset="600" message="10 min in"/>
+            <textevent timeoffset="1050" message="Halfway!"/>
+            <textevent timeoffset="1500" message="25 min - 10 to go!"/>
+            <textevent timeoffset="1800" message="30 min - final 5 minutes!"/>
+            <textevent timeoffset="2040" message="Last minute - finish strong!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+            <textevent timeoffset="10" message="AMAZING 35-min threshold!"/>
+        </Cooldown>
+      </workout>
+  </workout_file>
