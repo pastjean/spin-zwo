@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W12-Su: Reflection & Planning</n>
+      <description>Optional 30-45 minute easy spin. Reflect on your journey and plan what's next!</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 12"/>
+        <tag name="Recovery"/>
+        <tag name="Zone 1"/>
+        <tag name="Optional"/>
+        <tag name="Final"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="2700" Power="0.55">
+            <textevent timeoffset="10" message="Final ride of the program - reflect on your journey"/>
+            <textevent timeoffset="1350" message="Halfway - what will you tackle next?"/>
+            <textevent timeoffset="2400" message="Congratulations on completing 12 weeks!"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

@@ -222,6 +222,24 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
+  "W01-D7-Sunday-Recovery": {
+    name: "W1-Su: Active Recovery",
+    description: "Optional 30-45 minute easy recovery spin.",
+    tags: ["Week 1", "Recovery", "Zone 1-2", "Optional"],
+    segments: [
+      {
+        type: "steady",
+        duration: 2700,
+        power: 0.6,
+        messages: [
+          { time: 10, text: "Very easy optional recovery - Zone 1-2" },
+          { time: 1350, text: "Halfway - stay relaxed" },
+          { time: 2400, text: "Almost done - enjoy the easy ride" },
+        ],
+      },
+    ],
+  },
+
   // ============ WEEK 2 ============
   "W02-D2-Tuesday-Sweet_Spot": {
     name: "W2-T: Sweet Spot",
@@ -418,7 +436,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W02-D0-Sunday-Long_Endurance": {
+  "W02-D7-Sunday-Long_Endurance": {
     name: "W2-Su: Long Endurance",
     description: "2-hour steady endurance ride. Build aerobic capacity.",
     tags: ["Week 2", "Endurance", "Zone 2", "Long Ride"],
@@ -582,7 +600,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W03-D0-Sunday-Endurance_Tempo": {
+  "W03-D7-Sunday-Endurance_Tempo": {
     name: "W3-Su: Endurance with Tempo",
     description: "90-minute endurance ride with embedded tempo efforts.",
     tags: ["Week 3", "Endurance", "Tempo", "Zone 2-3"],
@@ -720,6 +738,24 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
+  "W04-D7-Sunday-Recovery": {
+    name: "W4-Su: Active Recovery",
+    description: "Optional 30-45 minute rest or very easy spin.",
+    tags: ["Week 4", "Recovery", "Zone 1", "Optional"],
+    segments: [
+      {
+        type: "steady",
+        duration: 2700,
+        power: 0.55,
+        messages: [
+          { time: 10, text: "Optional rest day - very easy if riding" },
+          { time: 1350, text: "Halfway - recovery week, stay easy" },
+          { time: 2400, text: "Almost done - great recovery week!" },
+        ],
+      },
+    ],
+  },
+
   // ============ WEEK 5 ============
   "W05-D2-Tuesday-Extended_Sweet_Spot": {
     name: "W5-T: Extended Sweet Spot",
@@ -847,7 +883,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W05-D0-Sunday-Long_Endurance": {
+  "W05-D7-Sunday-Long_Endurance": {
     name: "W5-Su: Long Endurance",
     description: "2-hour steady endurance ride.",
     tags: ["Week 5", "Endurance", "Zone 2", "Long Ride"],
@@ -1019,7 +1055,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W06-D0-Sunday-Long_Endurance": {
+  "W06-D7-Sunday-Long_Endurance": {
     name: "W6-Su: Long Endurance",
     description: "2.5-hour steady endurance ride.",
     tags: ["Week 6", "Endurance", "Zone 2", "Long Ride"],
@@ -1175,7 +1211,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W07-D0-Sunday-Endurance_Tempo": {
+  "W07-D7-Sunday-Endurance_Tempo": {
     name: "W7-Su: Endurance with Tempo",
     description: "2-hour ride with embedded tempo efforts.",
     tags: ["Week 7", "Endurance", "Tempo", "Zone 2-3"],
@@ -1298,6 +1334,24 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
+  "W08-D7-Sunday-Recovery": {
+    name: "W8-Su: Active Recovery",
+    description: "Optional 30-45 minute rest or very easy spin.",
+    tags: ["Week 8", "Recovery", "Zone 1", "Optional"],
+    segments: [
+      {
+        type: "steady",
+        duration: 2700,
+        power: 0.55,
+        messages: [
+          { time: 10, text: "Optional rest - recovery week" },
+          { time: 1350, text: "Halfway - stay easy" },
+          { time: 2400, text: "Good recovery - ready for final block!" },
+        ],
+      },
+    ],
+  },
+
   // ============ WEEK 9 ============
   "W09-D2-Tuesday-Sweet_Spot_2x22": {
     name: "W9-T: Sweet Spot 2x22",
@@ -1404,7 +1458,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W09-D0-Sunday-Long_Endurance": {
+  "W09-D7-Sunday-Long_Endurance": {
     name: "W9-Su: Long Endurance",
     description: "2-hour steady endurance ride.",
     tags: ["Week 9", "Endurance", "Zone 2", "Long Ride"],
@@ -1512,7 +1566,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W10-D0-Sunday-Long_Endurance": {
+  "W10-D7-Sunday-Long_Endurance": {
     name: "W10-Su: Long Endurance",
     description: "2.5-hour steady endurance ride.",
     tags: ["Week 10", "Endurance", "Zone 2", "Long Ride"],
@@ -1663,7 +1717,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W11-D0-Sunday-Endurance": {
+  "W11-D7-Sunday-Endurance": {
     name: "W11-Su: Steady Endurance",
     description: "2-hour steady endurance ride.",
     tags: ["Week 11", "Endurance", "Zone 2"],
@@ -1796,6 +1850,24 @@ export const workouts: Record<string, WorkoutDefinition> = {
           { time: 10, text: "Celebrate your 12-week journey!" },
           { time: 2700, text: "Halfway - reflect on your progress" },
           { time: 5100, text: "You're a stronger cyclist now!" },
+        ],
+      },
+    ],
+  },
+
+  "W12-D7-Sunday-Recovery": {
+    name: "W12-Su: Reflection & Planning",
+    description: "Optional 30-45 minute easy spin. Reflect on your journey and plan what's next!",
+    tags: ["Week 12", "Recovery", "Zone 1", "Optional", "Final"],
+    segments: [
+      {
+        type: "steady",
+        duration: 2700,
+        power: 0.55,
+        messages: [
+          { time: 10, text: "Final ride of the program - reflect on your journey" },
+          { time: 1350, text: "Halfway - what will you tackle next?" },
+          { time: 2400, text: "Congratulations on completing 12 weeks!" },
         ],
       },
     ],
