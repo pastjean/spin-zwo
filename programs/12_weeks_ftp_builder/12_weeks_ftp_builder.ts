@@ -8,7 +8,7 @@ import type { WorkoutDefinition } from "../../lib/types.js";
 // Define all workouts for 12 weeks
 export const workouts: Record<string, WorkoutDefinition> = {
   // ============ WEEK 1 ============
-  "W01-T_FTP_Test": {
+  "W01-D2-Tuesday-FTP_Test": {
     name: "W1-T: FTP Test",
     description:
       "Initial FTP assessment test. Warm up progressively, then give maximum sustainable effort for 20 minutes. Your average power × 0.95 = your FTP.",
@@ -91,7 +91,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W01-W_Recovery": {
+  "W01-D3-Wednesday-Recovery": {
     name: "W1-W: Active Recovery",
     description:
       "Easy recovery spin. Very light effort to promote blood flow and recovery.",
@@ -110,7 +110,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W01-Th_Tempo": {
+  "W01-D4-Thursday-Tempo": {
     name: "W1-Th: Tempo Building",
     description:
       "3 x 10-minute tempo intervals at 85% FTP. Focus on smooth, sustainable power.",
@@ -160,7 +160,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W01-S_Endurance": {
+  "W01-D6-Saturday-Endurance": {
     name: "W1-S: Base Endurance",
     description:
       "90-minute endurance ride with short accelerations to build aerobic base.",
@@ -223,7 +223,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 2 ============
-  "W02-T_Sweet_Spot": {
+  "W02-D2-Tuesday-Sweet_Spot": {
     name: "W2-T: Sweet Spot",
     description:
       "2 x 15-minute sweet spot intervals at 90% FTP. Build aerobic power.",
@@ -267,7 +267,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W02-W_Recovery": {
+  "W02-D3-Wednesday-Recovery": {
     name: "W2-W: Recovery Spin",
     description: "Easy 45-minute recovery with short accelerations.",
     tags: ["Week 2", "Recovery", "Zone 1"],
@@ -323,7 +323,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W02-Th_FTP_Intervals": {
+  "W02-D4-Thursday-FTP_Intervals": {
     name: "W2-Th: FTP Intervals 4x8",
     description:
       "4 x 8-minute FTP intervals at 100% FTP. Direct threshold training.",
@@ -379,7 +379,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W02-S_Tempo_Endurance": {
+  "W02-D6-Saturday-Tempo_Endurance": {
     name: "W2-S: Tempo Endurance",
     description: "3 x 15-minute tempo intervals. Extended tempo work.",
     tags: ["Week 2", "Tempo", "Zone 3"],
@@ -418,7 +418,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W02-Su_Long_Endurance": {
+  "W02-D0-Sunday-Long_Endurance": {
     name: "W2-Su: Long Endurance",
     description: "2-hour steady endurance ride. Build aerobic capacity.",
     tags: ["Week 2", "Endurance", "Zone 2", "Long Ride"],
@@ -439,7 +439,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 3 ============
-  "W03-T_Over_Unders": {
+  "W03-D2-Tuesday-Over_Unders": {
     name: "W3-T: Over/Unders",
     description:
       "3 x (4min@95% + 4min@105%) Over/Under intervals. Teaches lactate clearance.",
@@ -494,7 +494,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W03-W_Recovery": {
+  "W03-D3-Wednesday-Recovery": {
     name: "W3-W: Active Recovery",
     description: "Easy 45-minute recovery spin.",
     tags: ["Week 3", "Recovery", "Zone 1"],
@@ -511,7 +511,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W03-Th_Extended_Threshold": {
+  "W03-D4-Thursday-Extended_Threshold": {
     name: "W3-Th: Extended Threshold",
     description: "2 x 20-minute FTP intervals. Building threshold endurance.",
     tags: ["Week 3", "FTP", "Threshold", "Zone 4"],
@@ -542,7 +542,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W03-S_Sweet_Spot_Progression": {
+  "W03-D6-Saturday-Sweet_Spot_Progression": {
     name: "W3-S: Sweet Spot 3x20",
     description:
       "3 x 20-minute sweet spot intervals. Extended sweet spot work.",
@@ -582,7 +582,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W03-Su_Endurance_Tempo": {
+  "W03-D0-Sunday-Endurance_Tempo": {
     name: "W3-Su: Endurance with Tempo",
     description: "90-minute endurance ride with embedded tempo efforts.",
     tags: ["Week 3", "Endurance", "Tempo", "Zone 2-3"],
@@ -626,7 +626,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 4 (RECOVERY) ============
-  "W04-T_Recovery_Cadence": {
+  "W04-D2-Tuesday-Recovery_Cadence": {
     name: "W4-T: Recovery Cadence",
     description:
       "Easy 60-minute recovery with cadence drills. Focus on technique.",
@@ -686,7 +686,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W04-Th_Light_Tempo": {
+  "W04-D4-Thursday-Light_Tempo": {
     name: "W4-Th: Light Tempo",
     description: "Easy 50-minute ride with light tempo effort.",
     tags: ["Week 4", "Recovery", "Easy Tempo", "Zone 2-3"],
@@ -702,7 +702,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W04-S_Easy_Endurance": {
+  "W04-D6-Saturday-Easy_Endurance": {
     name: "W4-S: Relaxed Endurance",
     description: "75-minute easy endurance ride. No structure, just enjoy.",
     tags: ["Week 4", "Recovery", "Endurance", "Zone 2"],
@@ -721,7 +721,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 5 ============
-  "W05-T_Extended_Sweet_Spot": {
+  "W05-D2-Tuesday-Extended_Sweet_Spot": {
     name: "W5-T: Extended Sweet Spot",
     description: "2 x 20-minute sweet spot intervals at 90% FTP.",
     tags: ["Week 5", "Sweet Spot", "Extended", "Zone 4"],
@@ -752,7 +752,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W05-W_Recovery": {
+  "W05-D3-Wednesday-Recovery": {
     name: "W5-W: Recovery Spin",
     description: "Easy 45-minute recovery.",
     tags: ["Week 5", "Recovery", "Zone 1"],
@@ -769,7 +769,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W05-Th_Progressive_Threshold": {
+  "W05-D4-Thursday-Progressive_Threshold": {
     name: "W5-Th: Progressive Threshold",
     description: "3 x 12-minute FTP intervals at 100% FTP.",
     tags: ["Week 5", "FTP", "Progressive", "Zone 4"],
@@ -808,7 +808,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W05-S_Tempo_Endurance_Long": {
+  "W05-D6-Saturday-Tempo_Endurance_Long": {
     name: "W5-S: Extended Tempo Endurance",
     description: "100-minute ride with 3 x 18-minute tempo intervals.",
     tags: ["Week 5", "Tempo", "Endurance", "Zone 3"],
@@ -847,7 +847,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W05-Su_Long_Endurance": {
+  "W05-D0-Sunday-Long_Endurance": {
     name: "W5-Su: Long Endurance",
     description: "2-hour steady endurance ride.",
     tags: ["Week 5", "Endurance", "Zone 2", "Long Ride"],
@@ -866,7 +866,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 6 ============
-  "W06-T_Over_Unders_Extended": {
+  "W06-D2-Tuesday-Over_Unders_Extended": {
     name: "W6-T: Extended Over/Unders",
     description:
       "4 x (4min@95% + 4min@105%) Over/Under intervals. More volume than Week 3.",
@@ -928,7 +928,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W06-W_Recovery": {
+  "W06-D3-Wednesday-Recovery": {
     name: "W6-W: Recovery Spin",
     description: "Easy 45-minute recovery.",
     tags: ["Week 6", "Recovery", "Zone 1"],
@@ -942,7 +942,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W06-Th_FTP_25_20": {
+  "W06-D4-Thursday-FTP_25_20": {
     name: "W6-Th: FTP 25+20",
     description:
       "25-minute + 20-minute FTP intervals. Building threshold endurance.",
@@ -979,7 +979,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W06-S_Sweet_Spot_3x22": {
+  "W06-D6-Saturday-Sweet_Spot_3x22": {
     name: "W6-S: Sweet Spot 3x22",
     description: "3 x 22-minute sweet spot intervals. Extended progression.",
     tags: ["Week 6", "Sweet Spot", "Zone 4"],
@@ -1019,7 +1019,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W06-Su_Long_Endurance": {
+  "W06-D0-Sunday-Long_Endurance": {
     name: "W6-Su: Long Endurance",
     description: "2.5-hour steady endurance ride.",
     tags: ["Week 6", "Endurance", "Zone 2", "Long Ride"],
@@ -1040,7 +1040,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 7 ============
-  "W07-T_VO2max_Intro": {
+  "W07-D2-Tuesday-VO2max_Intro": {
     name: "W7-T: VO2max Introduction",
     description:
       "5 x 3-minute VO2max intervals at 110% FTP. High intensity work.",
@@ -1085,7 +1085,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W07-W_Recovery": {
+  "W07-D3-Wednesday-Recovery": {
     name: "W7-W: Recovery Spin",
     description: "Easy 45-minute recovery.",
     tags: ["Week 7", "Recovery", "Zone 1"],
@@ -1099,7 +1099,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W07-Th_FTP_30min": {
+  "W07-D4-Thursday-FTP_30min": {
     name: "W7-Th: Continuous Threshold 30min",
     description: "30-minute continuous FTP effort. Peak threshold endurance.",
     tags: ["Week 7", "FTP", "Threshold", "Zone 4"],
@@ -1134,7 +1134,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W07-S_Sweet_Spot_3x25": {
+  "W07-D6-Saturday-Sweet_Spot_3x25": {
     name: "W7-S: Sweet Spot 3x25",
     description: "3 x 25-minute sweet spot intervals. Peak sweet spot volume.",
     tags: ["Week 7", "Sweet Spot", "Zone 4"],
@@ -1175,7 +1175,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W07-Su_Endurance_Tempo": {
+  "W07-D0-Sunday-Endurance_Tempo": {
     name: "W7-Su: Endurance with Tempo",
     description: "2-hour ride with embedded tempo efforts.",
     tags: ["Week 7", "Endurance", "Tempo", "Zone 2-3"],
@@ -1221,7 +1221,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 8 (RECOVERY) ============
-  "W08-T_Recovery_Cadence": {
+  "W08-D2-Tuesday-Recovery_Cadence": {
     name: "W8-T: Recovery Cadence",
     description: "Easy 60-minute recovery with cadence drills.",
     tags: ["Week 8", "Recovery", "Cadence", "Zone 1-2"],
@@ -1270,7 +1270,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W08-Th_Light_Tempo": {
+  "W08-D4-Thursday-Light_Tempo": {
     name: "W8-Th: Light Tempo",
     description: "Easy 50-minute ride with light tempo.",
     tags: ["Week 8", "Recovery", "Easy Tempo", "Zone 2-3"],
@@ -1281,7 +1281,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W08-S_Easy_Endurance": {
+  "W08-D6-Saturday-Easy_Endurance": {
     name: "W8-S: Relaxed Endurance",
     description: "75-minute easy endurance ride.",
     tags: ["Week 8", "Recovery", "Endurance", "Zone 2"],
@@ -1299,7 +1299,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 9 ============
-  "W09-T_Sweet_Spot_2x22": {
+  "W09-D2-Tuesday-Sweet_Spot_2x22": {
     name: "W9-T: Sweet Spot 2x22",
     description: "2 x 22-minute sweet spot intervals.",
     tags: ["Week 9", "Sweet Spot", "Zone 4"],
@@ -1328,14 +1328,14 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W09-W_Recovery": {
+  "W09-D3-Wednesday-Recovery": {
     name: "W9-W: Recovery Spin",
     description: "Easy 45-minute recovery.",
     tags: ["Week 9", "Recovery", "Zone 1"],
     segments: [{ type: "steady", duration: 2700, power: 0.6 }],
   },
 
-  "W09-Th_FTP_3x15": {
+  "W09-D4-Thursday-FTP_3x15": {
     name: "W9-Th: FTP Intervals 3x15",
     description: "3 x 15-minute FTP intervals.",
     tags: ["Week 9", "FTP", "Threshold", "Zone 4"],
@@ -1374,7 +1374,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W09-S_Tempo_Endurance": {
+  "W09-D6-Saturday-Tempo_Endurance": {
     name: "W9-S: Tempo Endurance",
     description: "100-minute ride with 3 x 18-minute tempo intervals.",
     tags: ["Week 9", "Tempo", "Endurance", "Zone 3"],
@@ -1404,7 +1404,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W09-Su_Long_Endurance": {
+  "W09-D0-Sunday-Long_Endurance": {
     name: "W9-Su: Long Endurance",
     description: "2-hour steady endurance ride.",
     tags: ["Week 9", "Endurance", "Zone 2", "Long Ride"],
@@ -1422,7 +1422,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 10 ============
-  "W10-T_Over_Unders_4x": {
+  "W10-D2-Tuesday-Over_Unders_4x": {
     name: "W10-T: Over/Unders 4x",
     description: "4 x (4min@95% + 4min@105%) Over/Under intervals.",
     tags: ["Week 10", "Over/Under", "Zone 4-5"],
@@ -1443,14 +1443,14 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W10-W_Recovery": {
+  "W10-D3-Wednesday-Recovery": {
     name: "W10-W: Recovery Spin",
     description: "Easy 45-minute recovery.",
     tags: ["Week 10", "Recovery", "Zone 1"],
     segments: [{ type: "steady", duration: 2700, power: 0.6 }],
   },
 
-  "W10-Th_FTP_2x25": {
+  "W10-D4-Thursday-FTP_2x25": {
     name: "W10-Th: FTP 2x25",
     description: "2 x 25-minute FTP intervals. Peak threshold work.",
     tags: ["Week 10", "FTP", "Threshold", "Zone 4"],
@@ -1481,7 +1481,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W10-S_Sweet_Spot_3x25": {
+  "W10-D6-Saturday-Sweet_Spot_3x25": {
     name: "W10-S: Sweet Spot 3x25",
     description:
       "3 x 25-minute sweet spot intervals. Maximum sweet spot volume.",
@@ -1512,7 +1512,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W10-Su_Long_Endurance": {
+  "W10-D0-Sunday-Long_Endurance": {
     name: "W10-Su: Long Endurance",
     description: "2.5-hour steady endurance ride.",
     tags: ["Week 10", "Endurance", "Zone 2", "Long Ride"],
@@ -1531,7 +1531,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 11 ============
-  "W11-T_VO2max_6x3": {
+  "W11-D2-Tuesday-VO2max_6x3": {
     name: "W11-T: VO2max 6x3",
     description: "6 x 3-minute VO2max intervals at 110% FTP.",
     tags: ["Week 11", "VO2max", "Zone 5"],
@@ -1582,14 +1582,14 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W11-W_Recovery": {
+  "W11-D3-Wednesday-Recovery": {
     name: "W11-W: Recovery Spin",
     description: "Easy 45-minute recovery.",
     tags: ["Week 11", "Recovery", "Zone 1"],
     segments: [{ type: "steady", duration: 2700, power: 0.6 }],
   },
 
-  "W11-Th_FTP_35min": {
+  "W11-D4-Thursday-FTP_35min": {
     name: "W11-Th: Continuous Threshold 35min",
     description:
       "35-minute continuous FTP effort. Maximum threshold endurance.",
@@ -1619,7 +1619,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W11-S_Mixed_Intervals": {
+  "W11-D6-Saturday-Mixed_Intervals": {
     name: "W11-S: Mixed Intensity",
     description: "90-minute ride with mixed tempo and threshold efforts.",
     tags: ["Week 11", "Mixed", "Zone 3-4"],
@@ -1663,7 +1663,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W11-Su_Endurance": {
+  "W11-D0-Sunday-Endurance": {
     name: "W11-Su: Steady Endurance",
     description: "2-hour steady endurance ride.",
     tags: ["Week 11", "Endurance", "Zone 2"],
@@ -1678,7 +1678,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   // ============ WEEK 12 (FINAL TEST & TAPER) ============
-  "W12-T_Final_FTP_Test": {
+  "W12-D2-Tuesday-Final_FTP_Test": {
     name: "W12-T: Final FTP Test",
     description:
       "Final FTP test to measure your improvement. Compare to Week 1!",
@@ -1745,7 +1745,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W12-W_Easy_Spin": {
+  "W12-D3-Wednesday-Easy_Spin": {
     name: "W12-W: Easy Recovery",
     description: "Very easy 30-minute spin. Recovery from test.",
     tags: ["Week 12", "Recovery", "Zone 1"],
@@ -1764,7 +1764,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W12-Th_Victory_Lap": {
+  "W12-D4-Thursday-Victory_Lap": {
     name: "W12-Th: Victory Lap",
     description:
       "60-minute relaxed ride at your new FTP zones. Celebrate your gains!",
@@ -1783,7 +1783,7 @@ export const workouts: Record<string, WorkoutDefinition> = {
     ],
   },
 
-  "W12-S_Celebration_Ride": {
+  "W12-D6-Saturday-Celebration_Ride": {
     name: "W12-S: Celebration Endurance",
     description: "90-minute easy celebration ride. Enjoy your fitness!",
     tags: ["Week 12", "Celebration", "Endurance", "Zone 2"],
