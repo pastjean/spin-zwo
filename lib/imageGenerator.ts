@@ -115,14 +115,6 @@ export function generateWorkoutImage(
   ctx.strokeStyle = '#D5DBDB';
   ctx.lineWidth = 1;
 
-  // Always draw top line (max power)
-  const topY = PADDING;
-  ctx.beginPath();
-  ctx.moveTo(PADDING, topY);
-  ctx.lineTo(IMAGE_WIDTH - PADDING, topY);
-  ctx.stroke();
-  ctx.fillText(`${Math.round(maxPower * 100)}%`, PADDING - 10, topY + 5);
-
   // Draw zone threshold lines
   for (const threshold of relevantThresholds) {
     const y = PADDING + CHART_HEIGHT - (threshold.level / maxPower) * CHART_HEIGHT;
