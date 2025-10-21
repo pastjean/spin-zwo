@@ -90,7 +90,6 @@ export function generateWorkoutImage(
 
   const minPower = Math.min(...powerLevels);
   const actualMaxPower = Math.max(...powerLevels);
-  const maxPower = Math.max(1.2, actualMaxPower);
 
   // Determine which zone thresholds to display
   // Include zones within range, plus one zone beyond the max
@@ -102,6 +101,12 @@ export function generateWorkoutImage(
     const zonesAboveMax = ZONE_THRESHOLDS.filter(z => z.level > actualMaxPower);
     return zonesAboveMax.length > 0 && zone.level === zonesAboveMax[0].level;
   });
+
+  // Set chart max to the highest relevant threshold, or actual max if higher
+  const highestThreshold = relevantThresholds.length > 0
+    ? Math.max(...relevantThresholds.map(t => t.level))
+    : actualMaxPower;
+  const maxPower = Math.max(highestThreshold, actualMaxPower) * 1.05; // Add 5% headroom
 
   // Draw zone threshold lines and labels
   ctx.fillStyle = '#5D6D7E';
