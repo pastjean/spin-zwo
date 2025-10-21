@@ -9,9 +9,19 @@ import type { Segment, WorkoutDefinition } from './types.js';
 // Constants for image generation
 const IMAGE_WIDTH = 1400;
 const IMAGE_HEIGHT = 600;
-const PADDING = 60;
+const PADDING = 80;
 const CHART_WIDTH = IMAGE_WIDTH - 2 * PADDING;
 const CHART_HEIGHT = IMAGE_HEIGHT - 2 * PADDING;
+
+// FTP Zone thresholds
+const ZONE_THRESHOLDS = [
+  { level: 0.55, name: 'Z1/Z2' },
+  { level: 0.75, name: 'Z2/Z3' },
+  { level: 0.90, name: 'Z3/Z4' },
+  { level: 1.05, name: 'Z4/Z5' },
+  { level: 1.20, name: 'Z5/Z6' },
+  { level: 1.50, name: 'Z6/Z7' },
+];
 
 // Power zone colors (matching the example images)
 const POWER_COLORS = {
@@ -69,29 +79,66 @@ export function generateWorkoutImage(
 
   // Calculate dimensions
   const totalDuration = getTotalDuration(workout.segments);
-  const maxPower = Math.max(
-    1.2,
-    ...workout.segments.map((seg) => {
-      if (seg.type === 'warmup' || seg.type === 'cooldown')
-        return seg.powerHigh;
-      if (seg.type === 'ramp') return Math.max(seg.powerLow, seg.powerHigh);
-      return seg.power;
-    }),
-  );
 
-  // Draw Y-axis label (FTP percentage)
+  // Find min and max power levels
+  const powerLevels = workout.segments.flatMap((seg) => {
+    if (seg.type === 'warmup' || seg.type === 'cooldown')
+      return [seg.powerLow, seg.powerHigh];
+    if (seg.type === 'ramp') return [seg.powerLow, seg.powerHigh];
+    return [seg.power];
+  });
+
+  const minPower = Math.min(...powerLevels);
+  const actualMaxPower = Math.max(...powerLevels);
+  const maxPower = Math.max(1.2, actualMaxPower);
+
+  // Determine which zone thresholds to display
+  // Include zones within range, plus one zone beyond the max
+  const relevantThresholds = ZONE_THRESHOLDS.filter((zone) => {
+    if (zone.level >= minPower && zone.level <= actualMaxPower) {
+      return true; // Zone is within range
+    }
+    // Check if this is the first zone beyond max
+    const zonesAboveMax = ZONE_THRESHOLDS.filter(z => z.level > actualMaxPower);
+    return zonesAboveMax.length > 0 && zone.level === zonesAboveMax[0].level;
+  });
+
+  // Draw zone threshold lines and labels
   ctx.fillStyle = '#5D6D7E';
-  ctx.font = 'bold 14px Arial';
-  ctx.textAlign = 'left';
-  ctx.fillText(`${Math.round(maxPower * 100)}% FTP`, 10, PADDING + 10);
-
-  // Draw horizontal grid line at the top
+  ctx.font = 'bold 12px Arial';
+  ctx.textAlign = 'right';
   ctx.strokeStyle = '#D5DBDB';
   ctx.lineWidth = 1;
+
+  // Always draw top line (max power)
+  const topY = PADDING;
   ctx.beginPath();
-  ctx.moveTo(PADDING, PADDING);
-  ctx.lineTo(IMAGE_WIDTH - PADDING, PADDING);
+  ctx.moveTo(PADDING, topY);
+  ctx.lineTo(IMAGE_WIDTH - PADDING, topY);
   ctx.stroke();
+  ctx.fillText(`${Math.round(maxPower * 100)}%`, PADDING - 10, topY + 5);
+
+  // Draw zone threshold lines
+  for (const threshold of relevantThresholds) {
+    const y = PADDING + CHART_HEIGHT - (threshold.level / maxPower) * CHART_HEIGHT;
+
+    ctx.strokeStyle = '#BDC3C7';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.moveTo(PADDING, y);
+    ctx.lineTo(IMAGE_WIDTH - PADDING, y);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.fillStyle = '#7F8C8D';
+    ctx.font = 'bold 11px Arial';
+    ctx.fillText(`${Math.round(threshold.level * 100)}%`, PADDING - 10, y + 4);
+  }
+
+  // Draw baseline (0%)
+  ctx.strokeStyle = '#34495E';
+  ctx.lineWidth = 2;
 
   // Draw workout segments
   let currentTime = 0;
@@ -151,13 +198,19 @@ export function generateWorkoutImage(
     currentTime += segment.duration;
   }
 
-  // Draw baseline
-  ctx.strokeStyle = '#D5DBDB';
+  // Draw baseline (0%)
+  ctx.strokeStyle = '#34495E';
   ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(PADDING, PADDING + CHART_HEIGHT);
   ctx.lineTo(IMAGE_WIDTH - PADDING, PADDING + CHART_HEIGHT);
   ctx.stroke();
+
+  // Label baseline
+  ctx.fillStyle = '#5D6D7E';
+  ctx.font = 'bold 12px Arial';
+  ctx.textAlign = 'right';
+  ctx.fillText('0%', PADDING - 10, PADDING + CHART_HEIGHT + 5);
 
   // Save to file
   const buffer = canvas.toBuffer('image/png');
