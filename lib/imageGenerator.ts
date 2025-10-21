@@ -138,7 +138,7 @@ export function generateWorkoutImage(
 
     ctx.fillStyle = '#7F8C8D';
     ctx.font = 'bold 11px Arial';
-    ctx.fillText(`${Math.round(threshold.level * 100)}%`, PADDING - 10, y + 4);
+    ctx.fillText(`${Math.round(threshold.level * 100)}% ${threshold.name}`, PADDING - 10, y + 4);
   }
 
   // Draw baseline (0%)
