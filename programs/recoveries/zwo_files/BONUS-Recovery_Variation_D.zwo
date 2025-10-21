@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>BONUS: Fun Recovery Ride</n>
+      <description>Playful recovery with random bursts. Keeps recovery interesting and engaging. Alternative recovery workout.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Bonus"/>
+        <tag name="Recovery"/>
+        <tag name="Active Recovery"/>
+        <tag name="Zone 1"/>
+        <tag name="Variation D"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.55">
+            <textevent timeoffset="10" message="Bonus recovery - fun and playful!"/>
+        </Warmup>
+        <SteadyState Duration="240" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.8">
+            <textevent timeoffset="5" message="Quick burst!"/>
+        </SteadyState>
+        <SteadyState Duration="270" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="45" Power="0.75">
+            <textevent timeoffset="5" message="Medium burst"/>
+        </SteadyState>
+        <SteadyState Duration="315" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.85">
+            <textevent timeoffset="5" message="Short punch!"/>
+        </SteadyState>
+        <SteadyState Duration="280" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Longer easy burst"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.8">
+            <textevent timeoffset="5" message="Another quick one!"/>
+        </SteadyState>
+        <SteadyState Duration="270" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="0.75">
+            <textevent timeoffset="5" message="Mix it up"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.45">
+            <textevent timeoffset="10" message="Fun recovery complete!"/>
+        </Cooldown>
+      </workout>
+  </workout_file>

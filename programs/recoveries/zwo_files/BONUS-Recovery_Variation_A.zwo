@@ -1,43 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W10-W: Active Recovery</n>
-      <description>Active recovery - peak training week.</description>
+      <n>BONUS: Short Bursts Recovery</n>
+      <description>Active recovery with short varied intensity bursts. Use this as an alternative to any Wednesday recovery ride.</description>
       <sportType>bike</sportType>
       <tags>
-          <tag name="Week 10"/>
+          <tag name="Bonus"/>
         <tag name="Recovery"/>
-        <tag name="Zone 1"/>
         <tag name="Active Recovery"/>
+        <tag name="Zone 1"/>
+        <tag name="Variation A"/>
       </tags>
       <workout>
           <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.55">
+            <textevent timeoffset="10" message="Bonus recovery workout - short bursts"/>
         </Warmup>
         <SteadyState Duration="180" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Light burst 1/6"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
-        <SteadyState Duration="60" Power="0.75">
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Burst 2/6"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.8">
+            <textevent timeoffset="10" message="Burst 3/6 - moderate"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
-        <SteadyState Duration="60" Power="0.75">
+        <SteadyState Duration="60" Power="0.8">
+            <textevent timeoffset="10" message="Burst 4/6"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Burst 5/6 - easing down"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Final burst 6/6"/>
         </SteadyState>
         <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.45">
+            <textevent timeoffset="10" message="Great active recovery!"/>
         </Cooldown>
       </workout>
   </workout_file>

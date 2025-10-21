@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W5-W: Recovery Spin</n>
-      <description>Easy 45-minute recovery.</description>
+      <n>W5-W: Active Recovery</n>
+      <description>Active recovery with varied bursts. Back to building!</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 5"/>
         <tag name="Recovery"/>
         <tag name="Zone 1"/>
+        <tag name="Active Recovery"/>
       </tags>
       <workout>
-          <SteadyState Duration="2700" Power="0.6">
-            <textevent timeoffset="10" message="Easy recovery pace"/>
-            <textevent timeoffset="1350" message="Halfway - stay easy"/>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.55">
+        </Warmup>
+        <SteadyState Duration="180" Power="0.5">
         </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Burst 1/6"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Burst 2/6"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.8">
+            <textevent timeoffset="10" message="Burst 3/6"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Burst 4/6"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Burst 5/6"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Final burst 6/6"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.45">
+        </Cooldown>
       </workout>
   </workout_file>

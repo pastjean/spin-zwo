@@ -2,7 +2,7 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W4-T: Recovery Cadence</n>
-      <description>Easy 60-minute recovery with cadence drills. Focus on technique.</description>
+      <description>Easy 60-minute recovery with high cadence drills. Focus on smooth pedaling technique.</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 4"/>
@@ -11,35 +11,36 @@
         <tag name="Zone 1-2"/>
       </tags>
       <workout>
-          <SteadyState Duration="600" Power="0.65">
-            <textevent timeoffset="10" message="Easy recovery pace - focus on smooth pedaling"/>
-            <textevent timeoffset="540" message="Prepare for first cadence drill"/>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.6">
+            <textevent timeoffset="10" message="Easy warmup - focus on smooth pedaling"/>
+        </Warmup>
+        <SteadyState Duration="180" Power="0.55">
         </SteadyState>
         <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 1/5 - aim for 100+ RPM"/>
+            <textevent timeoffset="10" message="Cadence drill 1/5 - aim for 100+ RPM, light gear"/>
         </SteadyState>
-        <SteadyState Duration="180" Power="0.65">
-        </SteadyState>
-        <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 2/5 - high RPM, smooth"/>
-        </SteadyState>
-        <SteadyState Duration="180" Power="0.65">
+        <SteadyState Duration="180" Power="0.55">
         </SteadyState>
         <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 3/5 - stay relaxed"/>
+            <textevent timeoffset="10" message="Cadence drill 2/5 - high RPM, stay smooth"/>
         </SteadyState>
-        <SteadyState Duration="180" Power="0.65">
-        </SteadyState>
-        <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 4/5 - efficient pedaling"/>
-        </SteadyState>
-        <SteadyState Duration="180" Power="0.65">
+        <SteadyState Duration="180" Power="0.55">
         </SteadyState>
         <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Final cadence drill 5/5"/>
+            <textevent timeoffset="10" message="Cadence drill 3/5 - relaxed upper body"/>
         </SteadyState>
-        <SteadyState Duration="1095" Power="0.65">
-            <textevent timeoffset="900" message="Recovery ride complete"/>
+        <SteadyState Duration="180" Power="0.55">
         </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Cadence drill 4/5 - efficient circles"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Final cadence drill 5/5 - perfect form"/>
+        </SteadyState>
+        <Cooldown Duration="1095" PowerHigh="0.6" PowerLow="0.5">
+            <textevent timeoffset="500" message="Recovery week - great technique work"/>
+        </Cooldown>
       </workout>
   </workout_file>

@@ -7,7 +7,7 @@
   "type": "module",
   "main": "programs/12_weeks_ftp_builder/12_weeks_ftp_builder.ts",
   "scripts": {
-    "start": "bun run programs/12_weeks_ftp_builder/12_weeks_ftp_builder.ts",
+    "start": "bun run programs/12_weeks_ftp_builder/12_weeks_ftp_builder.ts && bun run programs/recoveries/recoveries.ts",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint --write .",

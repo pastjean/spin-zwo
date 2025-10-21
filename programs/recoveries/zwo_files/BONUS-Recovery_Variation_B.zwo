@@ -1,59 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W7-W: Active Recovery</n>
-      <description>Active recovery - staying fresh during peak training.</description>
+      <n>BONUS: Pyramid Recovery</n>
+      <description>Recovery ride with pyramid structure. Builds up and down in intensity. Alternative recovery workout.</description>
       <sportType>bike</sportType>
       <tags>
-          <tag name="Week 7"/>
+          <tag name="Bonus"/>
         <tag name="Recovery"/>
-        <tag name="Zone 1"/>
         <tag name="Active Recovery"/>
+        <tag name="Zone 1"/>
+        <tag name="Variation B"/>
       </tags>
       <workout>
           <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.55">
+            <textevent timeoffset="10" message="Bonus recovery - pyramid structure"/>
         </Warmup>
         <SteadyState Duration="120" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Pyramid up - level 1"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Level 2"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.8">
+            <textevent timeoffset="10" message="Peak - level 3"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Pyramid down - level 2"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Level 1"/>
         </SteadyState>
         <SteadyState Duration="120" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Second pyramid - level 1"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Level 2"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.8">
+            <textevent timeoffset="10" message="Peak again"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Coming down"/>
         </SteadyState>
         <SteadyState Duration="60" Power="0.5">
         </SteadyState>
         <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Final level"/>
         </SteadyState>
         <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.45">
+            <textevent timeoffset="10" message="Pyramid complete - well done!"/>
         </Cooldown>
       </workout>
   </workout_file>

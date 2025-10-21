@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>BONUS: High Cadence Recovery</n>
+      <description>Recovery focused on high cadence technique. Perfect for developing smooth pedaling. Alternative recovery workout.</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Bonus"/>
+        <tag name="Recovery"/>
+        <tag name="Cadence"/>
+        <tag name="Technique"/>
+        <tag name="Zone 1"/>
+        <tag name="Variation C"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.55">
+            <textevent timeoffset="10" message="Bonus recovery - cadence focus"/>
+        </Warmup>
+        <SteadyState Duration="300" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="High cadence 1/5 - 100+ RPM, light gear"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.75">
+            <textevent timeoffset="10" message="High cadence 2/5 - 95-100 RPM"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="High cadence 3/5 - 100+ RPM"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.75">
+            <textevent timeoffset="10" message="High cadence 4/5 - stay smooth"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.7">
+            <textevent timeoffset="10" message="Final cadence 5/5 - perfect circles"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.55" PowerLow="0.45">
+            <textevent timeoffset="10" message="Excellent technique work!"/>
+        </Cooldown>
+      </workout>
+  </workout_file>

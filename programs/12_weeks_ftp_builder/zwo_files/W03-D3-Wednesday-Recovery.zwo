@@ -2,17 +2,68 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W3-W: Active Recovery</n>
-      <description>Easy 45-minute recovery spin.</description>
+      <description>Active recovery with pyramid structure. Varied intensity keeps it engaging.</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 3"/>
         <tag name="Recovery"/>
         <tag name="Zone 1"/>
+        <tag name="Active Recovery"/>
       </tags>
       <workout>
-          <SteadyState Duration="2700" Power="0.6">
-            <textevent timeoffset="10" message="Easy recovery pace"/>
-            <textevent timeoffset="1350" message="Halfway - stay relaxed"/>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.55">
+        </Warmup>
+        <SteadyState Duration="120" Power="0.5">
         </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Building up - burst 1"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Burst 2"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.8">
+            <textevent timeoffset="10" message="Peak burst 3"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Coming down - burst 4"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Final burst 5"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Second pyramid - burst 1"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Burst 2"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.8">
+            <textevent timeoffset="10" message="Peak burst 3"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.75">
+            <textevent timeoffset="10" message="Coming down"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.7">
+            <textevent timeoffset="10" message="Final burst"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.45">
+        </Cooldown>
       </workout>
   </workout_file>
