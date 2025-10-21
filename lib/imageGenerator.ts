@@ -15,12 +15,12 @@ const CHART_HEIGHT = IMAGE_HEIGHT - 2 * PADDING;
 
 // FTP Zone thresholds
 const ZONE_THRESHOLDS = [
-  { level: 0.55, name: 'Z1/Z2' },
-  { level: 0.75, name: 'Z2/Z3' },
-  { level: 0.90, name: 'Z3/Z4' },
-  { level: 1.05, name: 'Z4/Z5' },
-  { level: 1.20, name: 'Z5/Z6' },
-  { level: 1.50, name: 'Z6/Z7' },
+  { level: 0.55, name: 'Z2 Endurance' },
+  { level: 0.75, name: 'Z3 Tempo' },
+  { level: 0.90, name: 'Z4 Threshold' },
+  { level: 1.05, name: 'Z5 VO2max' },
+  { level: 1.20, name: 'Z6 Anaerobic' },
+  { level: 1.50, name: 'Z7 Neuromuscular' },
 ];
 
 // Power zone colors (matching the example images)
