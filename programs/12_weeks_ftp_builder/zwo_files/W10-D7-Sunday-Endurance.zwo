@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W10-Su: Endurance 2hr</n>
+      <description>workout.description, 📊 98 TSS · IF 0.70 · 120 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 10"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="7200" Power="0.7">
+            <textevent timeoffset="1800" message="30 min"/>
+            <textevent timeoffset="3600" message="Halfway!"/>
+            <textevent timeoffset="5400" message="90 min - final 30 minutes"/>
+            <textevent timeoffset="6900" message="Almost done - peak week complete!"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

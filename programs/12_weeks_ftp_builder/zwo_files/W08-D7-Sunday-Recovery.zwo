@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W8-Su: Active Recovery</n>
-      <description>Optional 30-45 minute rest or very easy spin.</description>
+      <n>W8-Su: Optional Recovery</n>
+      <description>workout.description, 📊 23 TSS · IF 0.55 · 45 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 8"/>
         <tag name="Recovery"/>
-        <tag name="Zone 1"/>
         <tag name="Optional"/>
       </tags>
       <workout>
           <SteadyState Duration="2700" Power="0.55">
-            <textevent timeoffset="10" message="Optional rest - recovery week"/>
-            <textevent timeoffset="1350" message="Halfway - stay easy"/>
-            <textevent timeoffset="2400" message="Good recovery - ready for final block!"/>
+            <textevent timeoffset="10" message="Optional rest day"/>
+            <textevent timeoffset="1350" message="Recovery complete - ready for final block!"/>
         </SteadyState>
       </workout>
   </workout_file>

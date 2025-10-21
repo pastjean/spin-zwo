@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W1-S: Base Endurance</n>
-      <description>90-minute endurance ride with short accelerations to build aerobic base.</description>
+      <n>W1-S: Base Endurance with Accelerations</n>
+      <description>workout.description, 📊 76 TSS · IF 0.71 · 91 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 1"/>
@@ -13,36 +13,23 @@
           <SteadyState Duration="1200" Power="0.7">
             <textevent timeoffset="10" message="Settle into steady endurance pace"/>
         </SteadyState>
-        <SteadyState Duration="30" Power="0.9">
-            <textevent timeoffset="5" message="Acceleration 1/6"/>
+        <SteadyState Duration="30" Power="0.95">
+            <textevent timeoffset="5" message="Acceleration 1/6 - quick surge"/>
         </SteadyState>
         <SteadyState Duration="1170" Power="0.7">
         </SteadyState>
-        <SteadyState Duration="30" Power="0.9">
-            <textevent timeoffset="5" message="Acceleration 2/6"/>
+        <SteadyState Duration="30" Power="0.95">
         </SteadyState>
         <SteadyState Duration="1170" Power="0.7">
         </SteadyState>
-        <SteadyState Duration="30" Power="0.9">
-            <textevent timeoffset="5" message="Acceleration 3/6"/>
+        <SteadyState Duration="30" Power="0.95">
         </SteadyState>
         <SteadyState Duration="1170" Power="0.7">
         </SteadyState>
-        <SteadyState Duration="30" Power="0.9">
-            <textevent timeoffset="5" message="Acceleration 4/6"/>
-        </SteadyState>
-        <SteadyState Duration="1170" Power="0.7">
-        </SteadyState>
-        <SteadyState Duration="30" Power="0.9">
-            <textevent timeoffset="5" message="Acceleration 5/6"/>
-        </SteadyState>
-        <SteadyState Duration="1170" Power="0.7">
-        </SteadyState>
-        <SteadyState Duration="30" Power="0.9">
-            <textevent timeoffset="5" message="Final acceleration 6/6"/>
+        <SteadyState Duration="30" Power="0.95">
         </SteadyState>
         <SteadyState Duration="600" Power="0.7">
-            <textevent timeoffset="300" message="Final minutes - well done"/>
+            <textevent timeoffset="300" message="Final stretch - well done"/>
         </SteadyState>
       </workout>
   </workout_file>

@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W5-Th: Progressive Threshold</n>
-      <description>3 x 12-minute FTP intervals at 100% FTP.</description>
+      <n>W5-Th: Progressive Threshold 3x12</n>
+      <description>workout.description, 📊 97 TSS · IF 0.84 · 83 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 5"/>
         <tag name="FTP"/>
-        <tag name="Progressive"/>
+        <tag name="Threshold"/>
         <tag name="Zone 4"/>
       </tags>
       <workout>
           <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
         </Warmup>
         <SteadyState Duration="720" Power="1">
-            <textevent timeoffset="10" message="FTP 1/3 - 12 minutes at threshold"/>
+            <textevent timeoffset="10" message="FTP 1/3 - 12 min at threshold"/>
             <textevent timeoffset="360" message="Halfway through first"/>
         </SteadyState>
         <SteadyState Duration="360" Power="0.55">
         </SteadyState>
         <SteadyState Duration="720" Power="1">
             <textevent timeoffset="10" message="FTP 2/3 - maintain that power"/>
-            <textevent timeoffset="360" message="Halfway through second"/>
+            <textevent timeoffset="360" message="Halfway"/>
         </SteadyState>
         <SteadyState Duration="360" Power="0.55">
         </SteadyState>
         <SteadyState Duration="720" Power="1">
-            <textevent timeoffset="10" message="Final FTP 3/3 - 12 minutes to glory"/>
+            <textevent timeoffset="10" message="Final FTP 3/3 - 12 min strong"/>
             <textevent timeoffset="360" message="Halfway through final interval"/>
+            <textevent timeoffset="660" message="Final minute - dig deep!"/>
         </SteadyState>
         <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
         </Cooldown>

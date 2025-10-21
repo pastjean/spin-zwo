@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W5-S: Extended Tempo Endurance</n>
-      <description>100-minute ride with 3 x 18-minute tempo intervals.</description>
+      <n>W5-S: Extended Tempo 3x18</n>
+      <description>workout.description, 📊 90 TSS · IF 0.77 · 92 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 5"/>

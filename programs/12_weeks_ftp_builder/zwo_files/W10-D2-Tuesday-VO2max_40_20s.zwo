@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W10-T: VO2max 40/20s</n>
+      <description>workout.description, 📊 98 TSS · IF 0.89 · 74 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 10"/>
+        <tag name="VO2max"/>
+        <tag name="Zone 5"/>
+        <tag name="40/20s"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+            <textevent timeoffset="1080" message="Get ready for VO2max 40/20s"/>
+        </Warmup>
+        <SteadyState Duration="40" Power="1.2">
+            <textevent timeoffset="5" message="Block 1: 40sec ON 1/10"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+            <textevent timeoffset="5" message="Final interval of block 1"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+            <textevent timeoffset="10" message="Good rest - Block 1 complete"/>
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+            <textevent timeoffset="5" message="Block 2: 40sec ON 1/10"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+            <textevent timeoffset="5" message="Final interval of block 2"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.55">
+            <textevent timeoffset="10" message="Good rest - Block 2 complete"/>
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+            <textevent timeoffset="5" message="Block 3: 40sec ON 1/10 - FINAL block!"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.2">
+            <textevent timeoffset="5" message="FINAL interval - everything you have!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+            <textevent timeoffset="10" message="Outstanding VO2max work!"/>
+        </Cooldown>
+      </workout>
+  </workout_file>

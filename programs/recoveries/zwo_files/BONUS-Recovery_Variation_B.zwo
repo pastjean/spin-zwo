@@ -2,7 +2,7 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>BONUS: Pyramid Recovery</n>
-      <description>Recovery ride with pyramid structure. Builds up and down in intensity. Alternative recovery workout.</description>
+      <description>workout.description, 📊 25 TSS · IF 0.59 · 42 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Bonus"/>

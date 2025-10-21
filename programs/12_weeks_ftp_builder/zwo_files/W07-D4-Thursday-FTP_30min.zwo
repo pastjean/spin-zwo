@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W7-Th: Continuous Threshold 30min</n>
-      <description>30-minute continuous FTP effort. Peak threshold endurance.</description>
+      <n>W7-Th: Continuous 30min Threshold</n>
+      <description>workout.description, 📊 78 TSS · IF 0.85 · 65 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 7"/>
@@ -12,10 +12,10 @@
       </tags>
       <workout>
           <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
-            <textevent timeoffset="1080" message="Get ready for 30-min threshold"/>
+            <textevent timeoffset="1080" message="Get ready for 30-min continuous threshold"/>
         </Warmup>
         <SteadyState Duration="1800" Power="1">
-            <textevent timeoffset="10" message="30 minutes at FTP - stay steady"/>
+            <textevent timeoffset="10" message="30 minutes @ FTP - stay steady"/>
             <textevent timeoffset="600" message="10 min - settle into rhythm"/>
             <textevent timeoffset="900" message="15 min - halfway!"/>
             <textevent timeoffset="1200" message="20 min - two-thirds done"/>

@@ -2,7 +2,7 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W12-W: Easy Recovery</n>
-      <description>Very easy 30-minute spin. Recovery from test.</description>
+      <description>workout.description, 📊 15 TSS · IF 0.55 · 30 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 12"/>
@@ -11,7 +11,8 @@
       </tags>
       <workout>
           <SteadyState Duration="1800" Power="0.55">
-            <textevent timeoffset="10" message="Very easy recovery - let the test results sink in"/>
+            <textevent timeoffset="10" message="Very easy recovery - let test results sink in"/>
+            <textevent timeoffset="900" message="Halfway - how much did you improve?"/>
         </SteadyState>
       </workout>
   </workout_file>

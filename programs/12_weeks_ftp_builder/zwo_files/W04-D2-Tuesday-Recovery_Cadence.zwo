@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W4-T: Recovery Cadence</n>
-      <description>Easy 60-minute recovery with high cadence drills. Focus on smooth pedaling technique.</description>
+      <n>W4-T: Recovery Cadence + Sprints</n>
+      <description>workout.description, 📊 42 TSS · IF 0.63 · 64 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 4"/>
         <tag name="Recovery"/>
         <tag name="Cadence"/>
-        <tag name="Zone 1-2"/>
+        <tag name="Sprints"/>
       </tags>
       <workout>
           <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.6">
-            <textevent timeoffset="10" message="Easy warmup - focus on smooth pedaling"/>
+            <textevent timeoffset="10" message="Easy warmup - recovery week"/>
         </Warmup>
         <SteadyState Duration="180" Power="0.55">
         </SteadyState>
-        <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 1/5 - aim for 100+ RPM, light gear"/>
+        <SteadyState Duration="60" Power="0.65">
+            <textevent timeoffset="10" message="Low cadence drill 1/3 - 50-60 rpm"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.55">
         </SteadyState>
-        <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 2/5 - high RPM, stay smooth"/>
+        <SteadyState Duration="60" Power="0.6">
+            <textevent timeoffset="10" message="High cadence drill 1/3 - 110-120 rpm"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.55">
         </SteadyState>
-        <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 3/5 - relaxed upper body"/>
+        <SteadyState Duration="60" Power="0.65">
+            <textevent timeoffset="10" message="Low cadence drill 2/3"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.55">
         </SteadyState>
-        <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Cadence drill 4/5 - efficient circles"/>
+        <SteadyState Duration="60" Power="0.6">
+            <textevent timeoffset="10" message="High cadence drill 2/3"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.55">
         </SteadyState>
-        <SteadyState Duration="120" Power="0.7">
-            <textevent timeoffset="10" message="Final cadence drill 5/5 - perfect form"/>
+        <SteadyState Duration="60" Power="0.65">
+            <textevent timeoffset="10" message="Low cadence drill 3/3"/>
         </SteadyState>
-        <Cooldown Duration="1095" PowerHigh="0.6" PowerLow="0.5">
-            <textevent timeoffset="500" message="Recovery week - great technique work"/>
+        <SteadyState Duration="180" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="60" Power="0.6">
+            <textevent timeoffset="10" message="High cadence drill 3/3"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.55">
+            <textevent timeoffset="10" message="Sprint prep - next: 10sec max efforts"/>
+        </SteadyState>
+        <SteadyState Duration="10" Power="1.5">
+            <textevent timeoffset="2" message="Sprint 1/5 - MAX effort!"/>
+        </SteadyState>
+        <SteadyState Duration="230" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="10" Power="1.5">
+            <textevent timeoffset="2" message="Sprint 2/5"/>
+        </SteadyState>
+        <SteadyState Duration="230" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="10" Power="1.5">
+            <textevent timeoffset="2" message="Sprint 3/5"/>
+        </SteadyState>
+        <SteadyState Duration="230" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="10" Power="1.5">
+            <textevent timeoffset="2" message="Sprint 4/5"/>
+        </SteadyState>
+        <SteadyState Duration="230" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="10" Power="1.5">
+            <textevent timeoffset="2" message="Final sprint 5/5!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.5">
+            <textevent timeoffset="10" message="Recovery week - neuromuscular work done"/>
         </Cooldown>
       </workout>
   </workout_file>

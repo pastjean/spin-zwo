@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W2-Su: Long Endurance</n>
-      <description>2-hour steady endurance ride. Build aerobic capacity.</description>
+      <n>W2-Su: Long Endurance 2hr</n>
+      <description>workout.description, 📊 98 TSS · IF 0.70 · 120 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 2"/>
         <tag name="Endurance"/>
         <tag name="Zone 2"/>
-        <tag name="Long Ride"/>
+        <tag name="Long"/>
       </tags>
       <workout>
-          <SteadyState Duration="7200" Power="0.7">
-            <textevent timeoffset="10" message="Long steady ride - stay comfortable"/>
-            <textevent timeoffset="1800" message="30 min - settle in for the long haul"/>
-            <textevent timeoffset="3600" message="Halfway! Keep it steady"/>
-            <textevent timeoffset="5400" message="90 min - final 30 minutes"/>
-            <textevent timeoffset="6900" message="Almost done - strong finish"/>
+          <SteadyState Duration="1800" Power="0.68">
+            <textevent timeoffset="10" message="Long steady - settle in"/>
+        </SteadyState>
+        <SteadyState Duration="1800" Power="0.7">
+        </SteadyState>
+        <SteadyState Duration="1800" Power="0.72">
+            <textevent timeoffset="900" message="Final 30 min - slight bump"/>
+        </SteadyState>
+        <SteadyState Duration="1800" Power="0.7">
+            <textevent timeoffset="900" message="Almost done!"/>
         </SteadyState>
       </workout>
   </workout_file>

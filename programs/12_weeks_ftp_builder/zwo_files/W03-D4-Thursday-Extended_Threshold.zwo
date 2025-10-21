@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W3-Th: Extended Threshold</n>
-      <description>2 x 20-minute FTP intervals. Building threshold endurance.</description>
+      <n>W3-Th: Extended Threshold 2x20</n>
+      <description>workout.description, 📊 102 TSS · IF 0.85 · 85 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 3"/>
@@ -14,16 +14,16 @@
           <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
         </Warmup>
         <SteadyState Duration="1200" Power="1">
-            <textevent timeoffset="10" message="FTP 1/2 - 20 minutes at threshold"/>
-            <textevent timeoffset="600" message="Halfway through first interval"/>
+            <textevent timeoffset="10" message="FTP 1/2 - 20 min at threshold"/>
+            <textevent timeoffset="600" message="Halfway through first"/>
             <textevent timeoffset="1140" message="Final minute - stay strong"/>
         </SteadyState>
         <SteadyState Duration="600" Power="0.55">
         </SteadyState>
         <SteadyState Duration="1200" Power="1">
-            <textevent timeoffset="10" message="FTP 2/2 - Final 20 minutes"/>
+            <textevent timeoffset="10" message="FTP 2/2 - Final 20 min"/>
             <textevent timeoffset="600" message="Halfway - dig deep"/>
-            <textevent timeoffset="1140" message="Last minute - everything you have!"/>
+            <textevent timeoffset="1140" message="Last minute - finish strong!"/>
         </SteadyState>
         <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
         </Cooldown>

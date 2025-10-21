@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W7-W: Easy Zone 1 Spin</n>
+      <description>workout.description, 📊 15 TSS · IF 0.55 · 30 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 7"/>
+        <tag name="Recovery"/>
+        <tag name="Zone 1"/>
+      </tags>
+      <workout>
+          <SteadyState Duration="1800" Power="0.55">
+            <textevent timeoffset="10" message="Easy recovery after VO2max work"/>
+            <textevent timeoffset="900" message="Stay relaxed"/>
+        </SteadyState>
+      </workout>
+  </workout_file>

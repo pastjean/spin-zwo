@@ -2,22 +2,28 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W1-Th: Tempo Building</n>
-      <description>3 x 10-minute tempo intervals at 85% FTP. Focus on smooth, sustainable power.</description>
+      <description>workout.description, 📊 61 TSS · IF 0.72 · 70 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 1"/>
         <tag name="Tempo"/>
         <tag name="Zone 3"/>
+        <tag name="Cadence"/>
       </tags>
       <workout>
           <Warmup Duration="900" PowerLow="0.5" PowerHigh="0.7">
-            <textevent timeoffset="10" message="Gradual warmup to prepare for tempo work"/>
-            <textevent timeoffset="600" message="Feeling loose and ready"/>
+            <textevent timeoffset="10" message="Progressive warmup"/>
+            <textevent timeoffset="600" message="Building toward tempo intensity"/>
         </Warmup>
-        <SteadyState Duration="600" Power="0.85">
-            <textevent timeoffset="10" message="Tempo 1/3 - Comfortably hard effort"/>
-            <textevent timeoffset="300" message="Halfway through - stay smooth"/>
-            <textevent timeoffset="540" message="Final minute - maintain form"/>
+        <SteadyState Duration="300" Power="0.85">
+            <textevent timeoffset="10" message="Tempo 1/3 - Comfortably hard, 85-95 rpm"/>
+            <textevent timeoffset="150" message="Halfway - stay smooth"/>
+        </SteadyState>
+        <SteadyState Duration="150" Power="0.85">
+            <textevent timeoffset="10" message="High cadence - shift up, 95-105 rpm"/>
+        </SteadyState>
+        <SteadyState Duration="150" Power="0.85">
+            <textevent timeoffset="10" message="Low cadence - shift down, 70-80 rpm"/>
         </SteadyState>
         <SteadyState Duration="300" Power="0.55">
         </SteadyState>
@@ -27,9 +33,11 @@
         </SteadyState>
         <SteadyState Duration="300" Power="0.55">
         </SteadyState>
-        <SteadyState Duration="600" Power="0.85">
-            <textevent timeoffset="10" message="Final tempo 3/3 - finish strong"/>
-            <textevent timeoffset="300" message="Halfway through final interval"/>
+        <SteadyState Duration="400" Power="0.85">
+            <textevent timeoffset="10" message="Final tempo 3/3"/>
+        </SteadyState>
+        <SteadyState Duration="200" Power="0.88">
+            <textevent timeoffset="10" message="Final 3 min - bump it up slightly"/>
         </SteadyState>
         <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
         </Cooldown>

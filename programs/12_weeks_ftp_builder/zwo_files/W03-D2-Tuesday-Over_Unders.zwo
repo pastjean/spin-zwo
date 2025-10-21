@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W3-T: Over/Unders</n>
-      <description>3 x (4min@95% + 4min@105%) Over/Under intervals. Teaches lactate clearance.</description>
+      <n>W3-T: Over/Unders 3x8</n>
+      <description>workout.description, 📊 74 TSS · IF 0.80 · 69 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 3"/>
         <tag name="Over/Under"/>
-        <tag name="Lactate Clearance"/>
+        <tag name="Lactate"/>
         <tag name="Zone 4-5"/>
       </tags>
       <workout>
@@ -15,10 +15,10 @@
             <textevent timeoffset="1080" message="Get ready for challenging efforts"/>
         </Warmup>
         <SteadyState Duration="240" Power="0.95">
-            <textevent timeoffset="10" message="Block 1: Under phase - 95% FTP"/>
+            <textevent timeoffset="10" message="Block 1: Under phase - 95%"/>
         </SteadyState>
         <SteadyState Duration="240" Power="1.05">
-            <textevent timeoffset="10" message="Block 1: Over phase - 105% FTP"/>
+            <textevent timeoffset="10" message="Block 1: Over phase - 105%"/>
         </SteadyState>
         <SteadyState Duration="300" Power="0.55">
         </SteadyState>
@@ -31,10 +31,10 @@
         <SteadyState Duration="300" Power="0.55">
         </SteadyState>
         <SteadyState Duration="240" Power="0.95">
-            <textevent timeoffset="10" message="Final block: Under phase"/>
+            <textevent timeoffset="10" message="Block 3: Final under phase"/>
         </SteadyState>
         <SteadyState Duration="240" Power="1.05">
-            <textevent timeoffset="10" message="Final over phase - dig deep!"/>
+            <textevent timeoffset="10" message="Block 3: Final over - dig deep!"/>
         </SteadyState>
         <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
         </Cooldown>

@@ -2,18 +2,18 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W8-S: Relaxed Endurance</n>
-      <description>75-minute easy endurance ride.</description>
+      <description>workout.description, 📊 58 TSS · IF 0.68 · 75 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 8"/>
         <tag name="Recovery"/>
         <tag name="Endurance"/>
-        <tag name="Zone 2"/>
       </tags>
       <workout>
           <SteadyState Duration="4500" Power="0.68">
-            <textevent timeoffset="2250" message="Halfway - keep it relaxed"/>
-            <textevent timeoffset="4200" message="Almost done"/>
+            <textevent timeoffset="10" message="Easy endurance - no structure"/>
+            <textevent timeoffset="2250" message="Halfway - keep relaxed"/>
+            <textevent timeoffset="4200" message="Almost done - recovery week complete"/>
         </SteadyState>
       </workout>
   </workout_file>

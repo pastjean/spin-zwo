@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W6-T: Push & Pull</n>
+      <description>workout.description, 📊 96 TSS · IF 0.77 · 98 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 6"/>
+        <tag name="Push & Pull"/>
+        <tag name="Cadence"/>
+        <tag name="Zone 3-4"/>
+      </tags>
+      <workout>
+          <Warmup Duration="1200" PowerLow="0.5" PowerHigh="0.75">
+            <textevent timeoffset="1080" message="Get ready for Push & Pull work"/>
+        </Warmup>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Push 1/6: High cadence 100-110 rpm"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Pull 1/6: Low cadence 55-65 rpm"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Push 2/6: High cadence"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Pull 2/6: Low cadence"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Push 3/6: High cadence"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Pull 3/6: Low cadence"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Push 4/6: High cadence"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Pull 4/6: Low cadence"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Push 5/6: High cadence"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Pull 5/6: Low cadence"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.55">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Push 6/6: Final high cadence"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.88">
+            <textevent timeoffset="10" message="Pull 6/6: Final low cadence - done!"/>
+        </SteadyState>
+        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+            <textevent timeoffset="10" message="Great neuromuscular work!"/>
+        </Cooldown>
+      </workout>
+  </workout_file>
