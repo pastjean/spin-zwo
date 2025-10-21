@@ -3,6 +3,7 @@
 // For local Node.js execution only - saves ZWO files to local filesystem
 
 import { saveZWOFilesToDisk } from "../../lib/fileGenerator.js";
+import { generateAllWorkoutImages } from "../../lib/imageGenerator.js";
 import type { WorkoutDefinition } from "../../lib/types.js";
 
 // Define all workouts for 12 weeks
@@ -2120,5 +2121,8 @@ export const workouts: Record<string, WorkoutDefinition> = {
 // If running directly with Node.js
 if (import.meta.url === `file://${process.argv[1]}`) {
   const outputDir = new URL("./zwo_files", import.meta.url).pathname;
+  const imageDir = new URL("./images", import.meta.url).pathname;
+
   saveZWOFilesToDisk(outputDir, workouts);
+  generateAllWorkoutImages(workouts, imageDir, 200); // Using 200W as reference FTP for visualization
 }

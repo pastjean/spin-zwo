@@ -20,5 +20,8 @@
     "@biomejs/biome": "^2.2.5",
     "@types/node": "^24.7.1",
     "bun": "^1.2.4"
+  },
+  "dependencies": {
+    "canvas": "^3.2.0"
   }
 }
