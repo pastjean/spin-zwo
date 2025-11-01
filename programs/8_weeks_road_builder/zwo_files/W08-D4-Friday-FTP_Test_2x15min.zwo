@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W8-Fri: FTP Test 2x15min (Alternative)</n>
+      <description>workout.description, 📊 79 TSS · IF 0.85 · 66 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 8"/>
+        <tag name="FTP Test"/>
+        <tag name="Testing"/>
+        <tag name="Threshold"/>
+        <tag name="Alternative"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <Warmup Duration="300" PowerLow="0.7" PowerHigh="0.85">
+        </Warmup>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="60" Power="1">
+            <textevent timeoffset="10" message="1min opener"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="900" Power="0.98">
+            <textevent timeoffset="10" message="Test 1/2 - 15min @ 98%"/>
+            <textevent timeoffset="450" message="Halfway through test 1"/>
+            <textevent timeoffset="870" message="30sec - finish strong!"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="900" Power="0.98">
+            <textevent timeoffset="10" message="Test 2/2 - Final 15min!"/>
+            <textevent timeoffset="450" message="Halfway through test 2"/>
+            <textevent timeoffset="870" message="30sec - empty the tank!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.4">
+        </Cooldown>
+      </workout>
+  </workout_file>

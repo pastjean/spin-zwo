@@ -37,8 +37,8 @@ await saveZWOFilesToDisk(
 // Generate workout images
 console.log("Generating workout images...");
 await generateAllWorkoutImages(
-  "programs/8_weeks_road_builder/images",
-  workouts
+  workouts,
+  "programs/8_weeks_road_builder/images"
 );
 
 console.log("✅ 8-Week Road Builder generation complete!");

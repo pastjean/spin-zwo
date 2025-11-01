@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W1-Fri: Cruise Intervals 4x6min</n>
+      <description>workout.description, 📊 65 TSS · IF 0.80 · 61 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 1"/>
+        <tag name="Threshold"/>
+        <tag name="FTP"/>
+        <tag name="Cruise Intervals"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.7">
+            <textevent timeoffset="10" message="Progressive warmup"/>
+        </Warmup>
+        <Warmup Duration="300" PowerLow="0.7" PowerHigh="0.85">
+            <textevent timeoffset="10" message="Building toward threshold"/>
+        </Warmup>
+        <SteadyState Duration="180" Power="0.6">
+            <textevent timeoffset="10" message="Easy spin before intervals"/>
+        </SteadyState>
+        <SteadyState Duration="360" Power="0.95">
+            <textevent timeoffset="10" message="Interval 1/4 @ 95% - Settle in"/>
+            <textevent timeoffset="180" message="Halfway - smooth and steady"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="360" Power="0.95">
+            <textevent timeoffset="10" message="Interval 2/4 - Same effort"/>
+            <textevent timeoffset="180" message="Halfway through interval 2"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="360" Power="0.95">
+            <textevent timeoffset="10" message="Interval 3/4 - Stay focused"/>
+            <textevent timeoffset="180" message="Halfway - keep it steady"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="360" Power="0.95">
+            <textevent timeoffset="10" message="Final interval 4/4 - Finish strong!"/>
+            <textevent timeoffset="180" message="Halfway - you've got this!"/>
+            <textevent timeoffset="330" message="30sec - push through!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.4">
+            <textevent timeoffset="10" message="Great work! Easy cooldown"/>
+        </Cooldown>
+      </workout>
+  </workout_file>

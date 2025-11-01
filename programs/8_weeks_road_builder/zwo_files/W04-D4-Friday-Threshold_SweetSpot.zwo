@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W4-Fri: Sweet Spot 2x12min</n>
+      <description>workout.description, 📊 54 TSS · IF 0.76 · 56 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 4"/>
+        <tag name="Threshold"/>
+        <tag name="Sweet Spot"/>
+        <tag name="Recovery"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <Warmup Duration="300" PowerLow="0.7" PowerHigh="0.85">
+        </Warmup>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="720" Power="0.88">
+            <textevent timeoffset="10" message="Interval 1/2 @ 88% Sweet Spot"/>
+            <textevent timeoffset="360" message="Halfway - steady effort"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="720" Power="0.88">
+            <textevent timeoffset="10" message="Interval 2/2 - Final interval"/>
+            <textevent timeoffset="360" message="Halfway"/>
+            <textevent timeoffset="690" message="30sec - finish strong!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.4">
+        </Cooldown>
+      </workout>
+  </workout_file>
