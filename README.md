@@ -4,6 +4,15 @@ Generate ZWO workout files for cycling training programs.
 
 ## Available Programs
 
+- **[8 Weeks Road Builder](programs/8_weeks_road_builder/)** - An 8-week polarized training program (80/20) with 40 workouts including:
+  - **Polarized Training** - 80% low intensity (Z1-Z2), 15-20% high intensity (Z4-Z5)
+  - **VO2max Protocols** - 30/30s, 40/20s, 4x4min, mixed intervals
+  - **Threshold Development** - Cruise intervals, over/unders, progressive builds, threshold + surges
+  - **Long Endurance** - Progressive volume building (90-150min)
+  - **Recovery Weeks** - Weeks 4 & 8 with 35% volume reduction
+  - **FTP Testing** - Final week includes 20min and 2x15min test protocols
+  - **MyWhoosh Alternatives** - Every workout includes platform alternatives
+  - **Weekly Hours** - 6-8.5 hours (5-5.5 hours during recovery weeks)
 - **[12 Weeks FTP Builder](programs/12_weeks_ftp_builder/)** - A complete 12-week program with 58 workouts including:
   - **FTP Tests** - Baseline and final assessment
   - **Recovery Rides** - Active recovery, easy spins, and recovery cadence drills
