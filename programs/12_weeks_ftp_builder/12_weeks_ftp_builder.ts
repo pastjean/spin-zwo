@@ -293,18 +293,19 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   "W02-D3-Wednesday-Easy_Spin": {
-    name: "W2-W: Easy Zone 1 Spin",
+    name: "W2-W: Easy Zone 2",
     description:
-      "30min pure Zone 1 recovery. Let the legs spin.\n\n📊 12 TSS · IF 0.40",
-    tags: ["Week 2", "Recovery", "Zone 1"],
+      "60min easy Zone 2 endurance. Building aerobic volume.\n\n💡 Consume 30g carbs/hr\n📊 46 TSS · IF 0.68",
+    tags: ["Week 2", "Endurance", "Zone 2"],
     segments: [
       {
         type: "steady",
-        duration: 1800,
-        power: 0.55,
+        duration: 3600,
+        power: 0.68,
         messages: [
-          { time: 10, text: "Zone 1 only - very easy" },
-          { time: 900, text: "Halfway - stay relaxed" },
+          { time: 10, text: "Easy Zone 2 - building volume" },
+          { time: 1800, text: "Halfway - steady and relaxed" },
+          { time: 3300, text: "Almost done - great aerobic work" },
         ],
       },
     ],
@@ -733,7 +734,28 @@ export const workouts: Record<string, WorkoutDefinition> = {
   "W04-D6-Saturday-Easy_Endurance": {
     name: "W4-S: Relaxed Endurance",
     description:
-      "75min easy endurance.\n\n🍖 Recovery nutrition focus\n📊 45 TSS · IF 0.60",
+      "120min easy endurance. Recovery intensity with added volume to maintain fitness.\n\n🍖 Recovery nutrition focus\n💡 Consume 60g carbs/hr\n📊 98 TSS · IF 0.70",
+    tags: ["Week 4", "Recovery", "Endurance"],
+    segments: [
+      {
+        type: "steady",
+        duration: 7200,
+        power: 0.70,
+        messages: [
+          { time: 10, text: "Easy endurance - no structure" },
+          { time: 1800, text: "30 min - keep relaxed and steady" },
+          { time: 3600, text: "Halfway - recovery pace, building volume" },
+          { time: 5400, text: "90 min - feeling good" },
+          { time: 6900, text: "Almost done - great recovery week" },
+        ],
+      },
+    ],
+  },
+
+  "W04-D7-Sunday-Recovery": {
+    name: "W4-Su: Easy Endurance",
+    description:
+      "75min easy Zone 2 ride. Maintains training load while staying in recovery.\n\n🍖 Recovery nutrition focus\n💡 Consume 30-40g carbs/hr\n📊 58 TSS · IF 0.68",
     tags: ["Week 4", "Recovery", "Endurance"],
     segments: [
       {
@@ -741,27 +763,9 @@ export const workouts: Record<string, WorkoutDefinition> = {
         duration: 4500,
         power: 0.68,
         messages: [
-          { time: 10, text: "Easy endurance - no structure" },
-          { time: 2250, text: "Halfway - keep relaxed" },
-          { time: 4200, text: "Almost done - great recovery week" },
-        ],
-      },
-    ],
-  },
-
-  "W04-D7-Sunday-Recovery": {
-    name: "W4-Su: Optional Recovery",
-    description:
-      "30-45min optional easy spin.\n\n🍖 Recovery nutrition focus\n📊 18 TSS · IF 0.45",
-    tags: ["Week 4", "Recovery", "Optional"],
-    segments: [
-      {
-        type: "steady",
-        duration: 2700,
-        power: 0.55,
-        messages: [
-          { time: 10, text: "Optional rest day" },
-          { time: 1350, text: "Recovery week complete - ready for Block 2!" },
+          { time: 10, text: "Easy endurance - recovery pace" },
+          { time: 2250, text: "Halfway - feeling fresh" },
+          { time: 4200, text: "Recovery week complete - ready for Block 2!" },
         ],
       },
     ],
@@ -835,17 +839,18 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   "W05-D3-Wednesday-Easy_Spin": {
-    name: "W5-W: Easy Zone 1 Spin",
-    description: "30min Zone 1 recovery.\n\n📊 12 TSS · IF 0.40",
-    tags: ["Week 5", "Recovery", "Zone 1"],
+    name: "W5-W: Easy Zone 2",
+    description: "60min easy Zone 2 endurance. Building aerobic volume.\n\n💡 Consume 30g carbs/hr\n📊 46 TSS · IF 0.68",
+    tags: ["Week 5", "Endurance", "Zone 2"],
     segments: [
       {
         type: "steady",
-        duration: 1800,
-        power: 0.55,
+        duration: 3600,
+        power: 0.68,
         messages: [
-          { time: 10, text: "Zone 1 only - very easy" },
-          { time: 900, text: "Halfway - stay relaxed" },
+          { time: 10, text: "Easy Zone 2 - building volume" },
+          { time: 1800, text: "Halfway - steady and relaxed" },
+          { time: 3300, text: "Almost done - great aerobic work" },
         ],
       },
     ],
@@ -1285,17 +1290,18 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   "W07-D3-Wednesday-Easy_Spin": {
-    name: "W7-W: Easy Zone 1 Spin",
-    description: "30min Zone 1 recovery priority.\n\n📊 12 TSS · IF 0.40",
-    tags: ["Week 7", "Recovery", "Zone 1"],
+    name: "W7-W: Easy Zone 2",
+    description: "60min easy Zone 2 endurance. Building aerobic volume.\n\n💡 Consume 30g carbs/hr\n📊 46 TSS · IF 0.68",
+    tags: ["Week 7", "Endurance", "Zone 2"],
     segments: [
       {
         type: "steady",
-        duration: 1800,
-        power: 0.55,
+        duration: 3600,
+        power: 0.68,
         messages: [
-          { time: 10, text: "Easy recovery after VO2max work" },
-          { time: 900, text: "Stay relaxed" },
+          { time: 10, text: "Easy Zone 2 - recovery after VO2max work" },
+          { time: 1800, text: "Halfway - steady and relaxed" },
+          { time: 3300, text: "Almost done - great aerobic work" },
         ],
       },
     ],
@@ -1544,7 +1550,28 @@ export const workouts: Record<string, WorkoutDefinition> = {
   "W08-D6-Saturday-Easy_Endurance": {
     name: "W8-S: Relaxed Endurance",
     description:
-      "75min easy endurance.\n\n🍖 Recovery nutrition focus\n📊 45 TSS · IF 0.60",
+      "120min easy endurance. Recovery intensity with added volume to maintain fitness.\n\n🍖 Recovery nutrition focus\n💡 Consume 60g carbs/hr\n📊 98 TSS · IF 0.70",
+    tags: ["Week 8", "Recovery", "Endurance"],
+    segments: [
+      {
+        type: "steady",
+        duration: 7200,
+        power: 0.70,
+        messages: [
+          { time: 10, text: "Easy endurance - no structure" },
+          { time: 1800, text: "30 min - keep relaxed and steady" },
+          { time: 3600, text: "Halfway - recovery pace, building volume" },
+          { time: 5400, text: "90 min - feeling good" },
+          { time: 6900, text: "Almost done - recovery week complete" },
+        ],
+      },
+    ],
+  },
+
+  "W08-D7-Sunday-Recovery": {
+    name: "W8-Su: Easy Endurance",
+    description:
+      "75min easy Zone 2 ride. Maintains training load while staying in recovery.\n\n🍖 Recovery nutrition focus\n💡 Consume 30-40g carbs/hr\n📊 58 TSS · IF 0.68",
     tags: ["Week 8", "Recovery", "Endurance"],
     segments: [
       {
@@ -1552,27 +1579,9 @@ export const workouts: Record<string, WorkoutDefinition> = {
         duration: 4500,
         power: 0.68,
         messages: [
-          { time: 10, text: "Easy endurance - no structure" },
-          { time: 2250, text: "Halfway - keep relaxed" },
-          { time: 4200, text: "Almost done - recovery week complete" },
-        ],
-      },
-    ],
-  },
-
-  "W08-D7-Sunday-Recovery": {
-    name: "W8-Su: Optional Recovery",
-    description:
-      "30-45min optional easy spin.\n\n🍖 Recovery nutrition focus\n📊 18 TSS · IF 0.45",
-    tags: ["Week 8", "Recovery", "Optional"],
-    segments: [
-      {
-        type: "steady",
-        duration: 2700,
-        power: 0.55,
-        messages: [
-          { time: 10, text: "Optional rest day" },
-          { time: 1350, text: "Recovery complete - ready for final block!" },
+          { time: 10, text: "Easy endurance - recovery pace" },
+          { time: 2250, text: "Halfway - feeling fresh" },
+          { time: 4200, text: "Recovery complete - ready for final block!" },
         ],
       },
     ],
@@ -1654,17 +1663,18 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   "W09-D3-Wednesday-Easy_Spin": {
-    name: "W9-W: Easy Zone 1 Spin",
-    description: "30min Zone 1 recovery.\n\n📊 12 TSS · IF 0.40",
-    tags: ["Week 9", "Recovery", "Zone 1"],
+    name: "W9-W: Easy Zone 2",
+    description: "60min easy Zone 2 endurance. Building aerobic volume.\n\n💡 Consume 30g carbs/hr\n📊 46 TSS · IF 0.68",
+    tags: ["Week 9", "Endurance", "Zone 2"],
     segments: [
       {
         type: "steady",
-        duration: 1800,
-        power: 0.55,
+        duration: 3600,
+        power: 0.68,
         messages: [
-          { time: 10, text: "Easy Zone 1 spin" },
-          { time: 900, text: "Stay relaxed" },
+          { time: 10, text: "Easy Zone 2 - building volume" },
+          { time: 1800, text: "Halfway - steady and relaxed" },
+          { time: 3300, text: "Almost done - great aerobic work" },
         ],
       },
     ],
@@ -2102,17 +2112,18 @@ export const workouts: Record<string, WorkoutDefinition> = {
   },
 
   "W11-D3-Wednesday-Easy_Spin": {
-    name: "W11-W: Easy Zone 1 Spin",
-    description: "30min Zone 1 recovery.\n\n📊 12 TSS · IF 0.40",
-    tags: ["Week 11", "Recovery", "Zone 1"],
+    name: "W11-W: Easy Zone 2",
+    description: "60min easy Zone 2 endurance. Building aerobic volume.\n\n💡 Consume 30g carbs/hr\n📊 46 TSS · IF 0.68",
+    tags: ["Week 11", "Endurance", "Zone 2"],
     segments: [
       {
         type: "steady",
-        duration: 1800,
-        power: 0.55,
+        duration: 3600,
+        power: 0.68,
         messages: [
-          { time: 10, text: "Easy recovery - final test next week!" },
-          { time: 900, text: "Stay relaxed" },
+          { time: 10, text: "Easy Zone 2 - final test next week!" },
+          { time: 1800, text: "Halfway - steady and relaxed" },
+          { time: 3300, text: "Almost done - great aerobic work" },
         ],
       },
     ],
@@ -2403,17 +2414,19 @@ export const workouts: Record<string, WorkoutDefinition> = {
   "W12-D6-Saturday-Celebration_Ride": {
     name: "W12-S: Celebration Endurance",
     description:
-      "90min easy celebration ride. Enjoy your fitness!\n\n💡 Consume 60g carbs/hr\n📊 55 TSS · IF 0.65",
+      "120min easy celebration ride. Enjoy your fitness!\n\n💡 Consume 60-90g carbs/hr\n📊 98 TSS · IF 0.70",
     tags: ["Week 12", "Celebration", "Endurance", "Zone 2"],
     segments: [
       {
         type: "steady",
-        duration: 5400,
-        power: 0.68,
+        duration: 7200,
+        power: 0.70,
         messages: [
           { time: 10, text: "Celebrate your 12-week journey!" },
-          { time: 2700, text: "Halfway - reflect on your progress" },
-          { time: 5100, text: "You're a stronger cyclist now!" },
+          { time: 1800, text: "30 min - feeling strong" },
+          { time: 3600, text: "Halfway - reflect on your progress" },
+          { time: 5400, text: "90 min - you're a stronger cyclist now!" },
+          { time: 6900, text: "Almost done - amazing work!" },
         ],
       },
     ],

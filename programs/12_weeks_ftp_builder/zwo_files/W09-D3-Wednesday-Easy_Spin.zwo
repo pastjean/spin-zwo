@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W9-W: Easy Zone 1 Spin</n>
-      <description>workout.description, 📊 15 TSS · IF 0.55 · 30 min</description>
+      <n>W9-W: Easy Zone 2</n>
+      <description>workout.description, 📊 46 TSS · IF 0.68 · 60 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 9"/>
-        <tag name="Recovery"/>
-        <tag name="Zone 1"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
       </tags>
       <workout>
-          <SteadyState Duration="1800" Power="0.55">
-            <textevent timeoffset="10" message="Easy Zone 1 spin"/>
-            <textevent timeoffset="900" message="Stay relaxed"/>
+          <SteadyState Duration="3600" Power="0.68">
+            <textevent timeoffset="10" message="Easy Zone 2 - building volume"/>
+            <textevent timeoffset="1800" message="Halfway - steady and relaxed"/>
+            <textevent timeoffset="3300" message="Almost done - great aerobic work"/>
         </SteadyState>
       </workout>
   </workout_file>

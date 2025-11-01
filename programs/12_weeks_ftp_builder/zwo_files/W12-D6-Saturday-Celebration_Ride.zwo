@@ -2,7 +2,7 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W12-S: Celebration Endurance</n>
-      <description>workout.description, 📊 69 TSS · IF 0.68 · 90 min</description>
+      <description>workout.description, 📊 98 TSS · IF 0.70 · 120 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 12"/>
@@ -11,10 +11,12 @@
         <tag name="Zone 2"/>
       </tags>
       <workout>
-          <SteadyState Duration="5400" Power="0.68">
+          <SteadyState Duration="7200" Power="0.7">
             <textevent timeoffset="10" message="Celebrate your 12-week journey!"/>
-            <textevent timeoffset="2700" message="Halfway - reflect on your progress"/>
-            <textevent timeoffset="5100" message="You're a stronger cyclist now!"/>
+            <textevent timeoffset="1800" message="30 min - feeling strong"/>
+            <textevent timeoffset="3600" message="Halfway - reflect on your progress"/>
+            <textevent timeoffset="5400" message="90 min - you're a stronger cyclist now!"/>
+            <textevent timeoffset="6900" message="Almost done - amazing work!"/>
         </SteadyState>
       </workout>
   </workout_file>

@@ -2,7 +2,7 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W4-S: Relaxed Endurance</n>
-      <description>workout.description, 📊 58 TSS · IF 0.68 · 75 min</description>
+      <description>workout.description, 📊 98 TSS · IF 0.70 · 120 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 4"/>
@@ -10,10 +10,12 @@
         <tag name="Endurance"/>
       </tags>
       <workout>
-          <SteadyState Duration="4500" Power="0.68">
+          <SteadyState Duration="7200" Power="0.7">
             <textevent timeoffset="10" message="Easy endurance - no structure"/>
-            <textevent timeoffset="2250" message="Halfway - keep relaxed"/>
-            <textevent timeoffset="4200" message="Almost done - great recovery week"/>
+            <textevent timeoffset="1800" message="30 min - keep relaxed and steady"/>
+            <textevent timeoffset="3600" message="Halfway - recovery pace, building volume"/>
+            <textevent timeoffset="5400" message="90 min - feeling good"/>
+            <textevent timeoffset="6900" message="Almost done - great recovery week"/>
         </SteadyState>
       </workout>
   </workout_file>

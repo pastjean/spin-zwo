@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W4-Su: Optional Recovery</n>
-      <description>workout.description, 📊 23 TSS · IF 0.55 · 45 min</description>
+      <n>W4-Su: Easy Endurance</n>
+      <description>workout.description, 📊 58 TSS · IF 0.68 · 75 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 4"/>
         <tag name="Recovery"/>
-        <tag name="Optional"/>
+        <tag name="Endurance"/>
       </tags>
       <workout>
-          <SteadyState Duration="2700" Power="0.55">
-            <textevent timeoffset="10" message="Optional rest day"/>
-            <textevent timeoffset="1350" message="Recovery week complete - ready for Block 2!"/>
+          <SteadyState Duration="4500" Power="0.68">
+            <textevent timeoffset="10" message="Easy endurance - recovery pace"/>
+            <textevent timeoffset="2250" message="Halfway - feeling fresh"/>
+            <textevent timeoffset="4200" message="Recovery week complete - ready for Block 2!"/>
         </SteadyState>
       </workout>
   </workout_file>
