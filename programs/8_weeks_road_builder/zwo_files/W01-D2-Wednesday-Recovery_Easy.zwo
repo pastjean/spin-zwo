@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W1-Wed: Easy Recovery</n>
+      <description>workout.description, 📊 22 TSS · IF 0.54 · 45 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 1"/>
+        <tag name="Recovery"/>
+        <tag name="Zone 1"/>
+        <tag name="Easy"/>
+      </tags>
+      <workout>
+          <Warmup Duration="300" PowerLow="0.5" PowerHigh="0.55">
+            <textevent timeoffset="10" message="Very easy warmup"/>
+        </Warmup>
+        <SteadyState Duration="1800" Power="0.55">
+            <textevent timeoffset="10" message="Easy recovery pace - stay relaxed"/>
+            <textevent timeoffset="900" message="Halfway - keep it easy"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.5">
+            <textevent timeoffset="10" message="Easy finish"/>
+        </Cooldown>
+      </workout>
+  </workout_file>

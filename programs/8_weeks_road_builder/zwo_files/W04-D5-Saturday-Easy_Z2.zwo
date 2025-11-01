@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W4-Sat: Easy Z2 Ride (Reduced)</n>
+      <description>workout.description, 📊 34 TSS · IF 0.67 · 45 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 4"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+        <tag name="Recovery"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.6" PowerHigh="0.68">
+        </Warmup>
+        <SteadyState Duration="1500" Power="0.7">
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.68" PowerLow="0.55">
+        </Cooldown>
+      </workout>
+  </workout_file>
