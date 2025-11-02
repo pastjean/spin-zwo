@@ -2,7 +2,7 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W8-Wed: Easy Recovery</n>
-      <description>workout.description, 📊 22 TSS · IF 0.54 · 45 min</description>
+      <description>workout.description, 📊 30 TSS · IF 0.54 · 60 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 8"/>
@@ -12,7 +12,7 @@
       <workout>
           <Warmup Duration="300" PowerLow="0.5" PowerHigh="0.55">
         </Warmup>
-        <SteadyState Duration="1800" Power="0.55">
+        <SteadyState Duration="2700" Power="0.55">
         </SteadyState>
         <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.5">
         </Cooldown>

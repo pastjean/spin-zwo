@@ -11,6 +11,7 @@ export interface WarmupSegment {
   duration: number;
   powerLow: number;
   powerHigh: number;
+  cadence?: number;
   messages?: WorkoutTextEvent[];
 }
 
@@ -19,6 +20,7 @@ export interface CooldownSegment {
   duration: number;
   powerHigh: number;
   powerLow: number;
+  cadence?: number;
   messages?: WorkoutTextEvent[];
 }
 
@@ -26,6 +28,7 @@ export interface SteadyStateSegment {
   type: 'steady';
   duration: number;
   power: number;
+  cadence?: number;
   messages?: WorkoutTextEvent[];
 }
 
@@ -34,6 +37,7 @@ export interface RampSegment {
   duration: number;
   powerLow: number;
   powerHigh: number;
+  cadence?: number;
   messages?: WorkoutTextEvent[];
 }
 
@@ -56,16 +60,16 @@ export function segmentToXML(segment: Segment): string {
 
   switch (segment.type) {
     case 'warmup':
-      xml = `        <Warmup Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}">`;
+      xml = `        <Warmup Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
       break;
     case 'cooldown':
-      xml = `        <Cooldown Duration="${segment.duration}" PowerHigh="${segment.powerHigh}" PowerLow="${segment.powerLow}">`;
+      xml = `        <Cooldown Duration="${segment.duration}" PowerHigh="${segment.powerHigh}" PowerLow="${segment.powerLow}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
       break;
     case 'steady':
-      xml = `        <SteadyState Duration="${segment.duration}" Power="${segment.power}">`;
+      xml = `        <SteadyState Duration="${segment.duration}" Power="${segment.power}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
       break;
     case 'ramp':
-      xml = `        <Ramp Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}">`;
+      xml = `        <Ramp Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
       break;
   }
 

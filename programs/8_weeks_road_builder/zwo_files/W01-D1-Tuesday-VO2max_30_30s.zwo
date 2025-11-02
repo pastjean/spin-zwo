@@ -2,7 +2,7 @@
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
       <n>W1-Tue: 30/30s Introduction</n>
-      <description>workout.description, 📊 70 TSS · IF 0.83 · 60 min</description>
+      <description>workout.description, 📊 87 TSS · IF 0.85 · 72 min</description>
       <sportType>bike</sportType>
       <tags>
           <tag name="Week 1"/>
@@ -90,12 +90,12 @@
             <textevent timeoffset="5" message="Final interval of set 2"/>
         </SteadyState>
         <SteadyState Duration="30" Power="0.5">
-            <textevent timeoffset="10" message="Set 2 complete - one more set!"/>
+            <textevent timeoffset="10" message="Set 2 complete - two more sets!"/>
         </SteadyState>
         <SteadyState Duration="240" Power="0.5">
         </SteadyState>
         <SteadyState Duration="30" Power="1.2">
-            <textevent timeoffset="5" message="Set 3/3 - Final set, stay strong!"/>
+            <textevent timeoffset="5" message="Set 3/4 - Stay strong!"/>
         </SteadyState>
         <SteadyState Duration="30" Power="0.5">
         </SteadyState>
@@ -124,7 +124,44 @@
         <SteadyState Duration="30" Power="0.5">
         </SteadyState>
         <SteadyState Duration="30" Power="1.2">
-            <textevent timeoffset="5" message="Final interval - finish strong!"/>
+            <textevent timeoffset="5" message="Final interval of set 3"/>
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+            <textevent timeoffset="10" message="Set 3 complete - one more set!"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+            <textevent timeoffset="5" message="Set 4/4 - Final set, finish strong!"/>
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+        </SteadyState>
+        <SteadyState Duration="30" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="30" Power="1.2">
+            <textevent timeoffset="5" message="Final interval - you've got this!"/>
         </SteadyState>
         <SteadyState Duration="30" Power="0.5">
             <textevent timeoffset="10" message="All sets complete - great work!"/>

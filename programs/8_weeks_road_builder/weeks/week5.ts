@@ -81,15 +81,15 @@ Building threshold durability with longer intervals.
 
   "W05-D2-Wednesday-Recovery_Easy": {
     name: "W5-Wed: Easy Recovery",
-    description: `45min easy Z1 spin @ 50-60% FTP
+    description: `60min easy Z1 spin @ 50-60% FTP
 
 Pure recovery ride.
 
-📊 ~22 TSS · IF 0.55`,
+📊 ~30 TSS · IF 0.54`,
     tags: ["Week 5", "Recovery", "Zone 1"],
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
-      { type: "steady", duration: 1800, power: 0.55 },
+      { type: "steady", duration: 2700, power: 0.55 },
       { type: "cooldown", duration: 600, powerHigh: 0.55, powerLow: 0.5 },
     ],
   },
