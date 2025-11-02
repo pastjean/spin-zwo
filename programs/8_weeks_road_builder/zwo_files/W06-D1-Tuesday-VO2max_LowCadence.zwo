@@ -18,25 +18,25 @@
         </Warmup>
         <SteadyState Duration="180" Power="0.6">
         </SteadyState>
-        <SteadyState Duration="240" Power="1.1">
+        <SteadyState Duration="240" Power="1.1" Cadence="60">
             <textevent timeoffset="10" message="Interval 1/4 @ 110% @ 60rpm - Low cadence grind"/>
             <textevent timeoffset="120" message="Halfway - maintain cadence"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.6">
         </SteadyState>
-        <SteadyState Duration="240" Power="1.1">
+        <SteadyState Duration="240" Power="1.1" Cadence="60">
             <textevent timeoffset="10" message="Interval 2/4 @ 60rpm"/>
             <textevent timeoffset="120" message="Halfway"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.6">
         </SteadyState>
-        <SteadyState Duration="240" Power="1.1">
+        <SteadyState Duration="240" Power="1.1" Cadence="60">
             <textevent timeoffset="10" message="Interval 3/4 @ 60rpm - Stay strong"/>
             <textevent timeoffset="120" message="Halfway"/>
         </SteadyState>
         <SteadyState Duration="180" Power="0.6">
         </SteadyState>
-        <SteadyState Duration="240" Power="1.1">
+        <SteadyState Duration="240" Power="1.1" Cadence="60">
             <textevent timeoffset="10" message="Final interval 4/4 @ 60rpm!"/>
             <textevent timeoffset="120" message="Halfway - push through"/>
             <textevent timeoffset="210" message="30sec - finish!"/>

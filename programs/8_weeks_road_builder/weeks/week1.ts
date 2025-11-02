@@ -3,12 +3,12 @@ import type { WorkoutDefinition } from "../../../lib/types.js";
 export const week1Workouts: Record<string, WorkoutDefinition> = {
   "W01-D1-Tuesday-VO2max_30_30s": {
     name: "W1-Tue: 30/30s Introduction",
-    description: `Micro-intervals: 3 sets of 8x30sec @ 120% / 30sec @ 50%
+    description: `Micro-intervals: 4 sets of 8x30sec @ 120% / 30sec @ 50%
 
 VO2max introduction using Billat protocol. Short bursts with equal recovery.
 
 💡 Pre-load: Carbs 2-3hrs before
-📊 ~65 TSS · IF 0.82`,
+📊 ~85 TSS · IF 0.84`,
     tags: ["Week 1", "VO2max", "High Intensity", "Micro-Intervals"],
     segments: [
       {
@@ -95,7 +95,7 @@ VO2max introduction using Billat protocol. Short bursts with equal recovery.
         type: "steady",
         duration: 30,
         power: 0.5,
-        messages: [{ time: 10, text: "Set 2 complete - one more set!" }],
+        messages: [{ time: 10, text: "Set 2 complete - two more sets!" }],
       },
       // Recovery between sets
       { type: "steady", duration: 240, power: 0.5 },
@@ -104,7 +104,7 @@ VO2max introduction using Billat protocol. Short bursts with equal recovery.
         type: "steady",
         duration: 30,
         power: 1.2,
-        messages: [{ time: 5, text: "Set 3/3 - Final set, stay strong!" }],
+        messages: [{ time: 5, text: "Set 3/4 - Stay strong!" }],
       },
       { type: "steady", duration: 30, power: 0.5 },
       { type: "steady", duration: 30, power: 1.2 },
@@ -123,7 +123,41 @@ VO2max introduction using Billat protocol. Short bursts with equal recovery.
         type: "steady",
         duration: 30,
         power: 1.2,
-        messages: [{ time: 5, text: "Final interval - finish strong!" }],
+        messages: [{ time: 5, text: "Final interval of set 3" }],
+      },
+      {
+        type: "steady",
+        duration: 30,
+        power: 0.5,
+        messages: [{ time: 10, text: "Set 3 complete - one more set!" }],
+      },
+      // Recovery between sets
+      { type: "steady", duration: 240, power: 0.5 },
+      // Set 4: 8x30/30
+      {
+        type: "steady",
+        duration: 30,
+        power: 1.2,
+        messages: [{ time: 5, text: "Set 4/4 - Final set, finish strong!" }],
+      },
+      { type: "steady", duration: 30, power: 0.5 },
+      { type: "steady", duration: 30, power: 1.2 },
+      { type: "steady", duration: 30, power: 0.5 },
+      { type: "steady", duration: 30, power: 1.2 },
+      { type: "steady", duration: 30, power: 0.5 },
+      { type: "steady", duration: 30, power: 1.2 },
+      { type: "steady", duration: 30, power: 0.5 },
+      { type: "steady", duration: 30, power: 1.2 },
+      { type: "steady", duration: 30, power: 0.5 },
+      { type: "steady", duration: 30, power: 1.2 },
+      { type: "steady", duration: 30, power: 0.5 },
+      { type: "steady", duration: 30, power: 1.2 },
+      { type: "steady", duration: 30, power: 0.5 },
+      {
+        type: "steady",
+        duration: 30,
+        power: 1.2,
+        messages: [{ time: 5, text: "Final interval - you've got this!" }],
       },
       {
         type: "steady",
@@ -143,11 +177,11 @@ VO2max introduction using Billat protocol. Short bursts with equal recovery.
 
   "W01-D2-Wednesday-Recovery_Easy": {
     name: "W1-Wed: Easy Recovery",
-    description: `45min easy Z1 spin @ 50-60% FTP
+    description: `60min easy Z1 spin @ 50-60% FTP
 
 Pure recovery ride. Conversational pace, very easy effort.
 
-📊 ~22 TSS · IF 0.55`,
+📊 ~30 TSS · IF 0.55`,
     tags: ["Week 1", "Recovery", "Zone 1", "Easy"],
     segments: [
       {
@@ -159,11 +193,11 @@ Pure recovery ride. Conversational pace, very easy effort.
       },
       {
         type: "steady",
-        duration: 1800,
+        duration: 2700,
         power: 0.55,
         messages: [
           { time: 10, text: "Easy recovery pace - stay relaxed" },
-          { time: 900, text: "Halfway - keep it easy" },
+          { time: 1350, text: "Halfway - keep it easy" },
         ],
       },
       {
@@ -177,13 +211,13 @@ Pure recovery ride. Conversational pace, very easy effort.
   },
 
   "W01-D4-Friday-Threshold_Cruise": {
-    name: "W1-Fri: Cruise Intervals 4x6min",
-    description: `Threshold introduction: 4 x 6min @ 95% FTP (3min recovery)
+    name: "W1-Fri: Cruise Intervals 5x8min",
+    description: `Threshold introduction: 5 x 8min @ 95% FTP (3min recovery)
 
 Moderate threshold blocks to introduce sustained power work.
 
 💡 Pre-load: Carbs 2-3hrs before
-📊 ~70 TSS · IF 0.80`,
+📊 ~92 TSS · IF 0.82`,
     tags: ["Week 1", "Threshold", "FTP", "Cruise Intervals"],
     segments: [
       {
@@ -209,45 +243,56 @@ Moderate threshold blocks to introduce sustained power work.
       // Interval 1
       {
         type: "steady",
-        duration: 360,
+        duration: 480,
         power: 0.95,
         messages: [
-          { time: 10, text: "Interval 1/4 @ 95% - Settle in" },
-          { time: 180, text: "Halfway - smooth and steady" },
+          { time: 10, text: "Interval 1/5 @ 95% - Settle in" },
+          { time: 240, text: "Halfway - smooth and steady" },
         ],
       },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 2
       {
         type: "steady",
-        duration: 360,
+        duration: 480,
         power: 0.95,
         messages: [
-          { time: 10, text: "Interval 2/4 - Same effort" },
-          { time: 180, text: "Halfway through interval 2" },
+          { time: 10, text: "Interval 2/5 - Same effort" },
+          { time: 240, text: "Halfway through interval 2" },
         ],
       },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 3
       {
         type: "steady",
-        duration: 360,
+        duration: 480,
         power: 0.95,
         messages: [
-          { time: 10, text: "Interval 3/4 - Stay focused" },
-          { time: 180, text: "Halfway - keep it steady" },
+          { time: 10, text: "Interval 3/5 - Stay focused" },
+          { time: 240, text: "Halfway - keep it steady" },
         ],
       },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 4
       {
         type: "steady",
-        duration: 360,
+        duration: 480,
         power: 0.95,
         messages: [
-          { time: 10, text: "Final interval 4/4 - Finish strong!" },
-          { time: 180, text: "Halfway - you've got this!" },
-          { time: 330, text: "30sec - push through!" },
+          { time: 10, text: "Interval 4/5 - Two to go!" },
+          { time: 240, text: "Halfway - you've got this!" },
+        ],
+      },
+      { type: "steady", duration: 180, power: 0.6 },
+      // Interval 5
+      {
+        type: "steady",
+        duration: 480,
+        power: 0.95,
+        messages: [
+          { time: 10, text: "Final interval 5/5 - Finish strong!" },
+          { time: 240, text: "Halfway - push through!" },
+          { time: 420, text: "1min left - give it everything!" },
         ],
       },
       {

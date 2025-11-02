@@ -18,7 +18,7 @@
         </Warmup>
         <SteadyState Duration="180" Power="0.6">
         </SteadyState>
-        <SteadyState Duration="1200" Power="0.88">
+        <SteadyState Duration="1200" Power="0.88" Cadence="65">
             <textevent timeoffset="10" message="Interval 1/2 - 20min @ 88% @ 65rpm"/>
             <textevent timeoffset="300" message="5min in - settle into the grind"/>
             <textevent timeoffset="600" message="Halfway through interval 1"/>
@@ -26,7 +26,7 @@
         </SteadyState>
         <SteadyState Duration="300" Power="0.6">
         </SteadyState>
-        <SteadyState Duration="1200" Power="0.88">
+        <SteadyState Duration="1200" Power="0.88" Cadence="65">
             <textevent timeoffset="10" message="Interval 2/2 - Final 20min!"/>
             <textevent timeoffset="300" message="5min in - stay strong"/>
             <textevent timeoffset="600" message="Halfway - you've got this"/>
