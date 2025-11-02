@@ -4,7 +4,7 @@
 
 - **Duration:** 8 weeks
 - **Weekly Hours:** 6.5-8.5 hours (5-5.5 hours during recovery weeks)
-- **Structure:** Polarized training (80/20 split)
+- **Structure:** Polarized training (80/20 split between z2 and intervals higher zones)
 - **Key Sessions:** Tuesday (VO2max), Friday (Threshold), Sunday (Long Endurance)
 - **Weekly TSS:** 300-350 TSS (build weeks), 210-235 TSS (recovery weeks)
 - **Rest Days:** Thursday + Monday (full rest)
@@ -271,30 +271,6 @@ By Week 8, you should experience:
 - 2022 review: Power-duration relationship and durability critical for endurance performance
 - 2024: Lactate threshold modeling emphasizes sustainable power development
 - 2020: Over/under protocols with active recovery improve lactate clearance
-
----
-
-## Program Structure Summary
-
-```
-programs/8_weeks_road_builder/
-├── 8_weeks_road_builder.ts (main aggregator)
-├── README.md (this file)
-├── weeks/
-│   ├── week1.ts
-│   ├── week2.ts
-│   ├── week3.ts
-│   ├── week4.ts
-│   ├── week5.ts
-│   ├── week6.ts
-│   ├── week7.ts
-│   └── week8.ts
-├── images/ (40 PNG files)
-└── zwo_files/ (40 ZWO files - Zwift compatible)
-```
-
-**Total Workouts:** 40 (5 per week × 8 weeks)
-**File Formats:** TypeScript source, ZWO (Zwift), PNG (workout profiles)
 
 ---
 
