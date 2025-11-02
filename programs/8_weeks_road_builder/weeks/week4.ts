@@ -7,8 +7,7 @@ export const week4Workouts: Record<string, WorkoutDefinition> = {
 
 Recovery week - same intensity, less volume.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~48 TSS · IF 0.78`,
+💡 Pre-load: Carbs 2-3hrs before`,
     tags: ["Week 4", "VO2max", "Recovery", "Micro-Intervals"],
     segments: [
       {
@@ -30,7 +29,9 @@ Recovery week - same intensity, less volume.
         type: "steady",
         duration: 30,
         power: 1.2,
-        messages: [{ time: 5, text: "Set 1/2 - Recovery week, quality over quantity" }],
+        messages: [
+          { time: 5, text: "Set 1/2 - Recovery week, quality over quantity" },
+        ],
       },
       { type: "steady", duration: 30, power: 0.5 },
       { type: "steady", duration: 30, power: 1.2 },
@@ -95,9 +96,7 @@ Recovery week - same intensity, less volume.
     name: "W4-Wed: Easy Recovery",
     description: `60min easy Z1 spin @ 50-60% FTP
 
-Pure recovery ride.
-
-📊 ~30 TSS · IF 0.54`,
+Pure recovery ride.`,
     tags: ["Week 4", "Recovery", "Zone 1"],
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
@@ -112,8 +111,7 @@ Pure recovery ride.
 
 Recovery week threshold work at moderate intensity.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~62 TSS · IF 0.76`,
+💡 Pre-load: Carbs 2-3hrs before`,
     tags: ["Week 4", "Threshold", "Sweet Spot", "Recovery"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
@@ -149,13 +147,11 @@ Recovery week threshold work at moderate intensity.
     name: "W4-Sat: Easy Z2 Ride (Reduced)",
     description: `45min easy endurance @ 65-75% FTP
 
-Reduced volume for recovery week.
-
-📊 ~35 TSS · IF 0.68`,
+Reduced volume for recovery week.`,
     tags: ["Week 4", "Endurance", "Zone 2", "Recovery"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
-      { type: "steady", duration: 1500, power: 0.70 },
+      { type: "steady", duration: 1500, power: 0.7 },
       { type: "cooldown", duration: 600, powerHigh: 0.68, powerLow: 0.55 },
     ],
   },
@@ -166,15 +162,14 @@ Reduced volume for recovery week.
 
 Recovery week - reduced from 120min.
 
-💡 Consume 60g carbs/hr
-📊 ~72 TSS · IF 0.70`,
+💡 Consume 60g carbs/hr`,
     tags: ["Week 4", "Endurance", "Zone 2", "Recovery"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       {
         type: "steady",
         duration: 4200,
-        power: 0.70,
+        power: 0.7,
         messages: [
           { time: 10, text: "Recovery week - enjoy the lighter load" },
           { time: 2100, text: "Halfway!" },

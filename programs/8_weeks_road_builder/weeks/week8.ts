@@ -7,8 +7,7 @@ export const week8Workouts: Record<string, WorkoutDefinition> = {
 
 Taper week - reduced volume, maintain intensity.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~42 TSS · IF 0.76`,
+💡 Pre-load: Carbs 2-3hrs before`,
     tags: ["Week 8", "VO2max", "Taper", "Micro-Intervals"],
     segments: [
       {
@@ -76,9 +75,7 @@ Taper week - reduced volume, maintain intensity.
     name: "W8-Wed: Easy Recovery",
     description: `60min easy Z1 spin @ 50-60% FTP
 
-Pure recovery ride.
-
-📊 ~30 TSS · IF 0.54`,
+Pure recovery ride.`,
     tags: ["Week 8", "Recovery", "Zone 1"],
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
@@ -94,8 +91,8 @@ Pure recovery ride.
 Give everything you have. Your new FTP = avg power × 0.95
 
 💡 Pre-load: Carbs 2-3hrs before
-💡 Fully rested, well-fueled
-📊 ~68 TSS · IF 0.95`,
+💡 Fully rested, well-fueled`,
+
     tags: ["Week 8", "FTP Test", "Testing", "Threshold"],
     segments: [
       {
@@ -149,7 +146,9 @@ Give everything you have. Your new FTP = avg power × 0.95
         duration: 600,
         powerHigh: 0.6,
         powerLow: 0.4,
-        messages: [{ time: 10, text: "Test complete! Record your average power" }],
+        messages: [
+          { time: 10, text: "Test complete! Record your average power" },
+        ],
       },
     ],
   },
@@ -160,8 +159,8 @@ Give everything you have. Your new FTP = avg power × 0.95
 
 Less psychological stress. Average both intervals for FTP estimate.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~70 TSS · IF 0.92`,
+💡 Pre-load: Carbs 2-3hrs before`,
+
     tags: ["Week 8", "FTP Test", "Testing", "Threshold", "Alternative"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
@@ -207,15 +206,15 @@ Less psychological stress. Average both intervals for FTP estimate.
 
 Taper week - reduced volume endurance ride.
 
-💡 Consume 60g carbs/hr
-📊 ~85 TSS · IF 0.70`,
+💡 Consume 60g carbs/hr`,
+
     tags: ["Week 8", "Endurance", "Zone 2", "Taper"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       {
         type: "steady",
         duration: 5100,
-        power: 0.70,
+        power: 0.7,
         messages: [
           { time: 10, text: "Easy endurance - taper week" },
           { time: 2550, text: "Halfway!" },

@@ -1,9 +1,9 @@
 // Add this to your file or create a new utils file
 
-import { WorkoutDefinition } from "./types";
+import type { WorkoutDefinition } from './types';
 
 interface Segment {
-  type: "warmup" | "cooldown" | "steady" | "ramp";
+  type: 'warmup' | 'cooldown' | 'steady' | 'ramp';
   duration: number;
   power?: number;
   powerLow?: number;
@@ -28,7 +28,7 @@ function calculateNormalizedPower(segments: Segment[]): number {
   for (const segment of segments) {
     let avgPower: number;
 
-    if (segment.type === "warmup" || segment.type === "cooldown") {
+    if (segment.type === 'warmup' || segment.type === 'cooldown') {
       // For ramps, take average of low and high
       avgPower = ((segment.powerLow || 0) + (segment.powerHigh || 0)) / 2;
     } else {
@@ -37,12 +37,12 @@ function calculateNormalizedPower(segments: Segment[]): number {
     }
 
     // Add to running totals (power^4 * duration)
-    totalPower4Sum += Math.pow(avgPower, 4) * segment.duration;
+    totalPower4Sum += avgPower ** 4 * segment.duration;
     totalDuration += segment.duration;
   }
 
   // NP = fourth root of (sum of power^4 * duration / total duration)
-  const np = Math.pow(totalPower4Sum / totalDuration, 0.25);
+  const np = (totalPower4Sum / totalDuration) ** 0.25;
   return np;
 }
 
@@ -62,7 +62,7 @@ function calculateIF(np: number, ftp: number = 1.0): number {
 function calculateTSS(
   duration: number,
   np: number,
-  intensityFactor: number
+  intensityFactor: number,
 ): number {
   const durationHours = duration / 3600;
   const tss = durationHours * np * intensityFactor * 100;
@@ -93,7 +93,7 @@ export function formatMetricsForDescription(segments: Segment[]): string {
   const metrics = calculateWorkoutMetrics(segments);
   const durationMin = Math.round(metrics.duration / 60);
   return `📊 ${metrics.tss} TSS · IF ${metrics.if.toFixed(
-    2
+    2,
   )} · ${durationMin} min`;
 }
 
@@ -101,14 +101,14 @@ export function formatMetricsForDescription(segments: Segment[]): string {
  * Validate and update all workout descriptions with calculated metrics
  */
 export function addMetricsToWorkouts(
-  workouts: Record<string, WorkoutDefinition>
+  workouts: Record<string, WorkoutDefinition>,
 ): void {
   for (const [_key, workout] of Object.entries(workouts)) {
     const metrics = calculateWorkoutMetrics(workout.segments);
     console.log(
       `${workout.name}: TSS=${metrics.tss}, IF=${metrics.if.toFixed(
-        2
-      )}, Duration=${Math.round(metrics.duration / 60)}min`
+        2,
+      )}, Duration=${Math.round(metrics.duration / 60)}min`,
     );
   }
 }

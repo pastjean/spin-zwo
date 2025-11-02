@@ -7,8 +7,8 @@ export const week6Workouts: Record<string, WorkoutDefinition> = {
 
 Neuromuscular + aerobic stress. Grind it out.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~70 TSS · IF 0.83`,
+💡 Pre-load: Carbs 2-3hrs before`,
+
     tags: ["Week 6", "VO2max", "Low Cadence", "Strength"],
     segments: [
       {
@@ -81,9 +81,8 @@ Neuromuscular + aerobic stress. Grind it out.
     name: "W6-Wed: Easy Recovery",
     description: `60min easy Z1 spin @ 50-60% FTP
 
-Pure recovery ride.
+Pure recovery ride.`,
 
-📊 ~30 TSS · IF 0.54`,
     tags: ["Week 6", "Recovery", "Zone 1"],
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
@@ -98,8 +97,8 @@ Pure recovery ride.
 
 Lactate clearance with longer efforts.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~78 TSS · IF 0.83`,
+💡 Pre-load: Carbs 2-3hrs before`,
+
     tags: ["Week 6", "Threshold", "Over/Unders", "Lactate Clearance"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
@@ -150,13 +149,11 @@ Lactate clearance with longer efforts.
 
   "W06-D5-Saturday-Easy_Z2": {
     name: "W6-Sat: Easy Z2 Ride",
-    description: `60min easy endurance @ 65-75% FTP
-
-📊 ~46 TSS · IF 0.68`,
+    description: `60min easy endurance @ 65-75% FTP`,
     tags: ["Week 6", "Endurance", "Zone 2"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
-      { type: "steady", duration: 2400, power: 0.70 },
+      { type: "steady", duration: 2400, power: 0.7 },
       { type: "cooldown", duration: 600, powerHigh: 0.68, powerLow: 0.55 },
     ],
   },
@@ -167,15 +164,14 @@ Lactate clearance with longer efforts.
 
 Volume building week. Stay patient.
 
-💡 Consume 60g carbs/hr
-📊 ~108 TSS · IF 0.70`,
+💡 Consume 60g carbs/hr`,
     tags: ["Week 6", "Endurance", "Zone 2", "Long Ride"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       {
         type: "steady",
         duration: 6900,
-        power: 0.70,
+        power: 0.7,
         messages: [
           { time: 10, text: "Long steady Z2 - 135min today" },
           { time: 1800, text: "30min in" },

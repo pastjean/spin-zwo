@@ -7,8 +7,7 @@ export const week7Workouts: Record<string, WorkoutDefinition> = {
 
 Combines micro-intervals with sustained VO2max.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~78 TSS · IF 0.86`,
+💡 Pre-load: Carbs 2-3hrs before`,
     tags: ["Week 7", "VO2max", "High Intensity", "Mixed Protocol"],
     segments: [
       {
@@ -21,7 +20,12 @@ Combines micro-intervals with sustained VO2max.
       { type: "warmup", duration: 300, powerLow: 0.65, powerHigh: 0.75 },
       { type: "steady", duration: 180, power: 0.6 },
       // Set 1: 8x40/20
-      { type: "steady", duration: 40, power: 1.2, messages: [{ time: 5, text: "Set 1 - 40/20s" }] },
+      {
+        type: "steady",
+        duration: 40,
+        power: 1.2,
+        messages: [{ time: 5, text: "Set 1 - 40/20s" }],
+      },
       { type: "steady", duration: 20, power: 0.5 },
       { type: "steady", duration: 40, power: 1.2 },
       { type: "steady", duration: 20, power: 0.5 },
@@ -49,7 +53,12 @@ Combines micro-intervals with sustained VO2max.
       },
       { type: "steady", duration: 300, power: 0.5 },
       // Set 2: 8x40/20
-      { type: "steady", duration: 40, power: 1.2, messages: [{ time: 5, text: "Set 2 - Final 40/20s" }] },
+      {
+        type: "steady",
+        duration: 40,
+        power: 1.2,
+        messages: [{ time: 5, text: "Set 2 - Final 40/20s" }],
+      },
       { type: "steady", duration: 20, power: 0.5 },
       { type: "steady", duration: 40, power: 1.2 },
       { type: "steady", duration: 20, power: 0.5 },
@@ -84,9 +93,7 @@ Combines micro-intervals with sustained VO2max.
     name: "W7-Wed: Easy Recovery",
     description: `60min easy Z1 spin @ 50-60% FTP
 
-Pure recovery ride.
-
-📊 ~30 TSS · IF 0.54`,
+Pure recovery ride.`,
     tags: ["Week 7", "Recovery", "Zone 1"],
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
@@ -101,8 +108,7 @@ Pure recovery ride.
 
 Low cadence threshold - maximum durability stress.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~85 TSS · IF 0.82`,
+💡 Pre-load: Carbs 2-3hrs before`,
     tags: ["Week 7", "Threshold", "Low Cadence", "PEAK", "Durability"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
@@ -146,12 +152,17 @@ Low cadence threshold - maximum durability stress.
 
 Extended Saturday ride - peak week volume.
 
-💡 Consume 30g carbs/hr
-📊 ~58 TSS · IF 0.68`,
+💡 Consume 30g carbs/hr`,
+
     tags: ["Week 7", "Endurance", "Zone 2", "PEAK"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
-      { type: "steady", duration: 3300, power: 0.70, messages: [{ time: 1650, text: "Halfway!" }] },
+      {
+        type: "steady",
+        duration: 3300,
+        power: 0.7,
+        messages: [{ time: 1650, text: "Halfway!" }],
+      },
       { type: "cooldown", duration: 600, powerHigh: 0.68, powerLow: 0.55 },
     ],
   },
@@ -162,15 +173,15 @@ Extended Saturday ride - peak week volume.
 
 Maximum aerobic stress. Take nutrition seriously.
 
-💡 Consume 60g carbs/hr
-📊 ~120 TSS · IF 0.70`,
+💡 Consume 60g carbs/hr`,
+
     tags: ["Week 7", "Endurance", "Zone 2", "Long Ride", "PEAK"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       {
         type: "steady",
         duration: 7800,
-        power: 0.70,
+        power: 0.7,
         messages: [
           { time: 10, text: "150min peak ride - stay patient" },
           { time: 1800, text: "30min - settle in for the long haul" },

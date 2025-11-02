@@ -7,8 +7,7 @@ export const week5Workouts: Record<string, WorkoutDefinition> = {
 
 Building threshold durability with longer intervals.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~75 TSS · IF 0.82`,
+💡 Pre-load: Carbs 2-3hrs before`,
     tags: ["Week 5", "Threshold", "FTP", "Durability"],
     segments: [
       {
@@ -83,9 +82,7 @@ Building threshold durability with longer intervals.
     name: "W5-Wed: Easy Recovery",
     description: `60min easy Z1 spin @ 50-60% FTP
 
-Pure recovery ride.
-
-📊 ~30 TSS · IF 0.54`,
+Pure recovery ride.`,
     tags: ["Week 5", "Recovery", "Zone 1"],
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
@@ -100,8 +97,7 @@ Pure recovery ride.
 
 Trains sustained power with surge response.
 
-💡 Pre-load: Carbs 2-3hrs before
-📊 ~80 TSS · IF 0.84`,
+💡 Pre-load: Carbs 2-3hrs before`,
     tags: ["Week 5", "Threshold", "Surges", "Race Simulation"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
@@ -112,7 +108,9 @@ Trains sustained power with surge response.
         type: "steady",
         duration: 480,
         power: 0.95,
-        messages: [{ time: 10, text: "Interval 1/4 @ 95% - Prepare for surge" }],
+        messages: [
+          { time: 10, text: "Interval 1/4 @ 95% - Prepare for surge" },
+        ],
       },
       {
         type: "steady",
@@ -168,13 +166,11 @@ Trains sustained power with surge response.
 
   "W05-D5-Saturday-Easy_Z2": {
     name: "W5-Sat: Easy Z2 Ride",
-    description: `60min easy endurance @ 65-75% FTP
-
-📊 ~46 TSS · IF 0.68`,
+    description: `60min easy endurance @ 65-75% FTP`,
     tags: ["Week 5", "Endurance", "Zone 2"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
-      { type: "steady", duration: 2400, power: 0.70 },
+      { type: "steady", duration: 2400, power: 0.7 },
       { type: "cooldown", duration: 600, powerHigh: 0.68, powerLow: 0.55 },
     ],
   },
@@ -185,15 +181,14 @@ Trains sustained power with surge response.
 
 Building aerobic base.
 
-💡 Consume 60g carbs/hr
-📊 ~96 TSS · IF 0.70`,
+💡 Consume 60g carbs/hr`,
     tags: ["Week 5", "Endurance", "Zone 2", "Long Ride"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       {
         type: "steady",
         duration: 6000,
-        power: 0.70,
+        power: 0.7,
         messages: [
           { time: 10, text: "Long steady Z2" },
           { time: 1800, text: "30min in" },

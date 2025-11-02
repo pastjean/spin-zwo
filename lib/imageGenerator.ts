@@ -1,9 +1,9 @@
 // Image Generation Module for Workout Profiles
 // Generates visual representations of workout power profiles
 
-import { createCanvas } from 'canvas';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { createCanvas } from 'canvas';
 import type { Segment, WorkoutDefinition } from './types.js';
 
 // Constants for image generation
@@ -17,10 +17,10 @@ const CHART_HEIGHT = IMAGE_HEIGHT - 2 * PADDING;
 const ZONE_THRESHOLDS = [
   { level: 0.55, name: 'Z2 Endurance' },
   { level: 0.75, name: 'Z3 Tempo' },
-  { level: 0.90, name: 'Z4 Threshold' },
+  { level: 0.9, name: 'Z4 Threshold' },
   { level: 1.05, name: 'Z5 VO2max' },
-  { level: 1.20, name: 'Z6 Anaerobic' },
-  { level: 1.50, name: 'Z7 Neuromuscular' },
+  { level: 1.2, name: 'Z6 Anaerobic' },
+  { level: 1.5, name: 'Z7 Neuromuscular' },
 ];
 
 // Power zone colors (matching the example images)
@@ -98,14 +98,17 @@ export function generateWorkoutImage(
       return true; // Zone is within range
     }
     // Check if this is the first zone beyond max
-    const zonesAboveMax = ZONE_THRESHOLDS.filter(z => z.level > actualMaxPower);
+    const zonesAboveMax = ZONE_THRESHOLDS.filter(
+      (z) => z.level > actualMaxPower,
+    );
     return zonesAboveMax.length > 0 && zone.level === zonesAboveMax[0].level;
   });
 
   // Set chart max to the highest relevant threshold, or actual max if higher
-  const highestThreshold = relevantThresholds.length > 0
-    ? Math.max(...relevantThresholds.map(t => t.level))
-    : actualMaxPower;
+  const highestThreshold =
+    relevantThresholds.length > 0
+      ? Math.max(...relevantThresholds.map((t) => t.level))
+      : actualMaxPower;
   const maxPower = Math.max(highestThreshold, actualMaxPower) * 1.05; // Add 5% headroom
 
   // Draw zone threshold lines and labels
@@ -117,7 +120,8 @@ export function generateWorkoutImage(
 
   // Draw zone threshold lines
   for (const threshold of relevantThresholds) {
-    const y = PADDING + CHART_HEIGHT - (threshold.level / maxPower) * CHART_HEIGHT;
+    const y =
+      PADDING + CHART_HEIGHT - (threshold.level / maxPower) * CHART_HEIGHT;
 
     ctx.strokeStyle = '#BDC3C7';
     ctx.lineWidth = 1;
@@ -130,7 +134,11 @@ export function generateWorkoutImage(
 
     ctx.fillStyle = '#7F8C8D';
     ctx.font = 'bold 11px Arial';
-    ctx.fillText(`${Math.round(threshold.level * 100)}% ${threshold.name}`, PADDING - 10, y + 4);
+    ctx.fillText(
+      `${Math.round(threshold.level * 100)}% ${threshold.name}`,
+      PADDING - 10,
+      y + 4,
+    );
   }
 
   // Draw baseline (0%)
