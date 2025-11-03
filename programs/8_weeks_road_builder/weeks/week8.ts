@@ -67,7 +67,7 @@ Taper week - reduced volume, maintain intensity.
         messages: [{ time: 5, text: "Final interval - well done!" }],
       },
       { type: "steady", duration: 30, power: 0.5 },
-      { type: "cooldown", duration: 600, powerHigh: 0.5, powerLow: 0.3 },
+      { type: "cooldown", duration: 600, powerHigh: 0.3, powerLow: 0.5 },
     ],
   },
 
@@ -80,7 +80,7 @@ Pure recovery ride.`,
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
       { type: "steady", duration: 2700, power: 0.55 },
-      { type: "cooldown", duration: 600, powerHigh: 0.55, powerLow: 0.5 },
+      { type: "cooldown", duration: 600, powerHigh: 0.5, powerLow: 0.55 },
     ],
   },
 
@@ -196,7 +196,7 @@ Less psychological stress. Average both intervals for FTP estimate.
           { time: 870, text: "30sec - empty the tank!" },
         ],
       },
-      { type: "cooldown", duration: 600, powerHigh: 0.6, powerLow: 0.4 },
+      { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },
     ],
   },
 
@@ -220,7 +220,7 @@ Taper week - reduced volume endurance ride.
           { time: 2550, text: "Halfway!" },
         ],
       },
-      { type: "cooldown", duration: 600, powerHigh: 0.68, powerLow: 0.55 },
+      { type: "cooldown", duration: 600, powerHigh: 0.55, powerLow: 0.68 },
     ],
   },
 };

@@ -18,7 +18,7 @@
             <textevent timeoffset="10" message="Zone 2 endurance - stay conversational"/>
             <textevent timeoffset="1200" message="Halfway - feeling good"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.68" PowerLow="0.55">
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
             <textevent timeoffset="10" message="Easy finish"/>
         </Cooldown>
       </workout>

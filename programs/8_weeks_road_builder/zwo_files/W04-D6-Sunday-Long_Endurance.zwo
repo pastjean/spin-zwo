@@ -17,7 +17,7 @@
             <textevent timeoffset="10" message="Recovery week - enjoy the lighter load"/>
             <textevent timeoffset="2100" message="Halfway!"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.68" PowerLow="0.55">
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
         </Cooldown>
       </workout>
   </workout_file>

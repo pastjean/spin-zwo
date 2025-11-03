@@ -85,8 +85,8 @@ Recovery week - same intensity, less volume.
       {
         type: "cooldown",
         duration: 600,
-        powerHigh: 0.5,
-        powerLow: 0.3,
+        powerHigh: 0.3,
+        powerLow: 0.5,
         messages: [{ time: 10, text: "Recovery week complete" }],
       },
     ],
@@ -101,7 +101,7 @@ Pure recovery ride.`,
     segments: [
       { type: "warmup", duration: 300, powerLow: 0.5, powerHigh: 0.55 },
       { type: "steady", duration: 2700, power: 0.55 },
-      { type: "cooldown", duration: 600, powerHigh: 0.55, powerLow: 0.5 },
+      { type: "cooldown", duration: 600, powerHigh: 0.5, powerLow: 0.55 },
     ],
   },
 
@@ -139,7 +139,7 @@ Recovery week threshold work at moderate intensity.
           { time: 690, text: "30sec - finish strong!" },
         ],
       },
-      { type: "cooldown", duration: 600, powerHigh: 0.6, powerLow: 0.4 },
+      { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },
     ],
   },
 
@@ -152,7 +152,7 @@ Reduced volume for recovery week.`,
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       { type: "steady", duration: 1500, power: 0.7 },
-      { type: "cooldown", duration: 600, powerHigh: 0.68, powerLow: 0.55 },
+      { type: "cooldown", duration: 600, powerHigh: 0.55, powerLow: 0.68 },
     ],
   },
 
@@ -175,7 +175,7 @@ Recovery week - reduced from 120min.
           { time: 2100, text: "Halfway!" },
         ],
       },
-      { type: "cooldown", duration: 600, powerHigh: 0.68, powerLow: 0.55 },
+      { type: "cooldown", duration: 600, powerHigh: 0.55, powerLow: 0.68 },
     ],
   },
 };

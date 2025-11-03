@@ -20,7 +20,7 @@
             <textevent timeoffset="5400" message="90min - final hour ahead"/>
             <textevent timeoffset="6600" message="Final 20min - stay consistent"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.68" PowerLow="0.55">
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
         </Cooldown>
       </workout>
   </workout_file>

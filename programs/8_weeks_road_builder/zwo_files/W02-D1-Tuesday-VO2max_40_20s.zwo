@@ -190,7 +190,7 @@
         </SteadyState>
         <SteadyState Duration="20" Power="0.5">
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.5" PowerLow="0.3">
+        <Cooldown Duration="600" PowerHigh="0.3" PowerLow="0.5">
         </Cooldown>
       </workout>
   </workout_file>

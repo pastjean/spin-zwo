@@ -15,7 +15,7 @@
         </Warmup>
         <SteadyState Duration="1500" Power="0.7">
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.68" PowerLow="0.55">
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
         </Cooldown>
       </workout>
   </workout_file>

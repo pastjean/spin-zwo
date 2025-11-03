@@ -18,7 +18,7 @@
             <textevent timeoffset="10" message="Easy recovery pace - stay relaxed"/>
             <textevent timeoffset="1350" message="Halfway - keep it easy"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.5">
+        <Cooldown Duration="600" PowerHigh="0.5" PowerLow="0.55">
             <textevent timeoffset="10" message="Easy finish"/>
         </Cooldown>
       </workout>

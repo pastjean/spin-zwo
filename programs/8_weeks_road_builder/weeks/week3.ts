@@ -88,7 +88,7 @@ Pure recovery ride.`,
     segments: [
       { type: 'warmup', duration: 300, powerLow: 0.5, powerHigh: 0.55 },
       { type: 'steady', duration: 2700, power: 0.55 },
-      { type: 'cooldown', duration: 600, powerHigh: 0.55, powerLow: 0.5 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.5, powerLow: 0.55 },
     ],
   },
 
@@ -140,7 +140,7 @@ Each interval builds from sweet spot to near-FTP.
           { time: 570, text: '30sec - max effort!' },
         ],
       },
-      { type: 'cooldown', duration: 600, powerHigh: 0.6, powerLow: 0.4 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.4, powerLow: 0.6 },
     ],
   },
 
@@ -151,7 +151,7 @@ Each interval builds from sweet spot to near-FTP.
     segments: [
       { type: 'warmup', duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       { type: 'steady', duration: 2400, power: 0.7 },
-      { type: 'cooldown', duration: 600, powerHigh: 0.68, powerLow: 0.55 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.55, powerLow: 0.68 },
     ],
   },
 
@@ -176,7 +176,7 @@ Building volume. Zone 2 steady state.
           { time: 5400, text: 'Final 30min - stay consistent' },
         ],
       },
-      { type: 'cooldown', duration: 600, powerHigh: 0.68, powerLow: 0.55 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.55, powerLow: 0.68 },
     ],
   },
 };

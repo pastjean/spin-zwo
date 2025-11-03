@@ -33,7 +33,7 @@
             <textevent timeoffset="900" message="15min done - final 5min!"/>
             <textevent timeoffset="1170" message="30sec - finish!"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.4">
+        <Cooldown Duration="600" PowerHigh="0.4" PowerLow="0.6">
         </Cooldown>
       </workout>
   </workout_file>

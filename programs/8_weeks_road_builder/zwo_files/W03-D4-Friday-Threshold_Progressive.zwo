@@ -34,7 +34,7 @@
             <textevent timeoffset="300" message="Halfway - finish strong"/>
             <textevent timeoffset="570" message="30sec - max effort!"/>
         </Warmup>
-        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.4">
+        <Cooldown Duration="600" PowerHigh="0.4" PowerLow="0.6">
         </Cooldown>
       </workout>
   </workout_file>

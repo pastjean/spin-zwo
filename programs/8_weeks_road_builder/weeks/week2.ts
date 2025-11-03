@@ -145,7 +145,7 @@ Tabata-inspired protocol with longer work periods.
         messages: [{ time: 5, text: 'Final interval - finish strong!' }],
       },
       { type: 'steady', duration: 20, power: 0.5 },
-      { type: 'cooldown', duration: 600, powerHigh: 0.5, powerLow: 0.3 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.3, powerLow: 0.5 },
     ],
   },
 
@@ -158,7 +158,7 @@ Pure recovery ride.`,
     segments: [
       { type: 'warmup', duration: 300, powerLow: 0.5, powerHigh: 0.55 },
       { type: 'steady', duration: 2700, power: 0.55 },
-      { type: 'cooldown', duration: 600, powerHigh: 0.55, powerLow: 0.5 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.5, powerLow: 0.55 },
     ],
   },
 
@@ -218,7 +218,7 @@ Lactate clearance training with oscillating intensity.
         messages: [{ time: 10, text: 'Final over - push hard!' }],
       },
       { type: 'steady', duration: 180, power: 0.95 },
-      { type: 'cooldown', duration: 600, powerHigh: 0.6, powerLow: 0.4 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.4, powerLow: 0.6 },
     ],
   },
 
@@ -229,7 +229,7 @@ Lactate clearance training with oscillating intensity.
     segments: [
       { type: 'warmup', duration: 600, powerLow: 0.6, powerHigh: 0.68 },
       { type: 'steady', duration: 2400, power: 0.7 },
-      { type: 'cooldown', duration: 600, powerHigh: 0.68, powerLow: 0.55 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.55, powerLow: 0.68 },
     ],
   },
 
@@ -252,7 +252,7 @@ Volume increase week.
           { time: 2550, text: 'Halfway!' },
         ],
       },
-      { type: 'cooldown', duration: 600, powerHigh: 0.68, powerLow: 0.55 },
+      { type: 'cooldown', duration: 600, powerHigh: 0.55, powerLow: 0.68 },
     ],
   },
 };

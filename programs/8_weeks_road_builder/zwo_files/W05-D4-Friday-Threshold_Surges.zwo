@@ -47,7 +47,7 @@
         <SteadyState Duration="60" Power="1.1">
             <textevent timeoffset="10" message="Final SURGE! - Give it everything!"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.4">
+        <Cooldown Duration="600" PowerHigh="0.4" PowerLow="0.6">
         </Cooldown>
       </workout>
   </workout_file>

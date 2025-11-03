@@ -35,7 +35,7 @@
             <textevent timeoffset="450" message="Halfway through test 2"/>
             <textevent timeoffset="870" message="30sec - empty the tank!"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.4">
+        <Cooldown Duration="600" PowerHigh="0.4" PowerLow="0.6">
         </Cooldown>
       </workout>
   </workout_file>
