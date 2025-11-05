@@ -211,27 +211,27 @@ Pure recovery ride. Conversational pace, very easy effort.`,
     ],
   },
 
-  'W01-D4-Friday-VO2max_30_30s_Introduction': {
-    name: 'W1-Fri: VO2max 30/30s Introduction',
-    description: `VO2max micro-intervals: 4 sets of 6x30sec @ 120% / 30sec @ 50%
+  'W01-D4-Friday-VO2max_3x6min': {
+    name: 'W1-Fri: Sustained VO2max 3x6min',
+    description: `Sustained VO2max: 3 x 6min @ 108% (3min recovery)
 
-Polarized training introduction with high-intensity micro-intervals. Total 12min Zone 3 work.
+Sustained efforts contrast with Tuesday's micro-intervals. Total 18min Zone 3 work.
 
 💡 Pre-load: Carbs 2-3hrs before`,
-    tags: ['Week 1', 'VO2max', 'High Intensity', 'Polarized', 'Micro-Intervals'],
+    tags: ['Week 1', 'VO2max', 'High Intensity', 'Polarized', 'Sustained'],
     segments: [
       {
         type: 'warmup',
         duration: 600,
         powerLow: 0.5,
-        powerHigh: 0.65,
+        powerHigh: 0.7,
         messages: [{ time: 10, text: 'Easy warmup' }],
       },
       {
         type: 'warmup',
         duration: 300,
-        powerLow: 0.65,
-        powerHigh: 0.75,
+        powerLow: 0.7,
+        powerHigh: 0.85,
         messages: [{ time: 10, text: 'Building toward VO2max intensity' }],
       },
       {
@@ -240,130 +240,45 @@ Polarized training introduction with high-intensity micro-intervals. Total 12min
         power: 0.6,
         messages: [{ time: 10, text: 'Easy spin before intervals' }],
       },
-      // Set 1: 6x30/30
+      // Interval 1
       {
         type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Set 1/4 - Interval 1/6 @ 120%' }],
+        duration: 360,
+        power: 1.08,
+        messages: [
+          { time: 10, text: 'Interval 1/3 - 6min @ 108%' },
+          { time: 180, text: 'Halfway through interval 1' },
+        ],
       },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
+      { type: 'steady', duration: 180, power: 0.6 },
+      // Interval 2
       {
         type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Final interval of set 1' }],
+        duration: 360,
+        power: 1.08,
+        messages: [
+          { time: 10, text: 'Interval 2/3 - Stay controlled' },
+          { time: 180, text: 'Halfway' },
+        ],
       },
+      { type: 'steady', duration: 180, power: 0.6 },
+      // Interval 3
       {
         type: 'steady',
-        duration: 30,
-        power: 0.5,
-        messages: [{ time: 10, text: 'Set 1 complete - recovery' }],
-      },
-      // Recovery between sets
-      { type: 'steady', duration: 180, power: 0.5 },
-      // Set 2: 6x30/30
-      {
-        type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Set 2/4 - Stay controlled' }],
-      },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      {
-        type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Final interval of set 2' }],
-      },
-      {
-        type: 'steady',
-        duration: 30,
-        power: 0.5,
-        messages: [{ time: 10, text: 'Set 2 complete' }],
-      },
-      // Recovery between sets
-      { type: 'steady', duration: 180, power: 0.5 },
-      // Set 3: 6x30/30
-      {
-        type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Set 3/4 - Keep it up!' }],
-      },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      {
-        type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Final interval of set 3' }],
-      },
-      {
-        type: 'steady',
-        duration: 30,
-        power: 0.5,
-        messages: [{ time: 10, text: 'Set 3 complete - one more!' }],
-      },
-      // Recovery between sets
-      { type: 'steady', duration: 180, power: 0.5 },
-      // Set 4: 6x30/30
-      {
-        type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Set 4/4 - Final set!' }],
-      },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      { type: 'steady', duration: 30, power: 1.2 },
-      { type: 'steady', duration: 30, power: 0.5 },
-      {
-        type: 'steady',
-        duration: 30,
-        power: 1.2,
-        messages: [{ time: 5, text: 'Final interval - finish strong!' }],
-      },
-      {
-        type: 'steady',
-        duration: 30,
-        power: 0.5,
-        messages: [{ time: 10, text: 'All sets complete!' }],
+        duration: 360,
+        power: 1.08,
+        messages: [
+          { time: 10, text: 'Interval 3/3 - Final interval!' },
+          { time: 180, text: 'Halfway - finish strong' },
+          { time: 330, text: '30sec - push through!' },
+        ],
       },
       {
         type: 'cooldown',
         duration: 600,
-        powerHigh: 0.3,
-        powerLow: 0.5,
-        messages: [{ time: 10, text: 'Great VO2max work! Easy cooldown' }],
+        powerHigh: 0.4,
+        powerLow: 0.6,
+        messages: [{ time: 10, text: 'Great sustained VO2max work! Easy cooldown' }],
       },
     ],
   },
