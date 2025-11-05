@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W1-Sat: Easy Z2 Ride</n>
+      <description>workout.description, 📊 46 TSS · IF 0.68 · 60 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 1"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+        <tag name="Easy"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.6" PowerHigh="0.68">
+            <textevent timeoffset="10" message="Easy warmup into Z2"/>
+        </Warmup>
+        <SteadyState Duration="2400" Power="0.7">
+            <textevent timeoffset="10" message="Zone 2 endurance - stay conversational"/>
+            <textevent timeoffset="1200" message="Halfway - feeling good"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
+            <textevent timeoffset="10" message="Easy finish"/>
+        </Cooldown>
+      </workout>
+  </workout_file>

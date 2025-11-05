@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W4-Sun: Long Endurance 90min (Reduced)</n>
+      <description>workout.description, 📊 71 TSS · IF 0.69 · 90 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 4"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+        <tag name="Recovery"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.6" PowerHigh="0.68">
+        </Warmup>
+        <SteadyState Duration="4200" Power="0.7">
+            <textevent timeoffset="10" message="Recovery week - enjoy the lighter load"/>
+            <textevent timeoffset="2100" message="Halfway!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
+        </Cooldown>
+      </workout>
+  </workout_file>

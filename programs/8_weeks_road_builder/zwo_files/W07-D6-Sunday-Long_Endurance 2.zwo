@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W7-Sun: Long Endurance 150min (PEAK)</n>
+      <description>workout.description, 📊 120 TSS · IF 0.69 · 150 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 7"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+        <tag name="Long Ride"/>
+        <tag name="PEAK"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.6" PowerHigh="0.68">
+        </Warmup>
+        <SteadyState Duration="7800" Power="0.7">
+            <textevent timeoffset="10" message="150min peak ride - stay patient"/>
+            <textevent timeoffset="1800" message="30min - settle in for the long haul"/>
+            <textevent timeoffset="3600" message="1hr - fuel regularly"/>
+            <textevent timeoffset="5400" message="90min - halfway done!"/>
+            <textevent timeoffset="7200" message="2hrs - final 30min ahead"/>
+            <textevent timeoffset="7500" message="Final 20min - you've got this!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
+        </Cooldown>
+      </workout>
+  </workout_file>

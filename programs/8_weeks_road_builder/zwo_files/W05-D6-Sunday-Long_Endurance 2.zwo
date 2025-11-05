@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W5-Sun: Long Endurance 120min</n>
+      <description>workout.description, 📊 95 TSS · IF 0.69 · 120 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 5"/>
+        <tag name="Endurance"/>
+        <tag name="Zone 2"/>
+        <tag name="Long Ride"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.6" PowerHigh="0.68">
+        </Warmup>
+        <SteadyState Duration="6000" Power="0.7">
+            <textevent timeoffset="10" message="Long steady Z2"/>
+            <textevent timeoffset="1800" message="30min in"/>
+            <textevent timeoffset="3600" message="Halfway!"/>
+            <textevent timeoffset="5400" message="Final 30min"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.68">
+        </Cooldown>
+      </workout>
+  </workout_file>
