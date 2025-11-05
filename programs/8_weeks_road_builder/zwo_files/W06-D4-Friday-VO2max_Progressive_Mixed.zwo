@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W6-Fri: Progressive VO2max + Sprints</n>
+      <description>workout.description, 📊 67 TSS · IF 0.86 · 54 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 6"/>
+        <tag name="VO2max"/>
+        <tag name="High Intensity"/>
+        <tag name="Polarized"/>
+        <tag name="Progressive"/>
+        <tag name="Sprints"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <Warmup Duration="300" PowerLow="0.7" PowerHigh="0.85">
+        </Warmup>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="180" Power="1.1">
+            <textevent timeoffset="10" message="Interval 1/3 - 3min @ 110%"/>
+            <textevent timeoffset="90" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="240" Power="1.1">
+            <textevent timeoffset="10" message="Interval 2/3 - 4min @ 110%"/>
+            <textevent timeoffset="120" message="Halfway"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="300" Power="1.1">
+            <textevent timeoffset="10" message="Interval 3/3 - 5min @ 110%"/>
+            <textevent timeoffset="150" message="Halfway"/>
+            <textevent timeoffset="270" message="30sec - finish strong!"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+            <textevent timeoffset="10" message="Recovery - sprints coming!"/>
+        </SteadyState>
+        <SteadyState Duration="60" Power="1.35">
+            <textevent timeoffset="5" message="SPRINT! 1/2 - 1min @ 135%"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="60" Power="1.35">
+            <textevent timeoffset="5" message="Final SPRINT 2/2 - EXPLODE!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.4" PowerLow="0.6">
+        </Cooldown>
+      </workout>
+  </workout_file>

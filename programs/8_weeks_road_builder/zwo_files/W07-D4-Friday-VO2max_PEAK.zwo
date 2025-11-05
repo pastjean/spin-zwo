@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W7-Fri: Extended VO2max PEAK</n>
+      <description>workout.description, 📊 79 TSS · IF 0.89 · 60 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 7"/>
+        <tag name="VO2max"/>
+        <tag name="High Intensity"/>
+        <tag name="Polarized"/>
+        <tag name="PEAK"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <Warmup Duration="300" PowerLow="0.7" PowerHigh="0.85">
+        </Warmup>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="480" Power="1.1">
+            <textevent timeoffset="10" message="Interval 1/2 - 8min @ 110%"/>
+            <textevent timeoffset="120" message="2min in - settle in"/>
+            <textevent timeoffset="240" message="Halfway through interval 1"/>
+            <textevent timeoffset="420" message="1min to go - stay strong"/>
+        </SteadyState>
+        <SteadyState Duration="300" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="480" Power="1.1">
+            <textevent timeoffset="10" message="Interval 2/2 - Final 8min!"/>
+            <textevent timeoffset="120" message="2min in"/>
+            <textevent timeoffset="240" message="Halfway - you've got this"/>
+            <textevent timeoffset="420" message="1min to go - finish strong!"/>
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.6">
+            <textevent timeoffset="10" message="Recovery - hard efforts coming"/>
+        </SteadyState>
+        <SteadyState Duration="120" Power="1.2">
+            <textevent timeoffset="10" message="Hard effort 1/2 - 2min @ 120%"/>
+            <textevent timeoffset="60" message="Halfway - hold on!"/>
+        </SteadyState>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="120" Power="1.2">
+            <textevent timeoffset="10" message="Final effort 2/2 - 2min @ 120%!"/>
+            <textevent timeoffset="60" message="Halfway - dig deep!"/>
+            <textevent timeoffset="105" message="15sec - EMPTY THE TANK!"/>
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.4" PowerLow="0.6">
+        </Cooldown>
+      </workout>
+  </workout_file>
