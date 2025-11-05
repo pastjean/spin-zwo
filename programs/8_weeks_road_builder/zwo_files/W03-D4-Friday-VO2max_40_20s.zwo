@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <workout_file>
+      <author>Pierre-Alexandre St-Jean</author>
+      <n>W3-Fri: VO2max 40/20s</n>
+      <description>workout.description, 📊 86 TSS · IF 0.88 · 66 min</description>
+      <sportType>bike</sportType>
+      <tags>
+          <tag name="Week 3"/>
+        <tag name="VO2max"/>
+        <tag name="High Intensity"/>
+        <tag name="Polarized"/>
+        <tag name="Micro-Intervals"/>
+      </tags>
+      <workout>
+          <Warmup Duration="600" PowerLow="0.5" PowerHigh="0.7">
+        </Warmup>
+        <Warmup Duration="300" PowerLow="0.7" PowerHigh="0.85">
+        </Warmup>
+        <SteadyState Duration="180" Power="0.6">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+            <textevent timeoffset="5" message="Set 1/3 - 40/20s"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+            <textevent timeoffset="5" message="Final interval of set 1"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.5">
+            <textevent timeoffset="10" message="Set 1 complete - recovery"/>
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+            <textevent timeoffset="5" message="Set 2/3"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+            <textevent timeoffset="5" message="Final interval of set 2"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="240" Power="0.5">
+            <textevent timeoffset="10" message="Set 2 complete - one more!"/>
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+            <textevent timeoffset="5" message="Set 3/3 - Final set!"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <SteadyState Duration="40" Power="1.15">
+            <textevent timeoffset="5" message="Final interval - done!"/>
+        </SteadyState>
+        <SteadyState Duration="20" Power="0.5">
+        </SteadyState>
+        <Cooldown Duration="600" PowerHigh="0.4" PowerLow="0.6">
+        </Cooldown>
+      </workout>
+  </workout_file>
