@@ -1,14 +1,14 @@
 import type { WorkoutDefinition } from "../../../lib/types.js";
 
 export const week5Workouts: Record<string, WorkoutDefinition> = {
-  "W05-D1-Tuesday-Threshold_5x8min": {
-    name: "W5-Tue: Sub-Threshold 5x8min",
-    description: `Extended threshold intervals: 5 x 8min @ 95% (3min recovery)
+  "W05-D1-Tuesday-VO2max_5x5min": {
+    name: "W5-Tue: Max Aerobic Power 5x5min",
+    description: `Extended Max Aerobic Power: 5 x 5min @ 108% (3min recovery)
 
-Building threshold durability with longer intervals.
+Building VO2max endurance with extended efforts. Total 25min Zone 3 work.
 
 💡 Pre-load: Carbs 2-3hrs before`,
-    tags: ["Week 5", "Threshold", "FTP", "Durability"],
+    tags: ["Week 5", "VO2max", "High Intensity", "Polarized", "Endurance"],
     segments: [
       {
         type: "warmup",
@@ -22,56 +22,56 @@ Building threshold durability with longer intervals.
       // Interval 1
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
+        duration: 300,
+        power: 1.08,
         messages: [
-          { time: 10, text: "Interval 1/5 @ 95%" },
-          { time: 240, text: "Halfway through interval 1" },
+          { time: 10, text: "Interval 1/5 @ 108%" },
+          { time: 150, text: "Halfway through interval 1" },
         ],
       },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 2
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
+        duration: 300,
+        power: 1.08,
         messages: [
           { time: 10, text: "Interval 2/5" },
-          { time: 240, text: "Halfway" },
+          { time: 150, text: "Halfway" },
         ],
       },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 3
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
+        duration: 300,
+        power: 1.08,
         messages: [
-          { time: 10, text: "Interval 3/5 - Stay steady" },
-          { time: 240, text: "Halfway" },
+          { time: 10, text: "Interval 3/5 - Stay controlled" },
+          { time: 150, text: "Halfway" },
         ],
       },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 4
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
+        duration: 300,
+        power: 1.08,
         messages: [
           { time: 10, text: "Interval 4/5 - Keep pushing" },
-          { time: 240, text: "Halfway" },
+          { time: 150, text: "Halfway" },
         ],
       },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 5
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
+        duration: 300,
+        power: 1.08,
         messages: [
           { time: 10, text: "Final interval 5/5!" },
-          { time: 240, text: "Halfway - finish strong" },
-          { time: 450, text: "30sec - you've got this!" },
+          { time: 150, text: "Halfway - finish strong" },
+          { time: 270, text: "30sec - you've got this!" },
         ],
       },
       { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },
@@ -91,14 +91,14 @@ Pure recovery ride.`,
     ],
   },
 
-  "W05-D4-Friday-Threshold_Surges": {
-    name: "W5-Fri: Threshold + Surges",
-    description: `Threshold with surges: 4 x (8min @ 95% + 1min @ 110%)
+  "W05-D4-Friday-VO2max_Surges": {
+    name: "W5-Fri: VO2max + Surges",
+    description: `VO2max with surges: 4 x (6min @ 106% + 1min @ 120%)
 
-Trains sustained power with surge response.
+Trains sustained VO2max power with surge response. Total 24min Zone 3 work.
 
 💡 Pre-load: Carbs 2-3hrs before`,
-    tags: ["Week 5", "Threshold", "Surges", "Race Simulation"],
+    tags: ["Week 5", "VO2max", "High Intensity", "Polarized", "Surges", "Race Simulation"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
       { type: "warmup", duration: 300, powerLow: 0.7, powerHigh: 0.85 },
@@ -106,58 +106,68 @@ Trains sustained power with surge response.
       // Interval 1
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
+        duration: 360,
+        power: 1.06,
         messages: [
-          { time: 10, text: "Interval 1/4 @ 95% - Prepare for surge" },
+          { time: 10, text: "Interval 1/4 @ 106% - Prepare for surge" },
+          { time: 180, text: "Halfway - surge coming" },
         ],
       },
       {
         type: "steady",
         duration: 60,
-        power: 1.1,
-        messages: [{ time: 10, text: "SURGE! 1min @ 110%" }],
+        power: 1.2,
+        messages: [{ time: 10, text: "SURGE! 1min @ 120%" }],
       },
-      { type: "steady", duration: 240, power: 0.6 },
+      { type: "steady", duration: 180, power: 0.6 },
       // Interval 2
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
-        messages: [{ time: 10, text: "Interval 2/4 @ 95%" }],
+        duration: 360,
+        power: 1.06,
+        messages: [
+          { time: 10, text: "Interval 2/4 @ 106%" },
+          { time: 180, text: "Halfway" },
+        ],
       },
       {
         type: "steady",
         duration: 60,
-        power: 1.1,
-        messages: [{ time: 10, text: "SURGE! @ 110%" }],
+        power: 1.2,
+        messages: [{ time: 10, text: "SURGE! @ 120%" }],
       },
-      { type: "steady", duration: 240, power: 0.6 },
+      { type: "steady", duration: 180, power: 0.6 },
       // Interval 3
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
-        messages: [{ time: 10, text: "Interval 3/4 @ 95%" }],
+        duration: 360,
+        power: 1.06,
+        messages: [
+          { time: 10, text: "Interval 3/4 @ 106%" },
+          { time: 180, text: "Halfway" },
+        ],
       },
       {
         type: "steady",
         duration: 60,
-        power: 1.1,
-        messages: [{ time: 10, text: "SURGE! @ 110%" }],
+        power: 1.2,
+        messages: [{ time: 10, text: "SURGE! @ 120%" }],
       },
-      { type: "steady", duration: 240, power: 0.6 },
+      { type: "steady", duration: 180, power: 0.6 },
       // Interval 4
       {
         type: "steady",
-        duration: 480,
-        power: 0.95,
-        messages: [{ time: 10, text: "Final interval 4/4 @ 95%" }],
+        duration: 360,
+        power: 1.06,
+        messages: [
+          { time: 10, text: "Final interval 4/4 @ 106%" },
+          { time: 180, text: "Halfway - final surge coming!" },
+        ],
       },
       {
         type: "steady",
         duration: 60,
-        power: 1.1,
+        power: 1.2,
         messages: [{ time: 10, text: "Final SURGE! - Give it everything!" }],
       },
       { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },

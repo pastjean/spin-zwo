@@ -13,18 +13,20 @@
 
 ## Training Philosophy
 
-**Polarized Training (80/20)**
-- 80% training time at low intensity (Z1-Z2)
-- 15-20% at high intensity (Z4-Z5)
-- <5% moderate intensity (Z3)
+**Polarized Training (80/20) - Seiler Model**
+- **80% training time at LOW intensity (50-79% FTP)** - Zone 1-2, easy aerobic rides
+- **15-20% at HIGH intensity (105-120% FTP)** - Zone 3, VO2max work
+- **<5% moderate intensity (80-104% FTP)** - "Gray zone" minimized to avoid chronic fatigue
 
-**Progressive Threshold Loading**
-- Build sustained power from 24min → 40min time-at-threshold
-- Targets punchers/explosive riders who need durability
+This program follows Dr. Stephen Seiler's 3-zone polarized model:
+- **Zone 1 (50-79% FTP):** Easy/conversational - recovery and endurance rides
+- **Zone 2 (80-99% FTP):** AVOID - the "gray zone" creates fatigue without optimal adaptation
+- **Zone 3 (100%+ FTP):** High intensity - Tuesday/Friday interval sessions at 105-120% FTP
 
-**Varied VO2max Protocols**
-- Different protocol each week (30/30s, 40/20s, 4x4, 5x8, etc.)
-- Based on 2020-2024 research
+**VO2max Development**
+- All high-intensity sessions target 105-120% FTP (true Zone 3)
+- Varied protocols: 30/30s, 40/20s, 4x4min Seiler, 5x5min, mixed intervals
+- Based on research showing 105-110% FTP optimal for VO2max adaptation
 
 **Recovery Integration**
 - Week 4 & 8: Recovery weeks (35% volume reduction)
@@ -165,15 +167,23 @@
 
 ---
 
-## Training Zones
+## Training Zones (Seiler 3-Zone Polarized Model)
 
-| Zone | Name | % FTP | RPE | Purpose |
-|------|------|-------|-----|---------|
-| **Z1** | Active Recovery | <55% | 1-2 | Recovery, warmup |
-| **Z2** | Endurance | 56-75% | 3-4 | Aerobic base, fat oxidation |
-| **Z3** | Tempo | 76-87% | 5-6 | Muscular endurance (minimal use) |
-| **Z4** | Threshold | 88-105% | 7-8 | FTP development |
-| **Z5** | VO2max | 106-120% | 9-10 | Max aerobic capacity |
+| Zone | Name | % FTP | RPE | Purpose | Usage in Program |
+|------|------|-------|-----|---------|------------------|
+| **Zone 1** | Low Intensity | 50-79% | 1-4 | Aerobic base, recovery, fat oxidation | 80% of training time |
+| **Zone 2** | Moderate Intensity | 80-99% | 5-7 | **GRAY ZONE - MINIMIZE** | <5% (avoid chronic fatigue) |
+| **Zone 3** | High Intensity | 100-120% | 8-10 | VO2max, anaerobic capacity | 15-20% of training time |
+
+**Polarized Training Zones Explained:**
+- **Zone 1 (50-79% FTP):** All easy rides, recovery, warm-up/cool-down. Should feel conversational.
+- **Zone 2 (80-99% FTP):** The "gray zone" - hard enough to create fatigue, not hard enough for optimal adaptation. Minimized in polarized training.
+- **Zone 3 (100-120% FTP):** True high intensity. All interval sessions (Tuesday/Friday) target 105-120% FTP.
+
+**Traditional 5-Zone vs Seiler 3-Zone Comparison:**
+- Traditional Z1-Z2 = Seiler Zone 1 (Low)
+- Traditional Z3-Z4 = Seiler Zone 2 (Gray Zone - avoid)
+- Traditional Z5+ = Seiler Zone 3 (High)
 
 **FTP Calculation:** 20-min test average power × 0.95
 
@@ -256,21 +266,33 @@ By Week 8, you should experience:
 
 ---
 
-## Research References (2020-2024)
+## Research References
 
-**Polarized Training:**
-- Systematic review (2023): Training periodization and intensity distribution in trained cyclists
-- Meta-analysis (2024): Polarized vs non-polarized training yield comparable VO2max gains
+**Polarized Training Foundation (Seiler Model):**
+- **Seiler, S. (2010):** "What is best practice for training intensity and duration distribution in endurance athletes?" - Established the 3-zone polarized model (Zone 1: 50-79% FTP, Zone 2: 80-99% FTP, Zone 3: 100%+ FTP)
+- **Seiler & Tønnessen (2009):** "Intervals, Thresholds, and Long Slow Distance" - Found elite endurance athletes use 75-80% Zone 1, ~5% Zone 2, 15-20% Zone 3
+- **Stöggl & Sperlich (2014):** "Polarized training has greater impact on key endurance variables than threshold, high volume, or high intensity training alone"
+- **Sports Medicine Meta-Analysis (May 2024):** "Comparison of Polarized Versus Other Types of Endurance Training Intensity Distribution on Athletes' Endurance Performance" - Systematic review showing polarized training superiority
+
+**Zone 3 Intensity Guidelines:**
+- **Seiler research on Norwegian Olympic athletes:** High-intensity work performed at 105-110% FTP for 4-10 minute intervals
+- **Seiler on 4x4 protocol:** "The goal is 40-60 minutes of work above FTP, with intensity in the range 105-110% of FTP, and interval length between 4 and 10 minutes"
+- **VO2max optimization research:** Intervals at 105-120% FTP provide maximal VO2max stimulus while maintaining work quality
+
+**Why Avoid Zone 2 (80-99% FTP - The "Gray Zone"):**
+- **Seiler's observation:** Zone 2 work is "too hard to recover from, not hard enough for optimal adaptation"
+- **Polarized training research:** Zone 2 (threshold/tempo) produces high autonomic stress without proportional training benefits
+- **Optimal distribution:** 80% Zone 1 (50-79%), 5% Zone 2 (80-99%), 15% Zone 3 (105-120%)
 
 **VO2max Protocols:**
-- 2024 research: Higher fraction of VO2max during intervals = greater performance gains (R² = 0.54)
-- 2024 study: Low cadence (50-70 RPM) high-intensity shows superior aerobic improvements
-- 2021: Self-paced 4x4 and 4x8min protocols effective for VO2max development
+- **Rønnestad et al. (2020):** "Superior performance improvements in elite cyclists from short (4-min) vs long (16-min) intervals"
+- **2024 research:** Higher fraction of VO2max during intervals = greater performance gains (R² = 0.54)
+- **2024 study:** Low cadence (50-70 RPM) high-intensity shows superior aerobic improvements
+- **Helgerud et al. (2007):** "Aerobic high-intensity intervals improve VO2max more than threshold training" - Basis for 4x4 Seiler protocol
 
-**Threshold & Durability:**
-- 2022 review: Power-duration relationship and durability critical for endurance performance
-- 2024: Lactate threshold modeling emphasizes sustainable power development
-- 2020: Over/under protocols with active recovery improve lactate clearance
+**Additional References:**
+- **TrainerRoad, Fast Talk Labs, EVOQ.BIKE:** Practical applications of Seiler's polarized training zones for cyclists
+- Power-duration modeling and FTP-based zone calculations for polarized training implementation
 
 ---
 

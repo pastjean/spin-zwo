@@ -102,44 +102,67 @@ Pure recovery ride.`,
     ],
   },
 
-  "W07-D4-Friday-Threshold_LowCadence": {
-    name: "W7-Fri: 2x20min Low Cadence (PEAK)",
-    description: `PEAK workout: 2 x 20min @ 88% @ 65rpm (5min recovery)
+  "W07-D4-Friday-VO2max_PEAK": {
+    name: "W7-Fri: Extended VO2max PEAK",
+    description: `PEAK workout: 2x8min @ 110% (5min recovery) + 2x2min @ 120% (3min recovery)
 
-Low cadence threshold - maximum durability stress.
+Maximum Zone 3 load - sustained VO2max plus high-intensity efforts. Total 20min Zone 3.
 
 💡 Pre-load: Carbs 2-3hrs before`,
-    tags: ["Week 7", "Threshold", "Low Cadence", "PEAK", "Durability"],
+    tags: ["Week 7", "VO2max", "High Intensity", "Polarized", "PEAK"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
       { type: "warmup", duration: 300, powerLow: 0.7, powerHigh: 0.85 },
       { type: "steady", duration: 180, power: 0.6 },
-      // Interval 1
+      // Sustained efforts
       {
         type: "steady",
-        duration: 1200,
-        power: 0.88,
-        cadence: 65,
+        duration: 480,
+        power: 1.1,
         messages: [
-          { time: 10, text: "Interval 1/2 - 20min @ 88% @ 65rpm" },
-          { time: 300, text: "5min in - settle into the grind" },
-          { time: 600, text: "Halfway through interval 1" },
-          { time: 900, text: "15min done - 5min to go" },
+          { time: 10, text: "Interval 1/2 - 8min @ 110%" },
+          { time: 120, text: "2min in - settle in" },
+          { time: 240, text: "Halfway through interval 1" },
+          { time: 420, text: "1min to go - stay strong" },
         ],
       },
       { type: "steady", duration: 300, power: 0.6 },
-      // Interval 2
       {
         type: "steady",
-        duration: 1200,
-        power: 0.88,
-        cadence: 65,
+        duration: 480,
+        power: 1.1,
         messages: [
-          { time: 10, text: "Interval 2/2 - Final 20min!" },
-          { time: 300, text: "5min in - stay strong" },
-          { time: 600, text: "Halfway - you've got this" },
-          { time: 900, text: "15min done - final 5min!" },
-          { time: 1170, text: "30sec - finish!" },
+          { time: 10, text: "Interval 2/2 - Final 8min!" },
+          { time: 120, text: "2min in" },
+          { time: 240, text: "Halfway - you've got this" },
+          { time: 420, text: "1min to go - finish strong!" },
+        ],
+      },
+      {
+        type: "steady",
+        duration: 240,
+        power: 0.6,
+        messages: [{ time: 10, text: "Recovery - hard efforts coming" }],
+      },
+      // High-intensity efforts
+      {
+        type: "steady",
+        duration: 120,
+        power: 1.2,
+        messages: [
+          { time: 10, text: "Hard effort 1/2 - 2min @ 120%" },
+          { time: 60, text: "Halfway - hold on!" },
+        ],
+      },
+      { type: "steady", duration: 180, power: 0.6 },
+      {
+        type: "steady",
+        duration: 120,
+        power: 1.2,
+        messages: [
+          { time: 10, text: "Final effort 2/2 - 2min @ 120%!" },
+          { time: 60, text: "Halfway - dig deep!" },
+          { time: 105, text: "15sec - EMPTY THE TANK!" },
         ],
       },
       { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },

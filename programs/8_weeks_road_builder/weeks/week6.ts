@@ -91,57 +91,69 @@ Pure recovery ride.`,
     ],
   },
 
-  "W06-D4-Friday-Threshold_ExtendedOU": {
-    name: "W6-Fri: Extended Over/Unders",
-    description: `Extended over/unders: 2 x (5min @ 92% / 3min @ 102% / 5min @ 92%)
+  "W06-D4-Friday-VO2max_Progressive_Mixed": {
+    name: "W6-Fri: Progressive VO2max + Sprints",
+    description: `Mixed VO2max: 3min @ 110% + 4min @ 110% + 5min @ 110% (3min recovery) + 2x1min @ 135% (2min recovery)
 
-Lactate clearance with longer efforts.
+Peak week variety - sustained VO2max followed by explosive efforts. Total 14min Zone 3.
 
 💡 Pre-load: Carbs 2-3hrs before`,
 
-    tags: ["Week 6", "Threshold", "Over/Unders", "Lactate Clearance"],
+    tags: ["Week 6", "VO2max", "High Intensity", "Polarized", "Progressive", "Sprints"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
       { type: "warmup", duration: 300, powerLow: 0.7, powerHigh: 0.85 },
       { type: "steady", duration: 180, power: 0.6 },
-      // Interval 1
-      {
-        type: "steady",
-        duration: 300,
-        power: 0.92,
-        messages: [{ time: 10, text: "Interval 1/2 - Under @ 92%" }],
-      },
+      // Progressive intervals
       {
         type: "steady",
         duration: 180,
-        power: 1.02,
-        messages: [{ time: 10, text: "Over @ 102% - Push!" }],
+        power: 1.1,
+        messages: [
+          { time: 10, text: "Interval 1/3 - 3min @ 110%" },
+          { time: 90, text: "Halfway" },
+        ],
       },
+      { type: "steady", duration: 180, power: 0.6 },
+      {
+        type: "steady",
+        duration: 240,
+        power: 1.1,
+        messages: [
+          { time: 10, text: "Interval 2/3 - 4min @ 110%" },
+          { time: 120, text: "Halfway" },
+        ],
+      },
+      { type: "steady", duration: 180, power: 0.6 },
       {
         type: "steady",
         duration: 300,
-        power: 0.92,
-        messages: [{ time: 10, text: "Back under @ 92% - Clear lactate" }],
-      },
-      { type: "steady", duration: 300, power: 0.6 },
-      // Interval 2
-      {
-        type: "steady",
-        duration: 300,
-        power: 0.92,
-        messages: [{ time: 10, text: "Interval 2/2 - Under @ 92%" }],
+        power: 1.1,
+        messages: [
+          { time: 10, text: "Interval 3/3 - 5min @ 110%" },
+          { time: 150, text: "Halfway" },
+          { time: 270, text: "30sec - finish strong!" },
+        ],
       },
       {
         type: "steady",
-        duration: 180,
-        power: 1.02,
-        messages: [{ time: 10, text: "Final over @ 102%!" }],
+        duration: 240,
+        power: 0.6,
+        messages: [{ time: 10, text: "Recovery - sprints coming!" }],
       },
+      // Sprint efforts
       {
         type: "steady",
-        duration: 300,
-        power: 0.92,
-        messages: [{ time: 10, text: "Final under - hold it together" }],
+        duration: 60,
+        power: 1.35,
+        messages: [{ time: 5, text: "SPRINT! 1/2 - 1min @ 135%" }],
+      },
+      { type: "steady", duration: 120, power: 0.6 },
+      {
+        type: "steady",
+        duration: 60,
+        power: 1.35,
+        messages: [{ time: 5, text: "Final SPRINT 2/2 - EXPLODE!" }],
       },
       { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },
     ],

@@ -105,40 +105,79 @@ Pure recovery ride.`,
     ],
   },
 
-  "W04-D4-Friday-Threshold_SweetSpot": {
-    name: "W4-Fri: Sweet Spot 2x12min",
-    description: `Sweet spot intervals: 2 x 12min @ 88% (4min recovery)
+  "W04-D4-Friday-VO2max_40_20s_Recovery": {
+    name: "W4-Fri: 40/20s Recovery Volume",
+    description: `Recovery week VO2max: 2 sets of 8x40sec @ 115% / 20sec @ 50%
 
-Recovery week threshold work at moderate intensity.
+Reduced volume for recovery week while maintaining intensity quality. Total ~10min 40sec Zone 3.
 
 💡 Pre-load: Carbs 2-3hrs before`,
-    tags: ["Week 4", "Threshold", "Sweet Spot", "Recovery"],
+    tags: ["Week 4", "VO2max", "40/20s", "Recovery", "Polarized"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
       { type: "warmup", duration: 300, powerLow: 0.7, powerHigh: 0.85 },
       { type: "steady", duration: 180, power: 0.6 },
-      // Interval 1
+      // Set 1: 8x40/20
       {
         type: "steady",
-        duration: 720,
-        power: 0.88,
-        messages: [
-          { time: 10, text: "Interval 1/2 @ 88% Sweet Spot" },
-          { time: 360, text: "Halfway - steady effort" },
-        ],
+        duration: 40,
+        power: 1.15,
+        messages: [{ time: 5, text: "Set 1/2 - Recovery week quality" }],
       },
-      { type: "steady", duration: 240, power: 0.6 },
-      // Interval 2
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
       {
         type: "steady",
-        duration: 720,
-        power: 0.88,
-        messages: [
-          { time: 10, text: "Interval 2/2 - Final interval" },
-          { time: 360, text: "Halfway" },
-          { time: 690, text: "30sec - finish strong!" },
-        ],
+        duration: 40,
+        power: 1.15,
+        messages: [{ time: 5, text: "Final interval of set 1" }],
       },
+      { type: "steady", duration: 20, power: 0.5 },
+      // Recovery between sets
+      {
+        type: "steady",
+        duration: 240,
+        power: 0.5,
+        messages: [{ time: 10, text: "Set 1 complete - recovery" }],
+      },
+      // Set 2: 8x40/20
+      {
+        type: "steady",
+        duration: 40,
+        power: 1.15,
+        messages: [{ time: 5, text: "Set 2/2 - Final set" }],
+      },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      { type: "steady", duration: 40, power: 1.15 },
+      { type: "steady", duration: 20, power: 0.5 },
+      {
+        type: "steady",
+        duration: 40,
+        power: 1.15,
+        messages: [{ time: 5, text: "Final interval - done!" }],
+      },
+      { type: "steady", duration: 20, power: 0.5 },
       { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },
     ],
   },

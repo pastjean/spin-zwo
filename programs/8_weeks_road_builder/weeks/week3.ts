@@ -92,52 +92,60 @@ Pure recovery ride.`,
     ],
   },
 
-  "W03-D4-Friday-Threshold_Progressive": {
-    name: "W3-Fri: Progressive Build 3x10min",
-    description: `Progressive threshold intervals: 3 x 10min (90% → 98%)
+  "W03-D4-Friday-VO2max_4x4min": {
+    name: "W3-Fri: Max Aerobic Power 4x4min",
+    description: `Max Aerobic Power: 4 x 4min @ 110% (3min recovery)
 
-Each interval builds from sweet spot to near-FTP.
+Classic Seiler protocol at proper Zone 3 intensity. Total 16min Zone 3 work.
 
 💡 Pre-load: Carbs 2-3hrs before`,
-    tags: ["Week 3", "Threshold", "Progressive", "FTP"],
+    tags: ["Week 3", "VO2max", "High Intensity", "Polarized", "Seiler Protocol"],
     segments: [
       { type: "warmup", duration: 600, powerLow: 0.5, powerHigh: 0.7 },
       { type: "warmup", duration: 300, powerLow: 0.7, powerHigh: 0.85 },
       { type: "steady", duration: 180, power: 0.6 },
       // Interval 1
       {
-        type: "warmup",
-        duration: 600,
-        powerLow: 0.9,
-        powerHigh: 0.98,
+        type: "steady",
+        duration: 240,
+        power: 1.1,
         messages: [
-          { time: 10, text: "Interval 1/3 - Build from 90% to 98%" },
-          { time: 300, text: "Halfway - keep building" },
+          { time: 10, text: "Interval 1/4 @ 110% - Settle in" },
+          { time: 120, text: "Halfway through interval 1" },
         ],
       },
-      { type: "steady", duration: 240, power: 0.6 },
+      { type: "steady", duration: 180, power: 0.6 },
       // Interval 2
       {
-        type: "warmup",
-        duration: 600,
-        powerLow: 0.9,
-        powerHigh: 0.98,
+        type: "steady",
+        duration: 240,
+        power: 1.1,
         messages: [
-          { time: 10, text: "Interval 2/3 - Smooth progression" },
-          { time: 300, text: "Halfway" },
+          { time: 10, text: "Interval 2/4 - Stay controlled" },
+          { time: 120, text: "Halfway" },
         ],
       },
-      { type: "steady", duration: 240, power: 0.6 },
+      { type: "steady", duration: 180, power: 0.6 },
       // Interval 3
       {
-        type: "warmup",
-        duration: 600,
-        powerLow: 0.9,
-        powerHigh: 0.98,
+        type: "steady",
+        duration: 240,
+        power: 1.1,
         messages: [
-          { time: 10, text: "Final interval 3/3!" },
-          { time: 300, text: "Halfway - finish strong" },
-          { time: 570, text: "30sec - max effort!" },
+          { time: 10, text: "Interval 3/4 - Keep pushing" },
+          { time: 120, text: "Halfway" },
+        ],
+      },
+      { type: "steady", duration: 180, power: 0.6 },
+      // Interval 4
+      {
+        type: "steady",
+        duration: 240,
+        power: 1.1,
+        messages: [
+          { time: 10, text: "Final interval 4/4!" },
+          { time: 120, text: "Halfway - finish strong!" },
+          { time: 210, text: "30sec - push through!" },
         ],
       },
       { type: "cooldown", duration: 600, powerHigh: 0.4, powerLow: 0.6 },
