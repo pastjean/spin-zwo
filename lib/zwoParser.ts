@@ -4,7 +4,6 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { promisify } from 'node:util';
 import { parseString } from 'xml2js';
-import { parseFilename } from './filenameParser.js';
 import { calculateWorkoutMetrics } from './metrics.js';
 import type {
   CooldownSegment,
@@ -61,9 +60,6 @@ export async function parseZWOFile(filepath: string): Promise<ParsedWorkout> {
   // Extract segments
   const segments = extractSegments(workoutFile.workout[0]);
 
-  // Parse filename metadata
-  const filenameData = parseFilename(filename);
-
   // Calculate metrics
   const metrics = calculateWorkoutMetrics(segments);
 
@@ -73,10 +69,10 @@ export async function parseZWOFile(filepath: string): Promise<ParsedWorkout> {
     author,
     tags,
     segments,
-    week: filenameData?.week,
-    day: filenameData?.day,
-    dayName: filenameData?.dayName,
-    workoutName: filenameData?.workoutName,
+    week: undefined,
+    day: undefined,
+    dayName: undefined,
+    workoutName: name || path.basename(filepath, '.zwo'),
     duration: metrics.duration,
     tss: metrics.tss,
     intensityFactor: metrics.intensityFactor,
