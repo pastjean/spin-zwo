@@ -12,6 +12,8 @@
     "generate:12weeks": "bun run generate-all.ts programs/12_weeks_ftp_builder",
     "generate:8weeks": "bun run generate-all.ts programs/8_weeks_road_builder",
     "generate:recoveries": "bun run generate-all.ts programs/recoveries",
+    "generate:readme": "bun run generate-all.ts -- --detailed-readme",
+    "migrate:config": "bun run scripts/migrate-to-config.ts",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint --write .",
