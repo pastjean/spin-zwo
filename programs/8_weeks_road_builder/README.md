@@ -3,19 +3,19 @@
 ## Overview
 
 - **Total Weeks:** 8
-- **Total Workouts:** 66
-- **Total TSS:** 4117
-- **Total Hours:** 77.4
-- **Average TSS/Week:** 515
-- **Average Hours/Week:** 9.7
+- **Total Workouts:** 43
+- **Total TSS:** 2349
+- **Total Hours:** 45.1
+- **Average TSS/Week:** 294
+- **Average Hours/Week:** 5.6
 
 ## Intensity Distribution
 
-- **Recovery (<60% FTP):** 29.6%
-- **Endurance (60-75% FTP):** 58.5%
-- **Tempo (76-87% FTP):** 1.7%
-- **Threshold (88-105% FTP):** 1.6%
-- **VO2max (>105% FTP):** 8.6%
+- **Recovery (<60% FTP):** 35.2%
+- **Endurance (60-75% FTP):** 54.3%
+- **Tempo (76-87% FTP):** 2.0%
+- **Threshold (88-105% FTP):** 3.3%
+- **VO2max (>105% FTP):** 5.2%
 
 ## Program Calendar
 
@@ -29,152 +29,160 @@
 
 ### Week 1
 
-**Weekly Total:** 440 TSS, 8.4 hours
+**Weekly Total:** 279 TSS, 5.7 hours
 
-- **Day 1 (Tuesday):** VO2max 30 30s - 87 TSS, 72 min
-  ![VO2max 30 30s](images/individual/W01-D1-Tuesday-VO2max_30_30s.png)
+- **Day 2 (Tuesday):** controlled-30-30-s-1 - 24 TSS, 33 min
+  ![controlled-30-30-s-1](images/individual/W01-D2-Tuesday-controlled-30-30-s-1.png)
 
-- **Day 2 (Wednesday):** Recovery Easy 2 - 30 TSS, 60 min
-  ![Recovery Easy 2](images/individual/W01-D2-Wednesday-Recovery_Easy 2.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W01-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** VO2max 3x6min 2 - 65 TSS, 52 min
-  ![VO2max 3x6min 2](images/individual/W01-D4-Friday-VO2max_3x6min 2.png)
+- **Day 5 (Friday):** anaerobic-endurance-2 - 21 TSS, 25 min
+  ![anaerobic-endurance-2](images/individual/W01-D5-Friday-anaerobic-endurance-2.png)
 
-- **Day 5 (Saturday):** Easy Z2 2 - 46 TSS, 60 min
-  ![Easy Z2 2](images/individual/W01-D5-Saturday-Easy_Z2 2.png)
+- **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
+  ![Easy Z2](images/individual/W01-D6-Saturday-Easy_Z2.png)
 
-- **Day 6 (Sunday):** Long Endurance - 71 TSS, 90 min
-  ![Long Endurance](images/individual/W01-D6-Sunday-Long_Endurance.png)
+- **Day 7 (Sunday):** Long Endurance - 71 TSS, 90 min
+  ![Long Endurance](images/individual/W01-D7-Sunday-Long_Endurance.png)
+
 
 ### Week 2
 
-**Weekly Total:** 576 TSS, 10.0 hours
+**Weekly Total:** 201 TSS, 4.8 hours
 
-- **Day 1 (Tuesday):** VO2max 40 20s 2 - 115 TSS, 80 min
-  ![VO2max 40 20s 2](images/individual/W02-D1-Tuesday-VO2max_40_20s 2.png)
+- **Day 2 (Tuesday):** controlled-30-30-s-2 - 27 TSS, 35 min
+  ![controlled-30-30-s-2](images/individual/W02-D2-Tuesday-controlled-30-30-s-2.png)
 
-- **Day 2 (Wednesday):** Recovery Easy - 30 TSS, 60 min
-  ![Recovery Easy](images/individual/W02-D2-Wednesday-Recovery_Easy.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W02-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** VO2max Mixed - 58 TSS, 50 min
-  ![VO2max Mixed](images/individual/W02-D4-Friday-VO2max_Mixed.png)
+- **Day 5 (Friday):** neuromuscular-power-surges-2 - 15 TSS, 25 min
+  ![neuromuscular-power-surges-2](images/individual/W2-D5-Friday-neuromuscular-power-surges-2.png)
 
-- **Day 5 (Saturday):** Easy Z2 - 46 TSS, 60 min
-  ![Easy Z2](images/individual/W02-D5-Saturday-Easy_Z2.png)
+- **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
+  ![Easy Z2](images/individual/W02-D6-Saturday-Easy_Z2.png)
 
-- **Day 6 (Sunday):** Long Endurance 2 - 83 TSS, 105 min
-  ![Long Endurance 2](images/individual/W02-D6-Sunday-Long_Endurance 2.png)
+- **Day 7 (Sunday):** Long Endurance - 83 TSS, 105 min
+  ![Long Endurance](images/individual/W02-D7-Sunday-Long_Endurance.png)
+
 
 ### Week 3
 
-**Weekly Total:** 483 TSS, 9.1 hours
+**Weekly Total:** 356 TSS, 6.2 hours
 
-- **Day 1 (Tuesday):** VO2max 4x4min - 64 TSS, 53 min
-  ![VO2max 4x4min](images/individual/W03-D1-Tuesday-VO2max_4x4min.png)
+- **Day 2 (Tuesday):** hiit-45sec-1 - 16 TSS, 19 min
+  ![hiit-45sec-1](images/individual/W03-D2-Tuesday-hiit-45sec-1.png)
 
-- **Day 2 (Wednesday):** Recovery Easy - 30 TSS, 60 min
-  ![Recovery Easy](images/individual/W03-D2-Wednesday-Recovery_Easy.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W03-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** VO2max 40 20s 2 - 86 TSS, 66 min
-  ![VO2max 40 20s 2](images/individual/W03-D4-Friday-VO2max_40_20s 2.png)
+- **Day 5 (Friday):** power-intervals-1 - 83 TSS, 48 min
+  ![power-intervals-1](images/individual/W03-D5-Friday-power-intervals-1.png)
 
-- **Day 5 (Saturday):** Easy Z2 2 - 46 TSS, 60 min
-  ![Easy Z2 2](images/individual/W03-D5-Saturday-Easy_Z2 2.png)
+- **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
+  ![Easy Z2](images/individual/W03-D6-Saturday-Easy_Z2.png)
 
-- **Day 6 (Sunday):** Long Endurance - 95 TSS, 120 min
-  ![Long Endurance](images/individual/W03-D6-Sunday-Long_Endurance.png)
+- **Day 7 (Sunday):** Long Endurance - 95 TSS, 120 min
+  ![Long Endurance](images/individual/W03-D7-Sunday-Long_Endurance.png)
+
 
 ### Week 4
 
-**Weekly Total:** 434 TSS, 8.9 hours
+**Weekly Total:** 297 TSS, 5.7 hours
 
-- **Day 1 (Tuesday):** VO2max Recovery - 52 TSS, 48 min
-  ![VO2max Recovery](images/individual/W04-D1-Tuesday-VO2max_Recovery.png)
+- **Day 2 (Tuesday):** 30-30-s-anaerobic-3 - 19 TSS, 28 min
+  ![30-30-s-anaerobic-3](images/individual/W04-D2-Tuesday-30-30-s-anaerobic-3.png)
 
-- **Day 2 (Wednesday):** Recovery Easy - 30 TSS, 60 min
-  ![Recovery Easy](images/individual/W04-D2-Wednesday-Recovery_Easy.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W04-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** VO2max 40 20s Recovery - 56 TSS, 48 min
-  ![VO2max 40 20s Recovery](images/individual/W04-D4-Friday-VO2max_40_20s_Recovery.png)
+- **Day 5 (Friday):** VO2max 40 20s Recovery - 56 TSS, 48 min
+  ![VO2max 40 20s Recovery](images/individual/W04-D5-Friday-VO2max_40_20s_Recovery.png)
 
-- **Day 5 (Saturday):** Easy Z2 2 - 34 TSS, 45 min
-  ![Easy Z2 2](images/individual/W04-D5-Saturday-Easy_Z2 2.png)
+- **Day 6 (Saturday):** Easy Z2 - 34 TSS, 45 min
+  ![Easy Z2](images/individual/W04-D6-Saturday-Easy_Z2.png)
 
-- **Day 6 (Sunday):** Long Endurance 2 - 71 TSS, 90 min
-  ![Long Endurance 2](images/individual/W04-D6-Sunday-Long_Endurance 2.png)
+- **Day 7 (Sunday):** Long Endurance - 71 TSS, 90 min
+  ![Long Endurance](images/individual/W04-D7-Sunday-Long_Endurance.png)
+
 
 ### Week 5
 
-**Weekly Total:** 571 TSS, 10.3 hours
+**Weekly Total:** 296 TSS, 5.5 hours
 
-- **Day 1 (Tuesday):** VO2max 5x5min 2 - 85 TSS, 65 min
-  ![VO2max 5x5min 2](images/individual/W05-D1-Tuesday-VO2max_5x5min 2.png)
+- **Day 2 (Tuesday):** intensive-capacity-2 - 89 TSS, 57 min
+  ![intensive-capacity-2](images/individual/W05-D2-Tuesday-intensive-capacity-2.png)
 
-- **Day 2 (Wednesday):** Recovery Easy - 30 TSS, 60 min
-  ![Recovery Easy](images/individual/W05-D2-Wednesday-Recovery_Easy.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W05-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** VO2max Surges - 89 TSS, 65 min
-  ![VO2max Surges](images/individual/W05-D4-Friday-VO2max_Surges.png)
+- **Day 5 (Friday):** 40-20-s-2 - 36 TSS, 34 min
+  ![40-20-s-2](images/individual/W05-D5-Friday-40-20-s-2.png)
 
-- **Day 5 (Saturday):** Easy Z2 - 46 TSS, 60 min
-  ![Easy Z2](images/individual/W05-D5-Saturday-Easy_Z2.png)
+- **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
+  ![Easy Z2](images/individual/W05-D6-Saturday-Easy_Z2.png)
 
-- **Day 6 (Sunday):** Long Endurance - 95 TSS, 120 min
-  ![Long Endurance](images/individual/W05-D6-Sunday-Long_Endurance.png)
+- **Day 7 (Sunday):** Long Endurance - 95 TSS, 120 min
+  ![Long Endurance](images/individual/W05-D7-Sunday-Long_Endurance.png)
+
 
 ### Week 6
 
-**Weekly Total:** 582 TSS, 11.1 hours
+**Weekly Total:** 301 TSS, 5.7 hours
 
-- **Day 1 (Tuesday):** VO2max LowCadence 2 - 64 TSS, 53 min
-  ![VO2max LowCadence 2](images/individual/W06-D1-Tuesday-VO2max_LowCadence 2.png)
+- **Day 2 (Tuesday):** 12min-30-30-s-2 - 24 TSS, 38 min
+  ![12min-30-30-s-2](images/individual/W06-D2-Tuesday-12min-30-30-s-2.png)
 
-- **Day 2 (Wednesday):** Recovery Easy 2 - 30 TSS, 60 min
-  ![Recovery Easy 2](images/individual/W06-D2-Wednesday-Recovery_Easy 2.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W06-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** VO2max Progressive Mixed - 67 TSS, 54 min
-  ![VO2max Progressive Mixed](images/individual/W06-D4-Friday-VO2max_Progressive_Mixed.png)
+- **Day 5 (Friday):** power-intervals-3 - 94 TSS, 50 min
+  ![power-intervals-3](images/individual/W06-D5-Friday-power-intervals-3.png)
 
-- **Day 5 (Saturday):** Easy Z2 - 46 TSS, 60 min
-  ![Easy Z2](images/individual/W06-D5-Saturday-Easy_Z2.png)
+- **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
+  ![Easy Z2](images/individual/W06-D6-Saturday-Easy_Z2.png)
 
-- **Day 6 (Sunday):** Long Endurance - 107 TSS, 135 min
-  ![Long Endurance](images/individual/W06-D6-Sunday-Long_Endurance.png)
+- **Day 7 (Sunday):** Long Endurance - 107 TSS, 135 min
+  ![Long Endurance](images/individual/W06-D7-Sunday-Long_Endurance.png)
+
 
 ### Week 7
 
-**Weekly Total:** 641 TSS, 12.3 hours
+**Weekly Total:** 295 TSS, 5.8 hours
 
-- **Day 1 (Tuesday):** VO2max Mixed - 73 TSS, 55 min
-  ![VO2max Mixed](images/individual/W07-D1-Tuesday-VO2max_Mixed.png)
+- **Day 2 (Tuesday):** pace-is-the-trick - 74 TSS, 46 min
+  ![pace-is-the-trick](images/individual/W07-D2-Tuesday-pace-is-the-trick.png)
 
-- **Day 2 (Wednesday):** Recovery Easy - 30 TSS, 60 min
-  ![Recovery Easy](images/individual/W07-D2-Wednesday-Recovery_Easy.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W07-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** VO2max PEAK - 79 TSS, 60 min
-  ![VO2max PEAK](images/individual/W07-D4-Friday-VO2max_PEAK.png)
+- **Day 5 (Friday):** extensive-anaerobic-6-x-1min - 13 TSS, 15 min
+  ![extensive-anaerobic-6-x-1min](images/individual/W07-D5-Friday-extensive-anaerobic-6-x-1min.png)
 
-- **Day 5 (Saturday):** Easy Z2 - 58 TSS, 75 min
-  ![Easy Z2](images/individual/W07-D5-Saturday-Easy_Z2.png)
+- **Day 6 (Saturday):** Easy Z2 - 58 TSS, 75 min
+  ![Easy Z2](images/individual/W07-D6-Saturday-Easy_Z2.png)
 
-- **Day 6 (Sunday):** Long Endurance - 120 TSS, 150 min
-  ![Long Endurance](images/individual/W07-D6-Sunday-Long_Endurance.png)
+- **Day 7 (Sunday):** Long Endurance - 120 TSS, 150 min
+  ![Long Endurance](images/individual/W07-D7-Sunday-Long_Endurance.png)
+
 
 ### Week 8
 
-**Weekly Total:** 390 TSS, 7.4 hours
+**Weekly Total:** 324 TSS, 5.8 hours
 
-- **Day 1 (Tuesday):** VO2max Taper - 44 TSS, 44 min
-  ![VO2max Taper](images/individual/W08-D1-Tuesday-VO2max_Taper.png)
+- **Day 2 (Tuesday):** vo2max-climbing-1 - 70 TSS, 60 min
+  ![vo2max-climbing-1](images/individual/W08-D2-Tuesday-vo2max-climbing-1.png)
 
-- **Day 2 (Wednesday):** Recovery Easy - 30 TSS, 60 min
-  ![Recovery Easy](images/individual/W08-D2-Wednesday-Recovery_Easy.png)
+- **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
+  ![Recovery Easy](images/individual/W08-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 4 (Friday):** FTP Test 2x15min - 79 TSS, 66 min
-  ![FTP Test 2x15min](images/individual/W08-D4-Friday-FTP_Test_2x15min.png)
+- **Day 5 (Friday):** FTP Test 20min - 62 TSS, 54 min
+  ![FTP Test 20min](images/individual/W08-D5-Friday-FTP_Test_20min.png)
 
-- **Day 6 (Sunday):** Long Endurance - 83 TSS, 105 min
-  ![Long Endurance](images/individual/W08-D6-Sunday-Long_Endurance.png)
+- **Day 7 (Sunday):** Long Endurance - 83 TSS, 105 min
+  ![Long Endurance](images/individual/W08-D7-Sunday-Long_Endurance.png)
+
 
 ## Usage
 
