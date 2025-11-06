@@ -42,8 +42,12 @@ export async function parseZWOFile(filepath: string): Promise<ParsedWorkout> {
   const content = fs.readFileSync(filepath, 'utf-8');
   const filename = path.basename(filepath);
 
-  // Parse XML
-  const result = await parseXML(content);
+  // Parse XML with options to preserve element order
+  const result = await parseXML(content, {
+    explicitChildren: true,
+    preserveChildrenOrder: true,
+    charsAsChildren: true,
+  });
   const workoutFile = result.workout_file;
 
   // Extract basic metadata
@@ -88,18 +92,32 @@ export async function parseZWOFile(filepath: string): Promise<ParsedWorkout> {
 function extractSegments(workout: XMLWorkout): Segment[] {
   const segments: Segment[] = [];
 
-  // Get all child elements in order
-  const elements = Object.keys(workout).flatMap((key) => {
-    if (key === '$') return []; // Skip attributes
-    const items = workout[key];
-    if (!items) return [];
-    return items.map((elem: XMLSegmentData) => ({ type: key, data: elem }));
-  });
+  // Use $$ property to get children in order (when preserveChildrenOrder is enabled)
+  const orderedChildren = (workout as any).$$;
 
-  for (const elem of elements) {
-    const segment = parseSegment(elem.type, elem.data);
-    if (segment) {
-      segments.push(segment);
+  if (orderedChildren && Array.isArray(orderedChildren)) {
+    // Process children in the order they appear in the XML
+    for (const child of orderedChildren) {
+      const type = child['#name'];
+      const segment = parseSegment(type, child);
+      if (segment) {
+        segments.push(segment);
+      }
+    }
+  } else {
+    // Fallback to old method if $$ is not available
+    const elements = Object.keys(workout).flatMap((key) => {
+      if (key === '$' || key === '$$') return []; // Skip attributes and ordered children
+      const items = workout[key];
+      if (!items) return [];
+      return items.map((elem: XMLSegmentData) => ({ type: key, data: elem }));
+    });
+
+    for (const elem of elements) {
+      const segment = parseSegment(elem.type, elem.data);
+      if (segment) {
+        segments.push(segment);
+      }
     }
   }
 

@@ -1,30 +1,117 @@
-<workout_file><author>mywhooshinfo.com</author><name>Power Intervals #1</name><description>Today&#039;s session focuses on improving your ability to produce power. To be able to turn a big gear faster. Completing high power intervals with slightly less cadence increases the torque applied to the crank, boosting muscular endurance power. 
+<workout_file>
+    <author>mywhooshinfo.com</author>
+    <name>Power Intervals #1</name>
+    <description>Today&#039;s session focuses on improving your ability to produce power. To be able
+        to turn a big gear faster. Completing high power intervals with slightly less cadence
+        increases the torque applied to the crank, boosting muscular endurance power.
 
-Two sets of (3 x 2.5min) with 3min recovery. However, the initial high power 30sec effort has a target cadence of 85rpm before completing the remaining 2min at a self-selected cadence.</description><sportType>bike</sportType><workout>
-<Warmup  Duration="300" PowerLow="0.44999998807907" PowerHigh="0.75"><textevent timeoffset="20" message="Welcome to the Whoosh Power Intervals workout."/><textevent timeoffset="50" message="Today is all about producing high power and high crank torque."/><textevent timeoffset="200" message="Today&#039;s warm up takes you through some low power, 1min efforts."/></Warmup>
-<IntervalsT   Repeat="2" OnDuration="60" OnPower="0.80000001192093" OffDuration="60" OffPower="0.5">
+        Two sets of (3 x 2.5min) with 3min recovery. However, the initial high power 30sec effort
+        has a target cadence of 85rpm before completing the remaining 2min at a self-selected
+        cadence.</description>
+    <sportType>bike</sportType>
+    <workout>
+        <Warmup Duration="300" PowerLow="0.44999998807907" PowerHigh="0.75">
+            <textevent timeoffset="20" message="Welcome to the Whoosh Power Intervals workout." />
+            <textevent timeoffset="50"
+                message="Today is all about producing high power and high crank torque." />
+            <textevent timeoffset="200"
+                message="Today&#039;s warm up takes you through some low power, 1min efforts." />
+        </Warmup>
+        <IntervalsT Repeat="2" OnDuration="60" OnPower="0.80000001192093" OffDuration="60"
+            OffPower="0.5">
 </IntervalsT>
-<IntervalsT   Repeat="2" OnDuration="60" OnPower="0.98000001907349" OffDuration="60" OffPower="0.5">
+        <IntervalsT Repeat="2" OnDuration="60" OnPower="0.98000001907349" OffDuration="60"
+            OffPower="0.5">
 </IntervalsT>
-<SteadyState  Duration="120" Power="0.5"><textevent timeoffset="80" message="This time we have a target of 85 rpm for the opening 30sec effort."/><textevent timeoffset="90" message="Remember to aim for the target rpm and let the smart trainer adjust the power."/></SteadyState>
-<SteadyState  Cadence="85" Duration="30" Power="1.2999999523163"><textevent timeoffset="5" message="Straight to the target cadence of 85rpm."/><textevent timeoffset="20" message="Now we are going to ramp the power up."/></SteadyState>
-<Warmup  Duration="120" PowerLow="1.210000038147" PowerHigh="1.5"><textevent timeoffset="10" message="Self select your cadence now as the power steps up."/><textevent timeoffset="80" message="Controlled breathing."/><textevent timeoffset="100" message="Nice work. There&#039;s the line."/></Warmup>
-<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="20" message="A good rest period now to recover for the next effort."/><textevent timeoffset="160" message="Here we go... next effort"/><textevent timeoffset="170" message="Remember 85rpm for the opening 30sec."/></SteadyState>
-<SteadyState  Cadence="85" Duration="30" Power="1.2999999523163"><textevent timeoffset="5" message="Straight to the target cadence of 85rpm."/><textevent timeoffset="20" message="Now we are going to ramp the power up."/></SteadyState>
-<Warmup  Duration="120" PowerLow="1.210000038147" PowerHigh="1.5"><textevent timeoffset="20" message="This is a great effort from you."/><textevent timeoffset="60" message="What cadence are you finding comfortable?"/><textevent timeoffset="100" message="Keep the pressure on right to the end!"/></Warmup>
-<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="10" message="Nice work!"/><textevent timeoffset="40" message="Time for a good recovery period."/><textevent timeoffset="90" message="Grab a drink here while you can."/><textevent timeoffset="170" message="Into the last effort of the set now."/></SteadyState>
-<SteadyState  Cadence="85" Duration="30" Power="1.2999999523163"><textevent timeoffset="5" message="Straight to the target cadence of 85rpm."/><textevent timeoffset="20" message="Now we are going to ramp the power up."/></SteadyState>
-<Warmup  Duration="120" PowerLow="1.210000038147" PowerHigh="1.5"><textevent timeoffset="20" message="Settle in for a hard effort here."/><textevent timeoffset="60" message="This is all quality work from you."/><textevent timeoffset="100" message="Keep the pressure on right to the end!"/></Warmup>
-<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="100" message="What cadence did you find yourself riding at for the efforts?"/></SteadyState>
-<SteadyState  Duration="120" Power="0.5"><textevent timeoffset="90" message="Feel recovered for the next set?"/><textevent timeoffset="100" message="Remember 85rpm for the opening 30sec."/><textevent timeoffset="110" message="Aim for the target rpm and let the smart trainer adjust the power."/></SteadyState>
-<SteadyState  Cadence="85" Duration="30" Power="1.2999999523163"><textevent timeoffset="10" message="Great work. Nice and powerful!"/></SteadyState>
-<Warmup  Duration="120" PowerLow="1.210000038147" PowerHigh="1.5"><textevent timeoffset="10" message="Now to ramp the power up."/><textevent timeoffset="60" message="Are you riding with the same cadence as the 1st set?"/><textevent timeoffset="100" message="Keep the pressure on right to the end!"/></Warmup>
-<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="160" message="Just 2 intervals to go."/></SteadyState>
-<SteadyState  Cadence="85" Duration="30" Power="1.2999999523163"><textevent timeoffset="5" message="Hit that target cadence of 85rpm."/></SteadyState>
-<Warmup  Duration="120" PowerLow="1.210000038147" PowerHigh="1.5"><textevent timeoffset="10" message="Now to ramp the power up."/><textevent timeoffset="60" message="What cadence feels comfortable now?"/><textevent timeoffset="100" message="Keep the pressure on right to the end!"/></Warmup>
-<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="160" message="Last effort!"/></SteadyState>
-<SteadyState  Cadence="85" Duration="30" Power="1.2999999523163"><textevent timeoffset="10" message="Great work. Nice and powerful!"/></SteadyState>
-<Warmup  Duration="120" PowerLow="1.210000038147" PowerHigh="1.5"><textevent timeoffset="10" message="Let&#039;s go! Make the last one the best one."/><textevent timeoffset="100" message="Keep the pressure on right to the end!"/></Warmup>
-<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="30" message="That was a big session. Important to warm down appropriately."/></SteadyState>
-<Cooldown  Duration="360" PowerLow="0.55000001192093" PowerHigh="0.44999998807907"></Cooldown>
-</workout></workout_file>
+        <SteadyState Duration="120" Power="0.5">
+            <textevent timeoffset="80"
+                message="This time we have a target of 85 rpm for the opening 30sec effort." />
+            <textevent timeoffset="90"
+                message="Remember to aim for the target rpm and let the smart trainer adjust the power." />
+        </SteadyState>
+        <SteadyState Cadence="85" Duration="30" Power="1.2999999523163">
+            <textevent timeoffset="5" message="Straight to the target cadence of 85rpm." />
+            <textevent timeoffset="20" message="Now we are going to ramp the power up." />
+        </SteadyState>
+        <Warmup Duration="120" PowerLow="1.210000038147" PowerHigh="1.5">
+            <textevent timeoffset="10" message="Self select your cadence now as the power steps up." />
+            <textevent timeoffset="80" message="Controlled breathing." />
+            <textevent timeoffset="100" message="Nice work. There&#039;s the line." />
+        </Warmup>
+        <SteadyState Duration="180" Power="0.5">
+            <textevent timeoffset="20"
+                message="A good rest period now to recover for the next effort." />
+            <textevent timeoffset="160" message="Here we go... next effort" />
+            <textevent timeoffset="170" message="Remember 85rpm for the opening 30sec." />
+        </SteadyState>
+        <SteadyState Cadence="85" Duration="30" Power="1.2999999523163">
+            <textevent timeoffset="5" message="Straight to the target cadence of 85rpm." />
+            <textevent timeoffset="20" message="Now we are going to ramp the power up." />
+        </SteadyState>
+        <Warmup Duration="120" PowerLow="1.210000038147" PowerHigh="1.5">
+            <textevent timeoffset="20" message="This is a great effort from you." />
+            <textevent timeoffset="60" message="What cadence are you finding comfortable?" />
+            <textevent timeoffset="100" message="Keep the pressure on right to the end!" />
+        </Warmup>
+        <SteadyState Duration="180" Power="0.5">
+            <textevent timeoffset="10" message="Nice work!" />
+            <textevent timeoffset="40" message="Time for a good recovery period." />
+            <textevent timeoffset="90" message="Grab a drink here while you can." />
+            <textevent timeoffset="170" message="Into the last effort of the set now." />
+        </SteadyState>
+        <SteadyState Cadence="85" Duration="30" Power="1.2999999523163">
+            <textevent timeoffset="5" message="Straight to the target cadence of 85rpm." />
+            <textevent timeoffset="20" message="Now we are going to ramp the power up." />
+        </SteadyState>
+        <Warmup Duration="120" PowerLow="1.210000038147" PowerHigh="1.5">
+            <textevent timeoffset="20" message="Settle in for a hard effort here." />
+            <textevent timeoffset="60" message="This is all quality work from you." />
+            <textevent timeoffset="100" message="Keep the pressure on right to the end!" />
+        </Warmup>
+        <SteadyState Duration="180" Power="0.5">
+            <textevent timeoffset="100"
+                message="What cadence did you find yourself riding at for the efforts?" />
+        </SteadyState>
+        <SteadyState Duration="120" Power="0.5">
+            <textevent timeoffset="90" message="Feel recovered for the next set?" />
+            <textevent timeoffset="100" message="Remember 85rpm for the opening 30sec." />
+            <textevent timeoffset="110"
+                message="Aim for the target rpm and let the smart trainer adjust the power." />
+        </SteadyState>
+        <SteadyState Cadence="85" Duration="30" Power="1.2999999523163">
+            <textevent timeoffset="10" message="Great work. Nice and powerful!" />
+        </SteadyState>
+        <Warmup Duration="120" PowerLow="1.210000038147" PowerHigh="1.5">
+            <textevent timeoffset="10" message="Now to ramp the power up." />
+            <textevent timeoffset="60"
+                message="Are you riding with the same cadence as the 1st set?" />
+            <textevent timeoffset="100" message="Keep the pressure on right to the end!" />
+        </Warmup>
+        <SteadyState Duration="180" Power="0.5">
+            <textevent timeoffset="160" message="Just 2 intervals to go." />
+        </SteadyState>
+        <SteadyState Cadence="85" Duration="30" Power="1.2999999523163">
+            <textevent timeoffset="5" message="Hit that target cadence of 85rpm." />
+        </SteadyState>
+        <Warmup Duration="120" PowerLow="1.210000038147" PowerHigh="1.5">
+            <textevent timeoffset="10" message="Now to ramp the power up." />
+            <textevent timeoffset="60" message="What cadence feels comfortable now?" />
+            <textevent timeoffset="100" message="Keep the pressure on right to the end!" />
+        </Warmup>
+        <SteadyState Duration="180" Power="0.5">
+            <textevent timeoffset="160" message="Last effort!" />
+        </SteadyState>
+        <SteadyState Cadence="85" Duration="30" Power="1.2999999523163">
+            <textevent timeoffset="10" message="Great work. Nice and powerful!" />
+        </SteadyState>
+        <Warmup Duration="120" PowerLow="1.210000038147" PowerHigh="1.5">
+            <textevent timeoffset="10" message="Let&#039;s go! Make the last one the best one." />
+            <textevent timeoffset="100" message="Keep the pressure on right to the end!" />
+        </Warmup>
+        <SteadyState Duration="180" Power="0.5">
+            <textevent timeoffset="30"
+                message="That was a big session. Important to warm down appropriately." />
+        </SteadyState>
+        <Cooldown Duration="360" PowerLow="0.55000001192093" PowerHigh="0.44999998807907"></Cooldown>
+    </workout>
+</workout_file>
