@@ -40,6 +40,11 @@ export async function scanProgram(
   return {
     programName: path.basename(programPath),
     programPath,
+    config: {
+      name: path.basename(programPath),
+      description: '',
+      schedule: [],
+    }, // TODO: Replace with actual config in Task 3
     weeks,
     workouts,
     stats,

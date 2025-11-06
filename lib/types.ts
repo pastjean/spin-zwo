@@ -166,6 +166,7 @@ export interface ParsedWorkout {
 export interface ProgramStructure {
   programName: string;
   programPath: string;
+  config: ProgramConfig;
   weeks: Map<number, WeekStructure>;
   workouts: ParsedWorkout[];
   stats: ProgramStats;
@@ -204,4 +205,19 @@ export interface WorkoutModalData {
   tss: number;
   intensityFactor: number;
   normalizedPower: number;
+}
+
+export interface ProgramConfig {
+  name: string;
+  description: string;
+  schedule: WorkoutScheduleEntry[];
+  tags?: string[];
+  targetAudience?: string;
+}
+
+export interface WorkoutScheduleEntry {
+  week: number;
+  day: number;
+  dayName: string;
+  zwoFile: string;
 }
