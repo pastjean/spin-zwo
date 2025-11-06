@@ -10,13 +10,6 @@ interface Segment {
   powerHigh?: number;
 }
 
-interface WorkoutMetrics {
-  tss: number;
-  if: number;
-  duration: number;
-  np: number; // Normalized Power
-}
-
 /**
  * Calculate Normalized Power (NP) for a workout
  * NP is calculated as the fourth root of the average of the fourth power of power values
@@ -71,18 +64,24 @@ function calculateTSS(
 
 /**
  * Calculate workout metrics (TSS, IF, NP, duration)
+ * Returns metrics compatible with ParsedWorkout interface
  */
-export function calculateWorkoutMetrics(segments: Segment[]): WorkoutMetrics {
+export function calculateWorkoutMetrics(segments: Segment[]): {
+  duration: number;
+  tss: number;
+  intensityFactor: number;
+  normalizedPower: number;
+} {
   const totalDuration = segments.reduce((sum, seg) => sum + seg.duration, 0);
   const np = calculateNormalizedPower(segments);
   const intensityFactor = calculateIF(np);
   const tss = calculateTSS(totalDuration, np, intensityFactor);
 
   return {
-    tss,
-    if: Math.round(intensityFactor * 100) / 100, // Round to 2 decimal places
     duration: totalDuration,
-    np: Math.round(np * 100) / 100,
+    tss,
+    intensityFactor: Math.round(intensityFactor * 100) / 100, // Round to 2 decimal places
+    normalizedPower: Math.round(np * 100) / 100,
   };
 }
 
@@ -92,7 +91,7 @@ export function calculateWorkoutMetrics(segments: Segment[]): WorkoutMetrics {
 export function formatMetricsForDescription(segments: Segment[]): string {
   const metrics = calculateWorkoutMetrics(segments);
   const durationMin = Math.round(metrics.duration / 60);
-  return `📊 ${metrics.tss} TSS · IF ${metrics.if.toFixed(
+  return `📊 ${metrics.tss} TSS · IF ${metrics.intensityFactor.toFixed(
     2,
   )} · ${durationMin} min`;
 }
@@ -106,7 +105,7 @@ export function addMetricsToWorkouts(
   for (const [_key, workout] of Object.entries(workouts)) {
     const metrics = calculateWorkoutMetrics(workout.segments);
     console.log(
-      `${workout.name}: TSS=${metrics.tss}, IF=${metrics.if.toFixed(
+      `${workout.name}: TSS=${metrics.tss}, IF=${metrics.intensityFactor.toFixed(
         2,
       )}, Duration=${Math.round(metrics.duration / 60)}min`,
     );
