@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_weeks_ftp_builder - Interactive Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f6f7;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 0.875rem;
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .calendar-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .calendar-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar-table th {
+            background: #ecf0f1;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .calendar-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .workout-link {
+            color: #3498db;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .workout-link:hover {
+            text-decoration: underline;
+        }
+
+        .tss-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-left: 0.5rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 1000px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #7f8c8d;
+        }
+
+        .modal-close:hover {
+            color: #2c3e50;
+        }
+
+        .workout-image {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .charts-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .charts-section img {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>12 Weeks Ftp Builder</h1>
+        <p>Interactive Workout Calendar & Statistics</p>
+    </header>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Weeks</h3>
+                <div class="value">12</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Workouts</h3>
+                <div class="value">58</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total TSS</h3>
+                <div class="value">4259</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Hours</h3>
+                <div class="value">76.8</div>
+            </div>
+            <div class="stat-card">
+                <h3>Avg TSS/Week</h3>
+                <div class="value">355</div>
+            </div>
+            <div class="stat-card">
+                <h3>Avg Hours/Week</h3>
+                <div class="value">6.4</div>
+            </div>
+        </div>
+
+        <div class="calendar-section">
+            <h2>Workout Calendar</h2>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Day</th>
+                        <th>Workout</th>
+                        <th>Duration</th>
+                        <th>TSS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D2-Tuesday-FTP_Test.zwo')">FTP Test</a>
+                        </td>
+                        <td>67 min</td>
+                        <td><span class="tss-badge">72 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D3-Wednesday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>39 min</td>
+                        <td><span class="tss-badge">19 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D4-Thursday-Tempo.zwo')">Tempo</a>
+                        </td>
+                        <td>70 min</td>
+                        <td><span class="tss-badge">61 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D6-Saturday-Endurance.zwo')">Endurance</a>
+                        </td>
+                        <td>91 min</td>
+                        <td><span class="tss-badge">76 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D7-Sunday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>45 min</td>
+                        <td><span class="tss-badge">27 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D2-Tuesday-Sweet_Spot.zwo')">Sweet Spot</a>
+                        </td>
+                        <td>70 min</td>
+                        <td><span class="tss-badge">68 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D3-Wednesday-Easy_Spin.zwo')">Easy Spin</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D4-Thursday-FTP_Intervals.zwo')">FTP Intervals</a>
+                        </td>
+                        <td>79 min</td>
+                        <td><span class="tss-badge">89 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D6-Saturday-Tempo_Endurance.zwo')">Tempo Endurance</a>
+                        </td>
+                        <td>79 min</td>
+                        <td><span class="tss-badge">76 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D2-Tuesday-Over_Unders.zwo')">Over Unders</a>
+                        </td>
+                        <td>69 min</td>
+                        <td><span class="tss-badge">74 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D3-Wednesday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>45 min</td>
+                        <td><span class="tss-badge">23 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D4-Thursday-Extended_Threshold.zwo')">Extended Threshold</a>
+                        </td>
+                        <td>85 min</td>
+                        <td><span class="tss-badge">102 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D6-Saturday-Sweet_Spot_Progression.zwo')">Sweet Spot Progression</a>
+                        </td>
+                        <td>100 min</td>
+                        <td><span class="tss-badge">109 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D7-Sunday-Easy_Spin.zwo')">Easy Spin</a>
+                        </td>
+                        <td>30 min</td>
+                        <td><span class="tss-badge">15 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D2-Tuesday-Recovery_Cadence.zwo')">Recovery Cadence</a>
+                        </td>
+                        <td>64 min</td>
+                        <td><span class="tss-badge">42 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D4-Thursday-Light_Tempo.zwo')">Light Tempo</a>
+                        </td>
+                        <td>50 min</td>
+                        <td><span class="tss-badge">38 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D6-Saturday-Easy_Endurance.zwo')">Easy Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D7-Sunday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>75 min</td>
+                        <td><span class="tss-badge">58 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D2-Tuesday-Pyramid_Intervals.zwo')">Pyramid Intervals</a>
+                        </td>
+                        <td>75 min</td>
+                        <td><span class="tss-badge">77 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D3-Wednesday-Easy_Spin.zwo')">Easy Spin</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D4-Thursday-Progressive_Threshold.zwo')">Progressive Threshold</a>
+                        </td>
+                        <td>83 min</td>
+                        <td><span class="tss-badge">97 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D6-Saturday-Tempo_Endurance_Long.zwo')">Tempo Endurance Long</a>
+                        </td>
+                        <td>92 min</td>
+                        <td><span class="tss-badge">90 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D2-Tuesday-Push_and_Pull.zwo')">Push and Pull</a>
+                        </td>
+                        <td>98 min</td>
+                        <td><span class="tss-badge">96 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D3-Wednesday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>45 min</td>
+                        <td><span class="tss-badge">23 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D4-Thursday-FTP_2x20.zwo')">FTP 2x20</a>
+                        </td>
+                        <td>85 min</td>
+                        <td><span class="tss-badge">102 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D6-Saturday-Sweet_Spot_3x22.zwo')">Sweet Spot 3x22</a>
+                        </td>
+                        <td>106 min</td>
+                        <td><span class="tss-badge">117 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D7-Sunday-Endurance.zwo')">Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D2-Tuesday-VO2max_30_30s.zwo')">VO2max 30 30s</a>
+                        </td>
+                        <td>68 min</td>
+                        <td><span class="tss-badge">75 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D3-Wednesday-Easy_Spin.zwo')">Easy Spin</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D4-Thursday-FTP_30min.zwo')">FTP 30min</a>
+                        </td>
+                        <td>65 min</td>
+                        <td><span class="tss-badge">78 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D6-Saturday-Sweet_Spot_3x25.zwo')">Sweet Spot 3x25</a>
+                        </td>
+                        <td>115 min</td>
+                        <td><span class="tss-badge">129 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D7-Sunday-Endurance_Tempo.zwo')">Endurance Tempo</a>
+                        </td>
+                        <td>130 min</td>
+                        <td><span class="tss-badge">110 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D2-Tuesday-Recovery_Cadence.zwo')">Recovery Cadence</a>
+                        </td>
+                        <td>64 min</td>
+                        <td><span class="tss-badge">42 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D4-Thursday-Light_Tempo.zwo')">Light Tempo</a>
+                        </td>
+                        <td>50 min</td>
+                        <td><span class="tss-badge">38 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D6-Saturday-Easy_Endurance.zwo')">Easy Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D7-Sunday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>75 min</td>
+                        <td><span class="tss-badge">58 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W09-D2-Tuesday-Pyramid_Intervals.zwo')">Pyramid Intervals</a>
+                        </td>
+                        <td>84 min</td>
+                        <td><span class="tss-badge">88 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W09-D3-Wednesday-Easy_Spin.zwo')">Easy Spin</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W09-D4-Thursday-FTP_3x15.zwo')">FTP 3x15</a>
+                        </td>
+                        <td>95 min</td>
+                        <td><span class="tss-badge">115 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W09-D6-Saturday-Tempo_Endurance.zwo')">Tempo Endurance</a>
+                        </td>
+                        <td>92 min</td>
+                        <td><span class="tss-badge">90 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W09-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W10-D2-Tuesday-VO2max_40_20s.zwo')">VO2max 40 20s</a>
+                        </td>
+                        <td>74 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W10-D3-Wednesday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>45 min</td>
+                        <td><span class="tss-badge">23 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W10-D4-Thursday-FTP_2x25.zwo')">FTP 2x25</a>
+                        </td>
+                        <td>95 min</td>
+                        <td><span class="tss-badge">120 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W10-D6-Saturday-Sweet_Spot_3x25.zwo')">Sweet Spot 3x25</a>
+                        </td>
+                        <td>115 min</td>
+                        <td><span class="tss-badge">129 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W10-D7-Sunday-Endurance.zwo')">Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W11-D2-Tuesday-VO2max_Mixed.zwo')">VO2max Mixed</a>
+                        </td>
+                        <td>62 min</td>
+                        <td><span class="tss-badge">69 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W11-D3-Wednesday-Easy_Spin.zwo')">Easy Spin</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W11-D4-Thursday-FTP_35min.zwo')">FTP 35min</a>
+                        </td>
+                        <td>70 min</td>
+                        <td><span class="tss-badge">86 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W11-D6-Saturday-Race_Simulation.zwo')">Race Simulation</a>
+                        </td>
+                        <td>86 min</td>
+                        <td><span class="tss-badge">89 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W11-D7-Sunday-Endurance.zwo')">Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W12-D2-Tuesday-Final_FTP_Test.zwo')">Final FTP Test</a>
+                        </td>
+                        <td>67 min</td>
+                        <td><span class="tss-badge">72 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W12-D3-Wednesday-Easy_Spin.zwo')">Easy Spin</a>
+                        </td>
+                        <td>30 min</td>
+                        <td><span class="tss-badge">15 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>4 (Thursday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W12-D4-Thursday-Victory_Lap.zwo')">Victory Lap</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">49 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W12-D6-Saturday-Celebration_Ride.zwo')">Celebration Ride</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">98 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W12-D7-Sunday-Recovery.zwo')">Recovery</a>
+                        </td>
+                        <td>45 min</td>
+                        <td><span class="tss-badge">23 TSS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="charts-section">
+            <h2>Progression Analysis</h2>
+            <img src="../images/progression.png" alt="Progression Charts">
+        </div>
+    </div>
+
+    <div class="modal" id="workoutModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const workouts = {"W07-D6-Saturday-Sweet_Spot_3x25.zwo":{"name":"W7-S: Sweet Spot 3x25","description":"workout.description, 📊 129 TSS · IF 0.82 · 115 min","week":7,"day":6,"dayName":"Saturday","duration":6900,"tss":129,"intensityFactor":0.82,"normalizedPower":0.82},"W04-D7-Sunday-Recovery.zwo":{"name":"W4-Su: Easy Endurance","description":"workout.description, 📊 58 TSS · IF 0.68 · 75 min","week":4,"day":7,"dayName":"Sunday","duration":4500,"tss":58,"intensityFactor":0.68,"normalizedPower":0.68},"W09-D4-Thursday-FTP_3x15.zwo":{"name":"W9-Th: FTP Intervals 3x15","description":"workout.description, 📊 115 TSS · IF 0.85 · 95 min","week":9,"day":4,"dayName":"Thursday","duration":5700,"tss":115,"intensityFactor":0.85,"normalizedPower":0.85},"W02-D2-Tuesday-Sweet_Spot.zwo":{"name":"W2-T: Sweet Spot 2x15","description":"workout.description, 📊 68 TSS · IF 0.76 · 70 min","week":2,"day":2,"dayName":"Tuesday","duration":4200,"tss":68,"intensityFactor":0.76,"normalizedPower":0.76},"W08-D2-Tuesday-Recovery_Cadence.zwo":{"name":"W8-T: Recovery Cadence + Sprints","description":"workout.description, 📊 42 TSS · IF 0.63 · 64 min","week":8,"day":2,"dayName":"Tuesday","duration":3850,"tss":42,"intensityFactor":0.63,"normalizedPower":0.63},"W10-D2-Tuesday-VO2max_40_20s.zwo":{"name":"W10-T: VO2max 40/20s","description":"workout.description, 📊 98 TSS · IF 0.89 · 74 min","week":10,"day":2,"dayName":"Tuesday","duration":4440,"tss":98,"intensityFactor":0.89,"normalizedPower":0.89},"W11-D4-Thursday-FTP_35min.zwo":{"name":"W11-Th: Continuous 35min Threshold","description":"workout.description, 📊 86 TSS · IF 0.86 · 70 min","week":11,"day":4,"dayName":"Thursday","duration":4200,"tss":86,"intensityFactor":0.86,"normalizedPower":0.86},"W06-D3-Wednesday-Recovery.zwo":{"name":"W6-W: Active Recovery","description":"workout.description, 📊 23 TSS · IF 0.55 · 45 min","week":6,"day":3,"dayName":"Wednesday","duration":2700,"tss":23,"intensityFactor":0.55,"normalizedPower":0.55},"W10-D6-Saturday-Sweet_Spot_3x25.zwo":{"name":"W10-S: Sweet Spot 3x25","description":"workout.description, 📊 129 TSS · IF 0.82 · 115 min","week":10,"day":6,"dayName":"Saturday","duration":6900,"tss":129,"intensityFactor":0.82,"normalizedPower":0.82},"W12-D3-Wednesday-Easy_Spin.zwo":{"name":"W12-W: Easy Recovery","description":"workout.description, 📊 15 TSS · IF 0.55 · 30 min","week":12,"day":3,"dayName":"Wednesday","duration":1800,"tss":15,"intensityFactor":0.55,"normalizedPower":0.55},"W01-D3-Wednesday-Recovery.zwo":{"name":"W1-W: Active Recovery","description":"workout.description, 📊 19 TSS · IF 0.54 · 39 min","week":1,"day":3,"dayName":"Wednesday","duration":2340,"tss":19,"intensityFactor":0.54,"normalizedPower":0.54},"W07-D4-Thursday-FTP_30min.zwo":{"name":"W7-Th: Continuous 30min Threshold","description":"workout.description, 📊 78 TSS · IF 0.85 · 65 min","week":7,"day":4,"dayName":"Thursday","duration":3900,"tss":78,"intensityFactor":0.85,"normalizedPower":0.85},"W11-D2-Tuesday-VO2max_Mixed.zwo":{"name":"W11-T: VO2max Mixed","description":"workout.description, 📊 69 TSS · IF 0.82 · 62 min","week":11,"day":2,"dayName":"Tuesday","duration":3700,"tss":69,"intensityFactor":0.82,"normalizedPower":0.82},"W05-D4-Thursday-Progressive_Threshold.zwo":{"name":"W5-Th: Progressive Threshold 3x12","description":"workout.description, 📊 97 TSS · IF 0.84 · 83 min","week":5,"day":4,"dayName":"Thursday","duration":4980,"tss":97,"intensityFactor":0.84,"normalizedPower":0.84},"W12-D4-Thursday-Victory_Lap.zwo":{"name":"W12-Th: Victory Lap","description":"workout.description, 📊 49 TSS · IF 0.70 · 60 min","week":12,"day":4,"dayName":"Thursday","duration":3600,"tss":49,"intensityFactor":0.7,"normalizedPower":0.7},"W09-D3-Wednesday-Easy_Spin.zwo":{"name":"W9-W: Easy Zone 2","description":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","week":9,"day":3,"dayName":"Wednesday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W05-D3-Wednesday-Easy_Spin.zwo":{"name":"W5-W: Easy Zone 2","description":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","week":5,"day":3,"dayName":"Wednesday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W01-D7-Sunday-Recovery.zwo":{"name":"W1-Su: Optional Recovery","description":"workout.description, 📊 27 TSS · IF 0.60 · 45 min","week":1,"day":7,"dayName":"Sunday","duration":2700,"tss":27,"intensityFactor":0.6,"normalizedPower":0.6},"W09-D2-Tuesday-Pyramid_Intervals.zwo":{"name":"W9-T: Pyramid Intervals 4-6-8-6-4","description":"workout.description, 📊 88 TSS · IF 0.80 · 84 min","week":9,"day":2,"dayName":"Tuesday","duration":5040,"tss":88,"intensityFactor":0.8,"normalizedPower":0.8},"W12-D2-Tuesday-Final_FTP_Test.zwo":{"name":"W12-T: Final FTP Test","description":"workout.description, 📊 72 TSS · IF 0.81 · 67 min","week":12,"day":2,"dayName":"Tuesday","duration":4020,"tss":72,"intensityFactor":0.81,"normalizedPower":0.81},"W10-D7-Sunday-Endurance.zwo":{"name":"W10-Su: Endurance 2hr","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":10,"day":7,"dayName":"Sunday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W03-D6-Saturday-Sweet_Spot_Progression.zwo":{"name":"W3-S: Sweet Spot 3x20","description":"workout.description, 📊 109 TSS · IF 0.81 · 100 min","week":3,"day":6,"dayName":"Saturday","duration":6000,"tss":109,"intensityFactor":0.81,"normalizedPower":0.81},"W08-D7-Sunday-Recovery.zwo":{"name":"W8-Su: Easy Endurance","description":"workout.description, 📊 58 TSS · IF 0.68 · 75 min","week":8,"day":7,"dayName":"Sunday","duration":4500,"tss":58,"intensityFactor":0.68,"normalizedPower":0.68},"W05-D7-Sunday-Long_Endurance.zwo":{"name":"W5-Su: Long Endurance 2hr","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":5,"day":7,"dayName":"Sunday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W03-D3-Wednesday-Recovery.zwo":{"name":"W3-W: Active Recovery","description":"workout.description, 📊 23 TSS · IF 0.55 · 45 min","week":3,"day":3,"dayName":"Wednesday","duration":2700,"tss":23,"intensityFactor":0.55,"normalizedPower":0.55},"W08-D6-Saturday-Easy_Endurance.zwo":{"name":"W8-S: Relaxed Endurance","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":8,"day":6,"dayName":"Saturday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W03-D7-Sunday-Easy_Spin.zwo":{"name":"W3-Su: Easy Zone 1 Spin","description":"workout.description, 📊 15 TSS · IF 0.55 · 30 min","week":3,"day":7,"dayName":"Sunday","duration":1800,"tss":15,"intensityFactor":0.55,"normalizedPower":0.55},"W02-D3-Wednesday-Easy_Spin.zwo":{"name":"W2-W: Easy Zone 2","description":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","week":2,"day":3,"dayName":"Wednesday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W05-D2-Tuesday-Pyramid_Intervals.zwo":{"name":"W5-T: Pyramid Intervals 3-5-7-5-3","description":"workout.description, 📊 77 TSS · IF 0.78 · 75 min","week":5,"day":2,"dayName":"Tuesday","duration":4500,"tss":77,"intensityFactor":0.78,"normalizedPower":0.78},"W04-D4-Thursday-Light_Tempo.zwo":{"name":"W4-Th: Light Tempo","description":"workout.description, 📊 38 TSS · IF 0.67 · 50 min","week":4,"day":4,"dayName":"Thursday","duration":3000,"tss":38,"intensityFactor":0.67,"normalizedPower":0.67},"W04-D6-Saturday-Easy_Endurance.zwo":{"name":"W4-S: Relaxed Endurance","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":4,"day":6,"dayName":"Saturday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W03-D4-Thursday-Extended_Threshold.zwo":{"name":"W3-Th: Extended Threshold 2x20","description":"workout.description, 📊 102 TSS · IF 0.85 · 85 min","week":3,"day":4,"dayName":"Thursday","duration":5100,"tss":102,"intensityFactor":0.85,"normalizedPower":0.85},"W07-D3-Wednesday-Easy_Spin.zwo":{"name":"W7-W: Easy Zone 2","description":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","week":7,"day":3,"dayName":"Wednesday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W11-D3-Wednesday-Easy_Spin.zwo":{"name":"W11-W: Easy Zone 2","description":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","week":11,"day":3,"dayName":"Wednesday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W03-D2-Tuesday-Over_Unders.zwo":{"name":"W3-T: Over/Unders 3x8","description":"workout.description, 📊 74 TSS · IF 0.80 · 69 min","week":3,"day":2,"dayName":"Tuesday","duration":4140,"tss":74,"intensityFactor":0.8,"normalizedPower":0.8},"W12-D6-Saturday-Celebration_Ride.zwo":{"name":"W12-S: Celebration Endurance","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":12,"day":6,"dayName":"Saturday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W01-D6-Saturday-Endurance.zwo":{"name":"W1-S: Base Endurance with Accelerations","description":"workout.description, 📊 76 TSS · IF 0.71 · 91 min","week":1,"day":6,"dayName":"Saturday","duration":5430,"tss":76,"intensityFactor":0.71,"normalizedPower":0.71},"W06-D2-Tuesday-Push_and_Pull.zwo":{"name":"W6-T: Push & Pull","description":"workout.description, 📊 96 TSS · IF 0.77 · 98 min","week":6,"day":2,"dayName":"Tuesday","duration":5880,"tss":96,"intensityFactor":0.77,"normalizedPower":0.77},"W07-D7-Sunday-Endurance_Tempo.zwo":{"name":"W7-Su: Endurance with Tempo","description":"workout.description, 📊 110 TSS · IF 0.71 · 130 min","week":7,"day":7,"dayName":"Sunday","duration":7800,"tss":110,"intensityFactor":0.71,"normalizedPower":0.71},"W02-D4-Thursday-FTP_Intervals.zwo":{"name":"W2-Th: FTP Intervals 4x8","description":"workout.description, 📊 89 TSS · IF 0.82 · 79 min","week":2,"day":4,"dayName":"Thursday","duration":4740,"tss":89,"intensityFactor":0.82,"normalizedPower":0.82},"W01-D2-Tuesday-FTP_Test.zwo":{"name":"W1-T: FTP Test","description":"workout.description, 📊 72 TSS · IF 0.81 · 67 min","week":1,"day":2,"dayName":"Tuesday","duration":4020,"tss":72,"intensityFactor":0.81,"normalizedPower":0.81},"W10-D3-Wednesday-Recovery.zwo":{"name":"W10-W: Active Recovery","description":"workout.description, 📊 23 TSS · IF 0.55 · 45 min","week":10,"day":3,"dayName":"Wednesday","duration":2700,"tss":23,"intensityFactor":0.55,"normalizedPower":0.55},"W05-D6-Saturday-Tempo_Endurance_Long.zwo":{"name":"W5-S: Extended Tempo 3x18","description":"workout.description, 📊 90 TSS · IF 0.77 · 92 min","week":5,"day":6,"dayName":"Saturday","duration":5520,"tss":90,"intensityFactor":0.77,"normalizedPower":0.77},"W08-D4-Thursday-Light_Tempo.zwo":{"name":"W8-Th: Light Tempo","description":"workout.description, 📊 38 TSS · IF 0.67 · 50 min","week":8,"day":4,"dayName":"Thursday","duration":3000,"tss":38,"intensityFactor":0.67,"normalizedPower":0.67},"W09-D7-Sunday-Long_Endurance.zwo":{"name":"W9-Su: Long Endurance 2hr","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":9,"day":7,"dayName":"Sunday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W02-D6-Saturday-Tempo_Endurance.zwo":{"name":"W2-S: Tempo Endurance 3x15","description":"workout.description, 📊 76 TSS · IF 0.76 · 79 min","week":2,"day":6,"dayName":"Saturday","duration":4740,"tss":76,"intensityFactor":0.76,"normalizedPower":0.76},"W01-D4-Thursday-Tempo.zwo":{"name":"W1-Th: Tempo Building","description":"workout.description, 📊 61 TSS · IF 0.72 · 70 min","week":1,"day":4,"dayName":"Thursday","duration":4200,"tss":61,"intensityFactor":0.72,"normalizedPower":0.72},"W06-D7-Sunday-Endurance.zwo":{"name":"W6-Su: Endurance 2hr","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":6,"day":7,"dayName":"Sunday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W11-D6-Saturday-Race_Simulation.zwo":{"name":"W11-S: Race Simulation","description":"workout.description, 📊 89 TSS · IF 0.79 · 86 min","week":11,"day":6,"dayName":"Saturday","duration":5160,"tss":89,"intensityFactor":0.79,"normalizedPower":0.79},"W12-D7-Sunday-Recovery.zwo":{"name":"W12-Su: Reflection & Planning","description":"workout.description, 📊 23 TSS · IF 0.55 · 45 min","week":12,"day":7,"dayName":"Sunday","duration":2700,"tss":23,"intensityFactor":0.55,"normalizedPower":0.55},"W11-D7-Sunday-Endurance.zwo":{"name":"W11-Su: Steady Endurance 2hr","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":11,"day":7,"dayName":"Sunday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W10-D4-Thursday-FTP_2x25.zwo":{"name":"W10-Th: FTP 2x25","description":"workout.description, 📊 120 TSS · IF 0.87 · 95 min","week":10,"day":4,"dayName":"Thursday","duration":5700,"tss":120,"intensityFactor":0.87,"normalizedPower":0.87},"W02-D7-Sunday-Long_Endurance.zwo":{"name":"W2-Su: Long Endurance 2hr","description":"workout.description, 📊 98 TSS · IF 0.70 · 120 min","week":2,"day":7,"dayName":"Sunday","duration":7200,"tss":98,"intensityFactor":0.7,"normalizedPower":0.7},"W06-D6-Saturday-Sweet_Spot_3x22.zwo":{"name":"W6-S: Sweet Spot 3x22","description":"workout.description, 📊 117 TSS · IF 0.81 · 106 min","week":6,"day":6,"dayName":"Saturday","duration":6360,"tss":117,"intensityFactor":0.81,"normalizedPower":0.81},"W09-D6-Saturday-Tempo_Endurance.zwo":{"name":"W9-S: Tempo Endurance 3x18","description":"workout.description, 📊 90 TSS · IF 0.77 · 92 min","week":9,"day":6,"dayName":"Saturday","duration":5520,"tss":90,"intensityFactor":0.77,"normalizedPower":0.77},"W07-D2-Tuesday-VO2max_30_30s.zwo":{"name":"W7-T: VO2max 30/30s","description":"workout.description, 📊 75 TSS · IF 0.82 · 68 min","week":7,"day":2,"dayName":"Tuesday","duration":4050,"tss":75,"intensityFactor":0.82,"normalizedPower":0.82},"W04-D2-Tuesday-Recovery_Cadence.zwo":{"name":"W4-T: Recovery Cadence + Sprints","description":"workout.description, 📊 42 TSS · IF 0.63 · 64 min","week":4,"day":2,"dayName":"Tuesday","duration":3850,"tss":42,"intensityFactor":0.63,"normalizedPower":0.63},"W06-D4-Thursday-FTP_2x20.zwo":{"name":"W6-Th: FTP 2x20","description":"workout.description, 📊 102 TSS · IF 0.85 · 85 min","week":6,"day":4,"dayName":"Thursday","duration":5100,"tss":102,"intensityFactor":0.85,"normalizedPower":0.85}};
+
+        function showWorkout(filename) {
+            const workout = workouts[filename];
+            if (!workout) return;
+
+            const modal = document.getElementById('workoutModal');
+            const body = document.getElementById('modalBody');
+
+            const imageFilename = filename.replace('.zwo', '.png');
+
+            body.innerHTML = `
+                <h2>${workout.name}</h2>
+                <p><strong>Week ${workout.week}, Day ${workout.day} (${workout.dayName})</strong></p>
+                <p>${workout.description}</p>
+                <img src="../images/individual/${imageFilename}" alt="${workout.name}" class="workout-image">
+                <div style="margin-top: 1rem;">
+                    <strong>Duration:</strong> ${Math.round(workout.duration / 60)} minutes<br>
+                    <strong>TSS:</strong> ${Math.round(workout.tss)}<br>
+                    <strong>IF:</strong> ${workout.intensityFactor.toFixed(2)}<br>
+                    <strong>NP:</strong> ${Math.round(workout.normalizedPower)}W
+                </div>
+            `;
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('workoutModal').classList.remove('active');
+        }
+
+        document.getElementById('workoutModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

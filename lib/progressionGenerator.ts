@@ -12,6 +12,12 @@ const PADDING = 80;
 const CHART_PADDING = 60;
 
 export function generateProgressionCharts(program: ProgramStructure): void {
+  // Skip progression charts if no structured weeks
+  if (program.weeks.size === 0) {
+    console.log('Skipping progression charts (no structured weeks found)');
+    return;
+  }
+
   const canvas = createCanvas(CHART_WIDTH, CHART_HEIGHT);
   const ctx = canvas.getContext('2d');
 

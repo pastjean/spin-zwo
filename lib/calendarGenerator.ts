@@ -76,6 +76,12 @@ function getDominantZoneColor(workout: ParsedWorkout): string {
 }
 
 export function generateCalendarImage(program: ProgramStructure): void {
+  // Skip calendar generation if no structured weeks
+  if (program.weeks.size === 0) {
+    console.log('Skipping calendar generation (no structured weeks found)');
+    return;
+  }
+
   const maxWeek = Math.max(...Array.from(program.weeks.keys()));
   const rows = maxWeek;
   const cols = 7;
