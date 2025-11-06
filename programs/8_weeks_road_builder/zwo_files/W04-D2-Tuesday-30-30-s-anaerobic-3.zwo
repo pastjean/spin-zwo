@@ -1,0 +1,22 @@
+<workout_file><author>mywhooshinfo.com</author><name>30/30&#039;s Anaerobic #3</name><description>After completing a warm-up that includes some high rpm sprints and a 5min threshold effort, the principal sets today include 12 x 30sec efforts @ 115%FTP with 30sec recovery. 
+
+By completing short efforts above threshold, you can accumulate more time in this area than if completed in more prolonged efforts. The short recovery periods also increase oxygen uptake. Particularly towards the end of the set!</description><sportType>bike</sportType><workout>
+<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="129" message="High rpm in warm up sprints aiming for 110rpm"/></SteadyState>
+<IntervalsT   Repeat="4" OnDuration="10" OnPower="1.7044999599457" OffDuration="50" OffPower="0.65450000762939">
+</IntervalsT>
+<SteadyState  Duration="60" Power="0.5"><textevent timeoffset="50" message="Now a little longer in the zone 2 effort."/></SteadyState>
+<SteadyState  Duration="120" Power="0.75"></SteadyState>
+<SteadyState  Duration="120" Power="0.5"><textevent timeoffset="100" message="To complete the warm up we slowly build up to a threshold effort."/></SteadyState>
+<Warmup  Duration="180" PowerLow="0.5" PowerHigh="0.85000002384186"><textevent timeoffset="160" message="Ready for 3min at threshold."/></Warmup>
+<SteadyState  Duration="180" Power="0.9200000166893"><textevent timeoffset="60" message="Being just 3min, this should be comfortable for you."/></SteadyState>
+<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="100" message="That completes the warm up."/><textevent timeoffset="120" message="Now for the main sets of 12x30sec efforts."/><textevent timeoffset="140" message="Observe your cadence for each 30sec effort. Is it remaining the same for each effort?"/></SteadyState>
+<IntervalsT   Repeat="12" OnDuration="30" OnPower="1.1545000076294" OffDuration="30" OffPower="0.50449997186661">
+</IntervalsT>
+<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="30" message="A good recovery now before repeating the set."/><textevent timeoffset="60" message="In the next set, note your HR in comparison to the 1st set."/><textevent timeoffset="70" message="s you HR responding the same way?"/><textevent timeoffset="80" message="Are you completing the efforts at the same cadence?"/><textevent timeoffset="170" message="Here we go... 2nd set."/></SteadyState>
+<IntervalsT   Repeat="12" OnDuration="30" OnPower="1.1499999761581" OffDuration="30" OffPower="0.5">
+</IntervalsT>
+<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="160" message="Into the last set now."/></SteadyState>
+<IntervalsT   Repeat="12" OnDuration="30" OnPower="1.1499999761581" OffDuration="30" OffPower="0.5">
+</IntervalsT>
+<Cooldown  Duration="300" PowerLow="0.69999998807907" PowerHigh="0.44999998807907"></Cooldown>
+</workout></workout_file>

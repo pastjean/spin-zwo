@@ -1,0 +1,14 @@
+<workout_file><author>mywhooshinfo.com</author><name>Extensive Anaerobic 6 x 1min</name><description>The aim today is to produce repeatable, high power intervals. Extensive Anaerobic efforts will improve your ability to recover from high-intensity efforts and repeat them repeatedly. 
+
+Recovery is crucial with 6 x 1-minute quality efforts ahead of you!</description><sportType>bike</sportType><workout>
+<Warmup  Duration="300" PowerLow="0.44999998807907" PowerHigh="0.75"></Warmup>
+<SteadyState  Duration="60" Power="0.5"></SteadyState>
+<SteadyState  Duration="60" Power="0.80000001192093"></SteadyState>
+<SteadyState  Duration="60" Power="0.60000002384186"></SteadyState>
+<SteadyState  Duration="60" Power="1.0599999427795"></SteadyState>
+<SteadyState  Duration="60" Power="0.5"></SteadyState>
+<SteadyState  Duration="180" Power="0.80449998378754"></SteadyState>
+<SteadyState  Duration="120" Power="0.55000001192093"></SteadyState>
+<IntervalsT   Repeat="6" OnDuration="60" OnPower="1.6045000553131" OffDuration="360" OffPower="0.55449998378754">
+</IntervalsT>
+</workout></workout_file>
