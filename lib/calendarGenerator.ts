@@ -2,8 +2,9 @@
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import type { CanvasRenderingContext2D } from 'canvas';
 import { createCanvas } from 'canvas';
-import type { ProgramStructure, ParsedWorkout } from './types.js';
+import type { ParsedWorkout, ProgramStructure } from './types.js';
 
 const CELL_WIDTH = 180;
 const CELL_HEIGHT = 120;
@@ -18,46 +19,44 @@ const POWER_COLORS = {
   recovery: '#B8C5D6',
   endurance: '#5DADE2',
   tempo: '#52C67A',
-  sweetspot: '#F39C12',
   threshold: '#E67E22',
   vo2max: '#E74C3C',
 };
 
 function getPowerColor(power: number): string {
-  if (power <= 0.6) return POWER_COLORS.recovery;
+  if (power < 0.6) return POWER_COLORS.recovery;
   if (power <= 0.75) return POWER_COLORS.endurance;
   if (power <= 0.87) return POWER_COLORS.tempo;
-  if (power <= 0.93) return POWER_COLORS.sweetspot;
   if (power <= 1.05) return POWER_COLORS.threshold;
   return POWER_COLORS.vo2max;
 }
 
 function getDominantZoneColor(workout: ParsedWorkout): string {
-  let totalTime = 0;
   const timeInZone = {
     recovery: 0,
     endurance: 0,
     tempo: 0,
-    sweetspot: 0,
     threshold: 0,
     vo2max: 0,
   };
 
   for (const segment of workout.segments) {
     const duration = segment.duration;
-    totalTime += duration;
 
     let power: number;
-    if (segment.type === 'warmup' || segment.type === 'cooldown' || segment.type === 'ramp') {
+    if (
+      segment.type === 'warmup' ||
+      segment.type === 'cooldown' ||
+      segment.type === 'ramp'
+    ) {
       power = (segment.powerLow + segment.powerHigh) / 2;
     } else {
       power = segment.power;
     }
 
-    if (power <= 0.6) timeInZone.recovery += duration;
+    if (power < 0.6) timeInZone.recovery += duration;
     else if (power <= 0.75) timeInZone.endurance += duration;
     else if (power <= 0.87) timeInZone.tempo += duration;
-    else if (power <= 0.93) timeInZone.sweetspot += duration;
     else if (power <= 1.05) timeInZone.threshold += duration;
     else timeInZone.vo2max += duration;
   }
@@ -82,7 +81,8 @@ export function generateCalendarImage(program: ProgramStructure): void {
   const cols = 7;
 
   const width = LABEL_WIDTH + cols * (CELL_WIDTH + CELL_PADDING) + CELL_PADDING;
-  const height = HEADER_HEIGHT + rows * (CELL_HEIGHT + CELL_PADDING) + CELL_PADDING;
+  const height =
+    HEADER_HEIGHT + rows * (CELL_HEIGHT + CELL_PADDING) + CELL_PADDING;
 
   const canvas = createCanvas(width, height);
   const ctx = canvas.getContext('2d');
@@ -97,13 +97,18 @@ export function generateCalendarImage(program: ProgramStructure): void {
   ctx.textAlign = 'center';
 
   for (let day = 1; day <= 7; day++) {
-    const x = LABEL_WIDTH + (day - 1) * (CELL_WIDTH + CELL_PADDING) + CELL_WIDTH / 2 + CELL_PADDING;
+    const x =
+      LABEL_WIDTH +
+      (day - 1) * (CELL_WIDTH + CELL_PADDING) +
+      CELL_WIDTH / 2 +
+      CELL_PADDING;
     ctx.fillText(DAY_NAMES[day], x, 25);
   }
 
   // Draw week labels and cells
   for (let week = 1; week <= maxWeek; week++) {
-    const y = HEADER_HEIGHT + (week - 1) * (CELL_HEIGHT + CELL_PADDING) + CELL_PADDING;
+    const y =
+      HEADER_HEIGHT + (week - 1) * (CELL_HEIGHT + CELL_PADDING) + CELL_PADDING;
 
     // Week label
     ctx.fillStyle = '#34495E';
@@ -115,7 +120,8 @@ export function generateCalendarImage(program: ProgramStructure): void {
     const weekData = program.weeks.get(week);
 
     for (let day = 1; day <= 7; day++) {
-      const x = LABEL_WIDTH + (day - 1) * (CELL_WIDTH + CELL_PADDING) + CELL_PADDING;
+      const x =
+        LABEL_WIDTH + (day - 1) * (CELL_WIDTH + CELL_PADDING) + CELL_PADDING;
 
       const workout = weekData?.days.get(day);
 
@@ -146,12 +152,12 @@ export function generateCalendarImage(program: ProgramStructure): void {
 }
 
 function drawMiniWorkout(
-  ctx: any,
+  ctx: CanvasRenderingContext2D,
   workout: ParsedWorkout,
   x: number,
   y: number,
   width: number,
-  height: number
+  height: number,
 ): void {
   const chartPadding = 5;
   const chartWidth = width - 2 * chartPadding;
@@ -192,8 +198,10 @@ function drawMiniWorkout(
       const powerLow = segment.powerLow;
       const powerHigh = segment.powerHigh;
 
-      const yLow = y + chartPadding + chartHeight - (powerLow / maxPower) * chartHeight;
-      const yHigh = y + chartPadding + chartHeight - (powerHigh / maxPower) * chartHeight;
+      const yLow =
+        y + chartPadding + chartHeight - (powerLow / maxPower) * chartHeight;
+      const yHigh =
+        y + chartPadding + chartHeight - (powerHigh / maxPower) * chartHeight;
 
       ctx.fillStyle = getPowerColor((powerLow + powerHigh) / 2);
       ctx.beginPath();
