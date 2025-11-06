@@ -136,8 +136,8 @@ export interface ParsedWorkout {
   workoutName?: string;
 
   // Calculated metrics
-  duration: number;         // Total seconds
-  tss: number;             // Training Stress Score
+  duration: number; // Total seconds
+  tss: number; // Training Stress Score
   intensityFactor: number; // IF
   normalizedPower: number; // NP
 
@@ -169,10 +169,22 @@ export interface ProgramStats {
   avgTSSPerWeek: number;
   avgHoursPerWeek: number;
   intensityDistribution: {
-    recovery: number;    // % of time < 0.6 FTP
-    endurance: number;   // % of time 0.6-0.75
-    tempo: number;       // % of time 0.76-0.87
-    threshold: number;   // % of time 0.88-1.05
-    vo2max: number;      // % of time > 1.05
+    recovery: number; // % of time < 0.6 FTP
+    endurance: number; // % of time 0.6-0.75
+    tempo: number; // % of time 0.76-0.87
+    threshold: number; // % of time 0.88-1.05
+    vo2max: number; // % of time > 1.05
   };
+}
+
+export interface WorkoutModalData {
+  name: string;
+  description: string;
+  week: number;
+  day: number;
+  dayName: string;
+  duration: number;
+  tss: number;
+  intensityFactor: number;
+  normalizedPower: number;
 }

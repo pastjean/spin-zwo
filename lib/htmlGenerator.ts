@@ -2,7 +2,7 @@
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import type { ProgramStructure } from './types.js';
+import type { ProgramStructure, WorkoutModalData } from './types.js';
 
 export function generateHTML(program: ProgramStructure): void {
   const html = `<!DOCTYPE html>
@@ -180,7 +180,7 @@ export function generateHTML(program: ProgramStructure): void {
 </head>
 <body>
     <header>
-        <h1>${program.programName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h1>
+        <h1>${program.programName.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}</h1>
         <p>Interactive Workout Calendar & Statistics</p>
     </header>
 
@@ -297,7 +297,9 @@ ${generateCalendarRows(program)}
 }
 
 function generateCalendarRows(program: ProgramStructure): string {
-  const weeks = Array.from(program.weeks.values()).sort((a, b) => a.weekNumber - b.weekNumber);
+  const weeks = Array.from(program.weeks.values()).sort(
+    (a, b) => a.weekNumber - b.weekNumber,
+  );
   const rows: string[] = [];
 
   for (const week of weeks) {
@@ -320,8 +322,10 @@ function generateCalendarRows(program: ProgramStructure): string {
   return rows.join('\n');
 }
 
-function generateWorkoutData(program: ProgramStructure): Record<string, any> {
-  const data: Record<string, any> = {};
+function generateWorkoutData(
+  program: ProgramStructure,
+): Record<string, WorkoutModalData> {
+  const data: Record<string, WorkoutModalData> = {};
 
   for (const workout of program.workouts) {
     data[workout.filename] = {
