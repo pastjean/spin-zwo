@@ -260,8 +260,8 @@ function drawMiniWorkout(
       ctx.fillStyle = getPowerColor((powerLow + powerHigh) / 2);
       ctx.beginPath();
       ctx.moveTo(segX, y + chartPadding + chartHeight);
-      ctx.lineTo(segX, segment.type === 'cooldown' ? yHigh : yLow);
-      ctx.lineTo(segX + segWidth, segment.type === 'cooldown' ? yLow : yHigh);
+      ctx.lineTo(segX, yLow);
+      ctx.lineTo(segX + segWidth, yHigh);
       ctx.lineTo(segX + segWidth, y + chartPadding + chartHeight);
       ctx.closePath();
       ctx.fill();

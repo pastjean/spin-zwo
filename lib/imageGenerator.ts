@@ -195,8 +195,8 @@ export function generateWorkoutImage(
         ctx.fillStyle = getPowerColor((powerLow + powerHigh) / 2);
         ctx.beginPath();
         ctx.moveTo(x, PADDING + CHART_HEIGHT);
-        ctx.lineTo(x, segment.type === 'cooldown' ? yHigh : yLow);
-        ctx.lineTo(x + width, segment.type === 'cooldown' ? yLow : yHigh);
+        ctx.lineTo(x, yLow);
+        ctx.lineTo(x + width, yHigh);
         ctx.lineTo(x + width, PADDING + CHART_HEIGHT);
         ctx.closePath();
         ctx.fill();
