@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
       <author>Pierre-Alexandre St-Jean</author>
-      <n>W12-Su: Reflection & Planning</n>
+      <n>W12-Su: Reflection &amp; Planning</n>
       <description>workout.description, 📊 23 TSS · IF 0.55 · 45 min</description>
       <sportType>bike</sportType>
       <tags>

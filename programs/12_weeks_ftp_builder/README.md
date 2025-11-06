@@ -1,396 +1,277 @@
-# 12-Week FTP Builder Program v2.0
-
-## Training Plan Overview
-
-- **Duration:** 12 weeks
-- **Weekly Hours:** 7-8 hours (6 hours during recovery weeks)
-- **Structure:** Progressive volume build with adequate recovery
-- **Key Sessions:** Tuesday & Thursday (intensity), Saturday (long endurance), Sunday (endurance)
-- **Weekly TSS:** 231-380 TSS (build weeks), 233 TSS (recovery weeks)
-- **Rest Days:** Monday + Friday (full rest)
-
----
-
-## BLOCK 1: Foundation Building (Weeks 1-4)
-
-### Week 1 · 6.5 hours · 231 TSS
-
-| Day           | Workout                                                                                       | Details                                                                                                                  |
-| ------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Monday**    | REST                                                                                          | -                                                                                                                        |
-| **Tuesday**   | **FTP Test**<br/><img src="images/W01-D2-Tuesday-FTP_Test.png" width="300">                   | • 67 min · 72 TSS · IF 0.81<br/>• 20-min test effort - establish baseline<br/>• 💡 Pre-load: Carbs 2-3hrs before         |
-| **Wednesday** | **Active Recovery**<br/><img src="images/W01-D3-Wednesday-Recovery.png" width="300">          | • 39 min · 19 TSS · IF 0.54<br/>• Zone 1-2 easy spin                                                                     |
-| **Thursday**  | **Tempo Building**<br/><img src="images/W01-D4-Thursday-Tempo.png" width="300">               | • 70 min · 61 TSS · IF 0.72<br/>• 3 x 10min @ 85%<br/>• Zone 3 work with varied cadence<br/>• 💡 Consume 30-40g carbs/hr |
-| **Friday**    | REST                                                                                          | -                                                                                                                        |
-| **Saturday**  | **Base Endurance**<br/><img src="images/W01-D6-Saturday-Endurance.png" width="300">           | • 91 min · 76 TSS · IF 0.71<br/>• Zone 2 + 6 accelerations<br/>• Building aerobic base<br/>• 💡 Consume 60g carbs/hr     |
-| **Sunday**    | **Active Recovery**<br/><img src="images/W01-D7-Sunday-Recovery.png" width="300">             | • 45 min · 27 TSS · IF 0.60<br/>• Zone 1-2 optional spin                                                                 |
-
----
-
-### Week 2 · 7.5 hours · 338 TSS
-
-| Day           | Workout                                                                                         | Details                                                                                                                  |
-| ------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Monday**    | REST                                                                                            | -                                                                                                                        |
-| **Tuesday**   | **Sweet Spot 2x15**<br/><img src="images/W02-D2-Tuesday-Sweet_Spot.png" width="300">            | • 70 min · 68 TSS · IF 0.76<br/>• 2 x 15min @ 90%<br/>• Building sustained power<br/>• 💡 Pre-load: Carbs 2-3hrs before  |
-| **Wednesday** | **Easy Zone 2**<br/><img src="images/W02-D3-Wednesday-Easy_Spin.png" width="300">                 | • 60 min · 46 TSS · IF 0.68<br/>• Zone 2 endurance - building volume                                                           |
-| **Thursday**  | **FTP Intervals 4x8**<br/><img src="images/W02-D4-Thursday-FTP_Intervals.png" width="300">      | • 79 min · 89 TSS · IF 0.82<br/>• 4 x 8min @ 100%<br/>• Direct threshold training<br/>• 💡 Pre-load: Carbs 2-3hrs before |
-| **Friday**    | REST                                                                                            | -                                                                                                                        |
-| **Saturday**  | **Tempo Endurance 3x15**<br/><img src="images/W02-D6-Saturday-Tempo_Endurance.png" width="300"> | • 79 min · 76 TSS · IF 0.76<br/>• 3 x 15min @ 85%<br/>• Zone 3 with progressive structure<br/>• 💡 Consume 60g carbs/hr  |
-| **Sunday**    | **Long Endurance**<br/><img src="images/W02-D7-Sunday-Long_Endurance.png" width="300">          | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 steady<br/>• Aerobic development<br/>• 💡 Consume 60-90g carbs/hr              |
-
----
-
-### Week 3 · 7.0 hours · 306 TSS
-
-| Day           | Workout                                                                                  | Details                                                                                                                                  |
-| ------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                                     | -                                                                                                                                        |
-| **Tuesday**   | **Over/Unders 3x8**<br/><img src="images/W03-D2-Tuesday-Over_Unders.png" width="300">                 | • 69 min · 74 TSS · IF 0.80<br/>• 3 x (4min @ 95% + 4min @ 105%)<br/>• Lactate clearance training<br/>• 💡 Pre-load: Carbs 2-3hrs before |
-| **Wednesday** | **Active Recovery**<br/><img src="images/W03-D3-Wednesday-Recovery.png" width="300">                  | • 45 min · 23 TSS · IF 0.55<br/>• Zone 1-2 easy spin                                                                                     |
-| **Thursday**  | **Extended Threshold 2x20**<br/><img src="images/W03-D4-Thursday-Extended_Threshold.png" width="300"> | • 85 min · 102 TSS · IF 0.85<br/>• 2 x 20min @ 100%<br/>• Building threshold endurance<br/>• 💡 Consume 60-90g carbs/hr                  |
-| **Friday**    | REST                                                                                     | -                                                                                                                                        |
-| **Saturday**  | **Sweet Spot 3x20**<br/><img src="images/W03-D6-Saturday-Sweet_Spot_Progression.png" width="300">     | • 100 min · 109 TSS · IF 0.81<br/>• 3 x 20min @ 90%<br/>• Peak sweet spot work<br/>• 💡 Consume 60-90g carbs/hr                          |
-| **Sunday**    | **Easy Spin**<br/><img src="images/W03-D7-Sunday-Easy_Spin.png" width="300">                          | • 30 min · 15 TSS · IF 0.55<br/>• Zone 1 only - recovery priority                                                                        |
-
----
-
-### Week 4 (Recovery) · 6.0 hours · 233 TSS
-
-| Day           | Workout                                                                                  | Details                                                                                                                                         |
-| ------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                                     | -                                                                                                                                               |
-| **Tuesday**   | **Recovery Cadence + Sprints**<br/><img src="images/W04-D2-Tuesday-Recovery_Cadence.png" width="300"> | • 64 min · 42 TSS · IF 0.63<br/>• Zone 1-2 + cadence drills<br/>• 5x10sec sprints - neuromuscular maintenance<br/>• 🍖 Recovery nutrition focus |
-| **Wednesday** | REST                                                                                     | -                                                                                                                                               |
-| **Thursday**  | **Light Tempo**<br/><img src="images/W04-D4-Thursday-Light_Tempo.png" width="300">                    | • 50 min · 38 TSS · IF 0.67<br/>• 20min @ 80% - easy intensity<br/>• 🍖 Recovery nutrition focus                                                |
-| **Friday**    | REST                                                                                     | -                                                                                                                                               |
-| **Saturday**  | **Relaxed Endurance**<br/><img src="images/W04-D6-Saturday-Easy_Endurance.png" width="300">           | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 - recovery intensity, added volume<br/>• 💡 Consume 60g carbs/hr<br/>• 🍖 Recovery nutrition focus                                                       |
-| **Sunday**    | **Easy Endurance**<br/><img src="images/W04-D7-Sunday-Recovery.png" width="300">                     | • 75 min · 58 TSS · IF 0.68<br/>• Zone 2 - maintains training load in recovery<br/>• 💡 Consume 30-40g carbs/hr<br/>• 🍖 Recovery nutrition focus                                                               |
-
----
-
-## BLOCK 2: Threshold Development (Weeks 5-8)
-
-### Week 5 · 8.0 hours · 362 TSS
-
-| Day           | Workout                                                                                        | Details                                                                                                                                        |
-| ------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                                           | -                                                                                                                                              |
-| **Tuesday**   | **Pyramid Intervals 3-5-7-5-3** 🆕<br/><img src="images/W05-D2-Tuesday-Pyramid_Intervals.png" width="300">  | • 75 min · 77 TSS · IF 0.78<br/>• Progressive pyramid @ 100% FTP<br/>• Builds mental toughness & pacing<br/>• 💡 Pre-load: Carbs 2-3hrs before |
-| **Wednesday** | **Easy Zone 2**<br/><img src="images/W05-D3-Wednesday-Easy_Spin.png" width="300">                             | • 60 min · 46 TSS · IF 0.68<br/>• Zone 2 endurance - building volume<br/>• 💡 Consume 30g carbs/hr                                                                                 |
-| **Thursday**  | **Progressive Threshold 3x12**<br/><img src="images/W05-D4-Thursday-Progressive_Threshold.png" width="300"> | • 83 min · 97 TSS · IF 0.84<br/>• 3 x 12min @ 100%<br/>• Building duration<br/>• 💡 Consume 60-90g carbs/hr                                    |
-| **Friday**    | REST                                                                                           | -                                                                                                                                              |
-| **Saturday**  | **Extended Tempo 3x18**<br/><img src="images/W05-D6-Saturday-Tempo_Endurance_Long.png" width="300">         | • 92 min · 90 TSS · IF 0.77<br/>• 3 x 18min @ 85%<br/>• Tempo progression<br/>• 💡 Consume 60-90g carbs/hr                                     |
-| **Sunday**    | **Long Endurance**<br/><img src="images/W05-D7-Sunday-Long_Endurance.png" width="300">                      | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 steady<br/>• Aerobic base<br/>• 💡 Consume 60-90g carbs/hr                                           |
-
----
-
-### Week 6 · 7.5 hours · 354 TSS
-
-| Day           | Workout                                                                       | Details                                                                                                                                                    |
-| ------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                          | -                                                                                                                                                          |
-| **Tuesday**   | **Push & Pull** 🆕<br/><img src="images/W06-D2-Tuesday-Push_and_Pull.png" width="300">     | • 98 min · 96 TSS · IF 0.77<br/>• 6 x (4min high cadence 100rpm + 4min low 60rpm) @ 88%<br/>• Alternating muscle recruitment<br/>• 💡 Consume 60g carbs/hr |
-| **Wednesday** | **Active Recovery**<br/><img src="images/W06-D3-Wednesday-Recovery.png" width="300">       | • 45 min · 23 TSS · IF 0.55<br/>• Zone 1-2 easy spin                                                                                                       |
-| **Thursday**  | **FTP 2x20**<br/><img src="images/W06-D4-Thursday-FTP_2x20.png" width="300">               | • 85 min · 102 TSS · IF 0.85<br/>• 2 x 20min @ 100%<br/>• Threshold progression<br/>• 💡 Pre-load: Carbs 2-3hrs before                                     |
-| **Friday**    | REST                                                                          | -                                                                                                                                                          |
-| **Saturday**  | **Sweet Spot 3x22**<br/><img src="images/W06-D6-Saturday-Sweet_Spot_3x22.png" width="300"> | • 106 min · 117 TSS · IF 0.81<br/>• 3 x 22min @ 90%<br/>• Extended progression<br/>• 💡 Consume 60-90g carbs/hr                                            |
-| **Sunday**    | **Endurance**<br/><img src="images/W06-D7-Sunday-Endurance.png" width="300">               | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 steady volume<br/>• 💡 Consume 60-90g carbs/hr                                                                   |
-
----
-
-### Week 7 · 8.0 hours · 380 TSS
-
-| Day           | Workout                                                                            | Details                                                                                                                                               |
-| ------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                               | -                                                                                                                                                     |
-| **Tuesday**   | **VO2max 30/30s** 🆕<br/><img src="images/W07-D2-Tuesday-VO2max_30_30s.png" width="300">        | • 68 min · 75 TSS · IF 0.82<br/>• 3 x (8 x 30sec @ 120% / 30sec @ 50%)<br/>• High-intensity neuromuscular work<br/>• 💡 Pre-load: Carbs 2-3hrs before |
-| **Wednesday** | **Easy Zone 2**<br/><img src="images/W07-D3-Wednesday-Easy_Spin.png" width="300">                 | • 60 min · 46 TSS · IF 0.68<br/>• Zone 2 endurance - building volume<br/>• 💡 Consume 30g carbs/hr                                                                                     |
-| **Thursday**  | **Continuous 30min Threshold**<br/><img src="images/W07-D4-Thursday-FTP_30min.png" width="300"> | • 65 min · 78 TSS · IF 0.85<br/>• 30min @ 100% FTP<br/>• Peak threshold endurance<br/>• 💡 Consume 60g carbs/hr                                       |
-| **Friday**    | REST                                                                               | -                                                                                                                                                     |
-| **Saturday**  | **Sweet Spot 3x25**<br/><img src="images/W07-D6-Saturday-Sweet_Spot_3x25.png" width="300">      | • 115 min · 129 TSS · IF 0.82<br/>• 3 x 25min @ 90%<br/>• Peak volume<br/>• 💡 Consume 60-90g carbs/hr                                                |
-| **Sunday**    | **Endurance + Tempo**<br/><img src="images/W07-D7-Sunday-Endurance_Tempo.png" width="300">      | • 130 min · 110 TSS · IF 0.71<br/>• Zone 2 + 5x5min tempo bursts<br/>• Mixed work<br/>• 💡 Consume 60-90g carbs/hr                                    |
+# 12 Weeks Ftp Builder
 
----
+## Overview
 
-### Week 8 (Recovery) · 6.0 hours · 233 TSS
+- **Total Weeks:** 12
+- **Total Workouts:** 58
+- **Total TSS:** 4259
+- **Total Hours:** 76.8
+- **Average TSS/Week:** 355
+- **Average Hours/Week:** 6.4
 
-| Day           | Workout                                                                                  | Details                                                                                                             |
-| ------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                                     | -                                                                                                                   |
-| **Tuesday**   | **Recovery Cadence + Sprints**<br/><img src="images/W08-D2-Tuesday-Recovery_Cadence.png" width="300"> | • 64 min · 42 TSS · IF 0.63<br/>• Zone 1-2 + cadence drills<br/>• 5x10sec sprints<br/>• 🍖 Recovery nutrition focus |
-| **Wednesday** | REST                                                                                     | -                                                                                                                   |
-| **Thursday**  | **Light Tempo**<br/><img src="images/W08-D4-Thursday-Light_Tempo.png" width="300">                    | • 50 min · 38 TSS · IF 0.67<br/>• 20min @ 80%<br/>• 🍖 Recovery nutrition focus                                     |
-| **Friday**    | REST                                                                                     | -                                                                                                                   |
-| **Saturday**  | **Relaxed Endurance**<br/><img src="images/W08-D6-Saturday-Easy_Endurance.png" width="300">           | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 - recovery intensity, added volume<br/>• 💡 Consume 60g carbs/hr<br/>• 🍖 Recovery nutrition focus                           |
-| **Sunday**    | **Easy Endurance**<br/><img src="images/W08-D7-Sunday-Recovery.png" width="300">                     | • 75 min · 58 TSS · IF 0.68<br/>• Zone 2 - maintains training load in recovery<br/>• 💡 Consume 30-40g carbs/hr<br/>• 🍖 Recovery nutrition focus                                   |
+## Intensity Distribution
 
----
+- **Recovery (<60% FTP):** 24.9%
+- **Endurance (60-75% FTP):** 51.0%
+- **Tempo (76-87% FTP):** 5.2%
+- **Threshold (88-105% FTP):** 17.7%
+- **VO2max (>105% FTP):** 1.1%
 
-## BLOCK 3: Peak Performance (Weeks 9-12)
+## Program Calendar
 
-### Week 9 · 8.0 hours · 364 TSS
+![Program Calendar](images/calendar.png)
 
-| Day           | Workout                                                                                       | Details                                                                                                                                      |
-| ------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                                          | -                                                                                                                                            |
-| **Tuesday**   | **Pyramid Intervals 4-6-8-6-4** 🆕<br/><img src="images/W09-D2-Tuesday-Pyramid_Intervals.png" width="300"> | • 84 min · 88 TSS · IF 0.80<br/>• Advanced pyramid @ 100% FTP<br/>• Mental toughness & pacing mastery<br/>• 💡 Pre-load: Carbs 2-3hrs before |
-| **Wednesday** | **Easy Zone 2**<br/><img src="images/W09-D3-Wednesday-Easy_Spin.png" width="300">                            | • 60 min · 46 TSS · IF 0.68<br/>• Zone 2 endurance - building volume<br/>• 💡 Consume 30g carbs/hr                                                                               |
-| **Thursday**  | **FTP Intervals 3x15**<br/><img src="images/W09-D4-Thursday-FTP_3x15.png" width="300">                     | • 95 min · 115 TSS · IF 0.85<br/>• 3 x 15min @ 100%<br/>• Sustained threshold work<br/>• 💡 Consume 60-90g carbs/hr                          |
-| **Friday**    | REST                                                                                          | -                                                                                                                                            |
-| **Saturday**  | **Tempo Endurance 3x18**<br/><img src="images/W09-D6-Saturday-Tempo_Endurance.png" width="300">            | • 92 min · 90 TSS · IF 0.77<br/>• 3 x 18min @ 85%<br/>• Zone 3 work<br/>• 💡 Consume 60-90g carbs/hr                                         |
-| **Sunday**    | **Long Endurance**<br/><img src="images/W09-D7-Sunday-Long_Endurance.png" width="300">                     | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 steady<br/>• Aerobic work<br/>• 💡 Consume 60-90g carbs/hr                                         |
+## Progression Analysis
 
----
+![Progression Charts](images/progression.png)
 
-### Week 10 (Peak Build) · 8.0 hours · 378 TSS
+## Weekly Breakdown
 
-| Day           | Workout                                                                       | Details                                                                                                                                                                    |
-| ------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                          | -                                                                                                                                                                          |
-| **Tuesday**   | **VO2max 40/20s** 🆕<br/><img src="images/W10-D2-Tuesday-VO2max_40_20s.png" width="300">   | • 74 min · 98 TSS · IF 0.89<br/>• 3 x (10 x 40sec @ 120% / 20sec @ 50%)<br/>• Classic Tabata-style intervals<br/>• Lactate handling<br/>• 💡 Pre-load: Carbs 2-3hrs before |
-| **Wednesday** | **Active Recovery**<br/><img src="images/W10-D3-Wednesday-Recovery.png" width="300">       | • 45 min · 23 TSS · IF 0.55<br/>• Zone 1-2 easy spin<br/>• Peak training week - stay easy                                                                                  |
-| **Thursday**  | **FTP 2x25**<br/><img src="images/W10-D4-Thursday-FTP_2x25.png" width="300">               | • 95 min · 120 TSS · IF 0.87<br/>• 2 x 25min @ 100%<br/>• Peak threshold work<br/>• 💡 Consume 60-90g carbs/hr                                                             |
-| **Friday**    | REST                                                                          | -                                                                                                                                                                          |
-| **Saturday**  | **Sweet Spot 3x25**<br/><img src="images/W10-D6-Saturday-Sweet_Spot_3x25.png" width="300"> | • 115 min · 129 TSS · IF 0.82<br/>• 3 x 25min @ 90%<br/>• Maximum volume<br/>• 💡 Consume 60-90g carbs/hr                                                                  |
-| **Sunday**    | **Endurance**<br/><img src="images/W10-D7-Sunday-Endurance.png" width="300">               | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 steady volume<br/>• Reduced from 2.5hr<br/>• 💡 Consume 60-90g carbs/hr                                                          |
+### Week 1
 
----
+**Weekly Total:** 255 TSS, 5.2 hours
 
-### Week 11 (Peak) · 8.0 hours · 376 TSS
+- **Day 2 (Tuesday):** FTP Test - 72 TSS, 67 min
+  ![FTP Test](images/individual/W01-D2-Tuesday-FTP_Test.png)
 
-| Day           | Workout                                                                            | Details                                                                                                                                                     |
-| ------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                               | -                                                                                                                                                           |
-| **Tuesday**   | **VO2max Mixed** 🆕<br/><img src="images/W11-D2-Tuesday-VO2max_Mixed.png" width="300">          | • 62 min · 69 TSS · IF 0.82<br/>• 5 x 2min @ 115% + 4 x (40sec @ 120% / 20sec @ 50%)<br/>• Top-end power development<br/>• 💡 Pre-load: Carbs 2-3hrs before |
-| **Wednesday** | **Easy Zone 2**<br/><img src="images/W11-D3-Wednesday-Easy_Spin.png" width="300">                 | • 60 min · 46 TSS · IF 0.68<br/>• Zone 2 endurance - building volume<br/>• 💡 Consume 30g carbs/hr<br/>• Final test next week!                                                               |
-| **Thursday**  | **Continuous 35min Threshold**<br/><img src="images/W11-D4-Thursday-FTP_35min.png" width="300"> | • 70 min · 86 TSS · IF 0.86<br/>• 35min @ 100% FTP<br/>• Maximum threshold endurance<br/>• 💡 Consume 60-90g carbs/hr                                       |
-| **Friday**    | REST                                                                               | -                                                                                                                                                           |
-| **Saturday**  | **Race Simulation** 🆕<br/><img src="images/W11-D6-Saturday-Race_Simulation.png" width="300">   | • 86 min · 89 TSS · IF 0.79<br/>• 3 x (8min @ 92% + 2min @ 105% + 5min @ 75%)<br/>• Mixed intensity - race dynamics<br/>• 💡 Consume 60-90g carbs/hr        |
-| **Sunday**    | **Steady Endurance**<br/><img src="images/W11-D7-Sunday-Endurance.png" width="300">             | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 steady<br/>• Final volume ride<br/>• 💡 Consume 60-90g carbs/hr                                                   |
+- **Day 3 (Wednesday):** Recovery - 19 TSS, 39 min
+  ![Recovery](images/individual/W01-D3-Wednesday-Recovery.png)
 
----
+- **Day 4 (Thursday):** Tempo - 61 TSS, 70 min
+  ![Tempo](images/individual/W01-D4-Thursday-Tempo.png)
 
-### Week 12 (Taper & Test) · 6.0 hours · 238 TSS
+- **Day 6 (Saturday):** Endurance - 76 TSS, 91 min
+  ![Endurance](images/individual/W01-D6-Saturday-Endurance.png)
 
-| Day           | Workout                                                                            | Details                                                                                                                                                                   |
-| ------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Monday**    | REST                                                                               | -                                                                                                                                                                         |
-| **Tuesday**   | **🎯 FINAL FTP TEST**<br/><img src="images/W12-D2-Tuesday-Final_FTP_Test.png" width="300">      | • 67 min · 72 TSS · IF 0.81<br/>• 20-min test - measure your gains!<br/>• Compare to Week 1<br/>• 💡 Pre-load: Carbs 2-3hrs before<br/>• **Expected: 5-15% FTP increase** |
-| **Wednesday** | **Easy Spin**<br/><img src="images/W12-D3-Wednesday-Easy_Spin.png" width="300">                 | • 30 min · 15 TSS · IF 0.55<br/>• Zone 1 - recovery from test<br/>• Let results sink in!                                                                                  |
-| **Thursday**  | **Victory Lap** 🎉<br/><img src="images/W12-D4-Thursday-Victory_Lap.png" width="300">           | • 60 min · 49 TSS · IF 0.70<br/>• Zone 2 at your NEW FTP zones<br/>• Celebrate your gains!<br/>• Feel how much stronger you are                                           |
-| **Friday**    | REST                                                                               | -                                                                                                                                                                         |
-| **Saturday**  | **Celebration Ride** 🎉<br/><img src="images/W12-D6-Saturday-Celebration_Ride.png" width="300"> | • 120 min · 98 TSS · IF 0.70<br/>• Zone 2 - enjoy your fitness<br/>• 12-week journey complete!<br/>• 💡 Consume 60-90g carbs/hr                                               |
-| **Sunday**    | **Reflection & Planning**<br/><img src="images/W12-D7-Sunday-Recovery.png" width="300">         | • 45 min · 23 TSS · IF 0.55<br/>• Optional easy spin<br/>• Reflect on your journey<br/>• Plan what's next!<br/>• 🍖 Recovery nutrition focus                              |
+- **Day 7 (Sunday):** Recovery - 27 TSS, 45 min
+  ![Recovery](images/individual/W01-D7-Sunday-Recovery.png)
 
----
 
-## Workout Types Reference
+### Week 2
 
-**FTP Intervals (100% FTP)** - Direct threshold training, builds sustainable power
-**Sweet Spot (88-93% FTP)** - High-intensity aerobic work, sustainable for longer durations
-**Over/Unders (95%/105% FTP)** - Lactate clearance training, alternating below/above threshold
-**Pyramid Intervals (100% FTP)** - Progressive intervals (3-5-7-5-3 or 4-6-8-6-4 min), builds mental toughness
-**Push & Pull (88% FTP)** - Alternating high cadence (100rpm) / low cadence (60rpm), neuromuscular development
-**Tempo (83-87% FTP)** - Moderate intensity, builds aerobic base and muscular endurance
-**VO2max (106-120% FTP)** - Short high-intensity efforts (30/30s, 40/20s, or 2-5min), maximum aerobic capacity
-**Endurance (65-75% FTP)** - Easy conversational pace, aerobic base and recovery
+**Weekly Total:** 377 TSS, 6.8 hours
 
----
+- **Day 2 (Tuesday):** Sweet Spot - 68 TSS, 70 min
+  ![Sweet Spot](images/individual/W02-D2-Tuesday-Sweet_Spot.png)
 
-## Alternative Workouts from MyWhoosh 🔄
+- **Day 3 (Wednesday):** Easy Spin - 46 TSS, 60 min
+  ![Easy Spin](images/individual/W02-D3-Wednesday-Easy_Spin.png)
 
-Can't complete the prescribed workout? Here are equivalent MyWhoosh alternatives you can substitute:
+- **Day 4 (Thursday):** FTP Intervals - 89 TSS, 79 min
+  ![FTP Intervals](images/individual/W02-D4-Thursday-FTP_Intervals.png)
 
-### **FTP/Threshold Alternatives**
+- **Day 6 (Saturday):** Tempo Endurance - 76 TSS, 79 min
+  ![Tempo Endurance](images/individual/W02-D6-Saturday-Tempo_Endurance.png)
 
-**If you need to replace FTP intervals:**
+- **Day 7 (Sunday):** Long Endurance - 98 TSS, 120 min
+  ![Long Endurance](images/individual/W02-D7-Sunday-Long_Endurance.png)
 
-- **Threshold #2-#5** (52-60 min) - Progressive threshold intervals
-- **Targeting FTP** (40 min) - Focused threshold work
-- **20min Tempo w/15sec Accelerations** (55 min) - Threshold + surges
 
-**For 2x20 FTP workouts:**
+### Week 3
 
-- **Tempo Climbing #1 or #2** (60 min) - Sustained threshold efforts
-- **Tempo #3-#5** (54-62 min) - Extended tempo/threshold
+**Weekly Total:** 323 TSS, 5.5 hours
 
-### **Sweet Spot Alternatives**
+- **Day 2 (Tuesday):** Over Unders - 74 TSS, 69 min
+  ![Over Unders](images/individual/W03-D2-Tuesday-Over_Unders.png)
 
-**If you need to replace Sweet Spot sessions:**
+- **Day 3 (Wednesday):** Recovery - 23 TSS, 45 min
+  ![Recovery](images/individual/W03-D3-Wednesday-Recovery.png)
 
-- **Sweetspot Training** (41 min) - Classic sweet spot intervals
-- **15min Varied Tempo #1-#3** (48-60 min) - Progressive sweet spot work
-- **Tempo into Sprints** (61 min) - Sweet spot + neuromuscular
+- **Day 4 (Thursday):** Extended Threshold - 102 TSS, 85 min
+  ![Extended Threshold](images/individual/W03-D4-Thursday-Extended_Threshold.png)
 
-### **VO2max Alternatives**
+- **Day 6 (Saturday):** Sweet Spot Progression - 109 TSS, 100 min
+  ![Sweet Spot Progression](images/individual/W03-D6-Saturday-Sweet_Spot_Progression.png)
 
-**For 30/30s or 40/20s:**
+- **Day 7 (Sunday):** Easy Spin - 15 TSS, 30 min
+  ![Easy Spin](images/individual/W03-D7-Sunday-Easy_Spin.png)
 
-- **30/30 Anaerobic #1-#4** (52-68 min) - Progressive 30/30 intervals
-- **30/30 Efforts** (51 min) - Classic 30/30 protocol
-- **12min 30/30's #1-#2** (57-74 min) - Extended 30/30 work
 
-**For longer VO2max (2-5 min):**
+### Week 4
 
-- **10min Ramps** (59 min) - VO2max ramp intervals
-- **11min Intensive Aerobic** (77 min) - Sustained VO2max
-- **22min Intensive Aerobic** (88 min) - Extended VO2max work
-- **1min Power Duration #2** (58 min) - Mixed VO2max intervals
+**Weekly Total:** 236 TSS, 5.2 hours
 
-### **Over/Under Alternatives**
+- **Day 2 (Tuesday):** Recovery Cadence - 42 TSS, 64 min
+  ![Recovery Cadence](images/individual/W04-D2-Tuesday-Recovery_Cadence.png)
 
-**If you need to replace Over/Under sessions:**
+- **Day 4 (Thursday):** Light Tempo - 38 TSS, 50 min
+  ![Light Tempo](images/individual/W04-D4-Thursday-Light_Tempo.png)
 
-- **Tempo with 30sec spike #1** (54 min) - Tempo with surges
-- **Tempo with 15sec surges** (40 min) - Shorter over efforts
-- **Tadej's Criss-cross Tempo** (34 min) - Pogačar's favorite workout
+- **Day 6 (Saturday):** Easy Endurance - 98 TSS, 120 min
+  ![Easy Endurance](images/individual/W04-D6-Saturday-Easy_Endurance.png)
 
-### **Pyramid/Progressive Alternatives**
+- **Day 7 (Sunday):** Recovery - 58 TSS, 75 min
+  ![Recovery](images/individual/W04-D7-Sunday-Recovery.png)
 
-**For Pyramid intervals:**
 
-- **Capacity Pyramid #1** (70 min) - Progressive FTP pyramid
-- **1min + Endurance #1** (88 min) - Progressive intervals + endurance
+### Week 5
 
-### **Tempo Alternatives**
+**Weekly Total:** 408 TSS, 7.2 hours
 
-**For 3x15-18 min Tempo:**
+- **Day 2 (Tuesday):** Pyramid Intervals - 77 TSS, 75 min
+  ![Pyramid Intervals](images/individual/W05-D2-Tuesday-Pyramid_Intervals.png)
 
-- **Tempo #1-#11** (52-76 min) - Various tempo durations
-- **Tempo Climbing #1-#2** (60 min) - Sustained tempo efforts
+- **Day 3 (Wednesday):** Easy Spin - 46 TSS, 60 min
+  ![Easy Spin](images/individual/W05-D3-Wednesday-Easy_Spin.png)
 
-### **Recovery/Cadence Alternatives**
+- **Day 4 (Thursday):** Progressive Threshold - 97 TSS, 83 min
+  ![Progressive Threshold](images/individual/W05-D4-Thursday-Progressive_Threshold.png)
 
-**For recovery weeks:**
+- **Day 6 (Saturday):** Tempo Endurance Long - 90 TSS, 92 min
+  ![Tempo Endurance Long](images/individual/W05-D6-Saturday-Tempo_Endurance_Long.png)
 
-- **Cadence Changers #1-#2** (42-46 min) - Cadence drills
-- **Power Reps #1-#2** (51-60 min) - Light power + cadence
-- **Torque Changers #1** (59 min) - Strength endurance work
-- **Low Cadence Steps #1-#2** (61-65 min) - Low cadence focus
+- **Day 7 (Sunday):** Long Endurance - 98 TSS, 120 min
+  ![Long Endurance](images/individual/W05-D7-Sunday-Long_Endurance.png)
 
-### **Sprint/Power Alternatives**
 
-**For sprint maintenance:**
+### Week 6
 
-- **Power Starts** - 10sec and 30sec sprint development
-- **Endurance with Short Sprints** (51-62 min) - Endurance + sprints
-- **Endurance with max bursts** (51 min) - Max efforts in endurance
+**Weekly Total:** 436 TSS, 7.6 hours
 
-### **Race Simulation Alternatives**
+- **Day 2 (Tuesday):** Push and Pull - 96 TSS, 98 min
+  ![Push and Pull](images/individual/W06-D2-Tuesday-Push_and_Pull.png)
 
-**For mixed intensity/race prep:**
+- **Day 3 (Wednesday):** Recovery - 23 TSS, 45 min
+  ![Recovery](images/individual/W06-D3-Wednesday-Recovery.png)
 
-- **Lactate Shuttle #1** (varies) - Lactate tolerance work
-- **Mixed Intervals** (90 min) - Varied intensity like racing
-- Any **"Train Like Tadej"** workout - World Tour race simulation
+- **Day 4 (Thursday):** FTP 2x20 - 102 TSS, 85 min
+  ![FTP 2x20](images/individual/W06-D4-Thursday-FTP_2x20.png)
 
-### **Endurance Alternatives**
+- **Day 6 (Saturday):** Sweet Spot 3x22 - 117 TSS, 106 min
+  ![Sweet Spot 3x22](images/individual/W06-D6-Saturday-Sweet_Spot_3x22.png)
 
-**For long steady rides:**
+- **Day 7 (Sunday):** Endurance - 98 TSS, 120 min
+  ![Endurance](images/individual/W06-D7-Sunday-Endurance.png)
 
-- Any workout in the **Endurance** category (89 workouts available)
-- **20sec + Endurance #1** (84 min) - Endurance with micro-bursts
 
----
+### Week 7
 
-## How to Use Alternatives
+**Weekly Total:** 438 TSS, 7.3 hours
 
-**When to substitute:**
+- **Day 2 (Tuesday):** VO2max 30 30s - 75 TSS, 68 min
+  ![VO2max 30 30s](images/individual/W07-D2-Tuesday-VO2max_30_30s.png)
 
-- ✅ Traveling and don't have your workout files
-- ✅ Need mental variety while maintaining training stimulus
-- ✅ Feeling slightly off and want a similar but different workout
-- ✅ Want to try World Tour coach-designed sessions
+- **Day 3 (Wednesday):** Easy Spin - 46 TSS, 60 min
+  ![Easy Spin](images/individual/W07-D3-Wednesday-Easy_Spin.png)
 
-**How to choose:**
+- **Day 4 (Thursday):** FTP 30min - 78 TSS, 65 min
+  ![FTP 30min](images/individual/W07-D4-Thursday-FTP_30min.png)
 
-1. Match the **duration** (±10 minutes is fine)
-2. Match the **TSS** (±10 TSS is acceptable)
-3. Match the **training zone** (Tempo, Threshold, VO2max, etc.)
-4. Prioritize workouts with similar IF (Intensity Factor)
+- **Day 6 (Saturday):** Sweet Spot 3x25 - 129 TSS, 115 min
+  ![Sweet Spot 3x25](images/individual/W07-D6-Saturday-Sweet_Spot_3x25.png)
 
-**Important notes:**
+- **Day 7 (Sunday):** Endurance Tempo - 110 TSS, 130 min
+  ![Endurance Tempo](images/individual/W07-D7-Sunday-Endurance_Tempo.png)
 
-- ⚠️ Don't substitute threshold work with VO2max or vice versa
-- ⚠️ Keep recovery weeks truly easy - don't swap in harder alternatives
-- ⚠️ FTP tests should never be substituted
-- ✅ Alternatives are best used 1-2x per training block, not every week
 
----
+### Week 8
 
-## Recovery Day Strategy 🆕
+**Weekly Total:** 236 TSS, 5.2 hours
 
-**Flexible Recovery Approach:**
-Unlike traditional weekly recovery, this plan uses a more frequent recovery schedule:
+- **Day 2 (Tuesday):** Recovery Cadence - 42 TSS, 64 min
+  ![Recovery Cadence](images/individual/W08-D2-Tuesday-Recovery_Cadence.png)
 
-- **Easy Spin Days:** Zone 1 only (30 min) every 3-4 days during build weeks
-- **Active Recovery:** Zone 1-2 (45 min) as needed
-- **Strategic Rest:** Monday & Friday always off
-- **Recovery Weeks:** Every 4th week (Weeks 4, 8, 12)
+- **Day 4 (Thursday):** Light Tempo - 38 TSS, 50 min
+  ![Light Tempo](images/individual/W08-D4-Thursday-Light_Tempo.png)
 
-**Benefits:**
+- **Day 6 (Saturday):** Easy Endurance - 98 TSS, 120 min
+  ![Easy Endurance](images/individual/W08-D6-Saturday-Easy_Endurance.png)
 
-- Prevents cumulative fatigue
-- Maintains consistency
-- Allows harder efforts on key days
-- Recovery is never more than 2-3 days away
+- **Day 7 (Sunday):** Recovery - 58 TSS, 75 min
+  ![Recovery](images/individual/W08-D7-Sunday-Recovery.png)
 
-**Recovery Week Focus:**
 
-- Neuromuscular maintenance (5x10sec sprints)
-- Cadence drills (high/low rpm work)
-- Reduced volume (~40%)
-- Enhanced nutrition focus
+### Week 9
 
----
+**Weekly Total:** 437 TSS, 7.5 hours
 
-## Training Zones
+- **Day 2 (Tuesday):** Pyramid Intervals - 88 TSS, 84 min
+  ![Pyramid Intervals](images/individual/W09-D2-Tuesday-Pyramid_Intervals.png)
 
-| Zone | Name            | % FTP     | Purpose                  |
-| ---- | --------------- | --------- | ------------------------ |
-| 1    | Active Recovery | <55%      | Easy recovery            |
-| 2    | Endurance       | 55-75%    | Aerobic base building    |
-| 3    | Tempo           | 76-87%    | Muscular endurance       |
-| 4    | Threshold       | 88-105%   | FTP development          |
-| 5    | VO2max          | 106-120%  | Max aerobic capacity     |
-| 6    | Anaerobic       | 121-150%  | Sprint/neuromuscular     |
+- **Day 3 (Wednesday):** Easy Spin - 46 TSS, 60 min
+  ![Easy Spin](images/individual/W09-D3-Wednesday-Easy_Spin.png)
 
-**FTP Calculation:** 20-min test average power × 0.95
+- **Day 4 (Thursday):** FTP 3x15 - 115 TSS, 95 min
+  ![FTP 3x15](images/individual/W09-D4-Thursday-FTP_3x15.png)
 
----
+- **Day 6 (Saturday):** Tempo Endurance - 90 TSS, 92 min
+  ![Tempo Endurance](images/individual/W09-D6-Saturday-Tempo_Endurance.png)
 
-## Nutrition Guidelines
+- **Day 7 (Sunday):** Long Endurance - 98 TSS, 120 min
+  ![Long Endurance](images/individual/W09-D7-Sunday-Long_Endurance.png)
 
-**High-Intensity Sessions (>85% FTP)**
-💡 Pre-load: 1-2g carbs/kg body weight 2-3 hours before (e.g., 70-140g for 70kg rider)
 
-**Long Rides (>90 min)**
-💡 During: 60-90g carbs/hour via sports drinks, gels, bars, or real food
+### Week 10
 
-**Moderate Sessions (60-90 min, <85% FTP)**
-💡 During: 30-60g carbs/hour - hydration priority
+**Weekly Total:** 468 TSS, 7.5 hours
 
-**Recovery Weeks**
-🍖 Increase protein (1.6-2.2g/kg/day), maintain carbs, prioritize sleep, anti-inflammatory foods
+- **Day 2 (Tuesday):** VO2max 40 20s - 98 TSS, 74 min
+  ![VO2max 40 20s](images/individual/W10-D2-Tuesday-VO2max_40_20s.png)
 
-**General**
-Hydration: 500-750ml/hr | Post-workout: 20-40g protein + carbs within 60 min
+- **Day 3 (Wednesday):** Recovery - 23 TSS, 45 min
+  ![Recovery](images/individual/W10-D3-Wednesday-Recovery.png)
 
----
+- **Day 4 (Thursday):** FTP 2x25 - 120 TSS, 95 min
+  ![FTP 2x25](images/individual/W10-D4-Thursday-FTP_2x25.png)
 
-## Expected Outcomes
+- **Day 6 (Saturday):** Sweet Spot 3x25 - 129 TSS, 115 min
+  ![Sweet Spot 3x25](images/individual/W10-D6-Saturday-Sweet_Spot_3x25.png)
 
-By Week 12, you should see:
+- **Day 7 (Sunday):** Endurance - 98 TSS, 120 min
+  ![Endurance](images/individual/W10-D7-Sunday-Endurance.png)
 
-- **5-15% FTP increase** (varies by training history)
-- Improved ability to sustain threshold power
-- Better pacing and power management
-- Enhanced recovery between efforts
-- Increased confidence and mental toughness
-- Stronger aerobic base for future training
-- Improved neuromuscular coordination (cadence work)
-- Better lactate clearance (Over/Unders, 30/30s)
-- Race-ready fitness (simulation workouts)
 
-**Compare your Week 1 and Week 12 FTP tests to measure your exact gains!**
+### Week 11
+
+**Weekly Total:** 388 TSS, 6.6 hours
+
+- **Day 2 (Tuesday):** VO2max Mixed - 69 TSS, 62 min
+  ![VO2max Mixed](images/individual/W11-D2-Tuesday-VO2max_Mixed.png)
+
+- **Day 3 (Wednesday):** Easy Spin - 46 TSS, 60 min
+  ![Easy Spin](images/individual/W11-D3-Wednesday-Easy_Spin.png)
+
+- **Day 4 (Thursday):** FTP 35min - 86 TSS, 70 min
+  ![FTP 35min](images/individual/W11-D4-Thursday-FTP_35min.png)
+
+- **Day 6 (Saturday):** Race Simulation - 89 TSS, 86 min
+  ![Race Simulation](images/individual/W11-D6-Saturday-Race_Simulation.png)
+
+- **Day 7 (Sunday):** Endurance - 98 TSS, 120 min
+  ![Endurance](images/individual/W11-D7-Sunday-Endurance.png)
+
+
+### Week 12
+
+**Weekly Total:** 257 TSS, 5.4 hours
+
+- **Day 2 (Tuesday):** Final FTP Test - 72 TSS, 67 min
+  ![Final FTP Test](images/individual/W12-D2-Tuesday-Final_FTP_Test.png)
+
+- **Day 3 (Wednesday):** Easy Spin - 15 TSS, 30 min
+  ![Easy Spin](images/individual/W12-D3-Wednesday-Easy_Spin.png)
+
+- **Day 4 (Thursday):** Victory Lap - 49 TSS, 60 min
+  ![Victory Lap](images/individual/W12-D4-Thursday-Victory_Lap.png)
+
+- **Day 6 (Saturday):** Celebration Ride - 98 TSS, 120 min
+  ![Celebration Ride](images/individual/W12-D6-Saturday-Celebration_Ride.png)
+
+- **Day 7 (Sunday):** Recovery - 23 TSS, 45 min
+  ![Recovery](images/individual/W12-D7-Sunday-Recovery.png)
+
+
+## Usage
+
+### Import ZWO Files
+
+The `.zwo` files in the `zwo_files/` directory can be imported into:
+
+- **Zwift** - Import custom workouts
+- **MyWhoosh** - Import workout files
+- **TrainingPeaks** - Upload ZWO files
+- Any other platform that supports the ZWO format
+
+### Interactive Viewer
+
+Open `docs/index.html` in your browser for an interactive workout calendar and statistics dashboard.

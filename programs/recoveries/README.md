@@ -1,34 +1,43 @@
-# Recovery Workouts
+# Recoveries
 
-Bonus recovery workouts that can be used as alternatives to standard recovery rides.
+## Overview
 
-## Available Recoveries
+- **Total Weeks:** 0
+- **Total Workouts:** 4
+- **Total TSS:** 97
+- **Total Hours:** 3.0
+- **Average TSS/Week:** 0
+- **Average Hours/Week:** 0.0
 
-### BONUS: Short Bursts Recovery (Variation A)
-Active recovery with short varied intensity bursts. Use this as an alternative to any Wednesday recovery ride.
+## Intensity Distribution
 
-![Short Bursts Recovery](images/BONUS-Recovery_Variation_A.png)
+- **Recovery (<60% FTP):** 83.3%
+- **Endurance (60-75% FTP):** 13.7%
+- **Tempo (76-87% FTP):** 3.0%
+- **Threshold (88-105% FTP):** 0.0%
+- **VO2max (>105% FTP):** 0.0%
 
-### BONUS: Pyramid Recovery (Variation B)
-Recovery ride with pyramid structure. Builds up and down in intensity. Alternative recovery workout.
+## Program Calendar
 
-![Pyramid Recovery](images/BONUS-Recovery_Variation_B.png)
+![Program Calendar](images/calendar.png)
 
-### BONUS: High Cadence Recovery (Variation C)
-Recovery focused on high cadence technique. Perfect for developing smooth pedaling. Alternative recovery workout.
+## Progression Analysis
 
-![High Cadence Recovery](images/BONUS-Recovery_Variation_C.png)
+![Progression Charts](images/progression.png)
 
-### BONUS: Fun Recovery Ride (Variation D)
-Playful recovery with random bursts. Keeps recovery interesting and engaging. Alternative recovery workout.
-
-![Fun Recovery Ride](images/BONUS-Recovery_Variation_D.png)
+## Weekly Breakdown
 
 ## Usage
 
-Generate the ZWO files by running:
-```bash
-npx tsx programs/recoveries/recoveries.ts
-```
+### Import ZWO Files
 
-The workout files will be created in `programs/recoveries/zwo_files/` and can be imported directly into Zwift.
+The `.zwo` files in the `zwo_files/` directory can be imported into:
+
+- **Zwift** - Import custom workouts
+- **MyWhoosh** - Import workout files
+- **TrainingPeaks** - Upload ZWO files
+- Any other platform that supports the ZWO format
+
+### Interactive Viewer
+
+Open `docs/index.html` in your browser for an interactive workout calendar and statistics dashboard.
