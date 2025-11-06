@@ -38,7 +38,7 @@
         <SteadyState Duration="180" Power="1.02">
             <textevent timeoffset="10" message="Final 3 min - dig deep, 102%!"/>
         </SteadyState>
-        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        <Cooldown Duration="900" PowerLow="0.5" PowerHigh="0.3">
         </Cooldown>
       </workout>
   </workout_file>

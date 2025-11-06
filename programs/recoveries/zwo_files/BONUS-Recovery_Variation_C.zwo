@@ -41,7 +41,7 @@
         <SteadyState Duration="120" Power="0.7">
             <textevent timeoffset="10" message="Final cadence 5/5 - perfect circles"/>
         </SteadyState>
-        <Cooldown Duration="900" PowerHigh="0.55" PowerLow="0.45">
+        <Cooldown Duration="900" PowerLow="0.55" PowerHigh="0.45">
             <textevent timeoffset="10" message="Excellent technique work!"/>
         </Cooldown>
       </workout>

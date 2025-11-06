@@ -60,7 +60,7 @@
         <SteadyState Duration="240" Power="0.88">
             <textevent timeoffset="10" message="Pull 6/6: Final low cadence - done!"/>
         </SteadyState>
-        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        <Cooldown Duration="900" PowerLow="0.5" PowerHigh="0.3">
             <textevent timeoffset="10" message="Great neuromuscular work!"/>
         </Cooldown>
       </workout>

@@ -45,7 +45,7 @@
         <SteadyState Duration="40" Power="0.75">
             <textevent timeoffset="5" message="Mix it up"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.45">
+        <Cooldown Duration="600" PowerLow="0.55" PowerHigh="0.45">
             <textevent timeoffset="10" message="Fun recovery complete!"/>
         </Cooldown>
       </workout>
