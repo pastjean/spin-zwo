@@ -1,10 +1,10 @@
 // generate-all.ts
 
-import { scanProgram } from './lib/programScanner.js';
-import { generateProgramWorkoutImages } from './lib/imageGenerator.js';
 import { generateCalendarImage } from './lib/calendarGenerator.js';
-import { generateProgressionCharts } from './lib/progressionGenerator.js';
 import { generateHTML } from './lib/htmlGenerator.js';
+import { generateProgramWorkoutImages } from './lib/imageGenerator.js';
+import { scanProgram } from './lib/programScanner.js';
+import { generateProgressionCharts } from './lib/progressionGenerator.js';
 import { generateREADME } from './lib/readmeGenerator.js';
 
 async function generateProgramOutputs(programPath: string) {
@@ -16,9 +16,11 @@ async function generateProgramOutputs(programPath: string) {
     // 1. Scan and parse ZWO files
     console.log('\n[1/6] Scanning ZWO files...');
     const program = await scanProgram(programPath);
-    console.log(`Found ${program.workouts.length} workouts across ${program.weeks.size} weeks`);
+    console.log(
+      `Found ${program.workouts.length} workouts across ${program.weeks.size} weeks`,
+    );
 
-    // 2. Generate all outputs in parallel
+    // 2. Generate all outputs
     console.log('\n[2/6] Generating individual workout images...');
     await generateProgramWorkoutImages(program);
 
