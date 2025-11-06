@@ -44,7 +44,8 @@ If you have your own ZWO files or want to regenerate the visualizations:
 # Install dependencies
 bun install
 
-# Generate all outputs (images, calendar, charts, HTML viewer, README)
+# Generate all outputs (images, calendar, charts, HTML viewer)
+# NOTE: This skips README generation by default
 bun run start
 
 # Or generate for a specific program
@@ -58,7 +59,39 @@ This will generate:
 - Program calendar grid (`programs/*/images/calendar.png`)
 - Progression analysis charts (`programs/*/images/progression.png`)
 - Interactive HTML viewer (`programs/*/docs/index.html`)
-- Auto-generated README with weekly breakdown (`programs/*/README.md`)
+
+**To generate comprehensive READMEs** (requires program.config.ts):
+
+```bash
+# Generate with detailed README
+bun run start -- --detailed-readme
+
+# Or for specific program
+bun run generate:8weeks -- --detailed-readme
+```
+
+### Program Configuration
+
+Each program requires a `program.config.ts` file that maps ZWO files to the training schedule:
+
+```typescript
+// programs/8_weeks_road_builder/program.config.ts
+import type { ProgramConfig } from '../../lib/types.js';
+
+export const config: ProgramConfig = {
+  name: "8 Weeks Road Builder",
+  description: "8-week polarized training program",
+
+  schedule: [
+    { week: 1, day: 2, dayName: "Tuesday", zwoFile: "VO2max_30_30s.zwo" },
+    { week: 1, day: 3, dayName: "Wednesday", zwoFile: "Recovery_Easy.zwo" },
+    // ... rest of schedule
+  ],
+
+  tags: ["polarized", "vo2max"],
+  targetAudience: "intermediate-advanced cyclists",
+};
+```
 
 ### Interactive Viewers
 
