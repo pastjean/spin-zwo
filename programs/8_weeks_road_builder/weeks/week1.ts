@@ -278,7 +278,9 @@ Sustained efforts contrast with Tuesday's micro-intervals. Total 18min Zone 3 wo
         duration: 600,
         powerHigh: 0.4,
         powerLow: 0.6,
-        messages: [{ time: 10, text: 'Great sustained VO2max work! Easy cooldown' }],
+        messages: [
+          { time: 10, text: 'Great sustained VO2max work! Easy cooldown' },
+        ],
       },
     ],
   },
