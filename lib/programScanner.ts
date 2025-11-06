@@ -2,6 +2,7 @@
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { loadProgramConfig, validateProgramConfig } from './configLoader.js';
 import type {
   ParsedWorkout,
   ProgramStats,
@@ -11,40 +12,47 @@ import type {
 import { parseZWOFile } from './zwoParser.js';
 
 /**
- * Scan a program directory and parse all ZWO files
+ * Scan a program directory using its config file
  */
 export async function scanProgram(
   programPath: string,
 ): Promise<ProgramStructure> {
+  // 1. Load and validate program config
+  const config = await loadProgramConfig(programPath);
+  validateProgramConfig(config, programPath);
+
   const zwoFilesDir = path.join(programPath, 'zwo_files');
 
   if (!fs.existsSync(zwoFilesDir)) {
     throw new Error(`ZWO files directory not found: ${zwoFilesDir}`);
   }
 
-  // Get all .zwo files
-  const files = fs
-    .readdirSync(zwoFilesDir)
-    .filter((f) => f.endsWith('.zwo'))
-    .map((f) => path.join(zwoFilesDir, f));
+  // 2. Parse ZWO files based on config schedule
+  const workouts: ParsedWorkout[] = [];
 
-  // Parse all workouts in parallel
-  const workouts = await Promise.all(files.map(parseZWOFile));
+  for (const entry of config.schedule) {
+    const zwoPath = path.join(zwoFilesDir, entry.zwoFile);
+    const workout = await parseZWOFile(zwoPath);
 
-  // Build week structure
+    // Attach schedule metadata from config
+    workout.week = entry.week;
+    workout.day = entry.day;
+    workout.dayName = entry.dayName;
+    workout.workoutName = workout.name || entry.zwoFile.replace('.zwo', '');
+
+    workouts.push(workout);
+  }
+
+  // 3. Build week structure
   const weeks = buildWeekStructure(workouts);
 
-  // Calculate program stats
+  // 4. Calculate program stats
   const stats = calculateProgramStats(workouts, weeks);
 
   return {
-    programName: path.basename(programPath),
+    programName: config.name,
     programPath,
-    config: {
-      name: path.basename(programPath),
-      description: '',
-      schedule: [],
-    }, // TODO: Replace with actual config in Task 3
+    config,
     weeks,
     workouts,
     stats,
