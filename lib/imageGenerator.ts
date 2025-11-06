@@ -1,10 +1,15 @@
 // Image Generation Module for Workout Profiles
 // Generates visual representations of workout power profiles
 
-import * as fs from "node:fs";
-import * as path from "node:path";
-import { createCanvas } from "canvas";
-import type { Segment, WorkoutDefinition } from "./types.js";
+import * as fs from 'node:fs';
+import * as path from 'node:path';
+import { createCanvas } from 'canvas';
+import type {
+  ParsedWorkout,
+  ProgramStructure,
+  Segment,
+  WorkoutDefinition,
+} from './types.js';
 
 // Constants for image generation
 const IMAGE_WIDTH = 1400;
@@ -15,22 +20,22 @@ const CHART_HEIGHT = IMAGE_HEIGHT - 2 * PADDING;
 
 // FTP Zone thresholds
 const ZONE_THRESHOLDS = [
-  { level: 0.55, name: "Z2 Endurance" },
-  { level: 0.75, name: "Z3 Tempo" },
-  { level: 0.9, name: "Z4 Threshold" },
-  { level: 1.05, name: "Z5 VO2max" },
-  { level: 1.2, name: "Z6 Anaerobic" },
-  { level: 1.5, name: "Z7 Neuromuscular" },
+  { level: 0.55, name: 'Z2 Endurance' },
+  { level: 0.75, name: 'Z3 Tempo' },
+  { level: 0.9, name: 'Z4 Threshold' },
+  { level: 1.05, name: 'Z5 VO2max' },
+  { level: 1.2, name: 'Z6 Anaerobic' },
+  { level: 1.5, name: 'Z7 Neuromuscular' },
 ];
 
 // Power zone colors (matching the example images)
 const POWER_COLORS = {
-  recovery: "#B8C5D6", // Light gray-blue for <0.6 FTP
-  endurance: "#5DADE2", // Blue for 0.6-0.75 FTP
-  tempo: "#52C67A", // Green for 0.76-0.87 FTP
-  sweetspot: "#F39C12", // Orange for 0.88-0.93 FTP
-  threshold: "#E67E22", // Dark orange for 0.94-1.05 FTP
-  vo2max: "#E74C3C", // Red for >1.05 FTP
+  recovery: '#B8C5D6', // Light gray-blue for <0.6 FTP
+  endurance: '#5DADE2', // Blue for 0.6-0.75 FTP
+  tempo: '#52C67A', // Green for 0.76-0.87 FTP
+  sweetspot: '#F39C12', // Orange for 0.88-0.93 FTP
+  threshold: '#E67E22', // Dark orange for 0.94-1.05 FTP
+  vo2max: '#E74C3C', // Red for >1.05 FTP
 };
 
 // Get color based on power level
@@ -49,15 +54,15 @@ function getTotalDuration(segments: Segment[]): number {
 }
 
 // Get average power for a segment
-function getSegmentPower(segment: Segment): number {
+function _getSegmentPower(segment: Segment): number {
   switch (segment.type) {
-    case "warmup":
+    case 'warmup':
       return (segment.powerLow + segment.powerHigh) / 2;
-    case "cooldown":
+    case 'cooldown':
       return (segment.powerLow + segment.powerHigh) / 2;
-    case "steady":
+    case 'steady':
       return segment.power;
-    case "ramp":
+    case 'ramp':
       return (segment.powerLow + segment.powerHigh) / 2;
     default:
       return 0.5;
@@ -68,13 +73,13 @@ function getSegmentPower(segment: Segment): number {
 export function generateWorkoutImage(
   workout: WorkoutDefinition,
   outputPath: string,
-  ftp: number = 200 // Default FTP for display purposes
+  _ftp: number = 200, // Default FTP for display purposes
 ): void {
   const canvas = createCanvas(IMAGE_WIDTH, IMAGE_HEIGHT);
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext('2d');
 
   // Background
-  ctx.fillStyle = "#F5F6F7";
+  ctx.fillStyle = '#F5F6F7';
   ctx.fillRect(0, 0, IMAGE_WIDTH, IMAGE_HEIGHT);
 
   // Calculate dimensions
@@ -82,9 +87,9 @@ export function generateWorkoutImage(
 
   // Find min and max power levels
   const powerLevels = workout.segments.flatMap((seg) => {
-    if (seg.type === "warmup" || seg.type === "cooldown")
+    if (seg.type === 'warmup' || seg.type === 'cooldown')
       return [seg.powerLow, seg.powerHigh];
-    if (seg.type === "ramp") return [seg.powerLow, seg.powerHigh];
+    if (seg.type === 'ramp') return [seg.powerLow, seg.powerHigh];
     return [seg.power];
   });
 
@@ -99,7 +104,7 @@ export function generateWorkoutImage(
     }
     // Check if this is the first zone beyond max
     const zonesAboveMax = ZONE_THRESHOLDS.filter(
-      (z) => z.level > actualMaxPower
+      (z) => z.level > actualMaxPower,
     );
     return zonesAboveMax.length > 0 && zone.level === zonesAboveMax[0].level;
   });
@@ -112,10 +117,10 @@ export function generateWorkoutImage(
   const maxPower = Math.max(highestThreshold, actualMaxPower) * 1.05; // Add 5% headroom
 
   // Draw zone threshold lines and labels
-  ctx.fillStyle = "#5D6D7E";
-  ctx.font = "bold 12px Arial";
-  ctx.textAlign = "right";
-  ctx.strokeStyle = "#D5DBDB";
+  ctx.fillStyle = '#5D6D7E';
+  ctx.font = 'bold 12px Arial';
+  ctx.textAlign = 'right';
+  ctx.strokeStyle = '#D5DBDB';
   ctx.lineWidth = 1;
 
   // Draw zone threshold lines
@@ -123,7 +128,7 @@ export function generateWorkoutImage(
     const y =
       PADDING + CHART_HEIGHT - (threshold.level / maxPower) * CHART_HEIGHT;
 
-    ctx.strokeStyle = "#BDC3C7";
+    ctx.strokeStyle = '#BDC3C7';
     ctx.lineWidth = 1;
     ctx.setLineDash([5, 5]);
     ctx.beginPath();
@@ -132,17 +137,17 @@ export function generateWorkoutImage(
     ctx.stroke();
     ctx.setLineDash([]);
 
-    ctx.fillStyle = "#7F8C8D";
-    ctx.font = "bold 11px Arial";
+    ctx.fillStyle = '#7F8C8D';
+    ctx.font = 'bold 11px Arial';
     ctx.fillText(
       `${Math.round(threshold.level * 100)}% ${threshold.name}`,
       PADDING - 10,
-      y + 4
+      y + 4,
     );
   }
 
   // Draw baseline (0%)
-  ctx.strokeStyle = "#34495E";
+  ctx.strokeStyle = '#34495E';
   ctx.lineWidth = 2;
 
   // Draw workout segments
@@ -153,9 +158,9 @@ export function generateWorkoutImage(
     const width = (segment.duration / totalDuration) * CHART_WIDTH;
 
     switch (segment.type) {
-      case "warmup":
-      case "cooldown":
-      case "ramp": {
+      case 'warmup':
+      case 'cooldown':
+      case 'ramp': {
         const powerLow = segment.powerLow;
         const powerHigh = segment.powerHigh;
 
@@ -169,20 +174,20 @@ export function generateWorkoutImage(
         ctx.fillStyle = getPowerColor((powerLow + powerHigh) / 2);
         ctx.beginPath();
         ctx.moveTo(x, PADDING + CHART_HEIGHT);
-        ctx.lineTo(x, segment.type === "cooldown" ? yHigh : yLow);
-        ctx.lineTo(x + width, segment.type === "cooldown" ? yLow : yHigh);
+        ctx.lineTo(x, segment.type === 'cooldown' ? yHigh : yLow);
+        ctx.lineTo(x + width, segment.type === 'cooldown' ? yLow : yHigh);
         ctx.lineTo(x + width, PADDING + CHART_HEIGHT);
         ctx.closePath();
         ctx.fill();
 
         // Draw outline
-        ctx.strokeStyle = "#95A5A6";
+        ctx.strokeStyle = '#95A5A6';
         ctx.lineWidth = 0.5;
         ctx.stroke();
         break;
       }
 
-      case "steady": {
+      case 'steady': {
         const power = segment.power;
         const height = (power / maxPower) * CHART_HEIGHT;
         const y = PADDING + CHART_HEIGHT - height;
@@ -191,7 +196,7 @@ export function generateWorkoutImage(
         ctx.fillRect(x, y, width, height);
 
         // Draw outline
-        ctx.strokeStyle = "#95A5A6";
+        ctx.strokeStyle = '#95A5A6';
         ctx.lineWidth = 0.5;
         ctx.strokeRect(x, y, width, height);
         break;
@@ -202,7 +207,7 @@ export function generateWorkoutImage(
   }
 
   // Draw baseline (0%)
-  ctx.strokeStyle = "#34495E";
+  ctx.strokeStyle = '#34495E';
   ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(PADDING, PADDING + CHART_HEIGHT);
@@ -210,13 +215,13 @@ export function generateWorkoutImage(
   ctx.stroke();
 
   // Label baseline
-  ctx.fillStyle = "#5D6D7E";
-  ctx.font = "bold 12px Arial";
-  ctx.textAlign = "right";
-  ctx.fillText("0%", PADDING - 10, PADDING + CHART_HEIGHT + 5);
+  ctx.fillStyle = '#5D6D7E';
+  ctx.font = 'bold 12px Arial';
+  ctx.textAlign = 'right';
+  ctx.fillText('0%', PADDING - 10, PADDING + CHART_HEIGHT + 5);
 
   // Save to file
-  const buffer = canvas.toBuffer("image/png");
+  const buffer = canvas.toBuffer('image/png');
   fs.writeFileSync(outputPath, buffer);
 }
 
@@ -224,7 +229,7 @@ export function generateWorkoutImage(
 export function generateAllWorkoutImages(
   workouts: Record<string, WorkoutDefinition>,
   outputDir: string,
-  ftp: number = 200
+  ftp: number = 200,
 ): void {
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
@@ -234,6 +239,47 @@ export function generateAllWorkoutImages(
   for (const [key, workout] of Object.entries(workouts)) {
     const outputPath = path.join(outputDir, `${key}.png`);
     generateWorkoutImage(workout, outputPath, ftp);
+    console.log(`Generated: ${outputPath}`);
+    count++;
+  }
+
+  console.log(`\nGenerated ${count} workout images in ${outputDir}/`);
+}
+
+// Generate workout image from ParsedWorkout object
+export function generateWorkoutImageFromParsed(
+  workout: ParsedWorkout,
+  outputPath: string,
+  ftp: number = 200,
+): void {
+  generateWorkoutImage(
+    {
+      name: workout.name,
+      description: workout.description,
+      tags: workout.tags,
+      segments: workout.segments,
+    },
+    outputPath,
+    ftp,
+  );
+}
+
+// Generate all individual images for a program
+export function generateProgramWorkoutImages(
+  program: ProgramStructure,
+  ftp: number = 200,
+): void {
+  const outputDir = path.join(program.programPath, 'images', 'individual');
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  let count = 0;
+  for (const workout of program.workouts) {
+    const filename = workout.filename.replace('.zwo', '.png');
+    const outputPath = path.join(outputDir, filename);
+    generateWorkoutImageFromParsed(workout, outputPath, ftp);
     console.log(`Generated: ${outputPath}`);
     count++;
   }
