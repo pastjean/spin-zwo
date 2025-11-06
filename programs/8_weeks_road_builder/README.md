@@ -3,11 +3,11 @@
 ## Overview
 
 - **Total Weeks:** 8
-- **Total Workouts:** 43
-- **Total TSS:** 2924
-- **Total Hours:** 50.4
-- **Average TSS/Week:** 366
-- **Average Hours/Week:** 6.3
+- **Total Workouts:** 40
+- **Total TSS:** 2714
+- **Total Hours:** 47.7
+- **Average TSS/Week:** 339
+- **Average Hours/Week:** 6.0
 
 ## Intensity Distribution
 
@@ -29,31 +29,31 @@
 
 ### Week 1
 
-**Weekly Total:** 386 TSS, 6.8 hours
+**Weekly Total:** 296 TSS, 5.7 hours
 
 | Day | Workout | Details |
 | --- | ------- | ------- |
-| **Tuesday** | **controlled-30-30-s-1**<br/><img src="images/individual/W01-D2-Tuesday-controlled-30-30-s-1.png" width="300"> | • 51 min · 68 TSS · IF 0.89 |
+| **Tuesday** | **VO2max 30 30s**<br/><img src="images/individual/W01-D2-Tuesday-VO2max_30_30s.png" width="300"> | • 72 min · 87 TSS · IF 0.85 |
 | **Wednesday** | **Recovery Easy**<br/><img src="images/individual/W01-D3-Wednesday-Recovery_Easy.png" width="300"> | • 60 min · 30 TSS · IF 0.54 |
-| **Friday** | **anaerobic-endurance-2**<br/><img src="images/individual/W01-D5-Friday-anaerobic-endurance-2.png" width="300"> | • 73 min · 84 TSS · IF 0.83 |
+| **Friday** | **neuromuscular-power-surges-2**<br/><img src="images/individual/W01-D5-Friday-neuromuscular-power-surges-2.png" width="300"> | • 59 min · 62 TSS · IF 0.80 |
 | **Saturday** | **Easy Z2**<br/><img src="images/individual/W01-D6-Saturday-Easy_Z2.png" width="300"> | • 60 min · 46 TSS · IF 0.68 |
 | **Sunday** | **Long Endurance**<br/><img src="images/individual/W01-D7-Sunday-Long_Endurance.png" width="300"> | • 90 min · 71 TSS · IF 0.69 |
 
 ### Week 2
 
-**Weekly Total:** 305 TSS, 5.7 hours
+**Weekly Total:** 327 TSS, 6.0 hours
 
 | Day | Workout | Details |
 | --- | ------- | ------- |
 | **Tuesday** | **controlled-30-30-s-2**<br/><img src="images/individual/W02-D2-Tuesday-controlled-30-30-s-2.png" width="300"> | • 59 min · 84 TSS · IF 0.92 |
 | **Wednesday** | **Recovery Easy**<br/><img src="images/individual/W02-D3-Wednesday-Recovery_Easy.png" width="300"> | • 60 min · 30 TSS · IF 0.54 |
-| **Friday** | **neuromuscular-power-surges-2**<br/><img src="images/individual/W2-D5-Friday-neuromuscular-power-surges-2.png" width="300"> | • 59 min · 62 TSS · IF 0.80 |
+| **Friday** | **anaerobic-endurance-2**<br/><img src="images/individual/W02-D5-Friday-anaerobic-endurance-2.png" width="300"> | • 73 min · 84 TSS · IF 0.83 |
 | **Saturday** | **Easy Z2**<br/><img src="images/individual/W02-D6-Saturday-Easy_Z2.png" width="300"> | • 60 min · 46 TSS · IF 0.68 |
 | **Sunday** | **Long Endurance**<br/><img src="images/individual/W02-D7-Sunday-Long_Endurance.png" width="300"> | • 105 min · 83 TSS · IF 0.69 |
 
 ### Week 3
 
-**Weekly Total:** 441 TSS, 7.0 hours
+**Weekly Total:** 355 TSS, 5.9 hours
 
 | Day | Workout | Details |
 | --- | ------- | ------- |
@@ -65,13 +65,13 @@
 
 ### Week 4
 
-**Weekly Total:** 369 TSS, 6.3 hours
+**Weekly Total:** 313 TSS, 5.5 hours
 
 | Day | Workout | Details |
 | --- | ------- | ------- |
 | **Tuesday** | **30-30-s-anaerobic-3**<br/><img src="images/individual/W04-D2-Tuesday-30-30-s-anaerobic-3.png" width="300"> | • 68 min · 91 TSS · IF 0.90 |
 | **Wednesday** | **Recovery Easy**<br/><img src="images/individual/W04-D3-Wednesday-Recovery_Easy.png" width="300"> | • 60 min · 30 TSS · IF 0.54 |
-| **Friday** | **VO2max 40 20s Recovery**<br/><img src="images/individual/W04-D5-Friday-VO2max_40_20s_Recovery.png" width="300"> | • 48 min · 56 TSS · IF 0.84 |
+| **Friday** | **capacity-pyramid-2**<br/><img src="images/individual/W04-D5-Friday-capacity-pyramid-2.png" width="300"> | • 70 min · 87 TSS · IF 0.86 |
 | **Saturday** | **Easy Z2**<br/><img src="images/individual/W04-D6-Saturday-Easy_Z2.png" width="300"> | • 45 min · 34 TSS · IF 0.67 |
 | **Sunday** | **Long Endurance**<br/><img src="images/individual/W04-D7-Sunday-Long_Endurance.png" width="300"> | • 90 min · 71 TSS · IF 0.69 |
 
