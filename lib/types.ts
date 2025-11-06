@@ -41,11 +41,23 @@ export interface RampSegment {
   messages?: WorkoutTextEvent[];
 }
 
+export interface IntervalsSegment {
+  type: 'intervals';
+  repeat: number;
+  onDuration: number;
+  onPower: number;
+  offDuration: number;
+  offPower: number;
+  cadence?: number;
+  messages?: WorkoutTextEvent[];
+}
+
 export type Segment =
   | WarmupSegment
   | CooldownSegment
   | SteadyStateSegment
-  | RampSegment;
+  | RampSegment
+  | IntervalsSegment;
 
 export interface WorkoutDefinition {
   name: string;
@@ -71,6 +83,9 @@ export function segmentToXML(segment: Segment): string {
     case 'ramp':
       xml = `        <Ramp Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
       break;
+    case 'intervals':
+      xml = `        <IntervalsT Repeat="${segment.repeat}" OnDuration="${segment.onDuration}" OnPower="${segment.onPower}" OffDuration="${segment.offDuration}" OffPower="${segment.offPower}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
+      break;
   }
 
   // Add text events
@@ -88,7 +103,9 @@ export function segmentToXML(segment: Segment): string {
         ? 'Cooldown'
         : segment.type === 'ramp'
           ? 'Ramp'
-          : 'SteadyState';
+          : segment.type === 'intervals'
+            ? 'IntervalsT'
+            : 'SteadyState';
   xml += `\n        </${closeTag}>`;
 
   return xml;

@@ -4,18 +4,18 @@
 
 - **Total Weeks:** 8
 - **Total Workouts:** 43
-- **Total TSS:** 2349
-- **Total Hours:** 45.1
-- **Average TSS/Week:** 294
-- **Average Hours/Week:** 5.6
+- **Total TSS:** 2924
+- **Total Hours:** 50.4
+- **Average TSS/Week:** 366
+- **Average Hours/Week:** 6.3
 
 ## Intensity Distribution
 
-- **Recovery (<60% FTP):** 35.2%
-- **Endurance (60-75% FTP):** 54.3%
-- **Tempo (76-87% FTP):** 2.0%
-- **Threshold (88-105% FTP):** 3.3%
-- **VO2max (>105% FTP):** 5.2%
+- **Recovery (<60% FTP):** 0.0%
+- **Endurance (60-75% FTP):** 0.0%
+- **Tempo (76-87% FTP):** 0.0%
+- **Threshold (88-105% FTP):** 0.0%
+- **VO2max (>105% FTP):** 0.0%
 
 ## Program Calendar
 
@@ -29,15 +29,15 @@
 
 ### Week 1
 
-**Weekly Total:** 279 TSS, 5.7 hours
+**Weekly Total:** 386 TSS, 6.8 hours
 
-- **Day 2 (Tuesday):** controlled-30-30-s-1 - 24 TSS, 33 min
+- **Day 2 (Tuesday):** controlled-30-30-s-1 - 68 TSS, 51 min
   ![controlled-30-30-s-1](images/individual/W01-D2-Tuesday-controlled-30-30-s-1.png)
 
 - **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
   ![Recovery Easy](images/individual/W01-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 5 (Friday):** anaerobic-endurance-2 - 21 TSS, 25 min
+- **Day 5 (Friday):** anaerobic-endurance-2 - 84 TSS, 73 min
   ![anaerobic-endurance-2](images/individual/W01-D5-Friday-anaerobic-endurance-2.png)
 
 - **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
@@ -49,15 +49,15 @@
 
 ### Week 2
 
-**Weekly Total:** 201 TSS, 4.8 hours
+**Weekly Total:** 305 TSS, 5.7 hours
 
-- **Day 2 (Tuesday):** controlled-30-30-s-2 - 27 TSS, 35 min
+- **Day 2 (Tuesday):** controlled-30-30-s-2 - 84 TSS, 59 min
   ![controlled-30-30-s-2](images/individual/W02-D2-Tuesday-controlled-30-30-s-2.png)
 
 - **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
   ![Recovery Easy](images/individual/W02-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 5 (Friday):** neuromuscular-power-surges-2 - 15 TSS, 25 min
+- **Day 5 (Friday):** neuromuscular-power-surges-2 - 62 TSS, 59 min
   ![neuromuscular-power-surges-2](images/individual/W2-D5-Friday-neuromuscular-power-surges-2.png)
 
 - **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
@@ -69,15 +69,15 @@
 
 ### Week 3
 
-**Weekly Total:** 356 TSS, 6.2 hours
+**Weekly Total:** 441 TSS, 7.0 hours
 
-- **Day 2 (Tuesday):** hiit-45sec-1 - 16 TSS, 19 min
+- **Day 2 (Tuesday):** hiit-45sec-1 - 92 TSS, 57 min
   ![hiit-45sec-1](images/individual/W03-D2-Tuesday-hiit-45sec-1.png)
 
 - **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
   ![Recovery Easy](images/individual/W03-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 5 (Friday):** power-intervals-1 - 83 TSS, 48 min
+- **Day 5 (Friday):** power-intervals-1 - 92 TSS, 56 min
   ![power-intervals-1](images/individual/W03-D5-Friday-power-intervals-1.png)
 
 - **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
@@ -89,9 +89,9 @@
 
 ### Week 4
 
-**Weekly Total:** 297 TSS, 5.7 hours
+**Weekly Total:** 369 TSS, 6.3 hours
 
-- **Day 2 (Tuesday):** 30-30-s-anaerobic-3 - 19 TSS, 28 min
+- **Day 2 (Tuesday):** 30-30-s-anaerobic-3 - 91 TSS, 68 min
   ![30-30-s-anaerobic-3](images/individual/W04-D2-Tuesday-30-30-s-anaerobic-3.png)
 
 - **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
@@ -109,15 +109,15 @@
 
 ### Week 5
 
-**Weekly Total:** 296 TSS, 5.5 hours
+**Weekly Total:** 348 TSS, 6.0 hours
 
-- **Day 2 (Tuesday):** intensive-capacity-2 - 89 TSS, 57 min
+- **Day 2 (Tuesday):** intensive-capacity-2 - 96 TSS, 59 min
   ![intensive-capacity-2](images/individual/W05-D2-Tuesday-intensive-capacity-2.png)
 
 - **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
   ![Recovery Easy](images/individual/W05-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 5 (Friday):** 40-20-s-2 - 36 TSS, 34 min
+- **Day 5 (Friday):** 40-20-s-2 - 81 TSS, 58 min
   ![40-20-s-2](images/individual/W05-D5-Friday-40-20-s-2.png)
 
 - **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
@@ -129,15 +129,15 @@
 
 ### Week 6
 
-**Weekly Total:** 301 TSS, 5.7 hours
+**Weekly Total:** 383 TSS, 6.5 hours
 
-- **Day 2 (Tuesday):** 12min-30-30-s-2 - 24 TSS, 38 min
+- **Day 2 (Tuesday):** 12min-30-30-s-2 - 96 TSS, 74 min
   ![12min-30-30-s-2](images/individual/W06-D2-Tuesday-12min-30-30-s-2.png)
 
 - **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
   ![Recovery Easy](images/individual/W06-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 5 (Friday):** power-intervals-3 - 94 TSS, 50 min
+- **Day 5 (Friday):** power-intervals-3 - 104 TSS, 58 min
   ![power-intervals-3](images/individual/W06-D5-Friday-power-intervals-3.png)
 
 - **Day 6 (Saturday):** Easy Z2 - 46 TSS, 60 min
@@ -149,7 +149,7 @@
 
 ### Week 7
 
-**Weekly Total:** 295 TSS, 5.8 hours
+**Weekly Total:** 368 TSS, 6.5 hours
 
 - **Day 2 (Tuesday):** pace-is-the-trick - 74 TSS, 46 min
   ![pace-is-the-trick](images/individual/W07-D2-Tuesday-pace-is-the-trick.png)
@@ -157,7 +157,7 @@
 - **Day 3 (Wednesday):** Recovery Easy - 30 TSS, 60 min
   ![Recovery Easy](images/individual/W07-D3-Wednesday-Recovery_Easy.png)
 
-- **Day 5 (Friday):** extensive-anaerobic-6-x-1min - 13 TSS, 15 min
+- **Day 5 (Friday):** extensive-anaerobic-6-x-1min - 86 TSS, 57 min
   ![extensive-anaerobic-6-x-1min](images/individual/W07-D5-Friday-extensive-anaerobic-6-x-1min.png)
 
 - **Day 6 (Saturday):** Easy Z2 - 58 TSS, 75 min

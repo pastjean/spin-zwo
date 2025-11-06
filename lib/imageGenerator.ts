@@ -50,7 +50,14 @@ function getPowerColor(power: number): string {
 
 // Calculate total workout duration
 function getTotalDuration(segments: Segment[]): number {
-  return segments.reduce((total, segment) => total + segment.duration, 0);
+  return segments.reduce((total, segment) => {
+    if (segment.type === 'intervals') {
+      return (
+        total + (segment.onDuration + segment.offDuration) * segment.repeat
+      );
+    }
+    return total + segment.duration;
+  }, 0);
 }
 
 // Get average power for a segment
@@ -64,6 +71,15 @@ function _getSegmentPower(segment: Segment): number {
       return segment.power;
     case 'ramp':
       return (segment.powerLow + segment.powerHigh) / 2;
+    case 'intervals': {
+      // Return weighted average of on and off power
+      const totalDuration = segment.onDuration + segment.offDuration;
+      return (
+        (segment.onPower * segment.onDuration +
+          segment.offPower * segment.offDuration) /
+        totalDuration
+      );
+    }
     default:
       return 0.5;
   }
@@ -90,6 +106,7 @@ export function generateWorkoutImage(
     if (seg.type === 'warmup' || seg.type === 'cooldown')
       return [seg.powerLow, seg.powerHigh];
     if (seg.type === 'ramp') return [seg.powerLow, seg.powerHigh];
+    if (seg.type === 'intervals') return [seg.onPower, seg.offPower];
     return [seg.power];
   });
 
@@ -155,7 +172,11 @@ export function generateWorkoutImage(
 
   for (const segment of workout.segments) {
     const x = PADDING + (currentTime / totalDuration) * CHART_WIDTH;
-    const width = (segment.duration / totalDuration) * CHART_WIDTH;
+    const segmentDuration =
+      segment.type === 'intervals'
+        ? (segment.onDuration + segment.offDuration) * segment.repeat
+        : segment.duration;
+    const width = (segmentDuration / totalDuration) * CHART_WIDTH;
 
     switch (segment.type) {
       case 'warmup':
@@ -201,9 +222,43 @@ export function generateWorkoutImage(
         ctx.strokeRect(x, y, width, height);
         break;
       }
+
+      case 'intervals': {
+        // Draw repeated on/off intervals
+        const intervalDuration = segment.onDuration + segment.offDuration;
+        const intervalWidth = (intervalDuration / totalDuration) * CHART_WIDTH;
+
+        for (let i = 0; i < segment.repeat; i++) {
+          const intervalX = x + i * intervalWidth;
+
+          // Draw ON phase
+          const onWidth = (segment.onDuration / totalDuration) * CHART_WIDTH;
+          const onHeight = (segment.onPower / maxPower) * CHART_HEIGHT;
+          const onY = PADDING + CHART_HEIGHT - onHeight;
+
+          ctx.fillStyle = getPowerColor(segment.onPower);
+          ctx.fillRect(intervalX, onY, onWidth, onHeight);
+          ctx.strokeStyle = '#95A5A6';
+          ctx.lineWidth = 0.5;
+          ctx.strokeRect(intervalX, onY, onWidth, onHeight);
+
+          // Draw OFF phase
+          const offX = intervalX + onWidth;
+          const offWidth = (segment.offDuration / totalDuration) * CHART_WIDTH;
+          const offHeight = (segment.offPower / maxPower) * CHART_HEIGHT;
+          const offY = PADDING + CHART_HEIGHT - offHeight;
+
+          ctx.fillStyle = getPowerColor(segment.offPower);
+          ctx.fillRect(offX, offY, offWidth, offHeight);
+          ctx.strokeStyle = '#95A5A6';
+          ctx.lineWidth = 0.5;
+          ctx.strokeRect(offX, offY, offWidth, offHeight);
+        }
+        break;
+      }
     }
 
-    currentTime += segment.duration;
+    currentTime += segmentDuration;
   }
 
   // Draw baseline (0%)

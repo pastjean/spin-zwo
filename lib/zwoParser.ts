@@ -8,6 +8,7 @@ import { parseFilename } from './filenameParser.js';
 import { calculateWorkoutMetrics } from './metrics.js';
 import type {
   CooldownSegment,
+  IntervalsSegment,
   ParsedWorkout,
   RampSegment,
   Segment,
@@ -154,6 +155,20 @@ function parseSegment(type: string, data: XMLSegmentData): Segment | null {
         duration: parseFloat(attrs.Duration),
         powerLow: parseFloat(attrs.PowerLow),
         powerHigh: parseFloat(attrs.PowerHigh),
+      };
+      if (attrs.Cadence) seg.cadence = parseInt(attrs.Cadence, 10);
+      if (messages.length > 0) seg.messages = messages;
+      return seg;
+    }
+
+    case 'IntervalsT': {
+      const seg: IntervalsSegment = {
+        type: 'intervals',
+        repeat: parseInt(attrs.Repeat, 10),
+        onDuration: parseFloat(attrs.OnDuration),
+        onPower: parseFloat(attrs.OnPower),
+        offDuration: parseFloat(attrs.OffDuration),
+        offPower: parseFloat(attrs.OffPower),
       };
       if (attrs.Cadence) seg.cadence = parseInt(attrs.Cadence, 10);
       if (messages.length > 0) seg.messages = messages;

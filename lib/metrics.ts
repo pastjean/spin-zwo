@@ -3,11 +3,16 @@
 import type { WorkoutDefinition } from './types';
 
 interface Segment {
-  type: 'warmup' | 'cooldown' | 'steady' | 'ramp';
-  duration: number;
+  type: 'warmup' | 'cooldown' | 'steady' | 'ramp' | 'intervals';
+  duration?: number;
   power?: number;
   powerLow?: number;
   powerHigh?: number;
+  repeat?: number;
+  onDuration?: number;
+  onPower?: number;
+  offDuration?: number;
+  offPower?: number;
 }
 
 /**
@@ -19,19 +24,39 @@ function calculateNormalizedPower(segments: Segment[]): number {
   let totalDuration = 0;
 
   for (const segment of segments) {
-    let avgPower: number;
+    if (segment.type === 'intervals') {
+      // For intervals, calculate weighted power across ON and OFF periods
+      const repeat = segment.repeat || 1;
+      const onDuration = segment.onDuration || 0;
+      const offDuration = segment.offDuration || 0;
+      const onPower = segment.onPower || 0;
+      const offPower = segment.offPower || 0;
 
-    if (segment.type === 'warmup' || segment.type === 'cooldown') {
-      // For ramps, take average of low and high
-      avgPower = ((segment.powerLow || 0) + (segment.powerHigh || 0)) / 2;
+      // Add contribution from each repetition
+      const intervalPower4Sum =
+        onPower ** 4 * onDuration + offPower ** 4 * offDuration;
+      totalPower4Sum += intervalPower4Sum * repeat;
+      totalDuration += (onDuration + offDuration) * repeat;
     } else {
-      // For steady segments
-      avgPower = segment.power || 0;
-    }
+      let avgPower: number;
+      const duration = segment.duration || 0;
 
-    // Add to running totals (power^4 * duration)
-    totalPower4Sum += avgPower ** 4 * segment.duration;
-    totalDuration += segment.duration;
+      if (
+        segment.type === 'warmup' ||
+        segment.type === 'cooldown' ||
+        segment.type === 'ramp'
+      ) {
+        // For ramps, take average of low and high
+        avgPower = ((segment.powerLow || 0) + (segment.powerHigh || 0)) / 2;
+      } else {
+        // For steady segments
+        avgPower = segment.power || 0;
+      }
+
+      // Add to running totals (power^4 * duration)
+      totalPower4Sum += avgPower ** 4 * duration;
+      totalDuration += duration;
+    }
   }
 
   // NP = fourth root of (sum of power^4 * duration / total duration)
@@ -72,7 +97,15 @@ export function calculateWorkoutMetrics(segments: Segment[]): {
   intensityFactor: number;
   normalizedPower: number;
 } {
-  const totalDuration = segments.reduce((sum, seg) => sum + seg.duration, 0);
+  const totalDuration = segments.reduce((sum, seg) => {
+    if (seg.type === 'intervals') {
+      const repeat = seg.repeat || 1;
+      const onDuration = seg.onDuration || 0;
+      const offDuration = seg.offDuration || 0;
+      return sum + (onDuration + offDuration) * repeat;
+    }
+    return sum + (seg.duration || 0);
+  }, 0);
   const np = calculateNormalizedPower(segments);
   const intensityFactor = calculateIF(np);
   const tss = calculateTSS(totalDuration, np, intensityFactor);
