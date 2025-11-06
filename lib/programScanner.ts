@@ -2,13 +2,20 @@
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import type {
+  ParsedWorkout,
+  ProgramStats,
+  ProgramStructure,
+  WeekStructure,
+} from './types.js';
 import { parseZWOFile } from './zwoParser.js';
-import type { ParsedWorkout, ProgramStructure, WeekStructure, ProgramStats } from './types.js';
 
 /**
  * Scan a program directory and parse all ZWO files
  */
-export async function scanProgram(programPath: string): Promise<ProgramStructure> {
+export async function scanProgram(
+  programPath: string,
+): Promise<ProgramStructure> {
   const zwoFilesDir = path.join(programPath, 'zwo_files');
 
   if (!fs.existsSync(zwoFilesDir)) {
@@ -16,9 +23,10 @@ export async function scanProgram(programPath: string): Promise<ProgramStructure
   }
 
   // Get all .zwo files
-  const files = fs.readdirSync(zwoFilesDir)
-    .filter(f => f.endsWith('.zwo'))
-    .map(f => path.join(zwoFilesDir, f));
+  const files = fs
+    .readdirSync(zwoFilesDir)
+    .filter((f) => f.endsWith('.zwo'))
+    .map((f) => path.join(zwoFilesDir, f));
 
   // Parse all workouts in parallel
   const workouts = await Promise.all(files.map(parseZWOFile));
@@ -41,7 +49,9 @@ export async function scanProgram(programPath: string): Promise<ProgramStructure
 /**
  * Build week structure from workouts
  */
-function buildWeekStructure(workouts: ParsedWorkout[]): Map<number, WeekStructure> {
+function buildWeekStructure(
+  workouts: ParsedWorkout[],
+): Map<number, WeekStructure> {
   const weeks = new Map<number, WeekStructure>();
 
   for (const workout of workouts) {
@@ -58,7 +68,8 @@ function buildWeekStructure(workouts: ParsedWorkout[]): Map<number, WeekStructur
       });
     }
 
-    const week = weeks.get(workout.week)!;
+    const week = weeks.get(workout.week);
+    if (!week) continue; // Should never happen due to check above
     week.days.set(workout.day, workout);
     week.totalTSS += workout.tss;
     week.totalDuration += workout.duration;
@@ -72,7 +83,7 @@ function buildWeekStructure(workouts: ParsedWorkout[]): Map<number, WeekStructur
  */
 function calculateProgramStats(
   workouts: ParsedWorkout[],
-  weeks: Map<number, WeekStructure>
+  weeks: Map<number, WeekStructure>,
 ): ProgramStats {
   const totalTSS = workouts.reduce((sum, w) => sum + w.tss, 0);
   const totalDuration = workouts.reduce((sum, w) => sum + w.duration, 0);
@@ -116,7 +127,11 @@ function calculateIntensityDistribution(workouts: ParsedWorkout[]) {
 
       // Get average power for segment
       let power: number;
-      if (segment.type === 'warmup' || segment.type === 'cooldown' || segment.type === 'ramp') {
+      if (
+        segment.type === 'warmup' ||
+        segment.type === 'cooldown' ||
+        segment.type === 'ramp'
+      ) {
         power = (segment.powerLow + segment.powerHigh) / 2;
       } else {
         power = segment.power;
