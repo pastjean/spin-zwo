@@ -7,7 +7,11 @@
   "type": "module",
   "main": "programs/12_weeks_ftp_builder/12_weeks_ftp_builder.ts",
   "scripts": {
-    "start": "bun run programs/12_weeks_ftp_builder/12_weeks_ftp_builder.ts && bun run programs/recoveries/recoveries.ts && bun run programs/8_weeks_road_builder/8_weeks_road_builder.ts",
+    "start": "bun run generate-all.ts",
+    "generate": "bun run generate-all.ts",
+    "generate:12weeks": "bun run generate-all.ts programs/12_weeks_ftp_builder",
+    "generate:8weeks": "bun run generate-all.ts programs/8_weeks_road_builder",
+    "generate:recoveries": "bun run generate-all.ts programs/recoveries",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint --write .",
