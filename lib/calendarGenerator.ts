@@ -41,24 +41,42 @@ function getDominantZoneColor(workout: ParsedWorkout): string {
   };
 
   for (const segment of workout.segments) {
-    const duration = segment.duration;
+    if (segment.type === 'intervals') {
+      // For intervals, count ON and OFF periods separately
+      const onDuration = segment.onDuration * segment.repeat;
+      const offDuration = segment.offDuration * segment.repeat;
 
-    let power: number;
-    if (
-      segment.type === 'warmup' ||
-      segment.type === 'cooldown' ||
-      segment.type === 'ramp'
-    ) {
-      power = (segment.powerLow + segment.powerHigh) / 2;
+      if (segment.onPower < 0.6) timeInZone.recovery += onDuration;
+      else if (segment.onPower <= 0.75) timeInZone.endurance += onDuration;
+      else if (segment.onPower <= 0.87) timeInZone.tempo += onDuration;
+      else if (segment.onPower <= 1.05) timeInZone.threshold += onDuration;
+      else timeInZone.vo2max += onDuration;
+
+      if (segment.offPower < 0.6) timeInZone.recovery += offDuration;
+      else if (segment.offPower <= 0.75) timeInZone.endurance += offDuration;
+      else if (segment.offPower <= 0.87) timeInZone.tempo += offDuration;
+      else if (segment.offPower <= 1.05) timeInZone.threshold += offDuration;
+      else timeInZone.vo2max += offDuration;
     } else {
-      power = segment.power;
-    }
+      const duration = segment.duration;
 
-    if (power < 0.6) timeInZone.recovery += duration;
-    else if (power <= 0.75) timeInZone.endurance += duration;
-    else if (power <= 0.87) timeInZone.tempo += duration;
-    else if (power <= 1.05) timeInZone.threshold += duration;
-    else timeInZone.vo2max += duration;
+      let power: number;
+      if (
+        segment.type === 'warmup' ||
+        segment.type === 'cooldown' ||
+        segment.type === 'ramp'
+      ) {
+        power = (segment.powerLow + segment.powerHigh) / 2;
+      } else {
+        power = segment.power;
+      }
+
+      if (power < 0.6) timeInZone.recovery += duration;
+      else if (power <= 0.75) timeInZone.endurance += duration;
+      else if (power <= 0.87) timeInZone.tempo += duration;
+      else if (power <= 1.05) timeInZone.threshold += duration;
+      else timeInZone.vo2max += duration;
+    }
   }
 
   // Find dominant zone
@@ -175,6 +193,7 @@ function drawMiniWorkout(
   const powerLevels = workout.segments.flatMap((seg) => {
     if (seg.type === 'warmup' || seg.type === 'cooldown' || seg.type === 'ramp')
       return [seg.powerLow, seg.powerHigh];
+    if (seg.type === 'intervals') return [seg.onPower, seg.offPower];
     return [seg.power];
   });
   const maxPower = Math.max(...powerLevels) * 1.1;
@@ -190,7 +209,11 @@ function drawMiniWorkout(
 
   for (const segment of workout.segments) {
     const segX = x + chartPadding + (currentTime / totalDuration) * chartWidth;
-    const segWidth = (segment.duration / totalDuration) * chartWidth;
+    const segmentDuration =
+      segment.type === 'intervals'
+        ? (segment.onDuration + segment.offDuration) * segment.repeat
+        : segment.duration;
+    const segWidth = (segmentDuration / totalDuration) * chartWidth;
 
     if (segment.type === 'steady') {
       const power = segment.power;
@@ -199,6 +222,31 @@ function drawMiniWorkout(
 
       ctx.fillStyle = getPowerColor(power);
       ctx.fillRect(segX, segY, segWidth, segHeight);
+    } else if (segment.type === 'intervals') {
+      // Draw intervals as alternating blocks
+      const intervalDuration = segment.onDuration + segment.offDuration;
+      const intervalWidth = (intervalDuration / totalDuration) * chartWidth;
+
+      for (let i = 0; i < segment.repeat; i++) {
+        const intervalX = segX + i * intervalWidth;
+
+        // Draw ON phase
+        const onWidth = (segment.onDuration / totalDuration) * chartWidth;
+        const onHeight = (segment.onPower / maxPower) * chartHeight;
+        const onY = y + chartPadding + chartHeight - onHeight;
+
+        ctx.fillStyle = getPowerColor(segment.onPower);
+        ctx.fillRect(intervalX, onY, onWidth, onHeight);
+
+        // Draw OFF phase
+        const offX = intervalX + onWidth;
+        const offWidth = (segment.offDuration / totalDuration) * chartWidth;
+        const offHeight = (segment.offPower / maxPower) * chartHeight;
+        const offY = y + chartPadding + chartHeight - offHeight;
+
+        ctx.fillStyle = getPowerColor(segment.offPower);
+        ctx.fillRect(offX, offY, offWidth, offHeight);
+      }
     } else {
       // Warmup, cooldown, ramp
       const powerLow = segment.powerLow;
@@ -219,12 +267,15 @@ function drawMiniWorkout(
       ctx.fill();
     }
 
-    currentTime += segment.duration;
+    currentTime += segmentDuration;
   }
 
-  // Draw TSS label
+  // Draw workout info label
   ctx.fillStyle = '#2C3E50';
-  ctx.font = 'bold 11px Arial';
+  ctx.font = 'bold 10px Arial';
   ctx.textAlign = 'center';
-  ctx.fillText(`${Math.round(workout.tss)} TSS`, x + width / 2, y + height - 8);
+
+  const mins = Math.round(workout.duration / 60);
+  const infoText = `${mins}min · ${Math.round(workout.tss)} TSS · IF ${workout.intensityFactor.toFixed(2)}`;
+  ctx.fillText(infoText, x + width / 2, y + height - 8);
 }

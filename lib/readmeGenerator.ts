@@ -69,18 +69,27 @@ export function generateREADME(program: ProgramStructure): void {
 
     const days = Array.from(week.days.entries()).sort((a, b) => a[0] - b[0]);
 
-    for (const [day, workout] of days) {
-      const mins = Math.round(workout.duration / 60);
-      lines.push(
-        `- **Day ${day} (${workout.dayName}):** ${workout.workoutName} - ${Math.round(workout.tss)} TSS, ${mins} min`,
-      );
+    // Table header
+    lines.push('| Day | Workout | Details |');
+    lines.push('| --- | ------- | ------- |');
 
-      // Link to image
+    for (const [_day, workout] of days) {
+      const mins = Math.round(workout.duration / 60);
       const imageFilename = workout.filename.replace('.zwo', '.png');
+
+      // Format workout name with image
+      const workoutCell = `**${workout.workoutName}**<br/><img src="images/individual/${imageFilename}" width="300">`;
+
+      // Format details
+      const detailsLines = [
+        `• ${mins} min · ${Math.round(workout.tss)} TSS · IF ${workout.intensityFactor.toFixed(2)}`,
+      ];
+
+      const detailsCell = detailsLines.join('<br/>');
+
       lines.push(
-        `  ![${workout.workoutName}](images/individual/${imageFilename})`,
+        `| **${workout.dayName}** | ${workoutCell} | ${detailsCell} |`,
       );
-      lines.push('');
     }
 
     lines.push('');
