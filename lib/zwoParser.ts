@@ -18,6 +18,20 @@ import type {
 
 const parseXML = promisify(parseString);
 
+/**
+ * Extract text content from xml2js parsed element
+ * Handles both string and object with _ property
+ */
+function extractText(value: any): string {
+  if (typeof value === 'string') {
+    return value;
+  }
+  if (value && typeof value === 'object' && '_' in value) {
+    return String(value._);
+  }
+  return '';
+}
+
 // Type definitions for parsed XML structure
 interface XMLSegmentData {
   $?: Record<string, string>;
@@ -50,9 +64,10 @@ export async function parseZWOFile(filepath: string): Promise<ParsedWorkout> {
   const workoutFile = result.workout_file;
 
   // Extract basic metadata
-  const name = workoutFile.n?.[0] || "";
-  const description = workoutFile.description?.[0] || "";
-  const author = workoutFile.author?.[0] || "";
+  // Support both <n> and <name> tags for compatibility
+  const name = extractText(workoutFile.n?.[0]) || extractText(workoutFile.name?.[0]) || "";
+  const description = extractText(workoutFile.description?.[0]) || "";
+  const author = extractText(workoutFile.author?.[0]) || "";
   const tags =
     workoutFile.tags?.[0]?.tag?.map((t: { $: { name: string } }) => t.$.name) ||
     [];
