@@ -36,7 +36,7 @@
         <SteadyState Duration="240" Power="1.05">
             <textevent timeoffset="10" message="Block 3: Final over - dig deep!"/>
         </SteadyState>
-        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        <Cooldown Duration="900" PowerLow="0.5" PowerHigh="0.3">
         </Cooldown>
       </workout>
   </workout_file>

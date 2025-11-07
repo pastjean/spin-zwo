@@ -41,11 +41,23 @@ export interface RampSegment {
   messages?: WorkoutTextEvent[];
 }
 
+export interface IntervalsSegment {
+  type: 'intervals';
+  repeat: number;
+  onDuration: number;
+  onPower: number;
+  offDuration: number;
+  offPower: number;
+  cadence?: number;
+  messages?: WorkoutTextEvent[];
+}
+
 export type Segment =
   | WarmupSegment
   | CooldownSegment
   | SteadyStateSegment
-  | RampSegment;
+  | RampSegment
+  | IntervalsSegment;
 
 export interface WorkoutDefinition {
   name: string;
@@ -71,6 +83,9 @@ export function segmentToXML(segment: Segment): string {
     case 'ramp':
       xml = `        <Ramp Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
       break;
+    case 'intervals':
+      xml = `        <IntervalsT Repeat="${segment.repeat}" OnDuration="${segment.onDuration}" OnPower="${segment.onPower}" OffDuration="${segment.offDuration}" OffPower="${segment.offPower}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
+      break;
   }
 
   // Add text events
@@ -88,7 +103,9 @@ export function segmentToXML(segment: Segment): string {
         ? 'Cooldown'
         : segment.type === 'ramp'
           ? 'Ramp'
-          : 'SteadyState';
+          : segment.type === 'intervals'
+            ? 'IntervalsT'
+            : 'SteadyState';
   xml += `\n        </${closeTag}>`;
 
   return xml;
@@ -119,4 +136,88 @@ export function createZWOString(
   ${workoutSegments}
       </workout>
   </workout_file>`;
+}
+
+export interface ParsedWorkout {
+  // From ZWO file
+  name: string;
+  description: string;
+  author: string;
+  tags: string[];
+  segments: Segment[];
+
+  // From filename
+  week?: number;
+  day?: number;
+  dayName?: string;
+  workoutName?: string;
+
+  // Calculated metrics
+  duration: number; // Total seconds
+  tss: number; // Training Stress Score
+  intensityFactor: number; // IF
+  normalizedPower: number; // NP
+
+  // File metadata
+  filepath: string;
+  filename: string;
+}
+
+export interface ProgramStructure {
+  programName: string;
+  programPath: string;
+  config: ProgramConfig;
+  weeks: Map<number, WeekStructure>;
+  workouts: ParsedWorkout[];
+  stats: ProgramStats;
+}
+
+export interface WeekStructure {
+  weekNumber: number;
+  days: Map<number, ParsedWorkout>;
+  totalTSS: number;
+  totalDuration: number;
+}
+
+export interface ProgramStats {
+  totalWorkouts: number;
+  totalWeeks: number;
+  totalTSS: number;
+  totalHours: number;
+  avgTSSPerWeek: number;
+  avgHoursPerWeek: number;
+  intensityDistribution: {
+    recovery: number; // % of time < 0.6 FTP
+    endurance: number; // % of time 0.6-0.75
+    tempo: number; // % of time 0.76-0.87
+    threshold: number; // % of time 0.88-1.05
+    vo2max: number; // % of time > 1.05
+  };
+}
+
+export interface WorkoutModalData {
+  name: string;
+  description: string;
+  week: number;
+  day: number;
+  dayName: string;
+  duration: number;
+  tss: number;
+  intensityFactor: number;
+  normalizedPower: number;
+}
+
+export interface ProgramConfig {
+  name: string;
+  description: string;
+  schedule: WorkoutScheduleEntry[];
+  tags?: string[];
+  targetAudience?: string;
+}
+
+export interface WorkoutScheduleEntry {
+  week: number;
+  day: number;
+  dayName: string;
+  zwoFile: string;
 }

@@ -25,7 +25,7 @@
             <textevent timeoffset="600" message="Halfway - dig deep"/>
             <textevent timeoffset="1140" message="Last minute - finish strong!"/>
         </SteadyState>
-        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        <Cooldown Duration="900" PowerLow="0.5" PowerHigh="0.3">
         </Cooldown>
       </workout>
   </workout_file>

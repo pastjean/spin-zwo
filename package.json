@@ -7,7 +7,13 @@
   "type": "module",
   "main": "programs/12_weeks_ftp_builder/12_weeks_ftp_builder.ts",
   "scripts": {
-    "start": "bun run programs/12_weeks_ftp_builder/12_weeks_ftp_builder.ts && bun run programs/recoveries/recoveries.ts && bun run programs/8_weeks_road_builder/8_weeks_road_builder.ts",
+    "start": "bun run generate-all.ts",
+    "generate": "bun run generate-all.ts",
+    "generate:12weeks": "bun run generate-all.ts programs/12_weeks_ftp_builder",
+    "generate:8weeks": "bun run generate-all.ts programs/8_weeks_road_builder",
+    "generate:recoveries": "bun run generate-all.ts programs/recoveries",
+    "generate:readme": "bun run generate-all.ts -- --detailed-readme",
+    "migrate:config": "bun run scripts/migrate-to-config.ts",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint --write .",
@@ -19,9 +25,11 @@
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
     "@types/node": "^24.7.1",
+    "@types/xml2js": "^0.4.14",
     "bun": "^1.2.4"
   },
   "dependencies": {
-    "canvas": "^3.2.0"
+    "canvas": "^3.2.0",
+    "xml2js": "^0.6.2"
   }
 }

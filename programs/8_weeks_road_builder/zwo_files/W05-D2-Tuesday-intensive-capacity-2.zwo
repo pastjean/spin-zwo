@@ -1,0 +1,38 @@
+<workout_file><author>mywhooshinfo.com</author><name>Intensive Capacity #2</name><description>The aim today is to produce repeatable, high power intervals. Extensive Anaerobic efforts will improve your ability to recover from high-intensity efforts and repeat them repeatedly. 
+
+The intervals ramp up in power throughout today&#039;s session throughout the effort! 12 x 45sec Intensive Capacity intervals with 2min recovery provide a challenging session!</description><sportType>bike</sportType><workout>
+<SteadyState  Duration="300" Power="0.50449997186661"></SteadyState>
+<IntervalsT   Repeat="2" OnDuration="10" OnPower="2.004499912262" OffDuration="50" OffPower="0.50449997186661">
+</IntervalsT>
+<SteadyState  Duration="120" Power="0.50449997186661"></SteadyState>
+<SteadyState  Duration="60" Power="1.0944999456406"></SteadyState>
+<SteadyState  Duration="180" Power="0.50449997186661"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<SteadyState  Duration="180" Power="0.50449997186661"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<SteadyState  Duration="180" Power="0.50449997186661"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<Warmup  Duration="45" PowerLow="1.2044999599457" PowerHigh="1.7545000314713"></Warmup>
+<SteadyState  Duration="120" Power="0.65450000762939"></SteadyState>
+<SteadyState  Duration="120" Power="0.50449997186661"></SteadyState>
+<Cooldown  Duration="300" PowerLow="0.55449998378754" PowerHigh="0.454499989748"></Cooldown>
+</workout></workout_file>

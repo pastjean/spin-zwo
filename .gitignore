@@ -4,3 +4,6 @@ node_modules/**/*
 *.env.local
 *.local.env
 *.local.json
+
+# Generated images and outputs
+programs/*/docs/

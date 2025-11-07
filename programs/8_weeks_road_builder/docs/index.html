@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_weeks_road_builder - Interactive Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f6f7;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 0.875rem;
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .calendar-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .calendar-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar-table th {
+            background: #ecf0f1;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .calendar-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .workout-link {
+            color: #3498db;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .workout-link:hover {
+            text-decoration: underline;
+        }
+
+        .tss-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-left: 0.5rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 1000px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #7f8c8d;
+        }
+
+        .modal-close:hover {
+            color: #2c3e50;
+        }
+
+        .workout-image {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .charts-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .charts-section img {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>8 Weeks Road Builder</h1>
+        <p>Interactive Workout Calendar & Statistics</p>
+    </header>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Weeks</h3>
+                <div class="value">8</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Workouts</h3>
+                <div class="value">40</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total TSS</h3>
+                <div class="value">2714</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Hours</h3>
+                <div class="value">47.7</div>
+            </div>
+            <div class="stat-card">
+                <h3>Avg TSS/Week</h3>
+                <div class="value">339</div>
+            </div>
+            <div class="stat-card">
+                <h3>Avg Hours/Week</h3>
+                <div class="value">6.0</div>
+            </div>
+        </div>
+
+        <div class="calendar-section">
+            <h2>Workout Calendar</h2>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Day</th>
+                        <th>Workout</th>
+                        <th>Duration</th>
+                        <th>TSS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D2-Tuesday-VO2max_30_30s.zwo')">VO2max 30 30s</a>
+                        </td>
+                        <td>72 min</td>
+                        <td><span class="tss-badge">87 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D5-Friday-neuromuscular-power-surges-2.zwo')">neuromuscular-power-surges-2</a>
+                        </td>
+                        <td>59 min</td>
+                        <td><span class="tss-badge">62 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D6-Saturday-Easy_Z2.zwo')">Easy Z2</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W01-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>90 min</td>
+                        <td><span class="tss-badge">71 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D2-Tuesday-controlled-30-30-s-2.zwo')">controlled-30-30-s-2</a>
+                        </td>
+                        <td>59 min</td>
+                        <td><span class="tss-badge">84 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D5-Friday-anaerobic-endurance-2.zwo')">anaerobic-endurance-2</a>
+                        </td>
+                        <td>73 min</td>
+                        <td><span class="tss-badge">84 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D6-Saturday-Easy_Z2.zwo')">Easy Z2</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W02-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>105 min</td>
+                        <td><span class="tss-badge">83 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D2-Tuesday-hiit-45sec-1.zwo')">hiit-45sec-1</a>
+                        </td>
+                        <td>57 min</td>
+                        <td><span class="tss-badge">92 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D5-Friday-power-intervals-1.zwo')">power-intervals-1</a>
+                        </td>
+                        <td>56 min</td>
+                        <td><span class="tss-badge">92 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D6-Saturday-Easy_Z2.zwo')">Easy Z2</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W03-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">95 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D2-Tuesday-30-30-s-anaerobic-3.zwo')">30-30-s-anaerobic-3</a>
+                        </td>
+                        <td>68 min</td>
+                        <td><span class="tss-badge">91 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D5-Friday-capacity-pyramid-2.zwo')">capacity-pyramid-2</a>
+                        </td>
+                        <td>70 min</td>
+                        <td><span class="tss-badge">87 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D6-Saturday-Easy_Z2.zwo')">Easy Z2</a>
+                        </td>
+                        <td>45 min</td>
+                        <td><span class="tss-badge">34 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W04-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>90 min</td>
+                        <td><span class="tss-badge">71 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D2-Tuesday-intensive-capacity-2.zwo')">intensive-capacity-2</a>
+                        </td>
+                        <td>59 min</td>
+                        <td><span class="tss-badge">96 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D5-Friday-40-20-s-2.zwo')">40-20-s-2</a>
+                        </td>
+                        <td>58 min</td>
+                        <td><span class="tss-badge">81 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D6-Saturday-Easy_Z2.zwo')">Easy Z2</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W05-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>120 min</td>
+                        <td><span class="tss-badge">95 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D2-Tuesday-12min-30-30-s-2.zwo')">12min-30-30-s-2</a>
+                        </td>
+                        <td>74 min</td>
+                        <td><span class="tss-badge">96 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D5-Friday-power-intervals-3.zwo')">power-intervals-3</a>
+                        </td>
+                        <td>58 min</td>
+                        <td><span class="tss-badge">104 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D6-Saturday-Easy_Z2.zwo')">Easy Z2</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">46 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W06-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>135 min</td>
+                        <td><span class="tss-badge">107 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D2-Tuesday-pace-is-the-trick.zwo')">pace-is-the-trick</a>
+                        </td>
+                        <td>46 min</td>
+                        <td><span class="tss-badge">74 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D5-Friday-extensive-anaerobic-6-x-1min.zwo')">extensive-anaerobic-6-x-1min</a>
+                        </td>
+                        <td>57 min</td>
+                        <td><span class="tss-badge">86 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>6 (Saturday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D6-Saturday-Easy_Z2.zwo')">Easy Z2</a>
+                        </td>
+                        <td>75 min</td>
+                        <td><span class="tss-badge">58 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W07-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>150 min</td>
+                        <td><span class="tss-badge">120 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2 (Tuesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D2-Tuesday-vo2max-climbing-1.zwo')">vo2max-climbing-1</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">70 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>3 (Wednesday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D3-Wednesday-Recovery_Easy.zwo')">Recovery Easy</a>
+                        </td>
+                        <td>60 min</td>
+                        <td><span class="tss-badge">30 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>5 (Friday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D5-Friday-FTP_Test_20min.zwo')">FTP Test 20min</a>
+                        </td>
+                        <td>54 min</td>
+                        <td><span class="tss-badge">62 TSS</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>7 (Sunday)</td>
+                        <td>
+                            <a class="workout-link" onclick="showWorkout('W08-D7-Sunday-Long_Endurance.zwo')">Long Endurance</a>
+                        </td>
+                        <td>105 min</td>
+                        <td><span class="tss-badge">83 TSS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="charts-section">
+            <h2>Progression Analysis</h2>
+            <img src="../images/progression.png" alt="Progression Charts">
+        </div>
+    </div>
+
+    <div class="modal" id="workoutModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const workouts = {"W03-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W3-Sun: Long Endurance 120min","$$":[{"#name":"__text__","_":"W3-Sun: Long Endurance 120min"}]},"description":{"_":"workout.description, 📊 95 TSS · IF 0.69 · 120 min","$$":[{"#name":"__text__","_":"workout.description, 📊 95 TSS · IF 0.69 · 120 min"}]},"week":3,"day":7,"dayName":"Sunday","duration":7200,"tss":95,"intensityFactor":0.69,"normalizedPower":0.69},"W06-D6-Saturday-Easy_Z2.zwo":{"name":{"_":"W6-Sat: Easy Z2 Ride","$$":[{"#name":"__text__","_":"W6-Sat: Easy Z2 Ride"}]},"description":{"_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min"}]},"week":6,"day":6,"dayName":"Saturday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W04-D5-Friday-capacity-pyramid-2.zwo":{"name":"","description":{"_":"We are developing from the solid foundation you have created. Think of this session as a progressive pushing workout. \n\nWorking up the pyramid is not too difficult; it is the return leg when it starts to bite! This is pushing your threshold up. The main intervals are 7 x 5 minutes with 3 minutes of easy spinning between efforts, starting just above threshold then settling into high Zone 3 comfortably hard, but hardly comfortable!\n\nHang in and try and keep the power where it needs to be.","$$":[{"#name":"__text__","_":"We are developing from the solid foundation you have created. Think of this session as a progressive pushing workout. \n\nWorking up the pyramid is not too difficult; it is the return leg when it starts to bite! This is pushing your threshold up. The main intervals are 7 x 5 minutes with 3 minutes of easy spinning between efforts, starting just above threshold then settling into high Zone 3 comfortably hard, but hardly comfortable!\n\nHang in and try and keep the power where it needs to be."}]},"week":4,"day":5,"dayName":"Friday","duration":4200,"tss":87,"intensityFactor":0.86,"normalizedPower":0.86},"W07-D5-Friday-extensive-anaerobic-6-x-1min.zwo":{"name":"","description":{"_":"The aim today is to produce repeatable, high power intervals. Extensive Anaerobic efforts will improve your ability to recover from high-intensity efforts and repeat them repeatedly. \n\nRecovery is crucial with 6 x 1-minute quality efforts ahead of you!","$$":[{"#name":"__text__","_":"The aim today is to produce repeatable, high power intervals. Extensive Anaerobic efforts will improve your ability to recover from high-intensity efforts and repeat them repeatedly. \n\nRecovery is crucial with 6 x 1-minute quality efforts ahead of you!"}]},"week":7,"day":5,"dayName":"Friday","duration":3420,"tss":86,"intensityFactor":0.95,"normalizedPower":0.95},"W03-D2-Tuesday-hiit-45sec-1.zwo":{"name":"","description":{"_":"With repeated anaerobic bouts of 45sec, you will be improving your ability to process lactate and recover from strenuous efforts. You will also use up vital carbohydrate stores before the final 5min sub-threshold interval. \n\nThis is where the adaptation occurs!","$$":[{"#name":"__text__","_":"With repeated anaerobic bouts of 45sec, you will be improving your ability to process lactate and recover from strenuous efforts. You will also use up vital carbohydrate stores before the final 5min sub-threshold interval. \n\nThis is where the adaptation occurs!"}]},"week":3,"day":2,"dayName":"Tuesday","duration":3420,"tss":92,"intensityFactor":0.98,"normalizedPower":0.98},"W01-D5-Friday-neuromuscular-power-surges-2.zwo":{"name":"","description":{"_":"Training the neuromuscular system is one of the most effective ways to improve your efficiency. This system includes all the muscles in the body and the nerves that serve them. \n\nIn this workout, we aim to recruit the maximal amount of muscle fibres. We do this by completing a series of short, high powered efforts with slight recovery. As the muscles tire, more are recruited to produce the power. \n\nWith three sets of 10 surges, you will be calling upon every fibre you have to produce the power by the last interval!","$$":[{"#name":"__text__","_":"Training the neuromuscular system is one of the most effective ways to improve your efficiency. This system includes all the muscles in the body and the nerves that serve them. \n\nIn this workout, we aim to recruit the maximal amount of muscle fibres. We do this by completing a series of short, high powered efforts with slight recovery. As the muscles tire, more are recruited to produce the power. \n\nWith three sets of 10 surges, you will be calling upon every fibre you have to produce the power by the last interval!"}]},"week":1,"day":5,"dayName":"Friday","duration":3540,"tss":62,"intensityFactor":0.8,"normalizedPower":0.8},"W02-D6-Saturday-Easy_Z2.zwo":{"name":{"_":"W2-Sat: Easy Z2 Ride","$$":[{"#name":"__text__","_":"W2-Sat: Easy Z2 Ride"}]},"description":{"_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min"}]},"week":2,"day":6,"dayName":"Saturday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W07-D2-Tuesday-pace-is-the-trick.zwo":{"name":"","description":{"_":"We improve your muscular endurance power by completing extended high power intervals?2 different sets of work today.","$$":[{"#name":"__text__","_":"We improve your muscular endurance power by completing extended high power intervals?2 different sets of work today."}]},"week":7,"day":2,"dayName":"Tuesday","duration":2780,"tss":74,"intensityFactor":0.98,"normalizedPower":0.98},"W01-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W1-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W1-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":1,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54},"W07-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W7-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W7-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":7,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54},"W08-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W8-Sun: Long Endurance 105min","$$":[{"#name":"__text__","_":"W8-Sun: Long Endurance 105min"}]},"description":{"_":"workout.description, 📊 83 TSS · IF 0.69 · 105 min","$$":[{"#name":"__text__","_":"workout.description, 📊 83 TSS · IF 0.69 · 105 min"}]},"week":8,"day":7,"dayName":"Sunday","duration":6300,"tss":83,"intensityFactor":0.69,"normalizedPower":0.69},"W06-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W6-Sun: Long Endurance 135min","$$":[{"#name":"__text__","_":"W6-Sun: Long Endurance 135min"}]},"description":{"_":"workout.description, 📊 107 TSS · IF 0.69 · 135 min","$$":[{"#name":"__text__","_":"workout.description, 📊 107 TSS · IF 0.69 · 135 min"}]},"week":6,"day":7,"dayName":"Sunday","duration":8100,"tss":107,"intensityFactor":0.69,"normalizedPower":0.69},"W01-D6-Saturday-Easy_Z2.zwo":{"name":{"_":"W1-Sat: Easy Z2 Ride","$$":[{"#name":"__text__","_":"W1-Sat: Easy Z2 Ride"}]},"description":{"_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min"}]},"week":1,"day":6,"dayName":"Saturday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W02-D5-Friday-anaerobic-endurance-2.zwo":{"name":"","description":{"_":"After completing a good warm-up, the principal sets consist of 6 x 60 seconds at Zone 6, with 3min recovery. Anaerobic Capacity involves high cadence and big power, and the ability to resist fatigue. \n\nThroughout each 60sec interval, observe your cadence and heart rate. Is your cadence dropping with fatigue and your heart rate rising?","$$":[{"#name":"__text__","_":"After completing a good warm-up, the principal sets consist of 6 x 60 seconds at Zone 6, with 3min recovery. Anaerobic Capacity involves high cadence and big power, and the ability to resist fatigue. \n\nThroughout each 60sec interval, observe your cadence and heart rate. Is your cadence dropping with fatigue and your heart rate rising?"}]},"week":2,"day":5,"dayName":"Friday","duration":4380,"tss":84,"intensityFactor":0.83,"normalizedPower":0.83},"W05-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W5-Sun: Long Endurance 120min","$$":[{"#name":"__text__","_":"W5-Sun: Long Endurance 120min"}]},"description":{"_":"workout.description, 📊 95 TSS · IF 0.69 · 120 min","$$":[{"#name":"__text__","_":"workout.description, 📊 95 TSS · IF 0.69 · 120 min"}]},"week":5,"day":7,"dayName":"Sunday","duration":7200,"tss":95,"intensityFactor":0.69,"normalizedPower":0.69},"W06-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W6-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W6-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":6,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54},"W05-D6-Saturday-Easy_Z2.zwo":{"name":{"_":"W5-Sat: Easy Z2 Ride","$$":[{"#name":"__text__","_":"W5-Sat: Easy Z2 Ride"}]},"description":{"_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min"}]},"week":5,"day":6,"dayName":"Saturday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W08-D5-Friday-FTP_Test_2x15min.zwo":{"name":{"_":"W8-Fri: FTP Test 2x15min (Alternative)","$$":[{"#name":"__text__","_":"W8-Fri: FTP Test 2x15min (Alternative)"}]},"description":{"_":"workout.description, 📊 79 TSS · IF 0.85 · 66 min","$$":[{"#name":"__text__","_":"workout.description, 📊 79 TSS · IF 0.85 · 66 min"}]},"week":8,"day":5,"dayName":"Friday","duration":3960,"tss":79,"intensityFactor":0.85,"normalizedPower":0.85},"W04-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W4-Sun: Long Endurance 90min (Reduced)","$$":[{"#name":"__text__","_":"W4-Sun: Long Endurance 90min (Reduced)"}]},"description":{"_":"workout.description, 📊 71 TSS · IF 0.69 · 90 min","$$":[{"#name":"__text__","_":"workout.description, 📊 71 TSS · IF 0.69 · 90 min"}]},"week":4,"day":7,"dayName":"Sunday","duration":5400,"tss":71,"intensityFactor":0.69,"normalizedPower":0.69},"W06-D2-Tuesday-12min-30-30-s-2.zwo":{"name":"","description":{"_":"Another session of intermittent training, performing 30/30s for an accumulated time of 18 min above threshold. \n\nAfter warming up, we complete three sets of 12-minute blocks of 30 seconds above FTP, followed by 30 seconds of recovery. The rest period mustn't be too easy to train the muscle fibres to use the lactate produced as a fuel.","$$":[{"#name":"__text__","_":"Another session of intermittent training, performing 30/30s for an accumulated time of 18 min above threshold. \n\nAfter warming up, we complete three sets of 12-minute blocks of 30 seconds above FTP, followed by 30 seconds of recovery. The rest period mustn't be too easy to train the muscle fibres to use the lactate produced as a fuel."}]},"week":6,"day":2,"dayName":"Tuesday","duration":4440,"tss":96,"intensityFactor":0.88,"normalizedPower":0.88},"W01-D2-Tuesday-VO2max_30_30s.zwo":{"name":{"_":"W1-Tue: 30/30s Introduction","$$":[{"#name":"__text__","_":"W1-Tue: 30/30s Introduction"}]},"description":{"_":"workout.description, 📊 87 TSS · IF 0.85 · 72 min","$$":[{"#name":"__text__","_":"workout.description, 📊 87 TSS · IF 0.85 · 72 min"}]},"week":1,"day":2,"dayName":"Tuesday","duration":4320,"tss":87,"intensityFactor":0.85,"normalizedPower":0.85},"W05-D2-Tuesday-intensive-capacity-2.zwo":{"name":"","description":{"_":"The aim today is to produce repeatable, high power intervals. Extensive Anaerobic efforts will improve your ability to recover from high-intensity efforts and repeat them repeatedly. \n\nThe intervals ramp up in power throughout today's session throughout the effort! 12 x 45sec Intensive Capacity intervals with 2min recovery provide a challenging session!","$$":[{"#name":"__text__","_":"The aim today is to produce repeatable, high power intervals. Extensive Anaerobic efforts will improve your ability to recover from high-intensity efforts and repeat them repeatedly. \n\nThe intervals ramp up in power throughout today's session throughout the effort! 12 x 45sec Intensive Capacity intervals with 2min recovery provide a challenging session!"}]},"week":5,"day":2,"dayName":"Tuesday","duration":3540,"tss":96,"intensityFactor":0.99,"normalizedPower":0.99},"W03-D6-Saturday-Easy_Z2.zwo":{"name":{"_":"W3-Sat: Easy Z2 Ride","$$":[{"#name":"__text__","_":"W3-Sat: Easy Z2 Ride"}]},"description":{"_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 46 TSS · IF 0.68 · 60 min"}]},"week":3,"day":6,"dayName":"Saturday","duration":3600,"tss":46,"intensityFactor":0.68,"normalizedPower":0.68},"W03-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W3-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W3-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":3,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54},"W05-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W5-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W5-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":5,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54},"W07-D6-Saturday-Easy_Z2.zwo":{"name":{"_":"W7-Sat: Easy Z2 Ride (Extended)","$$":[{"#name":"__text__","_":"W7-Sat: Easy Z2 Ride (Extended)"}]},"description":{"_":"workout.description, 📊 58 TSS · IF 0.68 · 75 min","$$":[{"#name":"__text__","_":"workout.description, 📊 58 TSS · IF 0.68 · 75 min"}]},"week":7,"day":6,"dayName":"Saturday","duration":4500,"tss":58,"intensityFactor":0.68,"normalizedPower":0.68},"W07-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W7-Sun: Long Endurance 150min (PEAK)","$$":[{"#name":"__text__","_":"W7-Sun: Long Endurance 150min (PEAK)"}]},"description":{"_":"workout.description, 📊 120 TSS · IF 0.69 · 150 min","$$":[{"#name":"__text__","_":"workout.description, 📊 120 TSS · IF 0.69 · 150 min"}]},"week":7,"day":7,"dayName":"Sunday","duration":9000,"tss":120,"intensityFactor":0.69,"normalizedPower":0.69},"W04-D6-Saturday-Easy_Z2.zwo":{"name":{"_":"W4-Sat: Easy Z2 Ride (Reduced)","$$":[{"#name":"__text__","_":"W4-Sat: Easy Z2 Ride (Reduced)"}]},"description":{"_":"workout.description, 📊 34 TSS · IF 0.67 · 45 min","$$":[{"#name":"__text__","_":"workout.description, 📊 34 TSS · IF 0.67 · 45 min"}]},"week":4,"day":6,"dayName":"Saturday","duration":2700,"tss":34,"intensityFactor":0.67,"normalizedPower":0.67},"W04-D2-Tuesday-30-30-s-anaerobic-3.zwo":{"name":"","description":{"_":"After completing a warm-up that includes some high rpm sprints and a 5min threshold effort, the principal sets today include 12 x 30sec efforts @ 115%FTP with 30sec recovery. \n\nBy completing short efforts above threshold, you can accumulate more time in this area than if completed in more prolonged efforts. The short recovery periods also increase oxygen uptake. Particularly towards the end of the set!","$$":[{"#name":"__text__","_":"After completing a warm-up that includes some high rpm sprints and a 5min threshold effort, the principal sets today include 12 x 30sec efforts @ 115%FTP with 30sec recovery. \n\nBy completing short efforts above threshold, you can accumulate more time in this area than if completed in more prolonged efforts. The short recovery periods also increase oxygen uptake. Particularly towards the end of the set!"}]},"week":4,"day":2,"dayName":"Tuesday","duration":4080,"tss":91,"intensityFactor":0.9,"normalizedPower":0.9},"W05-D5-Friday-40-20-s-2.zwo":{"name":"","description":{"_":"Building upon your previous 40/20 session, this time, we are increasing the number of intervals before finishing with a 3min VO2max effort. \n\nWe challenge your ability to recover from hard work and measure the final effort produced. \n\n","$$":[{"#name":"__text__","_":"Building upon your previous 40/20 session, this time, we are increasing the number of intervals before finishing with a 3min VO2max effort. \n\nWe challenge your ability to recover from hard work and measure the final effort produced. \n\n"}]},"week":5,"day":5,"dayName":"Friday","duration":3480,"tss":81,"intensityFactor":0.92,"normalizedPower":0.92},"W08-D2-Tuesday-vo2max-climbing-1.zwo":{"name":"","description":{"_":"Simulating the demands of climbing at a VO2max intensity, today, you will complete 3 x 3min intervals, followed by 3 x 2min intervals. However, the target cadence is reduced from 85rpm in the 3min intervals to 70rpm in the 2min intervals. \n\nComplete the 3min intervals seated, and the 2min intervals are standing if possible.","$$":[{"#name":"__text__","_":"Simulating the demands of climbing at a VO2max intensity, today, you will complete 3 x 3min intervals, followed by 3 x 2min intervals. However, the target cadence is reduced from 85rpm in the 3min intervals to 70rpm in the 2min intervals. \n\nComplete the 3min intervals seated, and the 2min intervals are standing if possible."}]},"week":8,"day":2,"dayName":"Tuesday","duration":3600,"tss":70,"intensityFactor":0.84,"normalizedPower":0.84},"W01-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W1-Sun: Long Endurance 90min","$$":[{"#name":"__text__","_":"W1-Sun: Long Endurance 90min"}]},"description":{"_":"workout.description, 📊 71 TSS · IF 0.69 · 90 min","$$":[{"#name":"__text__","_":"workout.description, 📊 71 TSS · IF 0.69 · 90 min"}]},"week":1,"day":7,"dayName":"Sunday","duration":5400,"tss":71,"intensityFactor":0.69,"normalizedPower":0.69},"W04-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W4-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W4-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":4,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54},"W03-D5-Friday-power-intervals-1.zwo":{"name":"","description":{"_":"Today's session focuses on improving your ability to produce power. To be able\n        to turn a big gear faster. Completing high power intervals with slightly less cadence\n        increases the torque applied to the crank, boosting muscular endurance power.\n\n        Two sets of (3 x 2.5min) with 3min recovery. However, the initial high power 30sec effort\n        has a target cadence of 85rpm before completing the remaining 2min at a self-selected\n        cadence.","$$":[{"#name":"__text__","_":"Today's session focuses on improving your ability to produce power. To be able\n        to turn a big gear faster. Completing high power intervals with slightly less cadence\n        increases the torque applied to the crank, boosting muscular endurance power.\n\n        Two sets of (3 x 2.5min) with 3min recovery. However, the initial high power 30sec effort\n        has a target cadence of 85rpm before completing the remaining 2min at a self-selected\n        cadence."}]},"week":3,"day":5,"dayName":"Friday","duration":3360,"tss":92,"intensityFactor":0.99,"normalizedPower":0.99},"W02-D7-Sunday-Long_Endurance.zwo":{"name":{"_":"W2-Sun: Long Endurance 105min","$$":[{"#name":"__text__","_":"W2-Sun: Long Endurance 105min"}]},"description":{"_":"workout.description, 📊 83 TSS · IF 0.69 · 105 min","$$":[{"#name":"__text__","_":"workout.description, 📊 83 TSS · IF 0.69 · 105 min"}]},"week":2,"day":7,"dayName":"Sunday","duration":6300,"tss":83,"intensityFactor":0.69,"normalizedPower":0.69},"W08-D5-Friday-FTP_Test_20min.zwo":{"name":{"_":"W8-Fri: FTP Test 20min","$$":[{"#name":"__text__","_":"W8-Fri: FTP Test 20min"}]},"description":{"_":"workout.description, 📊 62 TSS · IF 0.83 · 54 min","$$":[{"#name":"__text__","_":"workout.description, 📊 62 TSS · IF 0.83 · 54 min"}]},"week":8,"day":5,"dayName":"Friday","duration":3240,"tss":62,"intensityFactor":0.83,"normalizedPower":0.83},"W02-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W2-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W2-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":2,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54},"W06-D5-Friday-power-intervals-3.zwo":{"name":"","description":{"_":"Today's session focuses on improving your ability to produce power. To be able to turn a big gear faster. Completing high power intervals with slightly less cadence increases the torque applied to the crank, boosting muscular endurance power. \n\nTwo different sets of work today, with the 1st set involving shorter 2min intervals that begin with 30sec of high power / low rpm effort. The 2nd set includes 4 x 2min intervals decreasing power across the intervals.","$$":[{"#name":"__text__","_":"Today's session focuses on improving your ability to produce power. To be able to turn a big gear faster. Completing high power intervals with slightly less cadence increases the torque applied to the crank, boosting muscular endurance power. \n\nTwo different sets of work today, with the 1st set involving shorter 2min intervals that begin with 30sec of high power / low rpm effort. The 2nd set includes 4 x 2min intervals decreasing power across the intervals."}]},"week":6,"day":5,"dayName":"Friday","duration":3480,"tss":104,"intensityFactor":1.04,"normalizedPower":1.04},"W02-D2-Tuesday-controlled-30-30-s-2.zwo":{"name":"","description":{"_":"These Controlled 30/30 efforts are completed at a power just below your Maximal Aerobic Power (MAP). By splitting up into 30 seconds, with 30 seconds of recovery, you can accumulate more time at this intensity than you would if doing it as a continuous effort. \n\nEight repetitions this week, building on last week's great session!","$$":[{"#name":"__text__","_":"These Controlled 30/30 efforts are completed at a power just below your Maximal Aerobic Power (MAP). By splitting up into 30 seconds, with 30 seconds of recovery, you can accumulate more time at this intensity than you would if doing it as a continuous effort. \n\nEight repetitions this week, building on last week's great session!"}]},"week":2,"day":2,"dayName":"Tuesday","duration":3540,"tss":84,"intensityFactor":0.92,"normalizedPower":0.92},"W08-D3-Wednesday-Recovery_Easy.zwo":{"name":{"_":"W8-Wed: Easy Recovery","$$":[{"#name":"__text__","_":"W8-Wed: Easy Recovery"}]},"description":{"_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min","$$":[{"#name":"__text__","_":"workout.description, 📊 30 TSS · IF 0.54 · 60 min"}]},"week":8,"day":3,"dayName":"Wednesday","duration":3600,"tss":30,"intensityFactor":0.54,"normalizedPower":0.54}};
+
+        function showWorkout(filename) {
+            const workout = workouts[filename];
+            if (!workout) return;
+
+            const modal = document.getElementById('workoutModal');
+            const body = document.getElementById('modalBody');
+
+            const imageFilename = filename.replace('.zwo', '.png');
+
+            body.innerHTML = `
+                <h2>${workout.name}</h2>
+                <p><strong>Week ${workout.week}, Day ${workout.day} (${workout.dayName})</strong></p>
+                <p>${workout.description}</p>
+                <img src="../images/individual/${imageFilename}" alt="${workout.name}" class="workout-image">
+                <div style="margin-top: 1rem;">
+                    <strong>Duration:</strong> ${Math.round(workout.duration / 60)} minutes<br>
+                    <strong>TSS:</strong> ${Math.round(workout.tss)}<br>
+                    <strong>IF:</strong> ${workout.intensityFactor.toFixed(2)}<br>
+                    <strong>NP:</strong> ${Math.round(workout.normalizedPower)}W
+                </div>
+            `;
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('workoutModal').classList.remove('active');
+        }
+
+        document.getElementById('workoutModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

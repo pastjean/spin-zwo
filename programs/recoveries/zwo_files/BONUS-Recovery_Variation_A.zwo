@@ -45,7 +45,7 @@
         <SteadyState Duration="60" Power="0.7">
             <textevent timeoffset="10" message="Final burst 6/6"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.55" PowerLow="0.45">
+        <Cooldown Duration="600" PowerLow="0.55" PowerHigh="0.45">
             <textevent timeoffset="10" message="Great active recovery!"/>
         </Cooldown>
       </workout>

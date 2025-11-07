@@ -43,7 +43,7 @@
             <textevent timeoffset="10" message="Pyramid: Final 4 min @ FTP"/>
             <textevent timeoffset="180" message="Final minute - finish strong!"/>
         </SteadyState>
-        <Cooldown Duration="720" PowerHigh="0.5" PowerLow="0.3">
+        <Cooldown Duration="720" PowerLow="0.5" PowerHigh="0.3">
             <textevent timeoffset="10" message="Advanced pyramid complete!"/>
         </Cooldown>
       </workout>

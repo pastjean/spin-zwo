@@ -1,0 +1,21 @@
+<workout_file><author>mywhooshinfo.com</author><name>Neuromuscular Power Surges #2</name><description>Training the neuromuscular system is one of the most effective ways to improve your efficiency. This system includes all the muscles in the body and the nerves that serve them. 
+
+In this workout, we aim to recruit the maximal amount of muscle fibres. We do this by completing a series of short, high powered efforts with slight recovery. As the muscles tire, more are recruited to produce the power. 
+
+With three sets of 10 surges, you will be calling upon every fibre you have to produce the power by the last interval!</description><sportType>bike</sportType><workout>
+<SteadyState  Duration="180" Power="0"></SteadyState>
+<IntervalsT   Repeat="2" OnDuration="60" OnPower="0.93449997901917" OffDuration="60" OffPower="0.60449999570847">
+</IntervalsT>
+<SteadyState  Duration="60" Power="0.50449997186661"></SteadyState>
+<SteadyState  Duration="240" Power="0.81449997425079"></SteadyState>
+<SteadyState  Duration="120" Power="0.50449997186661"></SteadyState>
+<IntervalsT   Repeat="10" OnDuration="15" OnPower="1.2144999504089" OffDuration="45" OffPower="0.55449998378754">
+</IntervalsT>
+<SteadyState  Duration="300" Power="0.55449998378754"></SteadyState>
+<IntervalsT   Repeat="10" OnDuration="15" OnPower="1.2144999504089" OffDuration="45" OffPower="0.55449998378754">
+</IntervalsT>
+<SteadyState  Duration="300" Power="0.55000001192093"></SteadyState>
+<IntervalsT   Repeat="10" OnDuration="15" OnPower="1.2144999504089" OffDuration="45" OffPower="0.55449998378754">
+</IntervalsT>
+<Cooldown  Duration="300" PowerLow="0.64999997615814" PowerHigh="0.5"></Cooldown>
+</workout></workout_file>

@@ -44,7 +44,7 @@
             <textevent timeoffset="1080" message="Final 2 min - everything you have!"/>
             <textevent timeoffset="1170" message="30 sec - FINISH STRONG!"/>
         </SteadyState>
-        <Cooldown Duration="900" PowerHigh="0.5" PowerLow="0.3">
+        <Cooldown Duration="900" PowerLow="0.5" PowerHigh="0.3">
             <textevent timeoffset="10" message="Great job! Easy cooldown"/>
             <textevent timeoffset="300" message="New FTP = 20-min avg × 0.95"/>
         </Cooldown>

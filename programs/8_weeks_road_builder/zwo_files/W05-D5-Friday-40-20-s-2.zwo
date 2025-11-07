@@ -1,0 +1,21 @@
+<workout_file><author>mywhooshinfo.com</author><name>40/20&#039;s #2</name><description>Building upon your previous 40/20 session, this time, we are increasing the number of intervals before finishing with a 3min VO2max effort. 
+
+We challenge your ability to recover from hard work and measure the final effort produced. 
+
+</description><sportType>bike</sportType><workout>
+<SteadyState  Duration="180" Power="0.50449997186661"></SteadyState>
+<IntervalsT   Repeat="4" OnDuration="10" OnPower="1.8044999837875" OffDuration="50" OffPower="0.50449997186661">
+</IntervalsT>
+<SteadyState  Duration="180" Power="0.75314301252365"></SteadyState>
+<SteadyState  Duration="120" Power="0.65156602859497"></SteadyState>
+<SteadyState  Duration="300" Power="0.90450000762939"></SteadyState>
+<SteadyState  Duration="180" Power="0.50449997186661"></SteadyState>
+<IntervalsT   Repeat="10" OnDuration="40" OnPower="1.0944999456406" OffDuration="20" OffPower="0.65026301145554">
+</IntervalsT>
+<SteadyState  Duration="300" Power="0.50449997186661"></SteadyState>
+<IntervalsT   Repeat="10" OnDuration="40" OnPower="1.0944999456406" OffDuration="20" OffPower="0.65484899282455">
+</IntervalsT>
+<SteadyState  Duration="300" Power="0.50449997186661"></SteadyState>
+<SteadyState  Duration="180" Power="1.2545000314713"></SteadyState>
+<SteadyState  Duration="300" Power="0.50449997186661"></SteadyState>
+</workout></workout_file>

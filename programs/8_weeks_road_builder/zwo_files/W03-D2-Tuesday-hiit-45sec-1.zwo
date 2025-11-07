@@ -1,0 +1,15 @@
+<workout_file><author>mywhooshinfo.com</author><name>HIIT 45sec #1</name><description>With repeated anaerobic bouts of 45sec, you will be improving your ability to process lactate and recover from strenuous efforts. You will also use up vital carbohydrate stores before the final 5min sub-threshold interval. 
+
+This is where the adaptation occurs!</description><sportType>bike</sportType><workout>
+<SteadyState  Duration="180" Power="0.50449997186661"><textevent timeoffset="140" message="warm up efforts."/></SteadyState>
+<IntervalsT   Repeat="2" OnDuration="60" OnPower="0.75449997186661" OffDuration="60" OffPower="0.50449997186661">
+</IntervalsT>
+<IntervalsT   Repeat="2" OnDuration="60" OnPower="0.90450000762939" OffDuration="60" OffPower="0.50449997186661">
+</IntervalsT>
+<SteadyState  Cadence="85" Duration="180" Power="0.50449997186661"><textevent timeoffset="90" message="power, in the 45sec efforts."/><textevent timeoffset="115" message="No drop off in power."/></SteadyState>
+<IntervalsT   Repeat="6" OnDuration="45" OnPower="1.7545000314713" OffDuration="255" OffPower="0.60449999570847">
+</IntervalsT>
+<SteadyState  Cadence="85" Duration="180" Power="0.50449997186661"><textevent timeoffset="110" message="5min sub-threshold effort."/></SteadyState>
+<SteadyState  Cadence="95" Duration="300" Power="0.95450001955032"></SteadyState>
+<SteadyState  Cadence="85" Duration="300" Power="0.50449997186661"></SteadyState>
+</workout></workout_file>

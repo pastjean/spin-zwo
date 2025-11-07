@@ -1,0 +1,17 @@
+<workout_file><author>mywhooshinfo.com</author><name>Anaerobic Endurance #2</name><description>After completing a good warm-up, the principal sets consist of 6 x 60 seconds at Zone 6, with 3min recovery. Anaerobic Capacity involves high cadence and big power, and the ability to resist fatigue. 
+
+Throughout each 60sec interval, observe your cadence and heart rate. Is your cadence dropping with fatigue and your heart rate rising?</description><sportType>bike</sportType><workout>
+<Warmup  Duration="240" PowerLow="0.44999998807907" PowerHigh="0.75"><textevent timeoffset="30" message="We begin the warm up with a gentle aerobic effort."/><textevent timeoffset="60" message="Today&#039;s session will be tough, but definitely achievable."/><textevent timeoffset="100" message="Try to note at what point you begin to sweat."/><textevent timeoffset="110" message="This is a good sign you are warmed up."/><textevent timeoffset="160" message="How is your pedal stroke feeling?"/><textevent timeoffset="180" message="As you warm up, your joints become more flexible."/><textevent timeoffset="200" message="Improving the fluency of your pedal stroke."/></Warmup>
+<SteadyState  Duration="60" Power="0.5"><textevent timeoffset="20" message="A short effort above threshold to help warm up next."/><textevent timeoffset="50" message="Now for a 1min high power, effort."/></SteadyState>
+<SteadyState  Duration="60" Power="1.0900000333786"><textevent timeoffset="20" message="Being a short effort, this should be comfortable"/></SteadyState>
+<SteadyState  Duration="120" Power="0.5"><textevent timeoffset="110" message="To prepare for the efforts we step up to a 4min threshold effort now."/></SteadyState>
+<Warmup  Duration="180" PowerLow="0.5" PowerHigh="0.89999997615814"><textevent timeoffset="160" message="Nearly at threshold power now."/><textevent timeoffset="170" message="Time for the 4min threshold effort."/></Warmup>
+<SteadyState  Duration="240" Power="0.89999997615814"><textevent timeoffset="60" message="Focus on controlled breathing."/><textevent timeoffset="100" message="Aim to maintain the same cadence throughout the effort."/><textevent timeoffset="140" message="You should be feeling strong now!"/><textevent timeoffset="200" message="Warmed up and ready for the main sets."/></SteadyState>
+<SteadyState  Duration="180" Power="0.5"><textevent timeoffset="30" message="We have 2 sets of 60sec efforts ahead..."/><textevent timeoffset="40" message="This is a very high level of intensity that requires mental and physical perseverance."/><textevent timeoffset="50" message="But you can do this!"/><textevent timeoffset="170" message="Here we go. 1st effort."/></SteadyState>
+<IntervalsT   Repeat="6" OnDuration="60" OnPower="1.210000038147" OffDuration="180" OffPower="0.55000001192093">
+</IntervalsT>
+<SteadyState  Duration="120" Power="0.55000001192093"><textevent timeoffset="60" message="Fully recovered? ready to go again?"/></SteadyState>
+<IntervalsT   Repeat="6" OnDuration="60" OnPower="1.210000038147" OffDuration="180" OffPower="0.55000001192093">
+</IntervalsT>
+<Cooldown  Duration="300" PowerLow="0.55000001192093" PowerHigh="0.44999998807907"><textevent timeoffset="30" message="That was a big session. Well done!"/><textevent timeoffset="60" message="We need a good cool down after that session."/><textevent timeoffset="70" message="Bringing HR down slowly to resting levels."/></Cooldown>
+</workout></workout_file>

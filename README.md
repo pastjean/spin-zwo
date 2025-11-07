@@ -36,16 +36,76 @@ The `.zwo` files in each program's `zwo_files/` directory can be directly import
 - **TrainingPeaks** - Upload ZWO files
 - Any other platform that supports the ZWO format
 
-### Option 2: Generate Files Yourself
+### Option 2: Generate Visualizations from ZWO Files
+
+If you have your own ZWO files or want to regenerate the visualizations:
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
-# Generate workout files
-npm start
+# Generate all outputs (images, calendar, charts, HTML viewer)
+# NOTE: This skips README generation by default
+bun run start
+
+# Or generate for a specific program
+bun run generate:12weeks
+bun run generate:8weeks
+bun run generate:recoveries
 ```
+
+This will generate:
+- Individual workout profile images (`programs/*/images/individual/`)
+- Program calendar grid (`programs/*/images/calendar.png`)
+- Progression analysis charts (`programs/*/images/progression.png`)
+- Interactive HTML viewer (`programs/*/docs/index.html`)
+
+**To generate comprehensive READMEs** (requires program.config.ts):
+
+```bash
+# Generate with detailed README
+bun run start -- --detailed-readme
+
+# Or for specific program
+bun run generate:8weeks -- --detailed-readme
+```
+
+### Program Configuration
+
+Each program requires a `program.config.ts` file that maps ZWO files to the training schedule:
+
+```typescript
+// programs/8_weeks_road_builder/program.config.ts
+import type { ProgramConfig } from '../../lib/types.js';
+
+export const config: ProgramConfig = {
+  name: "8 Weeks Road Builder",
+  description: "8-week polarized training program",
+
+  schedule: [
+    { week: 1, day: 2, dayName: "Tuesday", zwoFile: "VO2max_30_30s.zwo" },
+    { week: 1, day: 3, dayName: "Wednesday", zwoFile: "Recovery_Easy.zwo" },
+    // ... rest of schedule
+  ],
+
+  tags: ["polarized", "vo2max"],
+  targetAudience: "intermediate-advanced cyclists",
+};
+```
+
+### Interactive Viewers
+
+Each program includes an interactive HTML viewer:
+- `programs/12_weeks_ftp_builder/docs/index.html`
+- `programs/8_weeks_road_builder/docs/index.html`
+- `programs/recoveries/docs/index.html`
+
+Open these files in your browser for:
+- Clickable workout calendar
+- Detailed workout visualizations
+- Statistics dashboard
+- Weekly progression charts
 
 ## Requirements
 
-- Node.js
+- Bun runtime (or Node.js with package.json adjustments)

@@ -69,7 +69,7 @@
         <SteadyState Duration="10" Power="1.5">
             <textevent timeoffset="2" message="Final sprint 5/5!"/>
         </SteadyState>
-        <Cooldown Duration="600" PowerHigh="0.6" PowerLow="0.5">
+        <Cooldown Duration="600" PowerLow="0.6" PowerHigh="0.5">
         </Cooldown>
       </workout>
   </workout_file>
