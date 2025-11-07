@@ -3,7 +3,6 @@
 import { generateCalendarImage } from "./lib/calendarGenerator.js";
 import { generateProgramWorkoutImages } from "./lib/imageGenerator.js";
 import { scanProgram } from "./lib/programScanner.js";
-import { generateProgressionCharts } from "./lib/progressionGenerator.js";
 import { generateREADME } from "./lib/readmeGenerator.js";
 
 async function generateProgramOutputs(
@@ -28,9 +27,6 @@ async function generateProgramOutputs(
 
     console.log("\n[3/6] Generating calendar grid...");
     await generateCalendarImage(program);
-
-    console.log("\n[4/6] Generating progression charts...");
-    await generateProgressionCharts(program);
 
     // 6. Generate README only if flag passed
     if (generateReadme) {

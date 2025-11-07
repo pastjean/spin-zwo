@@ -7,7 +7,7 @@ export interface WorkoutTextEvent {
 
 // Typed segment interfaces
 export interface WarmupSegment {
-  type: 'warmup';
+  type: "warmup";
   duration: number;
   powerLow: number;
   powerHigh: number;
@@ -16,7 +16,7 @@ export interface WarmupSegment {
 }
 
 export interface CooldownSegment {
-  type: 'cooldown';
+  type: "cooldown";
   duration: number;
   powerHigh: number;
   powerLow: number;
@@ -25,7 +25,7 @@ export interface CooldownSegment {
 }
 
 export interface SteadyStateSegment {
-  type: 'steady';
+  type: "steady";
   duration: number;
   power: number;
   cadence?: number;
@@ -33,7 +33,7 @@ export interface SteadyStateSegment {
 }
 
 export interface RampSegment {
-  type: 'ramp';
+  type: "ramp";
   duration: number;
   powerLow: number;
   powerHigh: number;
@@ -42,7 +42,7 @@ export interface RampSegment {
 }
 
 export interface IntervalsSegment {
-  type: 'intervals';
+  type: "intervals";
   repeat: number;
   onDuration: number;
   onPower: number;
@@ -68,23 +68,43 @@ export interface WorkoutDefinition {
 
 // Conversion functions to transform typed segments to XML
 export function segmentToXML(segment: Segment): string {
-  let xml = '';
+  let xml = "";
 
   switch (segment.type) {
-    case 'warmup':
-      xml = `        <Warmup Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
+    case "warmup":
+      xml = `        <Warmup Duration="${segment.duration}" PowerLow="${
+        segment.powerLow
+      }" PowerHigh="${segment.powerHigh}"${
+        segment.cadence ? ` Cadence="${segment.cadence}"` : ""
+      }>`;
       break;
-    case 'cooldown':
-      xml = `        <Cooldown Duration="${segment.duration}" PowerHigh="${segment.powerHigh}" PowerLow="${segment.powerLow}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
+    case "cooldown":
+      xml = `        <Cooldown Duration="${segment.duration}" PowerHigh="${
+        segment.powerHigh
+      }" PowerLow="${segment.powerLow}"${
+        segment.cadence ? ` Cadence="${segment.cadence}"` : ""
+      }>`;
       break;
-    case 'steady':
-      xml = `        <SteadyState Duration="${segment.duration}" Power="${segment.power}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
+    case "steady":
+      xml = `        <SteadyState Duration="${segment.duration}" Power="${
+        segment.power
+      }"${segment.cadence ? ` Cadence="${segment.cadence}"` : ""}>`;
       break;
-    case 'ramp':
-      xml = `        <Ramp Duration="${segment.duration}" PowerLow="${segment.powerLow}" PowerHigh="${segment.powerHigh}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
+    case "ramp":
+      xml = `        <Ramp Duration="${segment.duration}" PowerLow="${
+        segment.powerLow
+      }" PowerHigh="${segment.powerHigh}"${
+        segment.cadence ? ` Cadence="${segment.cadence}"` : ""
+      }>`;
       break;
-    case 'intervals':
-      xml = `        <IntervalsT Repeat="${segment.repeat}" OnDuration="${segment.onDuration}" OnPower="${segment.onPower}" OffDuration="${segment.offDuration}" OffPower="${segment.offPower}"${segment.cadence ? ` Cadence="${segment.cadence}"` : ''}>`;
+    case "intervals":
+      xml = `        <IntervalsT Repeat="${segment.repeat}" OnDuration="${
+        segment.onDuration
+      }" OnPower="${segment.onPower}" OffDuration="${
+        segment.offDuration
+      }" OffPower="${segment.offPower}"${
+        segment.cadence ? ` Cadence="${segment.cadence}"` : ""
+      }>`;
       break;
   }
 
@@ -97,15 +117,15 @@ export function segmentToXML(segment: Segment): string {
 
   // Add closing tag
   const closeTag =
-    segment.type === 'warmup'
-      ? 'Warmup'
-      : segment.type === 'cooldown'
-        ? 'Cooldown'
-        : segment.type === 'ramp'
-          ? 'Ramp'
-          : segment.type === 'intervals'
-            ? 'IntervalsT'
-            : 'SteadyState';
+    segment.type === "warmup"
+      ? "Warmup"
+      : segment.type === "cooldown"
+      ? "Cooldown"
+      : segment.type === "ramp"
+      ? "Ramp"
+      : segment.type === "intervals"
+      ? "IntervalsT"
+      : "SteadyState";
   xml += `\n        </${closeTag}>`;
 
   return xml;
@@ -116,12 +136,12 @@ export function createZWOString(
   name: string,
   description: string,
   tags: string[],
-  segments: Segment[],
+  segments: Segment[]
 ): string {
   const tagElements = tags
     .map((tag) => `        <tag name="${tag}"/>`)
-    .join('\n');
-  const workoutSegments = segments.map(segmentToXML).join('\n');
+    .join("\n");
+  const workoutSegments = segments.map(segmentToXML).join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
   <workout_file>
@@ -149,7 +169,6 @@ export interface ParsedWorkout {
   // From filename
   week?: number;
   day?: number;
-  dayName?: string;
   workoutName?: string;
 
   // Calculated metrics
@@ -200,7 +219,6 @@ export interface WorkoutModalData {
   description: string;
   week: number;
   day: number;
-  dayName: string;
   duration: number;
   tss: number;
   intensityFactor: number;
@@ -218,6 +236,5 @@ export interface ProgramConfig {
 export interface WorkoutScheduleEntry {
   week: number;
   day: number;
-  dayName: string;
   zwoFile: string;
 }

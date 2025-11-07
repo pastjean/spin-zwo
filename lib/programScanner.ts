@@ -1,27 +1,27 @@
 // lib/programScanner.ts
 
-import * as fs from 'node:fs';
-import * as path from 'node:path';
-import { loadProgramConfig, validateProgramConfig } from './configLoader.js';
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { loadProgramConfig, validateProgramConfig } from "./configLoader.js";
 import type {
   ParsedWorkout,
   ProgramStats,
   ProgramStructure,
   WeekStructure,
-} from './types.js';
-import { parseZWOFile } from './zwoParser.js';
+} from "./types.js";
+import { parseZWOFile } from "./zwoParser.js";
 
 /**
  * Scan a program directory using its config file
  */
 export async function scanProgram(
-  programPath: string,
+  programPath: string
 ): Promise<ProgramStructure> {
   // 1. Load and validate program config
   const config = await loadProgramConfig(programPath);
   validateProgramConfig(config, programPath);
 
-  const zwoFilesDir = path.join(programPath, 'zwo_files');
+  const zwoFilesDir = path.join(programPath, "zwo_files");
 
   if (!fs.existsSync(zwoFilesDir)) {
     throw new Error(`ZWO files directory not found: ${zwoFilesDir}`);
@@ -37,8 +37,7 @@ export async function scanProgram(
     // Attach schedule metadata from config
     workout.week = entry.week;
     workout.day = entry.day;
-    workout.dayName = entry.dayName;
-    workout.workoutName = workout.name || entry.zwoFile.replace('.zwo', '');
+    workout.workoutName = workout.name || entry.zwoFile.replace(".zwo", "");
 
     workouts.push(workout);
   }
@@ -63,7 +62,7 @@ export async function scanProgram(
  * Build week structure from workouts
  */
 function buildWeekStructure(
-  workouts: ParsedWorkout[],
+  workouts: ParsedWorkout[]
 ): Map<number, WeekStructure> {
   const weeks = new Map<number, WeekStructure>();
 
@@ -96,7 +95,7 @@ function buildWeekStructure(
  */
 function calculateProgramStats(
   workouts: ParsedWorkout[],
-  weeks: Map<number, WeekStructure>,
+  weeks: Map<number, WeekStructure>
 ): ProgramStats {
   const totalTSS = workouts.reduce((sum, w) => sum + w.tss, 0);
   const totalDuration = workouts.reduce((sum, w) => sum + w.duration, 0);
@@ -141,12 +140,12 @@ function calculateIntensityDistribution(workouts: ParsedWorkout[]) {
       // Get average power for segment
       let power: number;
       if (
-        segment.type === 'warmup' ||
-        segment.type === 'cooldown' ||
-        segment.type === 'ramp'
+        segment.type === "warmup" ||
+        segment.type === "cooldown" ||
+        segment.type === "ramp"
       ) {
         power = (segment.powerLow + segment.powerHigh) / 2;
-      } else if (segment.type === 'intervals') {
+      } else if (segment.type === "intervals") {
         // Calculate weighted average for intervals
         power =
           (segment.onPower * segment.onDuration +

@@ -21,10 +21,6 @@
 
 ![Program Calendar](images/calendar.png)
 
-## Progression Analysis
-
-![Progression Charts](images/progression.png)
-
 ## Weekly Breakdown
 
 ## Usage

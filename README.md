@@ -47,8 +47,6 @@ This will generate:
 
 - Individual workout profile images (`programs/*/images/individual/`)
 - Program calendar grid (`programs/*/images/calendar.png`)
-- Progression analysis charts (`programs/*/images/progression.png`)
-- Interactive HTML viewer (`programs/*/docs/index.html`)
 
 **To generate comprehensive READMEs** (requires program.config.ts):
 
@@ -73,8 +71,8 @@ export const config: ProgramConfig = {
   description: "8-week polarized training program",
 
   schedule: [
-    { week: 1, day: 2, dayName: "Tuesday", zwoFile: "VO2max_30_30s.zwo" },
-    { week: 1, day: 3, dayName: "Wednesday", zwoFile: "Recovery_Easy.zwo" },
+    { week: 1, day: 2, zwoFile: "VO2max_30_30s.zwo" },
+    { week: 1, day: 3, zwoFile: "Recovery_Easy.zwo" },
     // ... rest of schedule
   ],
 
