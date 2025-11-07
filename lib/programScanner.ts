@@ -146,6 +146,12 @@ function calculateIntensityDistribution(workouts: ParsedWorkout[]) {
         segment.type === 'ramp'
       ) {
         power = (segment.powerLow + segment.powerHigh) / 2;
+      } else if (segment.type === 'intervals') {
+        // Calculate weighted average for intervals
+        power =
+          (segment.onPower * segment.onDuration +
+            segment.offPower * segment.offDuration) /
+          (segment.onDuration + segment.offDuration);
       } else {
         power = segment.power;
       }
